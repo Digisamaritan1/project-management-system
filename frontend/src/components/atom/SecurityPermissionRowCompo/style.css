@@ -1,0 +1,32 @@
+.securitydropdown{
+    border: 1px solid #cccccc;
+    margin-bottom: 0px;
+    line-height: 23.6px;
+    padding: 2px 20px;
+    height: 29px;
+    border-radius: 5px;
+}
+.actionListName{
+    left: -1px; 
+    min-width: 300px;
+    z-index: 1;
+}
+
+.ownEveryone{
+    margin: 0px 0px 0px 10px;
+}
+.permissiontable .selectOption{
+    border: 1px solid #cccccc;
+    margin-bottom: 0px;
+    line-height: 23.6px;
+    padding: 2px 20px;
+    height: 29px;
+    border-radius: 5px;
+}
+
+.hover_securtiy_permisson > td {
+    background-color: white;
+}
+.hover_securtiy_permisson:hover > td{
+    background-color: #dbf1ff;
+}

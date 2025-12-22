@@ -1,0 +1,106 @@
+
+.tag-edit-option  ul{
+    padding: 0;
+    margin: 0;
+}
+.mainDiv{
+    display: flex;
+    padding: 5px 10px;
+    position: relative;
+    height: 35px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainDiv:hover{
+    background: #F4F5F7;
+}
+.mainDiv:hover span{
+    cursor: pointer;
+}
+
+.inner-tagedit-list-item{
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 100%;
+    margin-left: 0 !important;
+}
+.tagHover__icon{
+   min-width:7px;
+}
+.color-edit_img.save_img{
+   width:14px;
+}
+.tagList {
+    border-radius: 3px;
+    padding: 1px 5px ;
+    min-height: 15px;
+    position: relative;
+    min-width: 40px;
+}
+.tagList span.tagname {
+    min-width: 30px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+.tagname__contianer {
+    max-width: 200px;
+}
+.tagList:hover span.tagname,span.tagname.threedots {
+    max-width: calc(100% - 25px);
+    min-width: 0px;
+}
+.tagList img{
+    display: none;
+}
+
+.tagList .threedots{
+    display: block;
+}
+
+.tagList:hover img {
+    display: block;
+}
+.remove_hover span.tagname {
+    max-width: unset !important;
+    min-width: 30px !important;
+}
+ul.tag-edit-option .mainDiv {
+    justify-content: flex-start;
+}
+ul.tag-edit-option  {
+    padding: 0;
+}
+.error_top{
+    top:0px;
+}
+.is__color-status{
+   min-width: 55px;
+   padding: 2px 3px;
+}
+img.color-edit_img{ display: block!important;margin: 0px 3px;}
+@media(max-width:767px){
+    .tagList img{
+        display: block;
+    }
+    .tagList,.tagList span.tagname{min-width: max-content;}
+    .tagList:hover span.tagname, span.tagname.threedots {
+        max-width: fit-content;
+        min-width: 0px;
+    }
+    .task-detail-leftside .description-main{margin-top: 20px!important;}
+    .tagList.taglist__mobile-margin {
+        padding: 0;
+        margin-right: 8px;
+    }
+}

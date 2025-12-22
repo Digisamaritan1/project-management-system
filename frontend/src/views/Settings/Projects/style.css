@@ -1,0 +1,175 @@
+.form-mianDiv {
+  padding: 0;
+}
+.activeTab {
+  color: #2f3990 !important;
+  font-weight: 500;
+  background-color: #ffff;
+  border-radius: 5px 5px 0px 0px;
+}
+.tab-option {
+  padding: 7px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  max-width: 151px;
+  padding: 7px 10px;
+  gap: 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.totalCountActiveClose {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.mainProjectlistingInSetting::-webkit-scrollbar {
+  display: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.pagination span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  padding: 9.5px 14.1px;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #2f3990;
+  border: none;
+}
+
+.pagination span.dots {
+  cursor: default;
+}
+
+.project-search {
+  z-index: 2;
+  max-width: 558px !important;
+  border-radius: 6px;
+  border: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e0e0e0;
+}
+
+.pagination div {
+  font-size: 14px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+#itemsPerPageSelect {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 8px 14px;
+  gap: 5px;
+  border-radius: 6px;
+  border: 1px solid #CFCFCF !important;
+  
+}
+
+.page_button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.disabled {
+  cursor: not-allowed;
+  display: flex
+}
+
+.page_button {
+  display: flex;
+  align-items: center;
+}
+
+.page_button .button {
+  cursor: pointer;
+  display: flex;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px;
+}
+
+.page_button .button.arrow-left {
+  margin-right: 10px; 
+  color: #959595;
+
+}
+
+.page_button .button.right-arrow {
+  margin-left: 10px;
+}
+
+.page_button span {
+  padding: 8.5px 13.1px;
+  border-radius: 6px;
+  border: 1px solid #CFCFCF;
+  color: #959595;
+}
+
+.pagination-pages {
+  padding: 10px 0px;
+}
+
+@media(max-width:1024px) {
+  .pagination {
+    display: block;
+  }
+  .page_button {
+    display: block;
+  }
+  .next_prev_btn {
+    width: fit-content;
+    margin: 0 auto !important;
+  }
+  .pagination-pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0px;
+  }
+  .itemsPerPageSelect,.showingEntries {
+    margin-top: 15px;
+  }
+  .pagination{
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}

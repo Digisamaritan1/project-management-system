@@ -1,0 +1,101 @@
+.scroll-bottom-btn {
+  box-shadow: 5px 5px 10px #ccc;
+  padding: 12px;
+  background: #dbf1ff;
+  color: white;
+  right: 12px;
+  top: -55px;
+  border: 1px solid #CECECE;
+  border-radius: 10px;
+}
+.disable__send-button{
+  background-color: #e3e3e3 !important;
+  cursor: not-allowed !important;
+}
+.highlighted-message{
+  background-color: #ffff3630 !important;
+}
+.comment_footer_icon{min-width:174px;}
+.createTask__modal .createTask__modal-field span {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+.creator_div{
+  height: 45px !important;
+  box-shadow:0px 4px 5px 0px #cecece;
+  position: relative;
+  z-index: 100;
+}
+#creator_div {
+  z-index: 6;
+}
+
+.media__extension{
+  /* height: 100% !important;  */
+  background-color: #ffffffd6 !important;
+  /* position: absolute; */
+}
+.upload-body-dragged.media__extension.chat__drag-drop{
+    top: 0px;
+    position: absolute !important;
+    height: calc(100% - 94px) !important;
+    width: calc(99.5% - 7px);
+    left: 7px;
+}
+.msg__container{
+  /* transition: all 0.05s ease; */
+}
+.convert_dateformat{
+  left: 50%;
+  transform: translateX(-50%); 
+  top: 26px;
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.09);
+  background-color: #717bd5!important;
+  color: #fff;
+}
+.msg__initaluser{
+  height: 65px; 
+  box-shadow:0px 4px 5px 0px #cecece;
+}
+.comment__footer{
+  height: max-content; 
+  bottom: 1px;
+}
+.comment__text-wrapper{
+  width: calc(100% - 172px); 
+  min-height: 54px;
+}
+.message__reset-id{
+  top: 5px; 
+  right: 20px;
+}
+.record__progress{
+  height: 5px;
+}
+.send__media-btn{
+  height: 54px !important; 
+  width: 54px;
+}
+.input__taskname-value{
+  height: 28px;
+}
+.error__text{
+  bottom: -15px; 
+  left: 0px;
+}
+.select__component{
+  width: 350px !important;
+}
+
+@media(max-width: 1440px){
+  .upload-body-dragged.media__extension.chat__drag-drop{width: calc(99.3% - 7px);}
+}
+@media(max-width: 767px){
+  .msg__initaluser{background-color: #fff;}
+  .upload-body-dragged.media__extension.chat__drag-drop{width: calc(99.2% - 9px);}
+}
+@media(max-width: 480px){
+audio {width: 225px !important;}
+.upload-body-dragged.media__extension.chat__drag-drop{width: calc(98.8% - 8px);}
+}

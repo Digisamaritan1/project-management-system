@@ -1,0 +1,108 @@
+.fix-milestone-wrapper input:focus {
+    border: 1px solid cornflowerblue;
+}
+.startdateinput:focus {
+    border-radius: 5px;
+    border: 1px solid cornflowerblue;
+}
+.table_width {
+    width: 100%;
+}
+.status-name {
+    width: 100%;
+    max-width: 50%;
+}
+.status-date-picker{
+    width: 100%;
+    max-width: 50%;
+}
+.statushistory {
+    margin-left: 10px;
+}
+.status_date_value {
+    padding-left: 10px;
+}
+.paymentcancelled {
+    text-decoration: line-through;
+}
+.refund_padding_top {
+    padding-top: 40px;
+}
+.refund_cancel_font {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #2F3990;
+}
+.refund_wrapper{
+    padding-top: 70px;
+}
+.refund_amount_empty {
+    padding-top: 48px !important;
+}
+.refund_delete {
+    width: 16px;
+    height: 12px;
+    margin-right: 12px;
+}
+.left_space_wrapper {
+    margin-left: 10px;
+}
+.dropdown_span {
+    padding-bottom: 5px;
+}
+#dd_fix_milestone_status_dropdown {
+    width: 295px;
+    border-radius: 6px!important;
+}
+ #dd_fix_milestone_status_dropdown .dropdown_option {
+    padding: 0 !important;
+}
+.border_bottom_status {
+    border-bottom: 1px solid #DFE1E6;
+    border-radius: 0 !important;
+    padding: 12px 19px 12px 19px !important;
+    margin-bottom: 0 !important;
+    justify-content: space-between;
+}
+#dd_fix_milestone_status_dropdown .drop-down-options {
+    max-height: 166px !important;
+}
+#dd_amonut_history .drop-down-options {
+    max-height: 159px !important;
+}
+.currency {
+    height: 28px;
+    width: 30px;
+    background-color: #2f3990;
+    display: inline-block;
+    border-radius: 4px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+}
+.amountCurr {
+    padding-left: 36px !important;
+}
+.dot {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 86px;
+    display: block;
+}
+#dd_user_detail .dropdown_option {
+    padding: 0 !important;
+}
+.user_detail_mil {
+    padding: 6px 20px !important;
+    border-bottom: 1px solid #DFE1E6;
+    border-radius: 0 !important;
+}

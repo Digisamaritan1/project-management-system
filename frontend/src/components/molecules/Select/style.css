@@ -1,0 +1,40 @@
+.select-option {
+    text-align: left;
+    position: relative;
+    color: #959595;
+}
+.select-option-value{
+    position: absolute;
+    background-color: white;
+    border-radius: 0px;
+    border: 1px solid #ccc;
+    width: 100%;
+    left: 0;
+    top: 30px;
+    z-index: 7;
+}
+.custom-select-options_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.custom-select-options {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.custom-select-options:hover{
+    background-color: #ececec;
+    cursor: pointer;
+}
+.cutom-select-disabled {
+    background-color: #e9ecef;
+}
+.select-option.focused {
+    border-color: #2f3990 !important;
+}
+.custom-selectoptions-wrapper::-webkit-scrollbar{
+    display: none;
+}
+.custom-selectoptions-wrapper{
+    max-height: 182px;
+}

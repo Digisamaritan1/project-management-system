@@ -1,0 +1,40 @@
+.invoice_wrapper{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.invoice_wrapper table{
+    border:0px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.invoice_wrapper table thead {
+    position: sticky;
+    z-index:1;
+}
+.invoice_wrapper table td,th{
+    border-left:0px;
+    border-right:0px;
+    border-top: 0px;
+    /* padding-left: 50px; */
+}
+.invoice_wrapper table th{
+    text-align:left;
+    border:0px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
+}
+.invoice_wrapper .table-container_invoice{
+    max-height: 614px;
+    overflow-y: auto;
+}
+@media(max-width:1640px){
+    .invoice_table--wrapper {
+        overflow: auto;
+    }
+    .invoice_wrapper table {
+        width: 1140px;
+    }
+}

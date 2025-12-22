@@ -1,0 +1,15 @@
+.nav-item-wrapper{
+    height: 41px;
+    padding: 0px 10px;
+}
+
+.active-bar{
+    height: 100%;
+    width: 5px;
+
+    left: 0;
+}
+
+.rotate_arrow_down {
+    transform: rotateX(180deg) !important;
+}

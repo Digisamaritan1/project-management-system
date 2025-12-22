@@ -1,0 +1,49 @@
+:root { 
+  --width: 150px;
+  --height: 150px;
+  --cropperWidth: 250px;
+  --cropperHeight: 250px;
+}
+
+.cropper_main {
+  position: relative;
+  width: var(--cropperWidth) !important;
+  height: var(--cropperHeight) !important;
+  margin: 50px 0 0;
+}
+
+.vue-advanced-cropper__background,
+.vue-advanced-cropper__foreground {
+  width: var(--cropperWidth) !important;
+  height: var(--cropperHeight) !important;
+  border-radius: 8px !important;
+}
+
+.vue-advanced-cropper{
+  height: var(--cropperHeight) !important;
+  width: var(--cropperWidth) !important;
+  border-radius: 8px !important;
+}
+
+.vue-rectangle-stencil {
+  width: var(--width) !important;
+  height: var(--height) !important;
+  min-height: 150px !important;
+  min-width: 150px !important;
+}
+
+.vue-bounding-box {
+  border-radius: 8px !important;
+}
+
+.vue-rectangle-stencil__preview{
+  border-radius: 8px !important;
+}
+
+.vue-advanced-cropper__image-wrapper {
+  width: var(--cropperWidth) !important;
+  height: var(--cropperHeight) !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  border-radius: 8px !important;
+}

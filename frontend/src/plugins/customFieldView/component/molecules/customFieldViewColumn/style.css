@@ -1,0 +1,7 @@
+.custom__field_list_view {
+    min-width: 200px!important;
+}
+
+.custom__field_list_view .custom-ellipse-text {
+    max-width: 200px;
+}

@@ -1,0 +1,116 @@
+.sidebar {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.sidebar-head{
+    height: 46px;
+    border-color: #cecece;
+}
+.listsidebar-search{
+    width: -webkit-fill-available !important;
+}
+.hide-side-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+.hide-side-right {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar-content {
+    width: 480px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    max-width: 100vw;
+}
+.sidebar-body {
+    height: calc(100% - 47px);
+    overflow-y: auto;
+}
+.converted__sidebar .sidebar-body {
+    background-color: #F4F5F7 !important;
+}
+.sidebar-options {
+    /* height: calc(100% - 52px); */
+}
+.sidebar-options::-webkit-scrollbar {
+    display: none;
+}
+.back-drop {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+.clear-all {
+    background-color: white;
+    cursor: default;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.group-title {
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+}
+.mobile-list-inputsearch-wrapper .form-control::placeholder {
+    font-size: 16px !important;
+}
+
+.sidebar-head .assignee-headtitle {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28.6px;
+    text-align: left;
+    color: rgba(37, 61, 152, 1);
+}
+.sidebar-head {
+    height: 75px;
+}
+.sidebar-header--btn {
+    gap: 20px;
+}
+
+.sidebar-header--btn button.btn {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16.68px;
+    text-align: left;
+    padding: 11px 20px;
+}
+button.close-sidebar.btn {
+    background-color: #fff;
+    color: rgba(37, 61, 152, 1);
+    border-color: rgba(37, 61, 152, 1);
+}
+button.save-sidebar.btn {
+    background-color: rgba(37, 61, 152, 1);
+}
+@media(max-width: 767px) {
+    .sidebar-content {width: 100vw !important;}
+    /* .back-drop {display: none;} */
+    .listsidebar-search {padding: 15.5px 10px;}
+    .converted__sidebar .sidebar-body {background-color: #fff !important;}
+    .sidebar-header--btn button.btn {
+        padding: 8px 20px;
+    }
+    .sidebar-header--btn {
+        gap: 8px;
+    }
+}
+@media(max-width:560px){
+    .sidebar-head .assignee-headtitle {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28.6px;
+    }
+}

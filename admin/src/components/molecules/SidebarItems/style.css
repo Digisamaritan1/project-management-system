@@ -1,0 +1,54 @@
+.profile-image-assignee{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.sidebar_item_main:hover .emp_label {
+    color: white !important;
+}
+.designationAssignee{
+    color: #535358;
+}
+.sidebar__task-image{
+    height: 15px !important;
+    width: 15px !important;
+}
+.sidebar_item_main{
+    padding: 12.5px 15px;
+}
+.status__change-wrapper{
+    top: -1px; 
+    height: 10px;
+}
+.conditional__item{
+   top: -3px; 
+   height: 10px;
+}
+.status__renamecolordelete-dropdown{
+    border: 0 !important;
+}
+.status__renamecolordelete-dropdown .drop-down-item {
+    padding: 3.5px 3.5px !important;
+    margin-bottom: 15px;
+}
+.status__renamecolordelete-dropdown .drop-down-item:last-child {
+    margin-bottom: 0 !important;
+}
+.status__renamecolordelete-dropdown .search-project-filter.dropdown_option {
+    padding: 10px 6.5px !important;
+    min-width: 113px !important;
+}
+.team_icon_span {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    padding: 0px!important;
+    line-height: 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex-direction: column;
+}
+@media(max-width: 767px){
+    .status__renamecolordelete-dropdown .drop-down-item{ padding: 10px !important;}
+    .status__renamecolordelete-dropdown .search-project-filter.dropdown_option {padding: 20px !important;min-width: 100% !important;}
+}

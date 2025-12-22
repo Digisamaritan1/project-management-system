@@ -1,0 +1,8 @@
+**/node_modules
+/storage
+/frontend/node_modules
+/admin/node_modules
+/installation-single
+/installation-saas
+/installation
+Dockerfile

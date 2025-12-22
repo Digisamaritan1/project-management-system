@@ -1,0 +1,38 @@
+.createCompanyform {
+  padding: 20px 20px;
+  background-color: #ffffff;
+  margin: 15px;
+  border-radius: 8px;
+  height: auto;
+  width: auto;
+}
+
+.tools {
+  justify-content: center;
+  gap: 30px;
+}
+
+.cloud {
+    color: rgb(56, 69, 179);
+    width: 145px;
+    height: 20px;
+    margin-top: 13px;
+}
+
+.cloud img {
+  height: 20px;
+  width: 20px;
+}
+
+.cancel_upload-wrapper {
+  width: 185px !important;
+}
+
+.sidebar__height {
+  top: 47px !important;
+}
+
+.blue_btn.upload__btn {
+  margin-left: 20px !important;
+  color: white;
+}

@@ -1,0 +1,40 @@
+.add_permission_project {
+    margin: 20px;
+    padding-left: 20px 
+}
+.add_permission_project .add_permission_para{
+    width: 80%;
+}
+.main_para{
+    line-height: 20.72px;
+    word-wrap: break-word
+}
+.second_para {
+    margin-left: 0px !important;
+    line-height: 17.76px;
+    word-wrap: break-word
+}
+.permissionButton{
+    border-radius: 4px;
+    padding: 3px 8px;
+    line-height: 24px;
+}
+.disableButton{
+    pointer-events: none;
+    background-color: #312d2d57;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF !important;
+}
+@media(max-width:848px) {
+    .add_permission_project{
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+    .add_permission_project .add_permission_para{
+        width: 100% !important;
+    }
+    .main_para{
+        margin-bottom: 5px;
+    }
+}

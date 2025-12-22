@@ -1,0 +1,389 @@
+.billing__detail-header{
+    height: 60px;
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #DFE1E6;
+    padding: 20px;
+}
+.billingDetailTitle{
+    font-size: 18px;
+    color: #2F3990;
+    font-weight: 700;
+}
+.billing__box {
+    min-height: 196px;
+    width: 33%;
+    height: 196px;
+}
+.billngDetialHrLine{
+    padding: 30px 0px;
+}
+.billngDetialHrLine .divider{
+    height: 1px;
+}
+.paymentMethod{
+    background: #FFFFFF;
+    /* height: 182px; */
+    border-radius: 10px;
+}
+.transection__detail{
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.billing__container{
+    max-width: 1630px;
+}
+.billing__details{
+    gap: 20px;
+}
+.pay__now-wrapper {
+    height: 75px;
+}
+.planDetailBox__hrLine{
+    margin: 17px 0px 12px 0;
+}
+.paymentMethod__section-second {
+    min-height: 57px;
+}
+.planDetailBox__title{
+    line-height: 32.56px;
+}
+.current__plan__status, .planDetailBox__text{
+    line-height: 26.6px;
+    word-break: break-word;
+}
+.biilingAddBox{
+    display: inline;
+    word-break: break-word;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.upgrade__btn{
+    width: 124px;
+}
+.planDetailBox__section-three--text ,.upgrade__btn{
+    line-height: 23.68px;
+}
+.paymentMethod{
+    padding: 15px 20px;
+}
+.cardInfo{
+    height: 94px;
+}
+.cardLogo{
+    height: 54px;
+    border-radius: 7.5px;
+    width: 77.625px;
+}
+.billing__history-table thead tr{
+    background:  #DFE1E6;
+    text-align: left;
+    border: 1px solid #CFCFCF;
+}
+.billing__history-table thead th  {
+    color: #000;
+    font-size: 16px;
+    line-height: 23.68px;
+    padding: 9.7px 5px;
+    text-transform: capitalize;
+}
+.billing__history-table tbody td {
+    color: #535358;
+    font-size: 16px;
+    line-height: 23.68px;
+    padding: 4.78px 5px;
+    word-break: break-word;
+}
+.billing__history-table tbody td:nth-child(3) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.invoice__paln-status {
+    width: 353px;
+}
+.billing__history-table  {
+    max-height: 469px;
+}
+.billing__history-table thead{
+    top: 0;
+}
+.billing__history-table thead:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    background: #CFCFCF;
+    width: 100%;
+    height: 1px;
+}
+.billing__history-table thead::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: #CFCFCF;
+    width: 100%;
+    height: 1px;
+}
+.billing__history-table thead th:nth-child(7)   {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.billing__history-table thead th:nth-child(1), .billing__history-table tbody td:nth-child(1){
+    padding-left: 30px;
+    width: 160px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.billing__history-table thead th:nth-child(2){
+    width: 120px;
+}
+.billing__history-table thead th:nth-child(3){
+    width: 170px;
+}
+.billing__history-table thead th:nth-child(4){
+    width: 147px;
+}
+.billing__history-table thead th:nth-child(5){
+    width: 161px;
+}
+.billing__history-table thead th:nth-child(6){
+    width: 175px;
+}
+.billing__history-table thead th:nth-child(7){
+    width: 120px;
+}
+.billing__history-table thead th:nth-child(8){
+    width: 100px;
+}
+.billing__history-table thead th:nth-child(9) {
+    width: 123px;
+    padding-left: 13px;
+}
+.billing__history-table tbody td:last-child{
+    padding-right: 19px;
+    display: flex;
+    justify-content: end;
+}
+.billing__history-table tbody tr{
+    border: 1px solid #DFE1E6;
+    border-top: 0;
+}
+.billing__history-table tbody tr:last-child td:nth-child(1), .billing__history-table tbody tr:last-child td:last-child, .billing__history-table tbody tr:last-child{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.billing__status{
+    height: 23px;
+    line-height: 19.24px;
+}
+.download__btn {
+    line-height: 23.68px;
+    padding: 3px 13px;
+}
+.pay__now-btn {
+    line-height: 23.68px;
+    padding: 3px 14px;
+}
+.project__upgradwrapper-popup.pendingInvoice {
+    position: absolute;
+    top: -50%;
+    -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,.1);
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,.9);
+}
+.project__upgradwrapper-popup {
+    width: 607px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    height: auto;
+    z-index: 99;
+}
+.payment__text, .plan__dynamic-text, .plan__use-total{
+    line-height: 33px;
+}
+.plan__count-multipliaction{
+    line-height: 24px;
+}
+.form-check-label{
+    line-height: 21px;
+}
+.form-check_wrapper [type="radio"]:checked + label:after{
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #2f3990;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+#app:has(.cards-popup):after {
+    content: '';
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.cards-popup .form-check {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+    padding: 10px 0px;
+}
+.cards-popup .form-check label.form-check-label {
+    margin: 0;
+    font-size: 14px;
+}
+.form-check_wrapper [type="radio"]:checked,
+.form-check_wrapper [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.form-check_wrapper [type="radio"]:checked + label,
+.form-check_wrapper [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 38px;
+    cursor: pointer;
+    line-height: 25px;
+    display: inline-block;
+}
+.form-check_wrapper [type="radio"]:checked + label:before,
+.form-check_wrapper [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.form-check_wrapper [type="radio"]:checked + label:after,
+.form-check_wrapper [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #2f3990;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.form-check_wrapper [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.form-check_wrapper [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.scrollable-area-for-card {
+    max-height: 200px;
+    overflow: auto;
+}
+.buy__now-btn {
+    margin: -21px auto 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+.buy__now-btn button {
+    line-height: 24px;
+    padding: 3px 14px;
+    height: 39px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+}
+.close__modal-wrapper{
+    right: 30px;
+    top: 30px;
+}
+.close__modal-wrapper img {
+    width: 15px;
+    height: 15px;
+}
+.success__bg-green {
+    height: 117px;
+    border-radius: 20px 20px 0 0;
+}
+.success__planimg {
+    top: -23px;
+    left: 0;
+    right: 0;
+}
+.plan__upgrade-desc , .back__to-project button{
+    line-height: 24px;
+}
+.back__to-project button{
+    height: 30px;
+    width: 140px;
+}
+.plan__upgradesucessfully-wrapper {
+    padding: 73px 50px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.credit_balance_text{
+    color: #FFFFFF;
+}
+
+.creditBalance {
+    width: 520px;
+    border-radius: 16px;
+    background-color: #4167C8;
+    padding: 15px;
+}
+@media (max-width:1600px) {
+    .billing__box{height: auto;}
+    .billing__history-table table {width: 1600px;max-height: 469px;}
+    .paymentMethod__section-second {min-height: 80px;}
+    .billing__history-table tbody tr{border-left: 0;}
+    .billing__history-table{border-left: 1px solid #CFCFCF;}
+    .billing__history-table thead tr{border: 0;}
+}
+@media (max-width:1199px) {
+    .planDetailBox__sectionthree--text {display: flex;margin-top: 10px;}
+    .pay__now-wrapper {height: auto;}
+}
+@media (max-width:1024px) {
+    .cardInfo{width: 100%;}
+    .billing__box{padding-top: 15px;gap: 15px;flex-wrap: wrap;width: 100%;}
+    .billing__details {flex-wrap: wrap;margin: 0;gap: 0;}
+}
+@media(max-width: 767px){
+    .project__upgradwrapper-popup {width: 100%;max-width: 95%;}
+    .scrollable-area-for-card {max-height: 140px;}
+    .close__modal-wrapper {right: 15px;top: 25px;}
+    .form-check_wrapper{overflow: auto;max-height: 430px;z-index: 0;}
+    .form-check_wrapper::-webkit-scrollbar{display: none;}
+    .buy__now-btn{position: relative;z-index: 11;}
+    .plan__upgradesucessfully-wrapper{padding: 73px 15px 0;}
+    .title__textnext-step {padding: 0 15px;}
+}
+@media(max-width: 575px){
+    .cardLogo {
+        width: 50px;
+        height: 35px;
+    }
+    .paymentMethod .planDetailBox__text,.cardLine{
+        font-size: 14px !important;
+    }
+}

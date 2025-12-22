@@ -1,0 +1,65 @@
+
+.taskStatusInSidebar{
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    margin: 1px 10px 0 10px;
+    border-radius: 2px;
+}
+.oldstatusName{
+    padding-left: 8px
+}
+.sattus-color-div{
+    width: 10px;
+    height: 10px;
+}
+.task__name-sidebar{
+    padding-bottom: 0;
+    height: 36px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+ .task__name-sidebar:hover{
+    background-color: #F0F0F0;
+    border-radius: 5px;
+}
+.covert__folder-sprint .task__name-sidebar{
+    margin-left: 57px !important;
+}
+.project-item-wrapper .task__name-sidebar {
+    margin-left: 51px !important;
+}
+.covert__folder-sprint  .project-item-wrapper .task__name-sidebar {
+    margin-left: 62px !important;   
+}
+.task__desc-wrapper{
+    width: 70%;
+    flex: 0 0 70%;
+}
+.task__key-wrapper{
+    width: 19%;flex: 0 0 19%;
+}
+.task__assignee-wrapper
+{
+    width: 11%;
+    flex: 0 0 11%;
+}
+.data__is-parenttask{
+    line-height: 10px;
+}
+.parent-taskname-merge{
+    line-height: 13px;
+}
+@media(max-width: 767px){
+    .covert__folder-sprint .project-item-wrapper .task__name-sidebar {margin-left: 20px !important;}
+    .project-item-wrapper .task__name-sidebar{ margin-left: 30px !important;}
+    .task__name-sidebar{height: 50px;}
+    .task__desc-wrapper{width: 68%;flex: 0 0 68%;}
+    .task__key-wrapper{width: 18%;flex: 0 0 18%;}
+    .task__assignee-wrapper{width: 14%;flex: 0 0 14%;}
+}
+@media(max-width: 430px){
+    .task__desc-wrapper{width: 55%;flex: 0 0 55%;}
+    .task__key-wrapper{width: 25%;flex: 0 0 25%;}
+    .task__assignee-wrapper{width: 20%;flex: 0 0 20%;} 
+}

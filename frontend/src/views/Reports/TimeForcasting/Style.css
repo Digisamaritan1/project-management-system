@@ -1,0 +1,194 @@
+.time-forcasting-project-dropdpown {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.time-forcasting-project-dropdpown .dropdown-item {
+    padding: 5px 10px;
+}
+
+.time-forcasting-project-dropdpown .dropdown-list {
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+.time-forcasting-project-dropdpown .dropdown-item span {
+    width: 99%;
+    display: block;
+    color: #535358;
+}
+
+.time-forcasting-project-dropdpown .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #2F3990;
+    border-radius: 5px;
+}
+
+.resource-planning-report-main ul {
+    list-style: none;
+}
+
+.resource-planning-report-main .breadcrumb-section {
+    padding: 13px 15px;
+    border-bottom: 1px solid #dae1e7;
+}
+
+.resource-planning-report-main .border-left {
+    border-left: 1px solid #b7b7b7;
+}
+
+.resource-planning-report-main .content-area {
+    padding: 15px;
+}
+
+.resource-planning-report-main .top-section {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.resource-planning-report-main .top-section .item-box {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #535358;
+}
+
+.resource-planning-report-main .top-section .item-box strong {
+    margin-right: 15px;
+}
+
+.resource-planning-report-main .middle-section {
+    padding: 15px;
+    background-color: #FFF;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.resource-planning-report-main .middle-section .item-box {
+    width: 25%;
+    font-size: 14px;
+    color: #535358;
+}
+
+.resource-planning-report-main .middle-section .heading-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.resource-planning-report-main .middle-section .item-box ul {
+    margin-top: 10px;
+}
+
+.resource-planning-report-main .middle-section .item-box ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.resource-planning-report-main .middle-section .m-auto {
+    margin: auto;
+}
+
+.resource-planning-report-main .middle-section .item-box ul li strong,
+.resource-planning-report-main .middle-section .item-box ul li span {
+    min-width: 210px;
+    font-size: 14px;
+}
+
+.resource-planning-report-main .project-dropdown {
+    padding: 8px 10px;
+    border: 1px solid #dfe1e6;
+    border-radius: 4px;
+    color: #818181;
+    font-size: 13px;
+    font-weight: 400;
+    background-image: url('../../../assets/images/svg/filter_select_dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px);
+}
+
+.resource-planning-report-main .project-dropdown span {
+    width: 200px;
+    display: block;
+}
+
+.resource-planning-report-main .chart-wrapper {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #FFF;
+}
+
+.resource-planning-report-main .chart-wrapper .controls {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resource-planning-report-main .no-result-found {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.resource-planning-report-main .score-section {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.resource-planning-report-main .score-section .score {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resource-planning-report-main .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid red;
+}
+
+.resource-planning-report-main .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid green;
+}
+
+@media screen and (max-width: 1699px) {
+    .resource-planning-report-main .top-section .item-box {
+        width: 50%;
+        margin: 5px 0;
+    }
+    .resource-planning-report-main .middle-section .item-box {
+        width: 50%;
+        margin: 15px 0;
+    }
+    .resource-planning-report-main .top-section .item-box strong {
+        min-width: 110px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .resource-planning-report-main .top-section .item-box {
+        width: 100%;
+        margin: 7px 0;
+    }
+    .resource-planning-report-main .middle-section .item-box {
+        width: 100%;
+        margin: 15px 0;
+    }
+}

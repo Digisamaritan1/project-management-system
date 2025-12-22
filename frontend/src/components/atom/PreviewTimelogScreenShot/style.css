@@ -1,0 +1,101 @@
+.screenShotPreview{
+    font-weight: 700;
+    font-size: 18px;
+}
+.mainScreenShotPreview .sidebar-head.bg-white.d-flex.align-items-center.justify-content-between.px-1.blue.border-bottom.cursor-default {
+    height: 61px !important;
+    background-color: #FCFCFC;
+}
+.startEndMaidiv{
+    padding-bottom: 10px;
+}
+.starttoEndTime{
+    font-size: 18px;
+}
+.commentsidebarMaindiv{
+    border-bottom: 1px solid #DFE1E6;
+    padding-bottom: 23px;
+}
+.screnshotpreviewMain{
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+}
+.fullImgDiv{
+    width: 100%;
+    height: 479.514px;
+    margin-top: 20px;
+}
+.fullImgDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.mainImageDiv .timelogImage {
+    padding: 10px;
+    width: 100%;
+    max-width: 21.101%;
+    flex: 0 0 21.101%;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #F4F5F7;
+}
+.mainImageDiv{
+    margin: 22px 20px 0;
+}
+.mainImageDiv .timelogImage img {
+    width: 100%;
+    height: 118px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    z-index: 1;
+}
+.projectAndTasknamekeyDiv{
+    border-radius: 12px;
+    padding: 23px 10px 23px 10px;
+    margin-bottom: 32px;
+}
+.projectDetailkeyScreenshotPreview{
+    font-weight: 400;
+    font-size: 14px;
+}
+.tasknameScreenshotpreview {
+    padding-top: 6px;
+    max-width: 100%;
+    display: block;
+}
+.selectedOPenImgTimeSheet{
+    width: 100%;
+    object-fit: contain;
+    height: 430px;
+}
+.screnshotpreviewMain .startEndMaidiv {
+    padding-bottom: 15px;
+}
+.folderIconImg{
+    padding: 0px 4px;
+}
+.mainScreenShotPreview .sidebar-body {
+    background-color: #F4F5F7;
+}
+@media(max-width: 1199px){
+    .mainImageDiv .timelogImage {max-width: 25%;flex: 0 0 25%;}
+    .mainImageDiv .timelogImage img {height: 95px;}
+}
+@media(max-width: 767px){
+    .projectAndTasknamekeyDiv {margin-bottom: 25px; padding: 15px 10px 15px 10px;}
+    .screnshotpreviewMain .startEndMaidiv {padding-bottom: 10px;}
+    .fullImgDiv {width: 100%;height: fit-content !important;}
+    .fullImgDiv img {height: fit-content;}
+    .mainImageDiv .timelogImage {max-width: 28%;flex: 0 0 28%;}
+    .mainImageDiv .timelogImage img {height: 80px;}
+    .screnshotpreviewMain {margin: 0;padding: 20px;}
+}
+@media(max-width: 480px){
+    .mainImageDiv .timelogImage {max-width: 40%;flex: 0 0 40%;}
+}

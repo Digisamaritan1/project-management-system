@@ -1,0 +1,8 @@
+@media(min-width:1301px){
+    .main-left_sidebar{
+        min-width: 272px!important;
+    }
+    .main-right_body {
+        width: calc(100% - 272px)!important;
+    }
+}

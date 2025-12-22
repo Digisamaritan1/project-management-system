@@ -1,0 +1,75 @@
+.create_company_wrapper{
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+}
+.create_company_form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.create_company_row{
+    flex-basis: auto;
+    max-width: 100%;
+    width: 48%;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.create_company_row label{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23.68px;
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+.create_company_wrapper .arrow{
+    position: absolute;
+    left: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 12px;
+}
+.create_company_wrapper .teaminput-sidebar .dropdown-arrow {
+    position: absolute;
+    left: 75px;
+    top: 12px;
+    width: 8px;
+    height: 5px;
+}
+form.create_company_form .teaminput-sidebar {
+    position: relative
+}
+
+.create_company_wrapper .create_company_form .form-control {
+        padding: 10px 10px 10px 10px;
+        width: 100% !important;
+        box-sizing: border-box;
+        border: 1px solid #DCDCDC;
+        border-radius: 8px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.7px;
+        text-align: left;
+}
+.create_company_row .teaminput-sidebar .dropdown {
+    border-radius: 8px 0px 0px 8px;
+    height: 28px;
+    border-right: 0;
+}
+@media(max-width:767px){
+    .create_company_wrapper {
+        padding: 10px;
+        margin: 15px;
+    }
+    .create_company_row {
+        max-width: 100%;
+        width: 100%;
+    }
+}

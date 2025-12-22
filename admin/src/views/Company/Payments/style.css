@@ -1,0 +1,46 @@
+.payment_wrapper{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.payment_wrapper table{
+    border:0px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.payment_wrapper table thead {
+    position: sticky;
+    z-index:1;
+}
+.payment_wrapper table td,th{
+    border-left:0px;
+    border-right:0px;
+    border-top: 0px;
+    /* padding-left: 50px; */
+}
+.payment_wrapper table th{
+    text-align:left;
+    border:0px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
+}
+.payment_wrapper .table-container_payment{
+    max-height: 614px;
+    overflow-y: auto;
+}
+@media(max-width:1420px){
+    .paymentTable_wrapper {
+        overflow: auto;
+    }
+    
+    .paymentTable_wrapper table {
+        width: 1024px;
+    }
+}
+@media(max-width:991px){
+    .company_details--wrapper{
+        flex-wrap: wrap;
+    }
+}

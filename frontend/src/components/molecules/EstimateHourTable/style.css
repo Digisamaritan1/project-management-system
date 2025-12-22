@@ -1,0 +1,140 @@
+.disbleDate {
+    background-color: lightgray;
+    opacity: 0.5;
+}
+
+table.table.table-astimated-hour {
+    z-index: 9999;
+    position: relative
+}
+
+table.table.table-astimated-hour tr td{
+    padding: 8px;
+    min-width: 54px;
+    text-align: center;
+    border-bottom: 1px solid #DFE1E6;
+  
+}
+input.form-control.focusinput.date_input_value {
+    text-align: center;
+}
+table.table.table-astimated-hour tr td.est_esditing_block{
+    padding: 8px;
+    min-width: 54px;
+    text-align: center;
+    border-left: 1px solid #cfd0d3; 
+}
+table.table.table-astimated-hour tr th {
+    padding: 8px;
+    min-width: 54px;
+    text-align: center;
+}
+table.table.table-astimated-hour tr th span {
+    display: block;
+    color: #474747;
+    font-weight: 400
+}
+
+table.table.table-astimated-hour tr th b {
+    color: #000
+}
+tr.estimate__daysdate-tr th {
+    border: 1px solid #cfd0d3;
+}
+table.table.table-astimated-hour tr th {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+
+}
+
+table.table.table-astimated-hour td.full-width {
+    min-width: 185px;
+}
+
+table.table.table-astimated-hour td.full-width img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px
+}
+
+.vs-content-sidebar.sidebarx.estimatedModel .vs-sidebar--items {
+    overflow: hidden
+}
+
+table.table.table-astimated-hour td.full-width span {
+    margin-left: 10px
+}
+
+table.table.table-astimated-hour th.full-width {
+    text-align: left!important
+}
+
+table.table.table-astimated-hour thead tr:first-child th {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* border-top: 0 solid #cfd0d3 */
+}
+
+table.table.table-astimated-hour td.full-width span.font-weight-bold {
+    font-weight: 700;
+    color: #000
+}
+
+.table-Estimataed-hour-Wrapper {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+    height: 385px;
+    overflow: auto
+}
+
+.table-Estimataed-hour-Wrapper::-webkit-scrollbar {
+    display: none
+}
+
+table.table.table-astimated-hour thead {
+    position: sticky;
+    top: 0;
+    z-index: 99
+}
+
+.table-Estimataed-hour-Wrapper th.border-bottom {
+    position: relative
+}
+
+.table-Estimataed-hour-Wrapper th {
+    background-color: #DFE1E6;
+}
+.table-Estimataed-hour-Wrapper th.border-bottom:after {
+    height: 1px;
+    background: #cfd0d3;
+    content: "";
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    bottom: -1px
+}
+.table-Estimataed-hour-Wrapper .table-astimated-hour tr:first-child th:first-child{
+    padding: 10px 14px; 
+    text-align: left !important;
+    border-radius: 6px 0px 0px 0px;
+}
+.table-Estimataed-hour-Wrapper .table-astimated-hour tr:first-child th:last-child{
+    padding: 5px;
+    border-left: 1px solid #cfd0d3;
+    border-radius: 0px 6px 0px 0px;
+}
+.toggle__popover {
+    width: 202px;
+}
+.total__users {
+    padding: 5px 5px 5px 10px !important;
+}

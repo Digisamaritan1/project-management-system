@@ -1,0 +1,31 @@
+.custom_field-btn {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    right: 0;
+    border-top: 1px solid #DFE1E6;
+    width: 100%;
+    justify-content: end;
+    background-color: white;
+}
+.custom_field-btn .formkit-outer {
+    margin: 15px 0px;
+}
+.custom_field-btn .formkit-input {
+    font-family: 'Roboto' !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.68px !important;
+    padding: 2.2px 14px !important;
+}
+.custom_field-btn > div:first-child .formkit-input {
+    background: transparent;
+    color: #2F3990;
+    border: 1px solid #2F3990;
+    margin-right: 20px !important;
+}
+.custom_field-btn > div:last-child .formkit-input {
+    background: #2F3990;
+    margin-right: 20px;
+}

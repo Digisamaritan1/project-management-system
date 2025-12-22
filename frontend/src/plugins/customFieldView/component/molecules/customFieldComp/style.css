@@ -1,0 +1,13 @@
+.createProject__table-header {
+    max-height: 280px;
+}
+.createProject__table-header table thead {
+    top: 0;
+    background-color: #f8f9fa;
+}
+.createProject__table-body-content {
+    width: 100px;
+}
+.createProject__custom-field-icon-title {
+    gap: 10px;
+}

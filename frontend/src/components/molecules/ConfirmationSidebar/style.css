@@ -1,0 +1,48 @@
+.archive-delete-title{
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+    margin-top: 24px;
+    margin-bottom: 5px;
+}
+.archive-delete-desc {
+    line-height: 24px;
+    color: #818181;
+    margin-bottom: 21px;
+}
+.archive-delete-input{
+    border: 1px solid #DFE1E6 !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+}
+.archive-delete-input::placeholder{
+    font-size: 16px !important;
+}
+.archive-delete-btnwrapper .outline-primary{
+    padding: 3px 13.2px !important;
+}
+.archive-delete-btnwrapper .btn-primary{
+    padding: 3px 14.21px !important;
+}
+.archive-delete-btnwrapper .btn-danger{
+    padding: 3px 13.88px !important;
+}
+.conformation__sidebar-component{
+    height:calc(100vh - 46px);
+}
+.closeee__image-icon{
+    right: 15px; 
+    top: 14px;
+}
+.type__confirmation-string{
+    word-break: break-all;
+}
+.archive-delete-input{
+    max-width:420px !important;
+}
+
+@media(max-width:767px){
+    .p-040 {padding: 2.5rem 1.5rem !important;}
+    .archive-delete-title {margin-top: 15px;}
+}

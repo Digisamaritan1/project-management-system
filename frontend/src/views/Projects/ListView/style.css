@@ -1,0 +1,17 @@
+.list_view {
+  overflow-y: auto;
+  height: 100%;
+  padding: 0px 20px 15px 20px;
+}
+.list-view-wrapper{
+  height: calc(100% - 98px);
+}
+@media(max-width:767px){
+  .list_view {
+    padding: 0px 16px 15px 16px!important;
+}
+}
+
+@media(max-width:414px) {
+  .list_view {padding: 0px 10px 15px 10px!important;}
+}

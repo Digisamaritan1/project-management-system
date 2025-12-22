@@ -1,0 +1,15 @@
+.wrapperNameImage{
+    width:calc(100% - 30px);
+}
+
+.log-use-profile {
+    min-height: 30px;
+    min-width: 30px;
+}
+
+@media (max-width:991px){
+    .wrapperNameImage span {
+        font-size: 13px!important; 
+        line-height: 19px;
+    }
+}

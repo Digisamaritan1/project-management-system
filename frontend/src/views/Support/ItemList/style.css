@@ -1,0 +1,50 @@
+.subtask {
+    max-height: 290px;
+    overflow: auto;
+    display: contents;
+}
+.list_view {
+    overflow-x: auto;
+  }
+.item-head-draggable-div span{
+    min-width: 160px;
+}
+.item-head-draggable-div:hover{cursor: grab;}
+.span_wrapper {
+    width: 100%;
+    display: flex;
+    max-width: max-content;
+}
+.subtask img.draggable_icon {
+    position: absolute;
+    left: 25px;
+}
+img.draggable_icon {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    z-index: 3;
+}
+/* .subtask-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.subtask-wrapper {
+    max-height: 220px;
+    overflow-y: auto;
+} */
+/* .Task.main-task{
+    position: sticky;
+    top: 43px;
+    z-index: 6;
+    background-color: #fff;
+    } */
+/* .subtask-scroll {
+    max-height: 100px;
+    width: 100%;
+    min-width: fit-content;
+}
+.subtask-scroll::-webkit-scrollbar{display: none;} */
+.dragTask .parent__task-image {
+    display: none;
+}

@@ -1,0 +1,12 @@
+[{"name" : "Creative & Design", "key" : 1},
+{"name" : "Engineering & Product", "key" : 2},
+{"name" : "Finance & Accounting", "key" : 3},
+{"name" : "HR & Recruiting", "key" : 4},
+{"name" : "IT", "key" : 5},
+{"name" : "Marketing", "key" : 6},
+{"name" : "Operations", "key" : 7},
+{"name" : "PMO - Project Management", "key" : 8},
+{"name" : "Professional Services", "key" : 9},
+{"name" : "Sales & CRM", "key" : 10},
+{"name" : "Others", "key" : 11}
+]
