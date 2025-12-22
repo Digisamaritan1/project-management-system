@@ -861,18 +861,6 @@ exports.importCompanyRules = async(companyName,type,projectId) => {
             desc: ""
         },
         {
-            name: "Import Tasks",
-            key: "import_tasks",
-            dependency: "task",
-            desc: ""
-        },
-        {
-            name: "Export Tasks",
-            key: "export_tasks",
-            dependency: "task",
-            desc: ""
-        },
-        {
             name: "Convert to Task",
             key: "convert_to_task",
             dependency: "task",

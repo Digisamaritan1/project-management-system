@@ -4,7 +4,6 @@ import projectData from './ProjectData'
 import settings from './Settings'
 import users from './Users'
 import mainChat from './MainChats'
-import taskData from '../views/Support/store/TaskDatas'
 import brandSettingTab from './brandSettings'
 import ToursData from './Tours';
 
@@ -36,7 +35,6 @@ export default createStore({
         settings,
         users,
         mainChat,
-        taskData,
         brandSettingTab,
         ToursData
     },

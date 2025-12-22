@@ -91,7 +91,6 @@
                     <div>
                         <DropDownRouterOption v-if="rules && Object.keys(rules).length" :item="{image: profileIcon, to: {name: 'My Profile', params: {cid: companyId}}, label: $t('Header.my_profile')}" @click="$refs.profile_menu_dd.click()"/>
                         <DropDownRouterOption v-if="rules && Object.keys(rules).length" :item="{image: settingsIcon, to: {name: 'Setting', params: {cid: companyId}}, label: $t('settingslider.Settings')}" @click="$refs.profile_menu_dd.click()"/>
-                        <DropDownOption v-if="isOwnerOfAnyCompany" :item="{image: questionMarkDarkIcon, label: $t('Permissions.Support')}" @click="openSupport()" />
                         <BillingHistoryTab v-if="rules && Object.keys(rules).length && companyUser.roleType === 1" :companyId="companyId" :refs="$refs" />
                         <DropDownOption :item="{image: logoutIcon, label: $t('Header.Logout')}" @click="logout()" />
                     </div>
@@ -216,9 +215,6 @@
                         <div v-if="rules && Object.keys(rules).length" class="p-1 cursor-pointer border-radius-7-px mobile-menu-list" @click="$router.push({name: 'Setting', params: {cid: companyId}}), visible = false">
                             {{$t('settingslider.Settings')}}
                         </div>
-                        <div v-if="isOwnerOfAnyCompany" class="p-1 cursor-pointer border-radius-7-px mobile-menu-list" @click="openSupport(), visible = false">
-                            {{$t('Permissions.Support')}}
-                        </div>
                     </div>
                     <!-- BOTTOM SECTION -->
                     <div>
@@ -341,9 +337,8 @@ import Spinner from "@/components/atom/SpinnerComp/SpinnerComp.vue"
 import UserProfile from "@/components/atom/UserProfile/UserProfile.vue"
 import { useProjects } from '@/composable/projects';
 import * as env from '@/config/env';
-import { apiRequest, apiRequestWithoutCompnay,apiRequestWithoutSecure,useAuth } from "@/services";
+import { apiRequest, apiRequestWithoutCompnay,useAuth } from "@/services";
 import { UPDATE_UNREADREAD_COMMENTS_COUNT, USER_ID_COLLECTION, APP_NOTIFICATION } from "@/config/env";
-import { useToast } from "vue-toast-notification";
 import { clearFilterSignal } from "@/views/Projects/helper";
 
 // INTERFACES
@@ -357,7 +352,6 @@ const {openRoute, menu} = useHelper();
 const {getProjects} = useMainChat();
 const {getDateAndTime} = useProjects();
 const { logOut } = useAuth();
-const $toast = useToast();
 
 // IMAGES
 const closeBlueImage = require("@/assets/images/svg/CloseSidebar.svg");
@@ -370,7 +364,6 @@ const logoutIconMobile = require("@/assets/images/svg/Mobile_icon/logout.svg");
 const defaultUserIcon = inject("$defaultUserAvatar");
 const toggle = require("@/assets/images/svg/mobile_toggle_white.svg");
 const questionMarkIcon = require("@/assets/images/svg/questionmark.svg");
-const questionMarkDarkIcon = require("@/assets/images/svg/questionmark_dark.svg");
 const headerLogo = "/api/v1/getlogo?key=logo&type=web";
 // const notificationClose = require("@/assets/images/Shape 509.png");
 const tourComplete = require("@/assets/images/svg/tourcomplete.svg");
@@ -447,28 +440,6 @@ const dispatchEventForFilet = () => {
     document.dispatchEvent(ctrlKEv);
 }
 
-function openSupport() {
-    const domain = "https://support.alianhub.com";
-    const body = {
-        userName: "",
-        userEmail: ""
-    }
-
-    apiRequestWithoutSecure("post",`${domain}/api/auth/token`, body)
-    .then((res) => {
-        if (res && res.customerToken) {
-            const supportUrl = `${domain}/#/verify?token=${encodeURIComponent(res.customerToken)}`;
-            window.open(supportUrl, '_blank');
-        } else {
-            $toast.error("No token received from support API", {position: "top-right"});
-        }
-    })
-    .catch((error) => {
-        $toast.error("Something went wrong!", {position: "top-right"});
-        console.error("ERROR in generate token: ", error);
-    })
-}
-
 function processSprint(pid) {
     let total = 0;
     const keys = Object.keys(myCounts.value || {}).filter((x) => x.includes(`task_${pid}`));
@@ -507,9 +478,6 @@ const companies = computed(() => {
 
 const filteredCompanies = computed(() => {
     return companies.value.filter((x) => x._id !== companyId.value)
-})
-const isOwnerOfAnyCompany = computed(() => {
-    return filteredCompanies.value.findIndex((x) => x.userId === userId.value) !== -1;
 })
 
 const designations = computed(() => getters["settings/designations"])

@@ -19,14 +19,9 @@ app.use(bodyParser.raw({limit: '50mb'}));
 if (!config.UNDER_MAINTENANCE || config.UNDER_MAINTENANCE == "false") {
     app.use(express.static(path.join(__dirname, './frontend/dist')));
     app.use(express.static(path.join(__dirname, './installation/dist')));
-    app.use(express.static(path.join(__dirname, './admin/dist')));
     // RUN FRONTEND SERVER
     app.get("/", (req, res) => {
         res.sendFile(path.join(__dirname, './frontend/dist/index.html'));
-    });
-    // RUN ADMIN SERVER
-    app.get("/admin", (req, res) => {
-        res.sendFile(path.join(__dirname, './admin/dist/index.html'));
     });
 } else {
     // RUN UNDER MAINTENANCE SERVER
@@ -184,7 +179,6 @@ function initializeControllers() {
     require("./Modules/generateMongoId/init").init(app);
     require("./Modules/UserDashboard/init.js").init(app);
     require("./Modules/affiliate/init").init(app);
-    require("./Modules/Reports/TimeForcasting/init").init(app);
     require("./Modules/Reviews/init").init(app);
     require("./Modules/oAuth/init.js").init(app);
     require("./Modules/githubOAuth/init.js").init(app);

@@ -94,12 +94,11 @@ import { useRoute, useRouter } from 'vue-router';
 import { languageTranslateHelper } from './composable/index';
 import {socketHelper} from './composable/socketHelper';
 import { useCustomComposable } from '@/composable';
-import { apiRequest,apiRequestWithoutCompnay,useAuth } from './services';
+import { apiRequest,apiRequestWithoutCompnay } from './services';
 import * as env from '@/config/env';
 import {tabSyncHelper} from '@/utils/tabSyncs.js';
 import Cookies from 'js-cookie'
 const {tabSync} = tabSyncHelper();
-const { logOut } = useAuth();
 const mainTour = ref();
 
 // COMPONENT
@@ -268,10 +267,6 @@ async function getFirebaseData() {
                 userId.value = user._id;
                 
                 localStorage.setItem('logged', true);
-                if(userId.value === process.env.VUE_APP_SUPPORT_USER_ID && route.name && route.name !== 'Support'){
-                    logOut();
-                    return;
-                }
 
                 const userResult = await apiRequestWithoutCompnay('get',`${env.USER_UPATE}/${userId.value}`);
                 let userData = {}

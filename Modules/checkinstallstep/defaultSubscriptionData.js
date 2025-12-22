@@ -57,7 +57,5 @@ exports.planObj = {
     "bucketStorage": null,
     "maxFileSize": null,
     "aiRequest": null,
-    "aiPermission": true,
-    "taskImportPermission": true,
-    "taskExportPermission": true
+    "aiPermission": true
 }

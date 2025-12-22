@@ -46,8 +46,6 @@
                         || (!folder && checkPermission('project.sprint_restore',project.isGlobalPermission) === true && showArchived)
                         || (folder && checkPermission('project.folder_archive',project.isGlobalPermission) === true && !showArchived)
                         || (!folder && checkPermission('project.sprint_archive',project.isGlobalPermission) === true && !showArchived)
-                        || (!folder && checkPermission('task.import_tasks',project.isGlobalPermission) === true)
-                        || (!folder && checkPermission('task.export_tasks',project.isGlobalPermission) === true)
                     ) && checkPermission('project.project_list',project.isGlobalPermission) === true
                     && (showArchived ? data.deletedStatusKey === 2 : !data.deletedStatusKey)
                 ">
@@ -73,18 +71,6 @@
                                 <div class="d-flex align-items-center project-mobile-desc">
                                     <img :src="inventoryIcon" alt="inventoryIcon" class="mr-10px">
                                     {{$t('Projects.archive')}}
-                                </div>
-                            </DropDownOption>
-                            <DropDownOption v-if="!folder && checkPermission('task.import_tasks',project.isGlobalPermission) === true" @click="handleImportClick" @toggle-import-modal="(showImportModal = !val)">
-                                <div class="d-flex align-items-center project-mobile-desc">
-                                    <img :src="importIcon" alt="importIcon" class="mr-10px">
-                                    {{$t('importTaskButton.import_button')}}
-                                </div>
-                            </DropDownOption>
-                            <DropDownOption v-if="!folder && checkPermission('task.export_tasks',project.isGlobalPermission) === true" @click="handleExportClick">
-                                <div class="d-flex align-items-center project-mobile-desc">
-                                    <img :src="exportIcon" alt="exportIcon" class="mr-10px">
-                                    {{$t('importTaskButton.export_button')}}
                                 </div>
                             </DropDownOption>
                        
@@ -186,11 +172,7 @@ const {getters,commit} = useStore();
 const clientWidth = inject("$clientWidth");
 const showArchived = inject("showArchivedProjects");
 const isOpened = ref(false)
-const exportTasks = inject("ExportTaskAsCsv");
 
-const currentCompany = computed(() => getters['settings/selectedCompany']);
-const importTaskPermission = currentCompany?.value.planFeature.taskImportPermission;
-const exportTaskPermission = currentCompany?.value.planFeature.taskExportPermission;
 
 // IMAGES
 const inventoryIcon = require("@/assets/images/svg/inventoryIcon.svg");
@@ -200,8 +182,6 @@ const folderIcon = require("@/assets/images/folder.png");
 const editIcon = require("@/assets/images/svg/rename.svg");
 const filledStar = require("@/assets/images/svg/start10.svg");
 const blankStar = require("@/assets/images/svg/blankStar.svg");
-const importIcon = require("@/assets/images/svg/importIcon.svg");
-const exportIcon = require("@/assets/images/svg/exportIcon.svg");
 
 defineComponent({
     name: "sub-item",
@@ -248,21 +228,6 @@ const companyUsers = computed(() => {
     return getters["settings/companyUsers"]?.map((x) => x.userId)
 })
 
-const handleImportClick = () => {
-    if (!importTaskPermission) {
-        $toast.error(t("Toast.Upgrade_for_import"), {position: "top-right"});
-        return;
-    }
-    showImportModal.value = true;
-};
-
-const handleExportClick = () => {
-    if (!exportTaskPermission) {
-        $toast.error(t("Toast.Upgrade_for_export"), {position: "top-right"});
-        return;
-    }
-    exportTasks({ sprintId: sprint?.value._id, projectId: project?._id, fileName: (`${project?.value.ProjectCode}_${sprint?.value.name}` || 'Project_SprintData')});
-};
 
 const sprints = computed(() => {
     let tmp = {};
@@ -287,7 +252,6 @@ const sprint = computed(() => {
     return props.data;
 })
 
-const importTaskRef = ref(null);
 const showImportModal = ref(false);
 const spinner = ref(false);
 const archive = ref(false);

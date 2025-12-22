@@ -130,18 +130,6 @@
                                 {{$t('Projects.archive')}}
                             </div>
                         </DropDownOption>
-                        <DropDownOption @click="handleImportClick" @toggle-import-modal="(showImportModal = !val)" v-if="!showArchiveVar && checkPermission('task.import_tasks',project.isGlobalPermission) === true">
-                        <div class="d-flex align-items-center project-mobile-desc">
-                            <img :src="importIcon" alt="importIcon" class="mr-10px">
-                                {{$t('importTaskButton.import_button')}}
-                            </div>
-                        </DropDownOption>
-                        <DropDownOption @click="handleExportClick" v-if="!showArchiveVar && checkPermission('task.export_tasks',project.isGlobalPermission) === true">
-                            <div class="d-flex align-items-center project-mobile-desc">
-                                <img :src="exportIcon" alt="exportIcon" class="mr-10px">
-                                {{$t('importTaskButton.export_button')}}
-                            </div>
-                    </DropDownOption>
                     <DropDownOption @click="$refs[sprint.id]?.click(), showSidebar = true, archive = false">
                         <div class="d-flex align-items-center project-mobile-desc mobile-deleteIcon red">
                             <img :src="deleteIcon" alt="deleteIcon" class="mr-10px">
@@ -270,7 +258,6 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 // UTILS
-const exportTasks = inject("ExportTaskAsCsv");
 const project = inject("selectedProject");
 const searchedTask = inject("searchedTask");
 const clientWidth = inject("$clientWidth");
@@ -295,8 +282,6 @@ const eyeIcon = require('@/assets/images/svg/PriorityIcon/watchProjectEye.svg');
 const inventory_2 = require('@/assets/images/inventory_2.png');
 const horizontalDots = require("@/assets/images/svg/horizontalDots.svg");
 const aiIcon = require("@/assets/images/svg/ai_image.svg");
-const importIcon = require("@/assets/images/svg/importIcon.svg");
-const exportIcon = require("@/assets/images/svg/exportIcon.svg");
 const inventoryIcon = require("@/assets/images/svg/inventoryIcon.svg");
 const restore_icon = require("@/assets/images/svg/restore_icon.svg");
 const deleteIcon = require("@/assets/images/svg/deleteIcon.svg");
@@ -340,7 +325,6 @@ const companyOwner = computed(() => {
 })
 
 const companyOwnerId = computed(() => getters["settings/companyOwnerDetail"]?.userId)
-const currentCompany = computed(() => getters['settings/selectedCompany']);
 
 const createTask = ref(false);
 const assigneeInProgress = ref(false);
@@ -357,24 +341,7 @@ const isSpinner = ref(false);
 const isCreateSpinner = ref(false);
 const isError = ref(false);
 const showImportModal = ref(false);
-const importTaskPermission = currentCompany?.value.planFeature.taskImportPermission;
-const exportTaskPermission = currentCompany?.value.planFeature.taskExportPermission;
 
-const handleImportClick = () => {
-    if (!importTaskPermission) {
-        $toast.error(t("Toast.Upgrade_for_import"), {position: "top-right"});
-        return;
-    }
-    showImportModal.value = true;
-};
-
-const handleExportClick = () => {
-    if (!exportTaskPermission) {
-        $toast.error(t("Toast.Upgrade_for_export"), {position: "top-right"});
-        return;
-    }
-    exportTasks({ sprintId: props.sprint._id, projectId: project?._id, fileName:(`${project?.value.ProjectCode}_${props.sprint.name}` || 'Project_SprintData')});
-};
 
 watch(props.sprint, (val) => {
     if(val.isExpanded === false && createTask.value === true) {

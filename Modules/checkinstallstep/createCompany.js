@@ -7,13 +7,13 @@ const logger = require('../../Config/loggerConfig.js');
 const { default: mongoose } = require("mongoose");
 const { emitListener } = require("./eventController.js");
 const createUserRef = require("../auth/controller/createUser.js");
-const sendMailRef = require("../auth/controller/sendVerificationMail")
+const sendMailRef = require("../auth/controller/sendVerificationMail.js")
 const { dbCollections } = require("../../Config/collections.js");
 // const { installSteps, envVar } = require("./controller.js");
 const mainCtr = require("./controller.js");
 const installStepsFilePath = __dirname + "/../../installationSteps.json";
 const defaultSubscriptionDataRef = require("./defaultSubscriptionData.js")
-const serviceFun = require("../serviceFunction");
+const serviceFun = require("../serviceFunction.js");
 const { updateCompanyFun } = require("../Company/controller/updateCompany.js");
 const { updateUserFun, getUserByQueyFun } = require("../usersModule/controller.js");
 const { storeRefferalCode } = require("../affiliate/controller.js");
@@ -269,7 +269,7 @@ exports.createCompany = (data) => {
                                 }]
                             }
                             updateCompanyFun(SCHEMA_TYPE.GOLBAL,obj,"findOneAndUpdate",companyId)
-                            .then(async ()=>{
+                            .then(async()=>{
                                 await storeRefferalCode(companyId,data.userId);
                                 mainCtr.installSteps[7].status = "done";
                                 serviceFun.writeFile(installStepsFilePath, JSON.stringify({installSteps: mainCtr.installSteps, envVar: mainCtr.envVar}, null, 4), () => {

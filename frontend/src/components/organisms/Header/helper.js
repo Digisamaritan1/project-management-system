@@ -81,19 +81,6 @@ export function useHelper() {
                     name: "Milestone_Report",
                     to: {path: `/${companyId.value}/report/milestone`},
                     show:checkPermission('sheet_settings.milestone_report') !== null
-                },
-                {
-                    name: "Project_Forecasting",
-                    show: true
-                },
-                {
-                    name: "Resource_Planning",
-                    show: true
-                },
-                {
-                    name: "Time_Forcasting",
-                    to: { path: `/${companyId.value}/report/time-forcasting` },
-                    show: true
                 }
             ]
         }

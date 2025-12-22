@@ -52,17 +52,6 @@ const routes = [
 			title: '404'
 		}
 	},
-	{
-		path: "/:cid/support/:pid/:cuid",
-		name: "Support",
-		meta: {
-            title: "Support",
-            requiresAuth: false,
-			hideHeader: true,
-            preventAdvanceSearch: true
-        },
-		component: () => import(/* webpackChunkName: "project" */ '@/views/Support/Support')
-	},
 	...checkoutRoute,
 ]
 

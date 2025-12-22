@@ -2,26 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const logger = require("../../../Config/loggerConfig");
 
-exports.getEnv = (req, res) => {
-    try {
-        const filePath = __dirname + "/../../../.env";
-        const envFile = fs.readFileSync(filePath);
-        const envConfig = require('dotenv').parse(envFile);
-        res.json({
-            status: true,
-            data: envConfig
-        });
-    } catch(error) {
-        logger.error(`Get Env Data Error: ${error.message || error}`);
-        res.json({
-            status: false,
-            error: `Get Env Data Error: ${error.message || error}`
-        });
-    }
-};
-
-
-
 
 exports.getlogo = (req, res) => {
     try {
@@ -65,18 +45,13 @@ exports.getlogo = (req, res) => {
             folderName = "ghost-user-image/"
             folderFullPath = __dirname + "/" + rootPath + folderName;
         }
-
-        try {
-            fs.readdir(folderFullPath, (err, files) => {
-                files?.forEach(file => {
-                    fileName = file || "";
-                });
-                const filePath = rootPath + folderName + fileName;
-                res.sendFile(path.join(__dirname, filePath));
+        fs.readdir(folderFullPath, (err, files) => {
+            files.forEach(file => {
+                fileName = file || "";
             });
-        } catch (e) {
-            logger.error(`ERROR in read file ${folderFullPath}`);
-        }
+            const filePath = rootPath + folderName + fileName;
+            res.sendFile(path.join(__dirname, filePath));
+        });
 
     } catch (error) {
         console.log("error", error);
@@ -84,34 +59,6 @@ exports.getlogo = (req, res) => {
     }
 };
 
-exports.uploadLogoFile = (req, res) => {
-    // console.log(">>>>>>>> req.body", req.body);
-    if (req.file === undefined || req.file.path === undefined) {
-        res.send({
-            status: false,
-            statusText: 'file is required'
-        });
-        return;
-    }
-    res.send({
-        status: true,
-        statusText: 'File Uploaded'
-    });
-}
-
-exports.saveBrandSettingsData = (req, res) => {
-    const data = req.body;
-
-    const filePath = path.join(__dirname, '/../../../' , 'brandSettings.json');
-
-    fs.writeFile(filePath, JSON.stringify(data, null, 2), (err) => {
-        if (err) {
-            logger.error('Error writing file saveBrandSettingsData:', err);
-            return res.status(500).send('Internal Server Error');
-        }
-        res.status(200).send('Data saved successfully');
-    });
-}
 
 exports.makeDefaultBrandSettings = () => {
     return new Promise((resolve, reject) => {
@@ -121,8 +68,7 @@ exports.makeDefaultBrandSettings = () => {
                 // "productDescription": "Welcome to User Guide of all-in-one project management system - Alian Hub. You will find detailed instructions, steps and helpful hints for your queries here. From getting started by creating your first project to ensuring that your team has access to all of the resources they need, checking the status of the project and successfully completing the tasks. This user guide will lead you across anything you need to learn and understand. You can view the details of every query through the sections of this user guide.",
                 "termsOfService": "https://alianhub.com/terms-and-conditions/",
                 "privacyPolicy": "https://alianhub.com/privacy-policy/",
-                "helpLink":"https://help.alianhub.com/",
-                "supportLink":"https://alianhub.com/contact-us/"
+                "helpLink":"https://help.alianhub.com/"
             };
             const filePath = path.join(__dirname, '/../../../' , 'brandSettings.json');
             if (!fs.existsSync(filePath)) {

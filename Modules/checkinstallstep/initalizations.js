@@ -1,5 +1,6 @@
 const { SCHEMA_TYPE } = require("../../Config/schemaType");
 const { importRestrictedExtensions, importCustomFields, importTours } = require("../../utils/data");
+const { uploadPublicAssets } = require('../storage/wasabi/controller');
 
 exports.startInitialization = () => {
     return new Promise((resolve, reject) => {
@@ -17,6 +18,11 @@ exports.startInitialization = () => {
             promises.push(
                 // ADD Project Tour
                 importTours(SCHEMA_TYPE.GOLBAL)
+            )
+
+            promises.push(
+                // Upload public assets
+                uploadPublicAssets()
             )
 
             Promise.allSettled(promises)
