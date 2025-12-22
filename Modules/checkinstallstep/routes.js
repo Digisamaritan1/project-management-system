@@ -1,5 +1,6 @@
 const ctrl = require('./controller');
 const { handleEvents } = require('./eventController');
+const createCompanyctrl = require('./createCompany');
 
 exports.init = (app) => {
     //
@@ -14,8 +15,5 @@ exports.init = (app) => {
 
     app.get('/api/v1/installstep/get', ctrl.installstepget);
     app.get('/api/v1/getAiModels', ctrl.getAiModels);
-    if (process.env.CANYONLICENSEKEY) {
-        const createCompanyctrl = require('./createCompany');
-        app.post('/api/v1/installstep/createUserAndCompany', createCompanyctrl.createUserAndCompany);
-    }
+    app.post('/api/v1/installstep/createUserAndCompany', createCompanyctrl.createUserAndCompany);
 };

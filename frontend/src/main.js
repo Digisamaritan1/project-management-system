@@ -20,7 +20,6 @@ import chargebeePlugin from './plugins/chargebee/chargebeePlugin';
 import paddlePlugin from './plugins/paddle/paddlePlugin';
 import customfieldPlugin from './plugins/customFieldView/customFieldPlugin';
 import dashboardPlugin from './plugins/dashboard/dashboardPlugin';
-import affiliatePlugin from './plugins/affiliate/affiliatePlugin';
 import importTasksPlugin from './plugins/importTasks/importTasksPlugin';
 import exportTasksPlugin from './plugins/exportTasksPlugin/exportTasksPlugin';
 import tasklistDashboardPlugin from './plugins/tasklistDashboard/tasklistDashboardPlugin';
@@ -50,7 +49,6 @@ const pluginArray = [
   paddlePlugin,
   customfieldPlugin,
   dashboardPlugin,
-  affiliatePlugin,
   importTasksPlugin,
   exportTasksPlugin,
   tasklistDashboardPlugin,

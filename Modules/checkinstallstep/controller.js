@@ -19,7 +19,7 @@ exports.envVar = {
 
 exports.tmpInstallSteps = [{
     step: 1,
-    status: 'todo',
+    status: 'done',
     subStep: []
 }, {
     step: 2,
@@ -399,53 +399,10 @@ exports.checkSMTPConnection = async (bodyData, cb) => {
  */
 exports.checkTokenConnection = (req, cb) => {
     try {
-        if (!req.body.canyonlicensekey) {
-            cb({
-                status: false,
-                statusText: "Licensekey is Required",
-                error: "Licensekey is Required"
-            });
-            return;
-        }
-        const data = {
-            licensesKey: req.body.canyonlicensekey,
-        };
-        axios.post(`${process.env.CANYONAPIURL}/api/v1/validateRequest`, data, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Origin': req.get('Origin')
-            }
-        })
-        .then(response => {
-            exports.envVar.CANYONLICENSEKEY = req.body.canyonlicensekey;
-            exports.envVar.CANYONLICENSEID = response?.data?.data?._id || "";
-            const statusUpdateData = {
-                productionUrl: req.get('Origin'),
-                licenseId: exports.envVar.CANYONLICENSEID,
-                updateStatus: 1,
-                version: "v" + pjson.version
-            }
-            axios.post(`${process.env.CANYONAPIURL}/api/v1/updateProductionStatus`, statusUpdateData, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                }
-            })
-            .then(() => {}).catch(() => {});
-            serviceFun.writeFile(installStepsFilePath, JSON.stringify({installSteps: exports.installSteps, envVar: exports.envVar}, null, 4), () => {
-                cb({
-                    status: true,
-                    statusText: "Token Connected",
-                    data: response?.data || response,
-                });
-            });
-        })
-        .catch(error => {
-            cb({
-                status: false,
-                error: error?.response?.data?.message || ""
-            });
+        cb({
+            status: true,
+            statusText: "Token Connected",
+            data: response?.data || response,
         });
 
     } catch (error) {
@@ -966,13 +923,6 @@ exports.checkinstallstep = (req, res) => {
                             updateStatus: 2,
                             version: "v" + pjson.version
                         }
-                        axios.post(`${process.env.CANYONAPIURL}/api/v1/updateProductionStatus`, statusUpdateData, {
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/json',
-                            }
-                        })
-                        .then(() => {}).catch(() => {});
 
                         fs.unlinkSync(installStepsFilePath);
                         setTimeout(() => {

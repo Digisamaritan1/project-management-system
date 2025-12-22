@@ -28,10 +28,6 @@ if (!config.UNDER_MAINTENANCE || config.UNDER_MAINTENANCE == "false") {
     app.get("/", (req, res) => {
         res.sendFile(path.join(__dirname, './under-maintenance/index.html'));
     });
-    const versionData = require("./update-process/version.json");
-    app.get("/upgrade", (req, res) => {
-        res.sendFile(path.join(__dirname, './under-maintenance/upgrade.html'), { headers: { 'x-app-version':  packJOSNData.version, 'x-app-version-data': JSON.stringify(versionData)} });
-    });
 
     app.use(express.static(path.join(__dirname, 'under-maintenance')));
     app.use(express.static(path.join(__dirname, 'log')));
@@ -142,7 +138,6 @@ function initializeControllers() {
     require('./Modules/Project/init').init(app);
     require('./Modules/Teams/init').init(app);
     require('./Modules/tours/init').init(app);
-    require('./update-process/router').init(app);
     require('./Modules/AdvanceGlobalFilter/init.js').init(app);
     require('./Modules/settings/settingCurrency/init').init(app);
     require('./Modules/settings/settingNotifications/init').init(app);
