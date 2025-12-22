@@ -19,7 +19,6 @@ import createcompanyinsidePlugin from './plugins/createcompanyinside/createcompa
 import chargebeePlugin from './plugins/chargebee/chargebeePlugin';
 import paddlePlugin from './plugins/paddle/paddlePlugin';
 import customfieldPlugin from './plugins/customFieldView/customFieldPlugin';
-import upgradeVersionProcessPlugin from './plugins/upgradeVersionProcess/upgradeVersionProcessPlugin';
 import dashboardPlugin from './plugins/dashboard/dashboardPlugin';
 import affiliatePlugin from './plugins/affiliate/affiliatePlugin';
 import importTasksPlugin from './plugins/importTasks/importTasksPlugin';
@@ -50,7 +49,6 @@ const pluginArray = [
   chargebeePlugin,
   paddlePlugin,
   customfieldPlugin,
-  upgradeVersionProcessPlugin,
   dashboardPlugin,
   affiliatePlugin,
   importTasksPlugin,

@@ -7,7 +7,6 @@
                     {{ $route.meta.title === 'My Profile' ? $t(`Header.my_profile`) : $t(`settingslider.${$route.meta.title}`) }}
                 </span>
             </div>
-            <UpgradeVersionBtn v-if="$route.meta.title === 'Settings' && user.isProductOwner" @clickReleaseNoteModel="(val) => {openReleaseNoteModel = val}"></UpgradeVersionBtn>
             <button @click="openTeamSidebar = true" class="white border-0 cursor-pointer blue_btn align-items-center d-flex mr-0" v-if="$route.meta.title === 'Teams' && checkPermission('settings.settings_create_team') === true && currentCompany?.planFeature?.team"><img :src=" addnewteam" alt="AddNewTeam" class="mr-5px"> {{ $t('Permissions.add_new_team') }}</button>
             <button @click="toggleCreateProjectSB()" class="white border-0 cursor-pointer blue_btn align-items-center d-flex align-items-center justify-content-center add__new-project" v-if="$route.meta.title === 'Projects' && checkPermission('project.project_list') === true && checkPermission('project.project_create') === true" >+ {{$t('Settings.add_new_projects')}}</button>
         </div>
