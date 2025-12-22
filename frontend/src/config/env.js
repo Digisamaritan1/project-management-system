@@ -1,9 +1,5 @@
 module.exports.DEFAULT_COUNTRY_CODE = "IN";
 module.exports.DEFAULT_STATE_CODE = "GJ";
-module.exports.CHARGEBEE_SITE = process.env.VUE_APP_CHARGEBEE;
-module.exports.CANYONLICENSETYPE = process.env.VUE_APP_CANYONLICENSETYPE;
-module.exports.CANYON_IS_SINGLE_APP = process.env.VUE_APP_CANYON_IS_SINGLE_APP;
-module.exports.CHARGEBEE_PUBLISHABLE_KEY = process.env.VUE_APP_CHARGEBEE_PUBLISHABLE_KEY;
 module.exports.STORAGE_TYPE = process.env.VUE_APP_STORAGE_TYPE;
 module.exports.AFFILITAION_ON= process.env.VUE_APP_AFFILIATEON
 // API's

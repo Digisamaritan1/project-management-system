@@ -193,9 +193,9 @@ require('./Config/setMiddleware.js').setMiddlewareV2(app);
 
 //CONFIGURE ENV FILE
 require('dotenv').config();
-if (process.env.CANYONLICENSEKEY) {
-    initializeControllers();
-}
+// if (process.env.CANYONLICENSEKEY) {
+//     initializeControllers();
+// }
 
 if (!process.env.STORAGE_TYPE) {
     process.env.STORAGE_TYPE = "wasabi";

@@ -334,7 +334,7 @@
                     return;
                 }
     
-                const isProductOwner = await apiRequestWithoutCompnay('get',`${env.USER_UPATE}/${userId.value}`)
+                await apiRequestWithoutCompnay('get',`${env.USER_UPATE}/${userId.value}`)
                 .then((result) => {
                     if(result.status === 200) {
                         userEmail.value = result?.data?.Employee_Email;
@@ -349,11 +349,11 @@
                     return false;
                 })
 
-                if(!(isProductOwner || (env.CANYONLICENSETYPE === "Extended License" && env.CANYON_IS_SINGLE_APP == 'false'))) {
-                    $toast.error(t("Toast.Only_product_owner_can_create_a_company"), {position: "top-right"})
-                    logOut();
-                    return;
-                }
+                // if(!(isProductOwner || (env?.CANYONLICENSETYPE === "Extended License" && env?.CANYON_IS_SINGLE_APP == 'false'))) {
+                //     $toast.error(t("Toast.Only_product_owner_can_create_a_company"), {position: "top-right"})
+                //     logOut();
+                //     return;
+                // }
                 mainSpinner.value = false;
                 
                 nextTick(() => {

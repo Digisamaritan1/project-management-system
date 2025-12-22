@@ -523,18 +523,9 @@ self.addEventListener('push', event => {
         data += `VUE_APP_APPID='${process.env.APPID}'\n`;
         data += `VUE_APP_MEASUREMENTID='${process.env.MEASUREMENTID}'\n\n`;
         data += "# Chargbee Configrations\n";
-        data += `VUE_APP_CHARGEBEE='${process.env.CHARGEBEE_SITE}'\n`;
-        data += `VUE_APP_CHARGEBEE_PUBLISHABLE_KEY='${process.env.CHARGEBEE_API_KEY}'\n\n`;
         data += `VUE_APP_CANYONAPIURL='${process.env.CANYONAPIURL}'\n`;
-        data += `VUE_APP_CANYONLICENSEKEY='${process.env.CANYONLICENSEKEY}'\n`;
-        data += `VUE_APP_CANYONLICENSETYPE='${process.env.CANYONLICENSETYPE}'\n`;
-        data += `VUE_APP_CANYON_IS_SINGLE_APP=${process.env.CANYON_IS_SINGLE_APP}\n`;
         data += `VUE_APP_STORAGE_TYPE='${process.env.STORAGE_TYPE}'\n`;
-        if (process.env.CANYONLICENSETYPE === "Extended License" && process.env.CANYON_IS_SINGLE_APP == "false") {
-            data += `VUE_APP_AFFILIATEON='true'\n`;
-        } else {
-            data += `VUE_APP_AFFILIATEON='false'\n`;
-        }
+        data += `VUE_APP_AFFILIATEON='false'\n`;
 
         fs.writeFile(filePathEnv, data, (err, data) => {
             if (err) {

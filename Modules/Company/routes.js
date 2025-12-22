@@ -110,7 +110,6 @@ exports.init = (app) => {
      */
 	app.post("/api/v2/company/create", upload.single("file"), ctrl.createCompanyV2);
 	app.get("/api/v1/freeCompanyCount/:userId", ctrl.checkFreeCompanyCountsApi);
-	app.post("/api/v2/company/createAdmin", upload.single("file"), ctrl.createCompanyFromAdmin);
 	app.post("/api/v2/company/delete", ctrl.deleteCompany);
     app.get('/company-create/events/:id', (req, res) => {
         res.setHeader('Content-Type', 'text/event-stream');

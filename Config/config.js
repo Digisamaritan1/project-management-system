@@ -48,9 +48,7 @@ module.exports = {
     PRECOMPANYKEY: process.env.PRECOMPANYKEY,
 
     CANYONAPIURL: process.env.CANYONAPIURL,
-    CANYONLICENSEKEY:process.env.CANYONLICENSEKEY,
     ENTERPRISEURL: process.env.ENTERPRISEURL,
-    CANYONLICENSETYPE: process.env.CANYONLICENSETYPE,
     PAYMENTMETHOD: process.env.PAYMENTMETHOD,
 
     AI_API_KEY:process.env.AI_API_KEY,
@@ -58,7 +56,6 @@ module.exports = {
 
     STORAGE_TYPE:process.env.STORAGE_TYPE,
 
-    PADDLE_URL:process.env.PADDLE_URL,
     PADDLE_API_KEY:process.env.PADDLE_API_KEY,
     UNDER_MAINTENANCE: process.env.UNDER_MAINTENANCE,
     myCache: myCache,
