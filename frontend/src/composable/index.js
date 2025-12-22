@@ -4,7 +4,6 @@ import moment from "moment";
 import * as env from '@/config/env';
 import { apiRequest } from '../services';
 import { useToast } from "vue-toast-notification";
-import axios from "axios";
 import Store from '@/store/index'
 import { storageQueryBuilder } from "@/utils/storageQueryBuild";
 import { i18n } from "@/locales/main";
@@ -800,19 +799,17 @@ export function languageTranslateHelper() {
     const storedLanguage = localStorage.getItem('language');
     const selectedLanguageCode = ref(storedLanguage ? storedLanguage : 'en');
 
-    const changeLanguage = (selectedLanguage = "en") => {
-        return new Promise((resolve) => {
-            const languageUrl = env.API_URI;
-            axios.get(`${languageUrl}/api/v1/translation/${selectedLanguage}`)
-            .then((res) => {
-                resolve(res);
-            })
-            .catch((error) => {
-                resolve(null);
-                console.error(error);
-            })
-        })
-    }
+    const changeLanguage = async (selectedLanguage = "en") => {
+        try {
+            const module = await import(`../locales/${selectedLanguage}.js`);
+            console.log("Loaded language file:", selectedLanguage);
+            return module.default;
+        } catch (error) {
+            console.error("Language file not found:", error);
+            return null;
+        }
+    };
+    
 
     return { selectedLanguageCode, changeLanguage };
 }

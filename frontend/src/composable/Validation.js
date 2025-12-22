@@ -1,5 +1,5 @@
 import { nextTick } from "vue";
-import { en } from "@/locales/en"
+import en from "@/locales/en"
 import { useI18n } from 'vue-i18n';
 export function useValidation() {
     const { t } = useI18n();

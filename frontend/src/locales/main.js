@@ -1,13 +1,12 @@
-import { createI18n } from 'vue-i18n';
-import { english } from '@/locales/en';
+import { createI18n } from "vue-i18n";
+import en from "./en";
 
-const messages = {
-  en: english
-};
 export const i18n = createI18n({
     legacy: false,
-    locale: 'en',
-    messages,
-    fallbackLocale:'en'
-  });
-  
+    globalInjection: true, // REQUIRED
+    locale: localStorage.getItem("language") || "en",
+    fallbackLocale: "en",
+    messages: {
+        en,
+    },
+});

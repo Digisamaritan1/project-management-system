@@ -279,7 +279,7 @@ async function getFirebaseData() {
                     localStorage.setItem('language', userData.languageCode);
                     const updateLanguage = await changeLanguage(userData.languageCode);
                     locale.value = userData.languageCode;
-                    setLocaleMessage(userData.languageCode, updateLanguage?.data || "en");
+                    setLocaleMessage(userData.languageCode, updateLanguage || "en");
                 }
 
                 await dispatch('settings/setCompanies', userData?.AssignCompany)
@@ -727,7 +727,7 @@ watch(underMaintainance, (newVal, oldVal) => {
 const changeLanguageHandler = async () => {
     const updateLanguage = await changeLanguage(selectedLanguageCode.value);
     locale.value = selectedLanguageCode.value;
-    setLocaleMessage(selectedLanguageCode.value, updateLanguage?.data || "en");
+    setLocaleMessage(selectedLanguageCode.value, updateLanguage || "en");
 }
 
 const handleSocketsConnection = async () => {

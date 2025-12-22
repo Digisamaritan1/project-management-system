@@ -1,18 +1,10 @@
 const nodemailer = require("nodemailer");
 const config =  require('../Config/config.js');
-const awsRef = require('../Config/aws.js');
 const logger = require("../Config/loggerConfig.js");
-const AWS = require('aws-sdk');
 
-AWS.config.update({
-    accessKeyId: config.AWS_SES_KEY,
-    secretAccessKey: config.AWS_SES_SECRET,
-    region: config.AWS_SES_REGION
-});
-const ses = new AWS.SES({apiVersion: '2010-12-01',region: config.AWS_SES_REGION });
 
 /**
- * Send email with AWS
+ * Send mail via email
  * @param {*} subject 
  * @param {*} html 
  * @param {*} toMail 
@@ -21,43 +13,36 @@ const ses = new AWS.SES({apiVersion: '2010-12-01',region: config.AWS_SES_REGION 
  */
 exports.SendEmail = async (subject, html, toMail, isHtml, cb) => {
     try {
-        const tmpToMail = toMail.toLowerCase().split(",");
-        let toArr = [];
-        if (tmpToMail.length === 1) {
-            toArr = [toMail.toLowerCase()];
-        } else {
-            toArr = tmpToMail;
-        }
 
-        const params = {
-            Destination: {
-                ToAddresses: toArr
+        let transporter = nodemailer.createTransport({
+            host: config.NODEMAILER_HOST,
+            port: config.NODEMAILER_PORT,
+            secure: config.NODEMAILER_PORT == 465, // true for 465, false for other ports
+            auth: {
+                user: config.NODEMAILER_EMAIL, // generated ethereal user
+                pass: config.NODEMAILER_EMAIL_PASSWORD, // generated ethereal password
             },
-            Message: {
-                Body: {
-                    ...(isHtml && { Html: { Charset: 'UTF-8',  Data: html } }),
-                    ...(!isHtml && { Text: { Charset: 'UTF-8',  Data: html } })
-                },
-                Subject: {
-                    Charset: 'UTF-8',
-                    Data: subject
-                }
-            },
-            ReturnPath: `${config.APP_NAME} <${config.AWS_SES_FROM_DEFAULT}>`,
-            Source: `${config.APP_NAME} <${config.AWS_SES_FROM_DEFAULT}>`,
-        };
-    
-        await awsRef.ses.sendEmail(params, (error, data) => {
-            if (error) {
+            tls: {
+                rejectUnauthorized: false
+            }
+        });
+
+        await transporter.sendMail({
+            from: ""+'<'+config.NODEMAILER_EMAIL+'>', // sender address
+            to: toMail, // list of receivers
+            subject: subject, // Subject line
+            [isHtml ? "html" : "text"]: html
+        },(err, res)=>{
+            if (err) {
                 cb({
-                    status: false,
-                    error: error.message
-                });
+                    status:false,
+                    error: err,
+                })
             } else {
                 cb({
                     status: true,
-                    data,
-                });
+                    data: res
+                })
             }
         });
     } catch(error) {
@@ -70,7 +55,7 @@ exports.SendEmail = async (subject, html, toMail, isHtml, cb) => {
 
 
 /**
- * Send notification via AWS email
+ * Send notification via email
  * @param {*} subject 
  * @param {*} html 
  * @param {*} toMail 
@@ -79,40 +64,36 @@ exports.SendEmail = async (subject, html, toMail, isHtml, cb) => {
  */
 exports.SendNotificationEmail = async (subject, html, toMail, isHtml, cb) => {
     try {
-        let toArr = [];
-        toMail.forEach((email) => {
-            toArr.push(email.toLowerCase());
+        const toArr = toMail.toString().toLowerCase()
+        let transporter = nodemailer.createTransport({
+            host: config.NODEMAILER_HOST,
+            port: config.NODEMAILER_PORT,
+            secure: config.NODEMAILER_PORT == 465, // true for 465, false for other ports
+            auth: {
+                user: config.NODEMAILER_EMAIL, // generated ethereal user
+                pass: config.NODEMAILER_EMAIL_PASSWORD, // generated ethereal password
+            },
+            tls: {
+                rejectUnauthorized: false
+            }
         });
 
-        const params = {
-            Destination: {
-                BccAddresses: toArr,
-            },
-            Message: {
-                Body: {
-                    ...(isHtml && { Html: { Charset: 'UTF-8',  Data: html } }),
-                    ...(!isHtml && { Text: { Charset: 'UTF-8',  Data: html } })
-                },
-                Subject: {
-                    Charset: 'UTF-8',
-                    Data: subject
-                }
-            },
-            ReturnPath: `${config.APP_NAME} <${config.AWS_SES_FROM_DEFAULT}>`,
-            Source: `${config.APP_NAME} <${config.AWS_SES_FROM_DEFAULT}>`,
-        };
-
-        await awsRef.ses.sendEmail(params, (error, data) => {
-            if (error) {
+        await transporter.sendMail({
+            from: ""+'<'+config.NODEMAILER_EMAIL+'>', // sender address
+            bcc: toArr, // list of receivers
+            subject: subject, // Subject line
+            [isHtml ? "html" : "text"]: html
+        },(err, res)=>{
+            if (err) {
                 cb({
-                    status: false,
-                    error: error.message
-                });
+                    status:false,
+                    error: err,
+                })
             } else {
                 cb({
                     status: true,
-                    data,
-                });
+                    data: res
+                })
             }
         });
     } catch(error) {
@@ -126,7 +107,7 @@ exports.SendNotificationEmail = async (subject, html, toMail, isHtml, cb) => {
 
 
 /**
- * Send attachment via AWS email
+ * Send Attachment via email
  * @param {*} subject 
  * @param {*} html 
  * @param {*} toMail 
@@ -135,10 +116,19 @@ exports.SendNotificationEmail = async (subject, html, toMail, isHtml, cb) => {
  */
 exports.sendAttachMail = (subject, html, toMail,attachMents, cb) => {
     let transporter = nodemailer.createTransport({
-        SES: ses
+        host: config.NODEMAILER_HOST,
+        port: config.NODEMAILER_PORT,
+        secure: config.NODEMAILER_PORT == 465, // true for 465, false for other ports
+        auth: {
+            user: config.NODEMAILER_EMAIL, // generated ethereal user
+            pass: config.NODEMAILER_EMAIL_PASSWORD, // generated ethereal password
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
     });
     transporter.sendMail({
-        from: config.AWS_SES_FROM_DEFAULT, // sender address
+        from: ""+'<'+config.NODEMAILER_EMAIL+'>', // sender address
         to: toMail, // list of receivers
         subject: subject, // Subject line
         html : html,

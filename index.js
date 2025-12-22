@@ -181,9 +181,9 @@ function initializeControllers() {
 }
 
 // FIRES EVENT WHEN THE ENV IS UPDATED
-fs.watchFile(__dirname+'/.env', () => {
+// fs.watchFile(__dirname+'/.env', () => {
     initializeControllers();
-})
+// })
 
 // SET MIDDLEWARE
 // require('./Config/setMiddleware.js').setMiddlewareWithC(app);

@@ -191,7 +191,7 @@
     import CroppingTool from "@/components/atom/CroppingTool/CroppingTool.vue";
     import { useI18n } from 'vue-i18n';
     import { languageTranslateHelper } from '../../../composable/index.js';
-    import axios from "axios";
+    import languageOptions from '@/utils/languagesName.json';
     import { useStore } from "vuex";
     const {commit} = useStore();
     const { selectedLanguageCode, changeLanguage } = languageTranslateHelper();
@@ -245,8 +245,6 @@
     const base64Image = ref()
 
     let selectedLanguageTitle = ref('')
-    const languageUrl = process.env.VUE_APP_CANYONAPIURL + '/api/v1/language';
-    const languageOptions = ref([])
     const stencilSize = {
         width: 180,
         height: 180
@@ -281,7 +279,7 @@
         } else {
             localStorage.setItem('language', selectedLanguageCode.value);
             locale.value = selectedLanguageCode.value;
-            setLocaleMessage(selectedLanguageCode.value, languageData.data);
+            setLocaleMessage(selectedLanguageCode.value, languageData);
         }
         checkAllFields(formData.value).then(async(valid)=>{
             if(valid){
@@ -384,18 +382,11 @@
         timeZone.value = 'user_timezone';
         init();
         startListener();
-        axios.get(languageUrl)
-        .then((res) => {
-            languageOptions.value = res.data;
-            checkLang();
-        })
-        .catch((error) => {
-            console.error(error);
-        })
+        checkLang();
     });
 
     const checkLang = () => {
-        languageOptions.value?.find((language) => {
+        languageOptions.find((language) => {
             if (language.code == selectedLanguageCode.value) {
                 selectedLanguageTitle.value = language.title;
             }

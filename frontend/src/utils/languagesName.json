@@ -1,0 +1,42 @@
+[
+    {
+        "code": "en",
+        "title": "English"
+    },
+    {
+        "code": "fr",
+        "title": "Français (French)"
+    },
+    {
+        "code": "gu",
+        "title": "ગુજરાતી (Gujarati)"
+    },
+    {
+        "code": "hi",
+        "title": "हिंदी (Hindi)"
+    },
+    {
+        "code": "spa",
+        "title": "Español (Spanish)"
+    },
+    {
+        "code": "ru",
+        "title": "Русский (Russian)"
+    },
+    {
+        "code": "it",
+        "title": "Italiano (Italian)"
+    },
+    {
+        "code": "ge",
+        "title": "Deutsch (German)"
+    },
+    {
+        "code": "gr",
+        "title": "ελληνικά (Greek)"
+    },
+    {
+        "code": "ch",
+        "title": "中国人 (Chinese)"
+    }
+]
