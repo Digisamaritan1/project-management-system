@@ -1,5 +1,4 @@
 const mongoC = require("../../utils/mongo-handler/mongoQueries")
-const { validateLicense } = require("../../utils/licensesValidate.js");
 const { dbCollections } = require('../../Config/collections');
 const fs = require("fs");
 const bcrypt = require('bcrypt');
@@ -106,25 +105,6 @@ exports.addAndRemoveUserInMongodbNotificationCount = (companyId,userId,type) => 
         }
     })
 }
-
-
-exports.verifyLicense = (req,res) => {
-    try {
-        let origin = req.get('Origin');
-        if (!origin) {
-            res.status(400).json({message: 'Invalid Request'});
-            return;
-        }
-        validateLicense(origin).then(()=>{
-            res.status(200).json({message: 'License Verification Success'});
-        }).catch((error)=>{
-            res.status(400).json({message: error.message ? error.message : error});
-        })
-    } catch (error) {
-        res.status(400).json({message: error.message ? error.message : error});
-    }
-}
-
 
 exports.checkAvaibility = (req,res) => {
     try {

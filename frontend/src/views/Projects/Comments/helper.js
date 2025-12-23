@@ -1,5 +1,4 @@
 import { useCustomComposable} from "@/composable";
-import { dbCollections } from "@/utils/Collections";
 import * as env from '@/config/env';
 import { apiRequest, apiRequestWithoutCompnay } from "../../../services";
 import {storageQueryBuilder} from '@/utils/storageQueryBuild.js';
@@ -337,41 +336,6 @@ export function sendMailFromMessage(to, subject, message) {
     } catch (error) {
         console.error("ERROR in send mail comment: ", error);
     }
-}
-
-export function cutomerDetails(customerId) {
-    return new Promise((resolve) => {
-        try {
-            let data = {
-                type: dbCollections.USERS,
-                data:[{
-                    _id:  customerId
-                }]
-            }
-            const axiosData = {
-                dataObj: data.data,
-                collection: data.type,
-                methodName: 'findOne'
-            };
-
-            apiRequestWithoutCompnay("post", `${env.CANYON_API_URI}${env.MONGO_OPRATION}`, axiosData)
-			.then((response) => response.data)
-			.then((response) => {
-                if(response.status) {
-                    resolve(response.statusText)
-                } else {
-                    resolve({});
-                }
-			})
-			.catch((error) => {
-				console.error("ERROR in get customer details", error);
-                resolve({});
-			})
-        } catch (error) {
-            console.error("ERROR in get customer details", error);
-            resolve({});
-        }
-    })
 }
 
 // --------------- Conditions to Show/Hide user Info ---------------

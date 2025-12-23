@@ -1,140 +1,93 @@
 const { default: axios } = require("axios");
 const config = require('../Config/config');
 const {myCache} = require('../Config/config');
+const projectTemplates = require('./projectTemplates.json');
+const aiPrompts = require('./aiPrompts.json');
+const apiCategories = require('./aiCategories.json');
+const aiModals = require('./aiModals.json');
 
-exports.getCachedPromptData = async(body) => {
-    return new Promise(async(resolve,reject) => {
+exports.getCachedPromptData = async (body) => {
+    return new Promise(async (resolve, reject) => {
         try {
             let cachedPromptData = myCache.get(body.query[0].title);
             if (!cachedPromptData) {
-
-                axios.post(`${config.CANYONAPIURL}/api/v1/findOnePrompts`,body).then((response) => {
-
-                    delete response.data.result.predefinedPrompt;
-
-                    if(response.data.status === true){
-                        myCache.set(body.query[0].title, response.data.result,3600);
-                        resolve({status: true,statusText: response.data.result})
-                    }
-                    else{
-                        resolve({status: false,statusText: 'Error'})
-                    }
-                })
-                .catch((error) => { 
-                    resolve({status: false,statusText: error})
-                })
-
-            }else{
-                resolve({status: true, statusText: cachedPromptData})
+                const result = aiPrompts.find((e) => e.title === body.query[0].title);
+                if (!result) {
+                    return resolve({
+                        status: false,
+                        statusText: "No Prompt Found",
+                    });
+                }
+                myCache.set(body.query[0].title, result, 3600);
+                resolve({ status: true, statusText: result });
+            } else {
+                resolve({ status: true, statusText: cachedPromptData });
             }
         } catch (error) {
             reject(error);
         }
-    })
-}
+    });
+};
 
-exports.getCachedAllPromptData = async() => {
-    return new Promise(async(resolve,reject) => {
+exports.getCachedAllPromptData = async () => {
+    return new Promise(async (resolve, reject) => {
         try {
-            let cachedAllPromptData = myCache.get('getAllPrompt');
+            let cachedAllPromptData = myCache.get("getAllPrompt");
             if (!cachedAllPromptData) {
-
-                axios.post(`${config.CANYONAPIURL}/api/v1/getPrompt`).then((response) => {
-
-                    if(response.data.status === true){
-                        let result = response.data.result.map(({ predefinedPrompt, ...rest }) => rest)
-                        resolve({status: true,statusText: result})
-                        myCache.set("getAllPrompt", result,3600);
-                    }
-                    else{
-                        resolve({status: false,statusText: 'Error'})
-                    }
-                })
-                .catch((error) => {
-                    resolve({status: false,statusText: error})
-                })
-
-            }else{
-                resolve({status: true, statusText: cachedAllPromptData})
+                let result = aiPrompts.map(
+                    ({ predefinedPrompt, ...rest }) => rest
+                );
+                resolve({ status: true, statusText: result });
+                myCache.set("getAllPrompt", result, 3600);
+            } else {
+                resolve({ status: true, statusText: cachedAllPromptData });
             }
         } catch (error) {
             reject(error);
         }
-    })
-}
+    });
+};
 
-exports.getCachedCategoryData = async() => {
-    return new Promise(async(resolve,reject) => {
+exports.getCachedCategoryData = async () => {
+    return new Promise(async (resolve, reject) => {
         try {
-            let cachedCategoryData = myCache.get('getCategory');
+            let cachedCategoryData = myCache.get("getCategory");
             if (!cachedCategoryData) {
-                axios.post(`${config.CANYONAPIURL}/api/v1/getAiCategory`).then((response) => {
-
-                    if(response.data.status === true){
-                        myCache.set("getCategory", response.data.result,3600);
-                        resolve({status: true,statusText: response.data.result})
-                    }
-                    else{
-                        resolve({status: false,statusText: 'Error'})
-                    }
-                })
-                .catch((error) => { 
-                    resolve({status: false,statusText: error})
-                })
-            }else{
-                resolve({status: true, statusText: cachedCategoryData})
+                myCache.set("getCategory", apiCategories, 3600);
+                resolve({ status: true, statusText: apiCategories });
+            } else {
+                resolve({ status: true, statusText: cachedCategoryData });
             }
         } catch (error) {
             reject(error);
         }
-    })
-}
+    });
+};
 
-exports.getCachedAiModelData = async() => {
-    return new Promise(async(resolve,reject) => {
+exports.getCachedAiModelData = async () => {
+    return new Promise(async (resolve, reject) => {
         try {
-            let cachedModelData = myCache.get('getModel');
+            let cachedModelData = myCache.get("getModel");
             if (!cachedModelData) {
-                axios.post(`${config.CANYONAPIURL}/api/v1/getAiModels`).then((response) => {
-
-                    if(response.data.status === true){
-                        myCache.set("getModel", response.data.result,3600);
-                        resolve({status: true,statusText: response.data.result})
-                    }
-                    else{
-                        resolve({status: false,statusText: 'Error'})
-                    }
-                })
-                .catch((error) => { 
-                    resolve({status: false,statusText: error})
-                })
-            }else{
-                resolve({status: true, statusText: cachedModelData})
+                myCache.set("getModel", aiModals, 3600);
+                resolve({ status: true, statusText: aiModals });
+            } else {
+                resolve({ status: true, statusText: cachedModelData });
             }
         } catch (error) {
             reject(error);
         }
-    })
-}
+    });
+};
 
 exports.getCachedGlobalTemplateData = async() => {
     return new Promise(async(resolve,reject) => {
         try {
             let cacheglobalTemplateData = myCache.get('getTemplateData');
             if (!cacheglobalTemplateData) {
-                axios.get(config.CANYONAPIURL + `/api/v1/globalProjectTemplate`).then((response) => {
-                    if(response.data && response.data.length){
-                        myCache.set('getTemplateData', response.data,3600);
-                        resolve({status: true,statusText: response.data})
-                    }
-                    else{
-                        resolve({status: false,statusText: 'Error'})
-                    }
-                })
-                .catch((error) => { 
-                    resolve({status: false,statusText: error})
-                })
-            }else{
+                myCache.set('getTemplateData', projectTemplates, 3600);
+                resolve({ status: true, statusText: projectTemplates })
+            } else {
                 resolve({status: true, statusText: cacheglobalTemplateData})
             }
         } catch (error) {

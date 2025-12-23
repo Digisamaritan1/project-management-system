@@ -1,0 +1,3185 @@
+[
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d3",
+        "AssigneeUserId": [],
+        "TemplateName": "Implementation Plan For Simple, Complex, And Enter",
+        "Description": "The strategic goals and steps of the service are outlined in implementation plans, together with the completion timeline and the resources (team members, for example) needed to successfully complete the work for Professional Service Consultants.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "Backlog",
+                "bgColor": "#ec414135",
+                "textColor": "#ec4141",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff000035",
+                "key": 11,
+                "name": "Cancelled",
+                "textColor": "#ff0000",
+                "value": "cancelled",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff880035",
+                "textColor": "#ff8800",
+                "name": "In Process",
+                "value": "in_process",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 1,
+            "name": "Project Management & Operations"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/project-management.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2dc",
+        "AssigneeUserId": [],
+        "TemplateName": "Backlogs and Sprints",
+        "Description": "Project status can be planning when preparing for upcoming sprints, sprint execution during active development, review & retrospective for evaluating sprint outcomes, and iteration planning for future sprints.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "Backlog",
+                "bgColor": "#ec414135",
+                "textColor": "#ec4141",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Ready For Production",
+                "bgColor": "#55eb3735",
+                "textColor": "#55eb37",
+                "key": 8,
+                "type": "active"
+            },
+            {
+                "name": "Code Review",
+                "bgColor": "#324e3135",
+                "textColor": "#324e31",
+                "key": 9,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Backlog Refinement",
+                "value": "backlog_refinement",
+                "key": 69,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Backlog Refinement.svg"
+            },
+            {
+                "name": "Development",
+                "value": "development",
+                "key": 70,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Development.svg"
+            },
+            {
+                "name": "Sprint Planning",
+                "value": "sprint_planning",
+                "key": 50,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Sprint Planning.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#79cdb135",
+                "key": 15,
+                "name": "Review & Approval",
+                "textColor": "#79cdb1",
+                "value": "review_&_approval",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff880035",
+                "textColor": "#ff8800",
+                "name": "In Process",
+                "value": "in_process",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff000035",
+                "key": 11,
+                "name": "Cancelled",
+                "textColor": "#ff0000",
+                "value": "cancelled",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 1,
+            "name": "Project Management & Operations"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/operations.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d1",
+        "AssigneeUserId": [],
+        "TemplateName": "Finance & Accounting",
+        "Description": "Finance & Accounting involves managing and analyzing financial transactions, budgets, and reports to ensure financial stability, compliance, and informed decision-making within an organization.",
+        "LeadUserId": [],
+        "customFiedlsValue": [
+            {
+                "fieldTitle": "Currency",
+                "fieldPlaceholder": "Currency",
+                "fieldDescription": "Specifies the currency in which financial amounts are recorded for tasks or transactions involving multiple currencies.",
+                "fieldMoneyCode": "INR",
+                "fieldType": "money",
+                "fieldValidation": "",
+                "fieldMoneySymbol": "₹",
+                "fieldMoneyName": "Indian Rupee",
+                "fieldImage": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldMoney.svg",
+                "fieldImageGrey": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldMoneyGrey.svg",
+                "fieldPrimaryColor": "#528CCB",
+                "fieldBackgroundColor": "#c3e0ff",
+                "isDelete": true,
+                "userId": "65a7772a3392be16311345e0"
+            }
+        ],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "viewStatus": true,
+                "keyName": "Calendar",
+                "value": "calendar",
+                "name": "Calendar",
+                "setAsDefault": false
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "Completed",
+                "bgColor": "#00800035",
+                "textColor": "#008000",
+                "key": 12,
+                "type": "active"
+            },
+            {
+                "name": "Deferred",
+                "bgColor": "#80808035",
+                "textColor": "#808080",
+                "key": 13,
+                "type": "active"
+            },
+            {
+                "name": "Blocked",
+                "bgColor": "#ff000035",
+                "textColor": "#ff0000",
+                "key": 10,
+                "type": "active"
+            },
+            {
+                "name": "Cancelled",
+                "bgColor": "#69696935",
+                "textColor": "#696969",
+                "key": 15,
+                "type": "active"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "Milestones",
+                "name": "Milestones"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "CustomFields",
+                "name": "Custom Fields"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Financial Analysis",
+                "value": "financial_analysis",
+                "key": 20,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Financial Analysis.svg"
+            },
+            {
+                "name": "Bookkeeping",
+                "value": "bookkeeping",
+                "key": 21,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Bookkeeping.svg"
+            },
+            {
+                "name": "Auditing",
+                "value": "auditing",
+                "key": 22,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Auditing.svg"
+            },
+            {
+                "name": "Taxation",
+                "value": "taxation",
+                "key": 23,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Taxation.svg"
+            },
+            {
+                "name": "Financial Reporting",
+                "value": "financial_reporting",
+                "key": 24,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Financial Reporting.svg"
+            },
+            {
+                "name": "Cost Management",
+                "value": "cost_management",
+                "key": 25,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Cost Management.svg"
+            },
+            {
+                "name": "Cash Management",
+                "value": "cash_management",
+                "key": 26,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Cash Management.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff880035",
+                "textColor": "#ff8800",
+                "name": "In Process",
+                "value": "in_process",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#abad0035",
+                "key": 8,
+                "name": "Budgeting",
+                "textColor": "#abad00",
+                "value": "budgeting",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff000035",
+                "key": 11,
+                "name": "Cancelled",
+                "textColor": "#ff0000",
+                "value": "cancelled",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#abad0035",
+                "key": 12,
+                "name": "Budgeting",
+                "textColor": "#abad00",
+                "value": "budgeting",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#cd79cb35",
+                "key": 13,
+                "name": "Financial Analysis",
+                "textColor": "#cd79cb",
+                "value": "financial_analysis",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#79b1cd35",
+                "key": 14,
+                "name": "Implementation",
+                "textColor": "#79b1cd",
+                "value": "implementation",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#79cdb135",
+                "key": 15,
+                "name": "Review & Approval",
+                "textColor": "#79cdb1",
+                "value": "review_&_approval",
+                "type": "active"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 5,
+            "name": "Finance & Business Operations"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/sales-crm.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d0",
+        "AssigneeUserId": [],
+        "TemplateName": "App Development Plan",
+        "Description": "The \"App Development Plan\" project involves creating a roadmap for the development of a mobile application. Tasks include requirements gathering, design and prototyping, coding and development, testing and quality assurance, deployment planning, and ongoing maintenance and updates.Project progresses through planning, development, testing, deployment, and maintenance phases to ensure the successful delivery of the mobile application.",
+        "LeadUserId": [],
+        "customFiedlsValue": [
+            {
+                "fieldTitle": "Project Stage",
+                "fieldPlaceholder": "Enter Project Stage",
+                "fieldDescription": "The \"Project Stage\" custom field provides insight into the current stage of progress for a project. It allows stakeholders to quickly understand where the project stands and what steps are next.",
+                "fieldEntryLimits": ["Entry Limits"],
+                "fieldMinimum": "",
+                "fieldMaximum": "",
+                "fieldValidation": "",
+                "fieldType": "text",
+                "fieldImage": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldText.svg",
+                "fieldImageGrey": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldTextGrey.svg",
+                "fieldPrimaryColor": "#9A9D0F",
+                "fieldBackgroundColor": "#FEFFD4",
+                "isDelete": true,
+                "userId": "65bc7f88d454ec98010f26ec"
+            }
+        ],
+        "TemplateRequiredComponent": [
+            {
+                "keyName": "ProjectListView",
+                "name": "List",
+                "setAsDefault": true,
+                "value": "list",
+                "viewStatus": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "name": "Board",
+                "setAsDefault": false,
+                "value": "ProjectKanban",
+                "viewStatus": true
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "Milestones",
+                "name": "Milestones"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "CustomFields",
+                "name": "Custom Fields"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "setting/task_type/task.png",
+                "key": 1
+            },
+            {
+                "name": "Design",
+                "value": "design",
+                "key": 4,
+                "taskImage": "setting/task_type/design.png"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#f0287835",
+                "key": 25,
+                "name": "Testing & QA",
+                "textColor": "#f02878",
+                "value": "testing_&_qa",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#11567935",
+                "key": 26,
+                "name": "Deployment",
+                "textColor": "#115679",
+                "value": "deployment",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ed311d35",
+                "key": 27,
+                "name": "Maintenance & Updates",
+                "textColor": "#ed311d",
+                "value": "maintenance_&_updates",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffff0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffff00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "code": "INR",
+            "symbol_native": "টকা",
+            "symbol": "₹",
+            "decimal_digits": 2,
+            "name": "Indian Rupee",
+            "rounding": 0,
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 2,
+            "name": "Software & App Development"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/product-development.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d8",
+        "AssigneeUserId": [],
+        "TemplateName": "Legal Project Management",
+        "Description": "The \"Legal Project Management\" project involves managing legal matters and processes efficiently.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Litigation Support",
+                "value": "litigation_support",
+                "key": 63,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Litigation Support.svg"
+            },
+            {
+                "name": "Contract Review",
+                "value": "contract_review",
+                "key": 62,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Document Drafting-1.svg"
+            },
+            {
+                "name": "Document Drafting",
+                "value": "document_drafting",
+                "key": 61,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Document Drafting.svg"
+            },
+            {
+                "name": "Legal Research",
+                "value": "legal_research",
+                "key": 60,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Legal Research.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "backgroundColor": "#E3E1FC35",
+                "textColor": "#7367F0",
+                "name": "Open",
+                "value": "open",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff000035",
+                "key": 11,
+                "name": "Cancelled",
+                "textColor": "#ff0000",
+                "value": "cancelled",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#79cdb135",
+                "key": 15,
+                "name": "Review & Approval",
+                "textColor": "#79cdb1",
+                "value": "review_&_approval",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "backgroundColor": "#ED514535",
+                "textColor": "#ED5145",
+                "name": "Close",
+                "value": "close",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 1,
+            "name": "Project Management & Operations"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/project-management.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2da",
+        "AssigneeUserId": [],
+        "TemplateName": "Quick Start: Marketing",
+        "Description": "The \"Quick Start: Marketing\" project aims to rapidly launch marketing initiatives to promote a product, service, or brand.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Market Research",
+                "value": "market_research",
+                "key": 44,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Market Research.svg"
+            },
+            {
+                "name": "Content Creation Tasks",
+                "value": "content_creation_tasks",
+                "key": 18,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Content Creation Tasks.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#0b100535",
+                "key": 8,
+                "name": "Initiation",
+                "textColor": "#0b1005",
+                "value": "initiation",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#79b1cd35",
+                "key": 14,
+                "name": "Implementation",
+                "textColor": "#79b1cd",
+                "value": "implementation",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 3,
+            "name": "Marketing & Brand Management"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/marketing.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d6",
+        "AssigneeUserId": [],
+        "TemplateName": "Release Train",
+        "Description": "Release Train project involves coordinating the delivery of multiple interdependent features or components within a set timeframe, aligning teams, resources, and priorities to achieve timely releases and meet business objectives.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "Backlog",
+                "bgColor": "#ec414135",
+                "textColor": "#ec4141",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "name": "Blocked",
+                "bgColor": "#ff000035",
+                "textColor": "#ff0000",
+                "key": 10,
+                "type": "active"
+            },
+            {
+                "name": "Deferred",
+                "bgColor": "#80808035",
+                "textColor": "#808080",
+                "key": 13,
+                "type": "active"
+            },
+            {
+                "name": "Rejected",
+                "bgColor": "#ad000035",
+                "textColor": "#ad0000",
+                "key": 19,
+                "type": "active"
+            },
+            {
+                "name": "Completed",
+                "bgColor": "#00800035",
+                "textColor": "#008000",
+                "key": 12,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Cancelled",
+                "bgColor": "#69696935",
+                "textColor": "#696969",
+                "key": 15,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Feature Development",
+                "value": "feature_development",
+                "key": 48,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Feature Development.svg"
+            },
+            {
+                "name": "Backlog Grooming",
+                "value": "backlog_grooming",
+                "key": 49,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Backlog Grooming.svg"
+            },
+            {
+                "name": "Sprint Planning",
+                "value": "sprint_planning",
+                "key": 50,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Sprint Planning.svg"
+            },
+            {
+                "name": "Code Review",
+                "value": "code_review",
+                "key": 51,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Code Review.svg"
+            },
+            {
+                "name": "Testing",
+                "value": "testing",
+                "key": 52,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Testing.svg"
+            },
+            {
+                "name": "Bug Fixing",
+                "value": "bug_fixing",
+                "key": 53,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Bug Fixing.svg"
+            },
+            {
+                "name": "Integration",
+                "value": "integration",
+                "key": 54,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Integration.svg"
+            },
+            {
+                "name": "Feedback Collection",
+                "value": "feedback_collection",
+                "key": 55,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Feedback Collection.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff880035",
+                "textColor": "#ff8800",
+                "name": "In Process",
+                "value": "in_process",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 1,
+            "name": "Project Management & Operations"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/operations.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d5",
+        "AssigneeUserId": [],
+        "TemplateName": "Hiring Candidates",
+        "Description": "Hiring Candidates project focuses on recruiting and selecting top talent. It involves activities such as job posting, candidate evaluation, and onboarding to build a skilled and diverse workforce aligned with the company's goals.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "Rejected",
+                "bgColor": "#ad000035",
+                "textColor": "#ad0000",
+                "key": 19,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "Interview Conducted",
+                "bgColor": "#a2918135",
+                "textColor": "#a29181",
+                "key": 20,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Job Posting",
+                "value": "job_posting",
+                "key": 44,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Litigation Support.svg"
+            },
+            {
+                "name": "Candidate Sourcing",
+                "value": "candidate_sourcing",
+                "key": 46,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Candidate Sourcing.svg"
+            },
+            {
+                "name": "Resume Screening",
+                "value": "resume_screening",
+                "key": 47,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Resume Screening.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#AE550035",
+                "key": 8,
+                "name": "Job Posting",
+                "textColor": "#AE5500",
+                "value": "job_posting",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#dfaf5d35",
+                "key": 21,
+                "name": "Offer Stage",
+                "textColor": "#dfaf5d",
+                "value": "offer_stage",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#AE550035",
+                "key": 20,
+                "name": "Job Posting",
+                "textColor": "#AE5500",
+                "value": "job_posting",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 4,
+            "name": "Human Resources & Hiring"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/human-resource.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2db",
+        "AssigneeUserId": [],
+        "TemplateName": "Support",
+        "Description": "The \"Support\" project involves providing assistance and resolving issues for customers or internal stakeholders.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Sub Task",
+                "isDeleted": false,
+                "value": "sub_task",
+                "key": 3,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Sub-task.svg"
+            },
+            {
+                "name": "Issue Resolution",
+                "value": "issue_resolution",
+                "key": 67,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Issue Resolution.svg"
+            },
+            {
+                "name": "Customer Assistance",
+                "value": "customer_assistance",
+                "key": 68,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Customer Assistance.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff880035",
+                "textColor": "#ff8800",
+                "name": "In Process",
+                "value": "in_process",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 6,
+            "name": "Customer Support"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/sales.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d7",
+        "AssigneeUserId": [],
+        "TemplateName": "Product Requirements",
+        "Description": "The \"Product Requirements\" project focuses on gathering, documenting, and refining the specifications and features needed for a product.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Blocked",
+                "bgColor": "#ff000035",
+                "textColor": "#ff0000",
+                "key": 10,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Revision & Iteration",
+                "value": "revision_&_iteration",
+                "key": 59,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Revision & Iteration.svg"
+            },
+            {
+                "name": "Stakeholder Review",
+                "value": "stakeholder_review",
+                "key": 58,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Stakeholder Review.svg"
+            },
+            {
+                "name": "Documentation",
+                "value": "documentation",
+                "key": 57,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Documentation.svg"
+            },
+            {
+                "name": "Requirement Analysis",
+                "value": "requirement_analysis",
+                "key": 56,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Requirement Analysis.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#00a2ad35",
+                "key": 18,
+                "name": "Review & Feedback",
+                "textColor": "#00a2ad",
+                "value": "review_&_feedback",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#65bfe635",
+                "key": 22,
+                "name": "Requirements Gathering",
+                "textColor": "#65bfe6",
+                "value": "requirements_gathering",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#fbe66035",
+                "key": 23,
+                "name": "Documentation",
+                "textColor": "#fbe660",
+                "value": "documentation",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 2,
+            "name": "Product Requirements"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/product-development.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d2",
+        "AssigneeUserId": [],
+        "TemplateName": "Creative & Design",
+        "Description": "Creative & Design projects encompass the development and execution of visual elements to convey messages, evoke emotions, and engage audiences. These projects focus on innovation and effective communication through graphic design, branding, illustration, and multimedia production.",
+        "LeadUserId": [],
+        "customFiedlsValue": [
+            {
+                "fieldTitle": "Design Tools Used",
+                "fieldPlaceholder": "Design Tools Used",
+                "fieldDescription": "Records the design tools or software used in the project, such as Adobe Creative Suite, Sketch, or Figma.",
+                "fieldEntryLimits": ["Entry Limits"],
+                "fieldMinimum": "",
+                "fieldMaximum": "",
+                "fieldValidation": "",
+                "fieldType": "text",
+                "fieldImage": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldText.svg",
+                "fieldImageGrey": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldTextGrey.svg",
+                "fieldPrimaryColor": "#9A9D0F",
+                "fieldBackgroundColor": "#FEFFD4",
+                "isDelete": true,
+                "userId": "65a7772a3392be16311345e0"
+            },
+            {
+                "fieldTitle": "Client Feedback",
+                "fieldPlaceholder": "Client Feedback",
+                "fieldDescription": "A field to document feedback and comments from clients or stakeholders throughout the design process.",
+                "fieldEntryLimits": ["Entry Limits"],
+                "fieldMinimum": "",
+                "fieldMaximum": "",
+                "fieldValidation": "",
+                "fieldType": "text",
+                "fieldImage": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldText.svg",
+                "fieldImageGrey": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldTextGrey.svg",
+                "fieldPrimaryColor": "#9A9D0F",
+                "fieldBackgroundColor": "#FEFFD4",
+                "isDelete": true,
+                "userId": "65a7772a3392be16311345e0"
+            }
+        ],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "Designing",
+                "bgColor": "#9900ad35",
+                "textColor": "#9900ad",
+                "key": 16,
+                "type": "active"
+            },
+            {
+                "name": "Review & Feedback",
+                "bgColor": "#ff880035",
+                "textColor": "#ff8800",
+                "key": 17,
+                "type": "active"
+            },
+            {
+                "name": "Approval Pending",
+                "bgColor": "#f0e80535",
+                "textColor": "#f0e805",
+                "key": 18,
+                "type": "active"
+            },
+            {
+                "name": "Cancelled",
+                "bgColor": "#69696935",
+                "textColor": "#696969",
+                "key": 15,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "Milestones",
+                "name": "Milestones"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "CustomFields",
+                "name": "Custom Fields"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "User Interface (UI)",
+                "value": "user_interface_(ui)",
+                "key": 33,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/User Interface (UI).svg"
+            },
+            {
+                "name": "User Experience (UX)",
+                "value": "user_experience_(ux)",
+                "key": 32,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/User Experience (UX).svg"
+            },
+            {
+                "name": "Graphic Design",
+                "value": "graphic_design",
+                "key": 28,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Graphic Design.svg"
+            },
+            {
+                "name": "Branding",
+                "value": "branding",
+                "key": 29,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Branding.svg"
+            },
+            {
+                "name": "Web Design",
+                "value": "web_design",
+                "key": 34,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Web Design.svg"
+            },
+            {
+                "name": "Print Design",
+                "value": "print_design",
+                "key": 35,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Print Design.svg"
+            },
+            {
+                "name": "Motion Graphics",
+                "value": "motion_graphics",
+                "key": 36,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Motion Graphics.svg"
+            },
+            {
+                "name": "Photography/Videography",
+                "value": "photography/videography",
+                "key": 37,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Photography-Videography.svg"
+            },
+            {
+                "name": "Content Creation",
+                "value": "content_creation",
+                "key": 38,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Content Creation.svg"
+            },
+            {
+                "name": "Storyboarding",
+                "value": "storyboarding",
+                "key": 39,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Storyboarding.svg"
+            },
+            {
+                "name": "Feedback & Revision",
+                "value": "feedback_&_revision",
+                "key": 40,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Feedback & Revision.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ad4e0035",
+                "key": 8,
+                "name": "Concept Development",
+                "textColor": "#ad4e00",
+                "value": "concept_development",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff000035",
+                "key": 11,
+                "name": "Cancelled",
+                "textColor": "#ff0000",
+                "value": "cancelled",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#00a2ad35",
+                "key": 18,
+                "name": "Review & Feedback",
+                "textColor": "#00a2ad",
+                "value": "review_&_feedback",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ad9f0035",
+                "key": 17,
+                "name": "Designing",
+                "textColor": "#ad9f00",
+                "value": "designing",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 3,
+            "name": "Marketing & Brand Management"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/sales.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2cf",
+        "AssigneeUserId": [],
+        "TemplateName": "Community",
+        "Description": "Utilizing in your business",
+        "LeadUserId": [],
+        "customFiedlsValue": [
+            {
+                "fieldTitle": "Community Impact",
+                "fieldPlaceholder": "Community Impact",
+                "fieldDescription": "A field to track the anticipated or actual impact of the project on the community. This could include metrics such as number of participants, engagement levels, or qualitative feedback.",
+                "fieldEntryLimits": ["Entry Limits"],
+                "fieldMinimum": "",
+                "fieldMaximum": "",
+                "fieldValidation": "",
+                "fieldType": "text",
+                "fieldImage": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldText.svg",
+                "fieldImageGrey": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldTextGrey.svg",
+                "fieldPrimaryColor": "#9A9D0F",
+                "fieldBackgroundColor": "#FEFFD4",
+                "isDelete": true,
+                "userId": "65a7772a3392be16311345e0"
+            },
+            {
+                "fieldTitle": "Community Feedback",
+                "fieldPlaceholder": "Community Feedback",
+                "fieldDescription": "A field to collect feedback from community members throughout the project lifecycle. This could include capturing suggestions, concerns, or ideas for improvement.",
+                "fieldEntryLimits": ["Entry Limits"],
+                "fieldMinimum": "",
+                "fieldMaximum": "",
+                "fieldValidation": "",
+                "fieldType": "text",
+                "fieldImage": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldText.svg",
+                "fieldImageGrey": "https://s3.us-east-1.wasabisys.com/setting-icons/CustomFieldTextGrey.svg",
+                "fieldPrimaryColor": "#9A9D0F",
+                "fieldBackgroundColor": "#FEFFD4",
+                "isDelete": true,
+                "userId": "65a7772a3392be16311345e0"
+            }
+        ],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            }
+        ],
+        "taskStatusData": [
+            {
+                "key": 1,
+                "name": "To Do",
+                "textColor": "#ff9600",
+                "bgColor": "#ff960035",
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "Blocked",
+                "bgColor": "#ff000035",
+                "textColor": "#ff0000",
+                "key": 10,
+                "type": "active"
+            },
+            {
+                "name": "Under Review",
+                "bgColor": "#0000ff35",
+                "textColor": "#0000ff",
+                "key": 11,
+                "type": "active"
+            },
+            {
+                "name": "Deferred",
+                "bgColor": "#80808035",
+                "textColor": "#808080",
+                "key": 13,
+                "type": "active"
+            },
+            {
+                "name": "Awaiting Feedback",
+                "bgColor": "#ffd70035",
+                "textColor": "#ffd700",
+                "key": 14,
+                "type": "active"
+            },
+            {
+                "name": "Cancelled",
+                "bgColor": "#69696935",
+                "textColor": "#696969",
+                "key": 15,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "Milestones",
+                "name": "Milestones"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "CustomFields",
+                "name": "Custom Fields"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "key": 1,
+                "value": "task",
+                "name": "Task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png"
+            },
+            {
+                "name": "Engagement Tasks",
+                "value": "engagement_tasks",
+                "key": 15,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Engagement Tasks.svg"
+            },
+            {
+                "name": "Collaboration Tasks",
+                "value": "collaboration_tasks",
+                "key": 16,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Collaboration Tasks.svg"
+            },
+            {
+                "name": "Support Tasks",
+                "value": "support_tasks",
+                "key": 17,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Support Tasks.svg"
+            },
+            {
+                "name": "Content Creation Tasks",
+                "value": "content_creation_tasks",
+                "key": 18,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Content Creation Tasks.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "key": 1,
+                "type": "default_active",
+                "value": "open",
+                "backgroundColor": "#E3E1FC35",
+                "name": "Open",
+                "textColor": "#7367F0"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#00ff0035",
+                "key": 10,
+                "name": "Active",
+                "textColor": "#00ff00",
+                "value": "active",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff000035",
+                "key": 11,
+                "name": "Cancelled",
+                "textColor": "#ff0000",
+                "value": "cancelled",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "code": "INR",
+            "symbol_native": "টকা",
+            "symbol": "₹",
+            "decimal_digits": 2,
+            "name": "Indian Rupee",
+            "rounding": 0,
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 1,
+            "name": "Project Management & Operations"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/sales.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d4",
+        "AssigneeUserId": [],
+        "TemplateName": "Brand Management",
+        "Description": "Brand Management project focuses on strategically managing and enhancing the perception, positioning, and equity of [Client Name]'s brand(s) in the marketplace. It includes activities such as brand analysis, development of brand guidelines, design of brand identity, communication strategies, and ongoing monitoring to strengthen brand consistency, relevance, and resonance.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            },
+            {
+                "keyName": "ProjectKanban",
+                "viewStatus": true,
+                "value": "ProjectKanban",
+                "setAsDefault": false,
+                "name": "Board"
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "Backlog",
+                "bgColor": "#ec414135",
+                "textColor": "#ec4141",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "name": "Blocked",
+                "bgColor": "#ff000035",
+                "textColor": "#ff0000",
+                "key": 10,
+                "type": "active"
+            },
+            {
+                "name": "Cancelled",
+                "bgColor": "#69696935",
+                "textColor": "#696969",
+                "key": 15,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "Milestones",
+                "name": "Milestones"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Brand Analysis",
+                "value": "brand_analysis",
+                "key": 41,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Brand Analysis.svg"
+            },
+            {
+                "name": "Brand Identity Development",
+                "value": "brand_identity_development",
+                "key": 42,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Brand Identity Development.svg"
+            },
+            {
+                "name": "Brand Guidelines Creation",
+                "value": "brand_guidelines_creation",
+                "key": 43,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Brand Guidelines Creation.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ad5c0035",
+                "key": 19,
+                "name": "Brand Analysis",
+                "textColor": "#ad5c00",
+                "value": "brand_analysis",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 3,
+            "name": "Marketing & Brand Management"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/marketing.png"
+    },
+    {
+        "_id": "65f8478c2d7cb2e8c8ace2d9",
+        "AssigneeUserId": [],
+        "TemplateName": "Start a Social Media Marketing Agency",
+        "Description": "The \"Start a Social Media Marketing Agency\" project involves establishing and operating a social media marketing business.",
+        "LeadUserId": [],
+        "customFiedlsValue": [],
+        "TemplateRequiredComponent": [
+            {
+                "viewStatus": true,
+                "keyName": "ProjectListView",
+                "value": "list",
+                "name": "List",
+                "setAsDefault": true
+            }
+        ],
+        "taskStatusData": [
+            {
+                "name": "To Do",
+                "bgColor": "#ff960035",
+                "textColor": "#ff9600",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "name": "In Progress",
+                "bgColor": "#6473e835",
+                "textColor": "#6473e8",
+                "key": 3,
+                "type": "active"
+            },
+            {
+                "name": "In Review",
+                "bgColor": "#9759c035",
+                "textColor": "#9759c0",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "name": "On Hold",
+                "bgColor": "#cedb1f35",
+                "textColor": "#cedb1f",
+                "key": 7,
+                "type": "active"
+            },
+            {
+                "name": "Done",
+                "bgColor": "#24c11035",
+                "textColor": "#24c110",
+                "key": 6,
+                "type": "done"
+            },
+            {
+                "name": "Complete",
+                "bgColor": "#6BC95035",
+                "textColor": "#6BC950",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "apps": [
+            {
+                "appStatus": true,
+                "key": "Priority",
+                "name": "Priority"
+            },
+            {
+                "appStatus": true,
+                "key": "MultipleAssignees",
+                "name": "Multiple Assignees"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeEstimates",
+                "name": "Time Estimate"
+            },
+            {
+                "appStatus": true,
+                "key": "tags",
+                "name": "Tags"
+            },
+            {
+                "appStatus": true,
+                "key": "TimeTracking",
+                "name": "Time Tracking"
+            }
+        ],
+        "TemplateTaskType": [
+            {
+                "name": "Task",
+                "value": "task",
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/task.png",
+                "key": 1
+            },
+            {
+                "name": "Client Prospecting",
+                "value": "client_prospecting",
+                "key": 66,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Client Prospecting.svg"
+            },
+            {
+                "name": "Branding & Identity",
+                "value": "branding_&_identity",
+                "key": 65,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Branding & Identity.svg"
+            },
+            {
+                "name": "Business Planning",
+                "value": "business_planning",
+                "key": 64,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Business Planning.svg"
+            },
+            {
+                "name": "Content Creation Tasks",
+                "value": "content_creation_tasks",
+                "key": 18,
+                "taskImage": "https://s3.us-east-1.wasabisys.com/enterprice/projectTemplate/Content Creation Tasks.svg"
+            }
+        ],
+        "projectStatusData": [
+            {
+                "name": "Open",
+                "value": "open",
+                "textColor": "#7367F0",
+                "backgroundColor": "#E3E1FC35",
+                "key": 1,
+                "type": "default_active"
+            },
+            {
+                "backgroundColor": "#1aee1735",
+                "textColor": "#1aee17",
+                "name": "Completed",
+                "value": "completed",
+                "key": 5,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#c6b45d35",
+                "textColor": "#c6b45d",
+                "name": "On Hold",
+                "value": "on_hold",
+                "key": 4,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ff880035",
+                "textColor": "#ff8800",
+                "name": "In Process",
+                "value": "in_process",
+                "key": 6,
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#ffbb0035",
+                "key": 9,
+                "name": "Planning",
+                "textColor": "#ffbb00",
+                "value": "planning",
+                "type": "active"
+            },
+            {
+                "backgroundColor": "#68c21e35",
+                "textColor": "#68c21e",
+                "name": "Done",
+                "value": "done",
+                "key": 3,
+                "type": "done"
+            },
+            {
+                "name": "Close",
+                "value": "close",
+                "textColor": "#6BC950",
+                "backgroundColor": "#6BC95035",
+                "key": 2,
+                "type": "close"
+            }
+        ],
+        "ProjectCurrency": {
+            "symbol": "₹",
+            "name": "Indian Rupee",
+            "symbol_native": "টকা",
+            "decimal_digits": 2,
+            "rounding": 0,
+            "code": "INR",
+            "name_plural": "Indian rupees"
+        },
+        "TaskTypeTemplateId": "",
+        "TemplateTaskStatusId": "",
+        "TemplateCategory": {
+            "key": 3,
+            "name": "Marketing & Brand Management"
+        },
+        "templateImageURL": "https://s3.us-east-1.wasabisys.com/enterprice/templateImages/marketing.png"
+    }
+]

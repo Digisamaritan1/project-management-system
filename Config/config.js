@@ -47,8 +47,6 @@ module.exports = {
     NOOFPRESETCOMPANY: process.env.NOOFPRESETCOMPANY,
     PRECOMPANYKEY: process.env.PRECOMPANYKEY,
 
-    CANYONAPIURL: process.env.CANYONAPIURL,
-    ENTERPRISEURL: process.env.ENTERPRISEURL,
     PAYMENTMETHOD: process.env.PAYMENTMETHOD,
 
     AI_API_KEY:process.env.AI_API_KEY,

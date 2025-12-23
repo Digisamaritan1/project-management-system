@@ -11,6 +11,8 @@ const installStepsFilePath = __dirname + "/../../installationSteps.json";
 const serviceFun = require("../serviceFunction.js");
 const pjson = require('../../package.json');
 const { requestHandler } = require('../../Config/config.js');
+const aiModals = require('../../utils/aiModals.json');
+
 exports.envVar = {
     "JWT_SECRET": require('crypto').randomBytes(16).toString('hex'),
     "PRECOMPANYKEY": require('crypto').randomBytes(4).toString('hex'),
@@ -523,7 +525,6 @@ self.addEventListener('push', event => {
         data += `VUE_APP_APPID='${process.env.APPID}'\n`;
         data += `VUE_APP_MEASUREMENTID='${process.env.MEASUREMENTID}'\n\n`;
         data += "# Chargbee Configrations\n";
-        data += `VUE_APP_CANYONAPIURL='${process.env.CANYONAPIURL}'\n`;
         data += `VUE_APP_STORAGE_TYPE='${process.env.STORAGE_TYPE}'\n`;
         data += `VUE_APP_AFFILIATEON='false'\n`;
 
@@ -947,31 +948,9 @@ exports.checkinstallstep = (req, res) => {
  */
 exports.getAiModels = (req, res) => {
     try {
-        let config = {
-            method: 'post',
-            url: process.env.CANYONAPIURL + '/api/v1/getAiModels',
-            headers: {}
-        };
-
-        axios.request(config).then((response) => {
-            if (response.data.status && response.data.result && response.data.result.length) {
-                res.json({
-                    status: true,
-                    data: response.data.result
-                });
-                return;
-            }
-            res.json({
-                status: false,
-                statusText: "No Data Found"
-            });
-        })
-        .catch((error) => {
-            console.log(error);
-            res.json({
-                status: false,
-                error: error
-            });
+        res.json({
+            status: true,
+            data: aiModals
         });
     } catch (error) {
         console.log("error.message", error.message || error);

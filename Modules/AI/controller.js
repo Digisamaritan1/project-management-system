@@ -12,6 +12,7 @@ const { emitListener } = require("./eventController.js");
 const { getCachedPromptData, getCachedAllPromptData, getCachedCategoryData, getCachedAiModelData } = require("../../utils/enterpriseHelper.js");
 const { updateCompanyFun, getCompanyDataFun } = require('../Company/controller/updateCompany.js');
 const { updateMemberFunction } = require('../settings/Members/controller.js');
+const aiPrompts = require('../../utils/aiPrompts.json');
 
 // GENERATE INITIAL REQUEST AND FOR FUNCTION USE (SUB TASK,CHECKLIST)
 exports.generatePrompt = (req,res) => {
@@ -28,12 +29,9 @@ exports.generatePrompt = (req,res) => {
             deleteChat(req.body.uniqueUserId);
         }
         if(config.AI_API_KEY && config.AI_MODEL){
-            const data = {
-                query: [{_id: new mongoose.Types.ObjectId(req.body.prompt.id)}]
-            };
-            axios.post(`${config.CANYONAPIURL}/api/v1/findOnePrompts`, data).then((response) => {
-                if(response.data.status === true){
-                    let promptRes = response.data.result;
+                const promptData = aiPrompts.find((e) => e._id === req.body.prompt.id);
+                if (promptData) {
+                    let promptRes = promptData;
                     let promptsText = promptRes.predefinedPrompt;
                     let stream = promptRes.stream;
                     req.body.prompt.fields.forEach(prompt => {
@@ -78,10 +76,9 @@ exports.generatePrompt = (req,res) => {
                             res.send({status: false, statusText: error});
                         }
                     }
-                }else{
-                    res.send({status: false, statusText: 'error'});
+                } else {
+                    res.send({ status: false, statusText: 'error' });
                 }
-            })
         }else{
             res.send({status: true, statusText: 'AI is not integrated in your system',isNotAi : true});    
         }

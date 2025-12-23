@@ -218,7 +218,7 @@
 import { defineComponent, nextTick, onMounted, ref, defineProps, inject, watch, computed, onBeforeUnmount } from "vue";
 import { dbCollections } from "@/utils/Collections";
 import { useConvertDate, useCustomComposable, useGetterFunctions } from "@/composable";
-import { checkFile, renderFiles, showUserInfo, showMessageTime, sendMessage, bakeMessage, uploadToWasabi, deleteFromWasabi, sendMailFromMessage, cutomerDetails } from "./helper";
+import { checkFile, renderFiles, showUserInfo, showMessageTime, sendMessage, bakeMessage, uploadToWasabi, deleteFromWasabi, sendMailFromMessage } from "./helper";
 import { useToast } from "vue-toast-notification";
 import { useValidation } from "@/composable/Validation";
 import { useStore } from "vuex";
@@ -620,11 +620,6 @@ async function initialize() {
             popupDate.value = 0;
         }
     })
-
-    // GET CUSTOMER DETAILS FOR SUPPORT
-    if(props.productData?.customerId) {
-        customerDetails.value = await cutomerDetails(props.productData.customerId)
-    }
 }
 const visibilityHandler = async () => {
     clearTimeout(debounceTimeout);

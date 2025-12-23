@@ -9,6 +9,7 @@ const config = require("../../Config/config");
 const { getCachedGlobalTemplateData } = require("../../utils/enterpriseHelper");
 const { removeCache } = require('../../utils/commonFunctions');
 const { updateCompanyFun } = require("../Company/controller/updateCompany");
+const projectTemplate = require("../../utils/projectTemplates.json");
 
 exports.checkProjectPlan = (req) => {
     return new Promise(async(resolve,reject) => {
@@ -240,12 +241,11 @@ exports.createProject = async (req) => {
                     }else{
                         if(createProjectObject.useTemplateProj === 'category'){
                             try {
-                                await axios.get(config.CANYONAPIURL + `/api/v1/globalProjectTemplate?id=${createProjectObject.TemplateId}`).then(async (res) => {
-                                    if(res.data.length <= 0){
+                                    if(projectTemplate.length <= 0){
                                         reject({status: false, statusText: 'error in getting template with category'});
                                         return;
                                     }
-                                    let projectTemplateData = res.data[0];
+                                    let projectTemplateData = projectTemplate[0];
                                     let incrementProjectStatus = projectStatusData[0].totalStatus;
                                     let incrementTask = taskStatusData[0]?.totalStatus;
                                     let incrementTaskType = taskTypeData[0]?.totalStatus;
@@ -383,10 +383,6 @@ exports.createProject = async (req) => {
                                     createProjectObject.apps = projectAppMergedTempArray;
                                     createProjectObject.ProjectRequiredComponent = projectRequiredTempComponent;
                                     createProjectObject.status = createProjectObject.projectStatusData.filter((x) => x.type === 'default_active')[0].value;
-                                }).catch((err)=>{
-                                    reject({status: false, statusText: 'error in getting template with category'});
-                                    logger.error(`category: ${err}`);
-                                });
                             } catch(err){
                                 reject({status: false, statusText: 'error in getting template with category'});
                                 logger.error(`status update error: ${err}`);

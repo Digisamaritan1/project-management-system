@@ -1,0 +1,1811 @@
+[
+    {
+        "_id": "67d945fa890ef4e717c8d28e",
+        "name": "workload_by_status_pie_chart_title",
+        "description": "workload_by_status_pie_chart_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Workload By Status",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "text",
+                "name": "groupBy",
+                "value": "Workload",
+                "placeHolder": "group_by",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": true
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "display_labels_as_percent",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isPercentage",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_legend",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowLegend",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "WorkloadByStatusPieChartCard",
+        "image": "PieChartWorkload",
+        "cardType": "workload",
+        "backgroundColor": "#12a594",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67d9442e890ef4e717c8d28b",
+        "name": "tasks_by_assignee_bar_chart_title",
+        "description": "tasks_by_assignee_bar_chart_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Task By Assignee",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_legend",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowLegend",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_Data_Labels",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowDataLabels",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "text",
+                "name": "groupBy",
+                "value": "Assignee",
+                "placeHolder": "group_by",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": true
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TasksByAssigneeBarChartCard",
+        "image": "BarChart",
+        "cardType": "assignees",
+        "backgroundColor": "#0091ff",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67e22df29f758cff38335d50",
+        "name": "workload_estination_title",
+        "description": "workload_estination_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Time Reporting",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_assignees",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "AssigneeUserId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "logtype",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "logtype",
+                "value": 3,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "track_time"
+                    },
+                    {
+                        "id": 2,
+                        "name": "manual_time"
+                    },
+                    {
+                        "id": 3,
+                        "name": "both"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "timerange",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "timerange",
+                "value": 3,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "today"
+                    },
+                    {
+                        "id": 2,
+                        "name": "yesterday"
+                    },
+                    {
+                        "id": 3,
+                        "name": "this_week"
+                    },
+                    {
+                        "id": 4,
+                        "name": "last_week"
+                    },
+                    {
+                        "id": 5,
+                        "name": "this_month"
+                    },
+                    {
+                        "id": 6,
+                        "name": "last_month"
+                    },
+                    {
+                        "id": 7,
+                        "name": "this_year"
+                    },
+                    {
+                        "id": 8,
+                        "name": "last_30_days"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            }
+        ],
+        "key": "TimeEstimatedWorkloadComp",
+        "image": "BatteryChartWorkload",
+        "cardType": "time_tracking",
+        "backgroundColor": "#ab4aba",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67f344ef2009c419fcbdc50c",
+        "name": "total_tasks_count",
+        "description": "total_tasks_count_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Task Counts",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "measure",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "measure",
+                "value": 3,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "time_estimate"
+                    },
+                    {
+                        "id": 2,
+                        "name": "time_tracker"
+                    },
+                    {
+                        "id": {
+                            "$numberLong": "3"
+                        },
+                        "name": "task"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "calculation",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "calculation",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "sum"
+                    },
+                    {
+                        "id": 2,
+                        "name": "average"
+                    },
+                    {
+                        "id": 3,
+                        "name": "median"
+                    },
+                    {
+                        "id": 4,
+                        "name": "min"
+                    },
+                    {
+                        "id": 5,
+                        "name": "max"
+                    },
+                    {
+                        "id": 6,
+                        "name": "range"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_assignees",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "AssigneeUserId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "timerange",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "timerange",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "today"
+                    },
+                    {
+                        "id": 2,
+                        "name": "yesterday"
+                    },
+                    {
+                        "id": 3,
+                        "name": "this_week"
+                    },
+                    {
+                        "id": 4,
+                        "name": "last_week"
+                    },
+                    {
+                        "id": 5,
+                        "name": "this_month"
+                    },
+                    {
+                        "id": 6,
+                        "name": "last_month"
+                    },
+                    {
+                        "id": 7,
+                        "name": "this_year"
+                    },
+                    {
+                        "id": 8,
+                        "name": "last_30_days"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "task_label",
+                "groupBy": "data",
+                "type": "text",
+                "name": "taskLabel",
+                "value": "Total Count",
+                "placeHolder": "task_label",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TotalUrgentTasksComp",
+        "image": "Calculation",
+        "cardType": "calculation",
+        "backgroundColor": "#3e63dd",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67d945c9890ef4e717c8d28d",
+        "name": "workload_by_status_stack_bar_chart_title",
+        "description": "workload_by_status_stack_bar_chart_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Workload By Status",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "text",
+                "name": "groupBy",
+                "value": "Workload",
+                "placeHolder": "group_by",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": true
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_legend",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowLegend",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_Data_Labels",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowDataLabels",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "WorkloadByStatusStackBarChartCard",
+        "image": "BatteryChartWorkload",
+        "cardType": "workload",
+        "backgroundColor": "#12a594",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67f3451b2009c419fcbdc50d",
+        "name": "total_time_track_tasks",
+        "description": "total_time_track_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Time Tracked",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "measure",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "measure",
+                "value": 2,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "time_estimate"
+                    },
+                    {
+                        "id": 2,
+                        "name": "time_tracker"
+                    },
+                    {
+                        "id": {
+                            "$numberLong": "3"
+                        },
+                        "name": "task"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "calculation",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "calculation",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "sum"
+                    },
+                    {
+                        "id": 2,
+                        "name": "average"
+                    },
+                    {
+                        "id": 3,
+                        "name": "median"
+                    },
+                    {
+                        "id": 4,
+                        "name": "min"
+                    },
+                    {
+                        "id": 5,
+                        "name": "max"
+                    },
+                    {
+                        "id": 6,
+                        "name": "range"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_assignees",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "AssigneeUserId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "timerange",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "timerange",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "today"
+                    },
+                    {
+                        "id": 2,
+                        "name": "yesterday"
+                    },
+                    {
+                        "id": 3,
+                        "name": "this_week"
+                    },
+                    {
+                        "id": 4,
+                        "name": "last_week"
+                    },
+                    {
+                        "id": 5,
+                        "name": "this_month"
+                    },
+                    {
+                        "id": 6,
+                        "name": "last_month"
+                    },
+                    {
+                        "id": 7,
+                        "name": "this_year"
+                    },
+                    {
+                        "id": 8,
+                        "name": "last_30_days"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "task_label",
+                "groupBy": "data",
+                "type": "text",
+                "name": "taskLabel",
+                "value": "Total Count",
+                "placeHolder": "task_label",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TotalUrgentTasksComp",
+        "image": "Calculation",
+        "cardType": "calculation",
+        "backgroundColor": "#3e63dd",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67e384cd116f164bbeab149e",
+        "name": "time_only_estination_title",
+        "description": "time_only_estination_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Time Tracked",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_assignees",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "AssigneeUserId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "logtype",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "logtype",
+                "value": 3,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "track_time"
+                    },
+                    {
+                        "id": 2,
+                        "name": "manual_time"
+                    },
+                    {
+                        "id": 3,
+                        "name": "both"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "timerange",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "timerange",
+                "value": 3,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "today"
+                    },
+                    {
+                        "id": 2,
+                        "name": "yesterday"
+                    },
+                    {
+                        "id": 3,
+                        "name": "this_week"
+                    },
+                    {
+                        "id": 4,
+                        "name": "last_week"
+                    },
+                    {
+                        "id": 5,
+                        "name": "this_month"
+                    },
+                    {
+                        "id": 6,
+                        "name": "last_month"
+                    },
+                    {
+                        "id": 7,
+                        "name": "this_year"
+                    },
+                    {
+                        "id": 8,
+                        "name": "last_30_days"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            }
+        ],
+        "key": "TimeTrackComp",
+        "image": "BatteryChartWorkload",
+        "cardType": "time_tracking",
+        "backgroundColor": "#ab4aba",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67d27b1798d2ac495e8fe219",
+        "description": "queue_list_description",
+        "name": "queue_list_title",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Queue list",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "status",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "statusArray",
+                "value": [],
+                "placeHolder": "status",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            }
+        ],
+        "createdAt": "2025-03-13T05:45:04.000Z",
+        "key": "QueueListComp",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "backgroundColor": "#f76808",
+        "cardType": "task_card",
+        "image": "PieChart"
+    },
+    {
+        "_id": "67d9461a890ef4e717c8d28f",
+        "name": "workload_by_status_bar_chart_title",
+        "description": "workload_by_status_bar_chart_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Workload By Status",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "text",
+                "name": "groupBy",
+                "value": "Workload",
+                "placeHolder": "group_by",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": true
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_legend",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowLegend",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_Data_Labels",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowDataLabels",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "WorkloadByStatusBarChartCard",
+        "image": "BarChartWorkload",
+        "cardType": "workload",
+        "backgroundColor": "#12a594",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67e3848b116f164bbeab149d",
+        "name": "workload_only_estination_title",
+        "description": "workload_only_estination_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Time Estimated",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_assignees",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "AssigneeUserId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "timerange",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "timerange",
+                "value": 3,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "today"
+                    },
+                    {
+                        "id": 2,
+                        "name": "yesterday"
+                    },
+                    {
+                        "id": 3,
+                        "name": "this_week"
+                    },
+                    {
+                        "id": 4,
+                        "name": "last_week"
+                    },
+                    {
+                        "id": 5,
+                        "name": "this_month"
+                    },
+                    {
+                        "id": 6,
+                        "name": "last_month"
+                    },
+                    {
+                        "id": 7,
+                        "name": "this_year"
+                    },
+                    {
+                        "id": 8,
+                        "name": "last_30_days"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            }
+        ],
+        "key": "TimeEstimatedComp",
+        "image": "BatteryChartWorkload",
+        "cardType": "time_tracking",
+        "backgroundColor": "#ab4aba",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67e38c267fd4f7cbb31cb39b",
+        "name": "total_urgent_tasks",
+        "description": "total_urgent_tasks_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Time Estimated",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "measure",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "measure",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "time_estimate"
+                    },
+                    {
+                        "id": 2,
+                        "name": "time_tracker"
+                    },
+                    {
+                        "id": {
+                            "$numberLong": "3"
+                        },
+                        "name": "task"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "calculation",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "calculation",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "sum"
+                    },
+                    {
+                        "id": 2,
+                        "name": "average"
+                    },
+                    {
+                        "id": 3,
+                        "name": "median"
+                    },
+                    {
+                        "id": 4,
+                        "name": "min"
+                    },
+                    {
+                        "id": 5,
+                        "name": "max"
+                    },
+                    {
+                        "id": 6,
+                        "name": "range"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_assignees",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "AssigneeUserId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "timerange",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "timerange",
+                "value": 1,
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "today"
+                    },
+                    {
+                        "id": 2,
+                        "name": "yesterday"
+                    },
+                    {
+                        "id": 3,
+                        "name": "this_week"
+                    },
+                    {
+                        "id": 4,
+                        "name": "last_week"
+                    },
+                    {
+                        "id": 5,
+                        "name": "this_month"
+                    },
+                    {
+                        "id": 6,
+                        "name": "last_month"
+                    },
+                    {
+                        "id": 7,
+                        "name": "this_year"
+                    },
+                    {
+                        "id": 8,
+                        "name": "last_30_days"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "task_label",
+                "groupBy": "data",
+                "type": "text",
+                "name": "taskLabel",
+                "value": "Total Count",
+                "placeHolder": "task_label",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TotalUrgentTasksComp",
+        "image": "Calculation",
+        "cardType": "calculation",
+        "backgroundColor": "#3e63dd",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67d9444647214add331c6822",
+        "name": "tasks_list_title",
+        "description": "task_list_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Task List",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "fields",
+                "groupBy": "display",
+                "type": "dropdown",
+                "name": "fields",
+                "value": [],
+                "placeHolder": "select",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "commentCounts"
+                    },
+                    {
+                        "id": 2,
+                        "name": "AssigneeUserId"
+                    },
+                    {
+                        "id": 3,
+                        "name": "DueDate"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Task_Priority"
+                    },
+                    {
+                        "id": 5,
+                        "name": "TaskKey"
+                    },
+                    {
+                        "id": 6,
+                        "name": "created_date"
+                    },
+                    {
+                        "id": 7,
+                        "name": "created_by"
+                    }
+                ],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "groupBy",
+                "value": {
+                    "$numberLong": "0"
+                },
+                "placeHolder": "group_by",
+                "options": [
+                    {
+                        "id": 0,
+                        "name": "status"
+                    },
+                    {
+                        "id": 2,
+                        "name": "priority"
+                    },
+                    {
+                        "id": 3,
+                        "name": "due_date"
+                    },
+                    {
+                        "id": 4,
+                        "name": "none"
+                    }
+                ],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TASKLIST",
+        "image": "TaskList",
+        "cardType": "task_card",
+        "backgroundColor": "#f76808"
+    },
+    {
+        "_id": "67d9446f890ef4e717c8d28c",
+        "name": "tasks_by_assignee_stack_bar_chart_title",
+        "description": "tasks_by_assignee_stack_bar_chart_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Task By Assignee",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "text",
+                "name": "groupBy",
+                "value": "Assignee",
+                "placeHolder": "group_by",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": true
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_legend",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowLegend",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_Data_Labels",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowDataLabels",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TasksByAssigneeStackBarChartCard",
+        "image": "BatteryChart",
+        "cardType": "assignees",
+        "backgroundColor": "#0091ff",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    },
+    {
+        "_id": "67e1627f08e0f68261a94393",
+        "description": "calendar_card_description",
+        "name": "calendar_card_title",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Calendar",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "createdAt": "2025-03-13T05:45:04.000Z",
+        "key": "CalendarCard",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "backgroundColor": "#f76808",
+        "cardType": "task_card",
+        "image": "CalendarCard"
+    },
+    {
+        "_id": "67d8fa7b890ef4e717c8d289",
+        "name": "tasks_by_assignee_pie_chart_title",
+        "description": "tasks_by_assignee_pie_chart_description",
+        "permission": [],
+        "fields": [
+            {
+                "label": "card_name",
+                "groupBy": "display",
+                "type": "text",
+                "name": "fieldName",
+                "value": "Task By Assignee",
+                "placeHolder": "card_name",
+                "options": [],
+                "rules": "required | min:3 | max:100",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "display_labels_as_percent",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isPercentage",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "show_legend",
+                "groupBy": "display",
+                "type": "radio",
+                "name": "isShowLegend",
+                "value": false,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "location",
+                "groupBy": "data",
+                "type": "dropdown",
+                "name": "projectId",
+                "value": [],
+                "placeHolder": "select",
+                "options": [],
+                "rules": "required",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "group_by",
+                "groupBy": "data",
+                "type": "text",
+                "name": "groupBy",
+                "value": "Assignee",
+                "placeHolder": "group_by",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": true
+            },
+            {
+                "label": "include_subtasks",
+                "groupBy": "data",
+                "type": "radio",
+                "name": "isParentTask",
+                "value": true,
+                "placeHolder": "",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false
+            },
+            {
+                "label": "add_filter",
+                "type": "filter",
+                "name": "filter",
+                "value": [],
+                "placeHolder": "filter",
+                "options": [],
+                "rules": "",
+                "info": "",
+                "hidden": false,
+                "disabled": false,
+                "groupBy": "filter"
+            }
+        ],
+        "key": "TasksByAssigneePieChartCard",
+        "image": "PieChart",
+        "cardType": "assignees",
+        "backgroundColor": "#0091ff",
+        "updatedAt": "2025-03-13T05:45:04.000Z",
+        "createdAt": "2025-03-13T05:45:04.000Z"
+    }
+]

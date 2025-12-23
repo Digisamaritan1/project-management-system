@@ -3,6 +3,8 @@ const { SCHEMA_TYPE } = require("../../Config/schemaType");
 const { MongoDbCrudOpration } = require("../../utils/mongo-handler/mongoQueries");
 const axios = require("axios");
 const logger = require("../../Config/loggerConfig");
+const dashboardTemplate = require("../../utils/dashboardTemplate.json");
+const cardComponent = require("../../utils/cardComponent.json");
 
 /**
  * This endpoint is used to get user user dashboard template
@@ -38,7 +40,7 @@ exports.getDashboard = async (req, res) => {
         }
 
         try {
-            const { data: lanData } = await axios.get(`${process.env.CANYONAPIURL}/api/v1/defaultdashboard`);
+            const lanData = dashboardTemplate;
             const defaultDashboard = lanData.find(e => e.isDefault && !e.isDeleted);
             
             if (!defaultDashboard) {
@@ -79,14 +81,14 @@ exports.getCardComponent = async (req, res) => {
         }
 
         try {
-            const dataSaveRes = await axios.get(`${process.env.CANYONAPIURL}/api/v1/defaultCardComponent`);
+            const dataSaveRes = cardComponent;
             
             if (!dataSaveRes) {
                 return res.status(400).json({ status: false, message: "Error while saving default dashboard." });
             }
 
-            myCache.set(cacheKey, dataSaveRes.data, 86400);
-            return res.status(200).json(dataSaveRes.data);
+            myCache.set(cacheKey, dataSaveRes, 86400);
+            return res.status(200).json(dataSaveRes);
         } catch (apiError) {
             logger.error(`Error fetching default dashboard: ${apiError}`);
             return res.status(400).json({ status: false, message: "Error fetching default dashboard.", error: apiError });

@@ -75,7 +75,6 @@ module.exports.GET_INVOICE_AND_CREDITNOTE_URL = '/api/v1/getInvoiceAndCreditNote
 module.exports.TRACKER_USER_PERMISSION_MANAGEMENT = '/api/v1/manageTrackerUserPermission';
 module.exports.IMPORT_NOTIFICATION_SETTING = '/api/v1/importSettingsNotification';
 module.exports.GLOBAL_PROJECT_TEMPLATE = '/api/v1/getGlobalTemplate';
-module.exports.CANYON_API_URI = process.env.VUE_APP_CANYONAPIURL;
 module.exports.CUSTOMER_ADDRESS_ADD_PADDLE = '/api/v1/customerAddressPaddle'
 module.exports.GETTRANSECTIONPDFURL = '/api/v1/getTransectionPDFURL';
 module.exports.GET_CUSTOMER_CREDIT = '/api/v1/getCustomerCredit';
