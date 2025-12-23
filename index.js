@@ -181,9 +181,9 @@ function initializeControllers() {
 }
 
 // FIRES EVENT WHEN THE ENV IS UPDATED
-// fs.watchFile(__dirname+'/.env', () => {
+fs.watchFile(__dirname+'/.env', () => {
     initializeControllers();
-// })
+})
 
 // SET MIDDLEWARE
 // require('./Config/setMiddleware.js').setMiddlewareWithC(app);
@@ -193,6 +193,7 @@ require('./Config/setMiddleware.js').setMiddlewareV2(app);
 
 //CONFIGURE ENV FILE
 require('dotenv').config();
+initializeControllers();
 // if (process.env.CANYONLICENSEKEY) {
 //     initializeControllers();
 // }
