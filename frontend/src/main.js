@@ -24,7 +24,6 @@ import importTasksPlugin from './plugins/importTasks/importTasksPlugin';
 import exportTasksPlugin from './plugins/exportTasksPlugin/exportTasksPlugin';
 import tasklistDashboardPlugin from './plugins/tasklistDashboard/tasklistDashboardPlugin';
 import importUsersPlugin from './plugins/importUsers/importUsersPlugin';
-import ReviewPromptModal from './plugins/custome-modals/ReviewPromptModal';
 import oAuthPlugin from './plugins/oauth/oAuthPlugin';
 
 
@@ -53,7 +52,6 @@ const pluginArray = [
   exportTasksPlugin,
   tasklistDashboardPlugin,
   importUsersPlugin,
-  ReviewPromptModal,
   oAuthPlugin
 ];
 for (let index = 0; index < pluginArray.length; index++) {

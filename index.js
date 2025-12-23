@@ -132,7 +132,6 @@ function initializeControllers() {
     require('./Modules/emailTemplate/init').init(app);
     require('./Modules/email-notification/init').init(app);
     require(`./Modules/storage/${currentDirectory}/init`).init(app);
-    require('./Modules/multiLanguage/init').init(app);
     require('./Modules/AI/init').init(app);
     require('./Modules/usersModule/init').init(app);
     require('./Modules/Project/init').init(app);
@@ -174,7 +173,6 @@ function initializeControllers() {
     require("./Modules/generateMongoId/init").init(app);
     require("./Modules/UserDashboard/init.js").init(app);
     require("./Modules/affiliate/init").init(app);
-    require("./Modules/Reviews/init").init(app);
     require("./Modules/oAuth/init.js").init(app);
     require("./Modules/githubOAuth/init.js").init(app);
     require("./Modules/googleOAuth/init.js").init(app);
