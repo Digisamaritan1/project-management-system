@@ -1,0 +1,12 @@
+appId: com.example.nextron
+productName: Alian Hub Time Tracker 2.0
+copyright: Copyright © 2025 Alian Software
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null

@@ -137,7 +137,6 @@ Maintained by **Alian Software**.
 #### ⚙️ Other
 - Realtime updates (New)
 - Multilingual support (New)
-- Single-click update (New)
 - Local storage (New)
 - 40+ dynamic permissions per company
 - Pre-built project management templates

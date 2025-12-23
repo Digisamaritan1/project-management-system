@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Screenshot Notification</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+      width: 300px;
+      color: #333;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .screenshot {
+      width: 300px;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    .notif-container {
+      display: flex;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 12px;
+      /* box-shadow: 0 2px 12px rgba(0,0,0,0.08); */
+      padding: 20px 20px 20px 10px;
+      width: 350px;
+      min-height: 250px;
+      position: relative;
+    }
+    .notif-left {
+      margin-right: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .notif-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #6fefb1;
+      object-fit: cover;
+    }
+    .notif-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .notif-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .notif-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .notif-screenshot {
+      width: 250px;
+      height: 120px;
+      object-fit: cover;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
+    .notif-progress {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 18px;
+      height: 180px;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+    .progress-bar-bg {
+      width: 8px;
+      height: 80px;
+      background: #D5D8F0;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .progress-bar-fill {
+      width: 100%;
+      background: #2F3990;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0%;
+      border-radius: 4px;
+      transition: height 0.2s;
+    }
+    .trash-icon {
+      margin-top: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="notif-container">
+    <div class="notif-left">
+      <img src="./logo.png" class="notif-logo" alt="Logo" id="logo">
+    </div>
+    <div class="notif-main">
+      <div class="notif-header">
+        <span class="notif-title">Screen Capture</span>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20" width="20" version="1.1" viewBox="0 0 490 490" xml:space="preserve" id="close_icon" style="cursor:pointer;">
+          <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490   489.292,457.678 277.331,245.004 489.292,32.337 "/>
+        </svg>
+      </div>
+      <div style="display: flex;">
+        <img id="screenshot" class="notif-screenshot" src="" alt="Screenshot">
+        <div class="notif-progress">
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <script>
+    const { ipcRenderer } = require('electron');
+    ipcRenderer.on('logo-path', (event, path) => {
+      document.getElementById('logo').src = path;
+    });
+    ipcRenderer.on('screenshot-path', (event, path) => {
+      document.getElementById('screenshot').src = path;
+    });
+    document.getElementById('close_icon').addEventListener('click',() => {
+      ipcRenderer.send('close_click')
+    });
+
+    // Progress bar animation
+    const timeout = 10000; // 10 seconds
+    const fill = document.getElementById('progress-bar-fill');
+    const startTime = Date.now();
+    
+    function updateProgress() {
+      const currentTime = Date.now();
+      const elapsed = currentTime - startTime;
+      const progress = Math.min((elapsed / timeout) * 100, 100);
+      
+      fill.style.height = `${progress}%`;
+      
+      if (progress < 100) {
+        requestAnimationFrame(updateProgress);
+      }
+    }
+    
+    // Start the animation
+    requestAnimationFrame(updateProgress);
+  </script>
+</body>
+</html>
