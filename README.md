@@ -37,7 +37,7 @@ Maintained by **Alian Software**.
 ## Installation & Setup
  #### Clone the Repository
  ``` 
- git clone https://github.com/aliansoftwareteam/AlianHub---Project-Management-System.git
+ git clone https://github.com/aliansoftwareteam/AlianHub-Project-Management-System.git
  ```
 
  #### Installation guidelines documentation
