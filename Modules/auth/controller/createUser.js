@@ -9,20 +9,6 @@ const mongoose = require("mongoose");
 const { importUserNotifications } = require("../../../utils/data");
 const { addAndRemoveUserInMongodbNotificationCount } = require("../../auth/controller");
 
-let paymentRef = null;
-if (process.env.PAYMENTMETHOD) {
-    try {
-        if (process.env.PAYMENTMETHOD === "chargebee") {
-            paymentRef = require(`../../${process.env.PAYMENTMETHOD}/controller2`);
-        } else if(process.env.PAYMENTMETHOD === "paddle") {
-            paymentRef = require(`../../${process.env.PAYMENTMETHOD}/controller`);
-        } else {
-            paymentRef = require(`../../${process.env.PAYMENTMETHOD}/controller2`);
-        }
-    } catch (error) {
-        logger.error(`Payment File is not Found: ${error} `);
-    }
-}
 
 exports.authenticateToken = "";
 

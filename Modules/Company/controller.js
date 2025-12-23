@@ -3,20 +3,6 @@ const { MongoDbCrudOpration } = require("../../utils/mongo-handler/mongoQueries.
 const iCtr = require('../import_settings/controller.js');
 const helperCtr = require('../auth/controller/helper.js');
 const logger = require('../../Config/loggerConfig.js');
-let paymentRef = null;
-if (process.env.PAYMENTMETHOD) {
-    try {
-        if (process.env.PAYMENTMETHOD === "chargebee") {
-            paymentRef = require(`../${process.env.PAYMENTMETHOD}/controller2`);
-        } else if(process.env.PAYMENTMETHOD === "paddle") {
-            paymentRef = require(`../${process.env.PAYMENTMETHOD}/controller`);
-        } else {
-            paymentRef = require(`../${process.env.PAYMENTMETHOD}/controller2`);
-        }
-    } catch (error) {
-        logger.error(`Payment File is not Found: ${error} `);
-    }
-}
 const { addAndRemoveUserInMongodbNotificationCount } = require("../auth/controller.js");
 const { default: mongoose } = require("mongoose");
 const { emitListener } = require("./eventController.js");
@@ -578,9 +564,6 @@ exports.createCompanyV2 = (req, res) => {
                     () => exports.updateCompnayIdInUserFun(userUpdateObj, companyId,bodyData.userId) // ADD COMPANY ID IN USER DOCUMENT AFTER THE PROCESS COMPLETE
                 ];
                 let paymentObj = {};
-                if (process.env.PAYMENTMETHOD) {
-                    allProcess.push(() => paymentRef.addDefaultSubscriptionFun(companyId, bodyData.userId));
-                }
                 serviceFunctionCtr.allSettledWithRetry(3, allProcess)
                 .then(async(allSettledRes) => {
                     await handleCreateCompanyDataStorageFunForUpload(req.body, companyId)

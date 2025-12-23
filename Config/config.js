@@ -38,23 +38,17 @@ module.exports = {
     AWS_SES_FROM_DEFAULT: process.env.AWS_SES_FROM_DEFAULT,
 
     ENDPOINT_KEY: process.env.ENDPOINT_KEY,
-
-    CHARGEBEE_SITE: process.env.CHARGEBEE_SITE,
-    CHARGEBEE_API_KEY: process.env.CHARGEBEE_API_KEY,
     MONGODB_URL:process.env.MONGODB_URL,
 
     ERRORRECIVEREMAIL:process.env.ERRORRECIVEREMAIL,
     NOOFPRESETCOMPANY: process.env.NOOFPRESETCOMPANY,
     PRECOMPANYKEY: process.env.PRECOMPANYKEY,
 
-    PAYMENTMETHOD: process.env.PAYMENTMETHOD,
-
     AI_API_KEY:process.env.AI_API_KEY,
     AI_MODEL:process.env.AI_MODEL,
 
     STORAGE_TYPE:process.env.STORAGE_TYPE,
 
-    PADDLE_API_KEY:process.env.PADDLE_API_KEY,
     UNDER_MAINTENANCE: process.env.UNDER_MAINTENANCE,
     myCache: myCache,
     USERPROFILEBUCKET: process.env.USERPROFILEBUCKET,

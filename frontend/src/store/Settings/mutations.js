@@ -507,10 +507,6 @@ export const setTaskTypeArray = (state, payload) => {
     }
 }
 
-export const setChargeBeePrice = (state, payload) => {
-    state.chargeBeePrice = payload;
-}
-
 export const setplanFeatureDisplay = (state, payload) => {
     state.planFeatureDisplay = payload;
 }

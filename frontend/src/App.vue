@@ -363,12 +363,7 @@ async function getFirebaseData() {
                                             })
                                         }
                                     }
-                                    if(getters['settings/chargeBeePrice'] && !(getters['settings/chargeBeePrice']).length){
-                                        dispatch('settings/setChargeBeePrice').catch((error) =>{
-                                            console.error('ERROR in set Set Chargebee',error)
-                                        })
-                                    }
-                                    if(process.env.VUE_APP_PAYMENTMETHOD && getters['settings/planFeatureDisplay'] && !(getters['settings/planFeatureDisplay']).length){
+                                    if(getters['settings/planFeatureDisplay'] && !(getters['settings/planFeatureDisplay']).length){
                                         dispatch('settings/setplanFeatureDisplay').catch((error) =>{
                                             console.error('ERROR in set Set Chargebee',error)
                                         })

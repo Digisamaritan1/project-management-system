@@ -6,7 +6,7 @@ let swaggerUi = require("swagger-ui-express");
  * Swagger API document configuration
  * @param {*} app 
  */
-exports.init = (app, apiUrl, paymentMethod) => {
+exports.init = (app, apiUrl) => {
     const swaggerOptions = {
         definition: {
             openapi: "3.0.0",
@@ -25,7 +25,6 @@ exports.init = (app, apiUrl, paymentMethod) => {
             "./Modules/auth/routes2.js",
             "./Modules/notification1/routes.js",
             "./Modules/import_settings1/routes.js",
-            `./Modules/${paymentMethod}/routes2.js`,
             "./Modules/remove-sprint-operations/routes.js",
             "./Modules/logTime/routes.js",
             "./Modules/milestone/routes.js",

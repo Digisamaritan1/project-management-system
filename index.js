@@ -101,14 +101,6 @@ function initializeControllers() {
     require('./Modules/auth/init').init(app);
     require('./Modules/notification1/init').init(app);
     require('./Modules/import_settings/init').init(app);
-    if (process.env.PAYMENTMETHOD) {
-        try {
-            require(`./Modules/${process.env.PAYMENTMETHOD}/init`).init(app);
-        } catch (error) {
-            logger.error(`Payment File is not Found: ${error} `);
-        }
-    }
-    // require('./Modules/remove-sprint-operations/init').init(app);
     require('./Modules/tasks/init.js').init(app);
     require('./Modules/sprints/init.js').init(app);
     require('./Modules/logTime/init.js').init(app);
@@ -203,7 +195,7 @@ if (!process.env.STORAGE_TYPE) {
 require('./Modules/checkinstallstep/init').init(app);
 
 // SWAGGER CONFIGURATION
-require('./Modules/swaggerAPI/init').init(app, config.APIURL, config.PAYMENTMETHOD);
+require('./Modules/swaggerAPI/init').init(app, config.APIURL);
 
 // COMMON CODE 
 require('./Modules/common/init').init(app);

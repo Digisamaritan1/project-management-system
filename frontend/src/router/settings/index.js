@@ -1,6 +1,3 @@
-import chargebeeRouter from "../../plugins/chargebee/router";
-import paddleRouter from "../../plugins/paddle/router";
-const upgradeRoute = process.env.VUE_APP_PAYMENTMETHOD === "chargebee" ? chargebeeRouter?.upgradeRoute : process.env.VUE_APP_PAYMENTMETHOD === "paddle" ? paddleRouter?.upgradeRoute : [];
 import CustomFieldRouter from "../../plugins/customFieldView/router.js";
 export default [
     {
@@ -60,7 +57,6 @@ export default [
                 },
                 component: () => import(/* webpackChunkName: Template */ '@/views/Settings/Template/Template.vue')
             },
-            ...upgradeRoute,
             {
                 path: "security-permissions",
                 name: "Security & Permissions",

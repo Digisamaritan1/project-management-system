@@ -709,26 +709,6 @@ export const setTaskTypeArray = ({ commit }) => {
 }
 
 
-export const setChargeBeePrice = ({ commit }) => {
-    return new Promise((resolve, reject) => {
-        let query = [{ $sort: { sortIndex: 1 } }];
-        try {
-            apiRequest("post", `${env.SUBSCRIPTIONPLAN}/find`, { query: query })
-                .then((res) => {
-                    commit("setChargeBeePrice", res.data);
-                    resolve(res);
-                })
-                .catch((err) => {
-                    console.error("Error fetching Subscription Plans:", err);
-                    reject(err);
-                });
-        } catch (error) {
-            console.error("Error fetching Subscription Plans:", error);
-            reject(error);
-        }
-    });
-};
-
 
 export const setplanFeatureDisplay = ({ commit }) => {
     return new Promise((resolve, reject) => {

@@ -416,9 +416,7 @@
                                 userDesignation: userDesignation,
                                 userRole: userRole,
                             }
-                            if (!process.env.VUE_APP_PAYMENTMETHOD) {
-                                sendMail(userEmail, userDesignation, userRole ,isResend);
-                            }
+                            sendMail(userEmail, userDesignation, userRole, isResend);
                         } else {
                             isSpinner.value = false;
                             $toast.warning(resp.data.statusText,{position: 'top-right'});
@@ -483,9 +481,7 @@
             importUserData.value = userData;
             isSpinner.value = true;
             isImportUserUpdateShow.value = true;
-            if (!process.env.VUE_APP_PAYMENTMETHOD) {
-                importUserDb(false);
-            }
+            importUserDb(false);
         } else {
             $toast.error(t("Toast.Something_went_wrong_Please_try_again"),{position: 'top-right'});
         }

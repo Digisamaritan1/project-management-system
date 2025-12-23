@@ -78,7 +78,6 @@ module.exports.GLOBAL_PROJECT_TEMPLATE = '/api/v1/getGlobalTemplate';
 module.exports.CUSTOMER_ADDRESS_ADD_PADDLE = '/api/v1/customerAddressPaddle'
 module.exports.GETTRANSECTIONPDFURL = '/api/v1/getTransectionPDFURL';
 module.exports.GET_CUSTOMER_CREDIT = '/api/v1/getCustomerCredit';
-module.exports.ADD_DEFAULT_SUBSCRIPTION = '/api/v2/addDefaultSubscriptionFun';
 module.exports.TABSYNCTASKGET = '/api/v1/tabSyncTask';
 module.exports.VERSION_UPDATE_NOTIFY = 'api/v1/versionUpdateNotify';
 module.exports.PROJECT_TEMPLATE = '/api/v1/project/template/custom';

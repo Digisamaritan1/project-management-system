@@ -5,17 +5,13 @@ import chat from './chat'
 import settings from './settings'
 import timesheet from './timesheet'
 import milestonesheet from './milestonesheet'
-import payment from './payment';
 import reports from './reports';
 
 import { useCustomComposable } from '@/composable'
-import chargebeeRouter from "../plugins/chargebee/router";
-import paddleRouter from "../plugins/paddle/router";
 import dashboard from "../plugins/dashboard/router";
 import { apiRequestWithoutCompnay } from '@/services'
 import * as env from '@/config/env';
 import Cookies from 'js-cookie'
-const checkoutRoute = process.env.VUE_APP_PAYMENTMETHOD === "chargebee" ? chargebeeRouter?.checkoutRoute : process.env.VUE_APP_PAYMENTMETHOD === "paddle" ? paddleRouter?.checkoutRoute : [];
 
 
 const routes = [
@@ -36,8 +32,6 @@ const routes = [
 	//MILESTONE ROUTES
 	...milestonesheet,
 
-	// PAYMENTS ROUTES
-	...payment,
 
 	// DASHBOARD ROUTES
 	...dashboard.dashboardRouter,
@@ -51,8 +45,7 @@ const routes = [
 		meta: {
 			title: '404'
 		}
-	},
-	...checkoutRoute,
+	}
 ]
 
 const router = createRouter({

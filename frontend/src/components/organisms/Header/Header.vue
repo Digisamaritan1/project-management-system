@@ -20,8 +20,6 @@
             </template>
         </small>
         <div class="d-flex align-items-center justify-content-between z-index-5" v-if="clientWidth > 990">
-            <!-- Upgrade Button -->
-            <UpgradeBtn v-if="isUpgradeShow" :companyId="companyId" />
             <!-- COMPANY SELECTION -->
             <div class="d-flex" id="company_dropdown_driver">
             <span v-if="rules && Object.keys(rules).length" class="company-text">{{$t('settingslider.Company')}}</span>
@@ -144,12 +142,6 @@
                             </div>
                             </div>
 
-                            <div class="upgrade-section" v-if="isUpgradeShow">
-                                <span>{{$t('Header.get_more')}}</span>
-                                <div class="btn-upgrade" @click="$router.push({name: 'Upgrade', params: {cid: companyId}}), visible = false">
-                                    {{$t('Header.upgrade_now')}}
-                                </div>
-                            </div>
 
                         <!-- COMPANY SELECTION -->
                         <div :class="`p-1 cursor-pointer border-radius-10-px bg-light-gray2 ${clientWidth > 991 ? '' : 'm0px-20px'}`"  @click="visible = false,$emit('filter')">
@@ -218,7 +210,7 @@
                     </div>
                     <!-- BOTTOM SECTION -->
                     <div>
-                        <div class="cursor-pointer border-radius-7-px d-flex align-items-center log-out-list font-size-18 font-weight-500 blue" @click="logout()" :style="{marginTop: isUpgradeShow ? '35px': '160px'}">
+                        <div class="cursor-pointer border-radius-7-px d-flex align-items-center log-out-list font-size-18 font-weight-500 blue" @click="logout()" :style="{marginTop: '160px'}">
                             <img :src="logoutIconMobile" alt="logout" class="pr-10px">
                             {{$t('Header.Logout')}}
                         </div>
@@ -319,7 +311,7 @@
 
 <script setup>
 // PACKAGE
-import { computed, defineComponent, defineEmits, inject, onMounted, ref, watch, watchEffect } from "vue";
+import { computed, defineComponent, defineEmits, inject, onMounted, ref, watch } from "vue";
 import {version} from "../../../../../package.json";
 import {useHelper} from "./helper"
 import { useMainChat } from "@/views/Chat/helper";
@@ -421,7 +413,6 @@ const getImageData = (dataImage) => {
 
 // DATA
 const visible = ref(false);
-const isUpgradeShow = ref(false);
 const showNotification = ref(0);
 const notificationVisible = ref(false);
 const tourVisible = ref(false);
@@ -490,23 +481,6 @@ watch(clientWidth,(newVal)=>{
 const tourList = ref([]);
 const isSpinner = ref(false);
 const selectedCompany = ref("");
-const chargeBeePriceData = computed(() => {
-    return getters["settings/chargeBeePrice"];
-})
-const companyOwner = computed(() => {
-    return getters["settings/companyOwnerDetail"];
-})
-const displayUpgrade = inject("displayUpgrade");
-watchEffect(async () => {
-    selectedCompany.value = companies.value.find((company) => company._id === companyId.value);
-
-    try {
-        isUpgradeShow.value = await displayUpgrade(selectedCompany.value, chargeBeePriceData.value, companyOwner.value) || false;
-    } catch (error) {
-        console.log("Silence Is Golden");
-        isUpgradeShow.value = false;
-    }
-})
 
 const rules = computed(() => {
     return getters['settings/rules']

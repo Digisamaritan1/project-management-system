@@ -173,7 +173,6 @@ const verifyJWTToken = [
     "/api/v1/uploadLogoFile",
     "/api/v1/admin/checkSendInviatation",
     "/api/v1/getInvoiceAndCreditNoteURL",
-    "/api/v2/addDefaultSubscriptionFun",
     "/api/v1/company-invitation",
     '/api/v1/subscription/:id',
     '/api/v1/subscription/find',

@@ -109,9 +109,7 @@
         isUpdateShow.value = true;
         removeUserSubscriptionData.value = {type: 'remove', data: item};
         // removeUser();
-        if (!process.env.VUE_APP_PAYMENTMETHOD) {
-            removeUserProcess(item);
-        }
+        removeUserProcess(item);
     }
 
     const removeUserProcess = async (item) => {
@@ -176,9 +174,7 @@
         isUpdateShow.value = true;
         removeUserSubscriptionData.value = {type: 'cancel', data: data, isRequest: isRequest};
         // deleteDoc();
-        if (!process.env.VUE_APP_PAYMENTMETHOD) {
-            deleteDoc(data,isRequest);
-        }
+        deleteDoc(data,isRequest);
     }
 
     const deleteDoc = async (data, isRequest) => {
