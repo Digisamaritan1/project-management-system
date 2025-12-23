@@ -379,35 +379,6 @@ async function getFirebaseData() {
                                 console.error("ERROR in set file extentions: ", error)
                             })
                         }
-                        // STORE IMPLEMENTATION PENFINDING
-                        // if(self.users && !Object.keys(self.users).length) {
-                        //     let whereQueries= [
-                        //         {
-                        //             field: "AssignCompany",
-                        //             operation: "array-contains",
-                        //             value: Vue.prototype.$companyId
-                        //         },
-                        //         {
-                        //             field: "isDeleted",
-                        //             operation: "==",
-                        //             value: false
-                        //         },
-                        //         {
-                        //             field: "isActive",
-                        //             operation: "==",
-                        //             value: true
-                        //         },
-                        //     ]
-                        //     self.setUsers({
-                        //         whereQueries: whereQueries
-                        //     })
-                        //     .catch((error) => {
-                        //         console.error("ERROR in get users: ", error);
-                        //     })
-                        // }
-                        // if(self.teams && !Object.keys(self.teams).length) {
-                        //     self.setTeams({"cid":Vue.prototype.$companyId});
-                        // }
                         if(getters['settings/projectTabComponents'] && !getters['settings/projectTabComponents'].length) {
                             dispatch('settings/setProjectTabComponents', companyId.value)
                             .catch((error) => {
@@ -807,7 +778,6 @@ onMounted(() => {
 })
 
 const urlRegex = ref(/(https?|ftp):\/\/[^\s/$.?#].[^\s]*/g)
-// const urlRegex = ref(/https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)/g)
 
 provide("$urlRegex", urlRegex);
 provide("$dateFormat", dateFormat);
