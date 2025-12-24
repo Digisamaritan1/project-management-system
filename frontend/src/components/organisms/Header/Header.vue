@@ -311,7 +311,7 @@
 
 <script setup>
 // PACKAGE
-import { computed, defineComponent, defineEmits, inject, onMounted, ref, watch } from "vue";
+import { computed, defineComponent, defineEmits, inject, onMounted, ref, watch, watchEffect } from "vue";
 import {version} from "../../../../../package.json";
 import {useHelper} from "./helper"
 import { useMainChat } from "@/views/Chat/helper";
@@ -481,7 +481,9 @@ watch(clientWidth,(newVal)=>{
 const tourList = ref([]);
 const isSpinner = ref(false);
 const selectedCompany = ref("");
-
+watchEffect(async () => {
+    selectedCompany.value = companies.value.find((company) => company._id === companyId.value);
+})
 const rules = computed(() => {
     return getters['settings/rules']
 })

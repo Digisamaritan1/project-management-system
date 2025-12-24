@@ -909,13 +909,6 @@ exports.checkinstallstep = (req, res) => {
                     exports.installSteps[8].status = "done";
                     serviceFun.writeFile(installStepsFilePath, JSON.stringify({installSteps: exports.installSteps, envVar: exports.envVar}, null, 4), () => {
                         // Remove InstallSteps File
-                        const statusUpdateData = {
-                            productionUrl: req.get('Origin'),
-                            licenseId: exports.envVar.CANYONLICENSEID,
-                            updateStatus: 2,
-                            version: "v" + pjson.version
-                        }
-
                         fs.unlinkSync(installStepsFilePath);
                         setTimeout(() => {
                             emitListener(bodyData?.eventId, {step: 1});

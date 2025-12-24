@@ -363,11 +363,11 @@ async function getFirebaseData() {
                                             })
                                         }
                                     }
-                                    if(getters['settings/planFeatureDisplay'] && !(getters['settings/planFeatureDisplay']).length){
-                                        dispatch('settings/setplanFeatureDisplay').catch((error) =>{
-                                            console.error('ERROR in set Set Chargebee',error)
-                                        })
-                                    }
+                                    // if(getters['settings/planFeatureDisplay'] && !(getters['settings/planFeatureDisplay']).length){
+                                    //     dispatch('settings/setplanFeatureDisplay').catch((error) =>{
+                                    //         console.error('ERROR in set Set Chargebee',error)
+                                    //     })
+                                    // }
                             })
                             .catch((error) => {
                                 console.error("ERROR in set file extentions: ", error)

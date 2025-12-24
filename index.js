@@ -183,7 +183,9 @@ require('./Config/setMiddleware.js').setMiddlewareV2(app);
 
 //CONFIGURE ENV FILE
 require('dotenv').config();
-initializeControllers();
+if (process.env.MONGODB_URL) {
+    initializeControllers();
+}
 // if (process.env.CANYONLICENSEKEY) {
 //     initializeControllers();
 // }
