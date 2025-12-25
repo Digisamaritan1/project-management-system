@@ -1,0 +1,106 @@
+.header{
+    width: 100%;
+    background-color: #F4F5F7!important;
+    height: 43px;
+    margin: 20px 0px;
+}
+
+.list_view-table-wrapper {
+    width: 100%;
+    overflow-y: auto;
+    height: calc(100% - 134px);
+    padding: 0px 20px 15px 20px;
+}
+
+.list_view_table{
+    width: 100%;
+    display: table;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.2s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.view-status{
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 7px;
+    width: max-content;
+    height: 24px;
+    padding: 0 10px;
+    line-height: 24px;
+    margin: 10px 0px;
+}
+.task-priority-view-status {
+    display: flex;
+    align-items: center;
+}
+.m-ll-10 {
+    margin-left: -10px;
+}
+.header-item{
+    padding: 5px 10px 5px 19px ;
+    color: #0000;
+    background-color: #DFE1E6;
+    border-right: 1px solid #F0F1F3;
+}
+.table-width {
+    overflow: auto;
+    max-height: calc(100vh - 510px);
+}
+table.table__view tr th:first-child, table.table__view tr td:first-child{
+    width: 3%;
+    min-width: 42px;
+}
+table.table__view tr th:nth-child(2), table.table__view tr td:nth-child(2) { width: 5%; }
+table.table__view tr td:nth-child(3), table.table__view tr th:nth-child(3) { width: 25%; }
+table.table__view tr td:nth-child(4), table.table__view tr th:nth-child(4) { width: 4%; word-break: break-all; }
+table.table__view tr td:nth-child(5), table.table__view tr th:nth-child(5) { width: 8%; }
+table.table__view tr td:nth-child(6), table.table__view tr th:nth-child(6) { width: 7%; word-break: break-all; }
+table.table__view tr td:nth-child(7), table.table__view tr th:nth-child(7) { width: 7%; }
+table.table__view tr td:nth-child(8), table.table__view tr th:nth-child(8) { width: 7%; }
+table.table__view tr td:nth-child(9), table.table__view tr th:nth-child(9) { width: 7%; }
+
+
+.table__userstatus-thead {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.task__groups{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    padding: 5px 0;
+    background-color: #F4F5F7;
+}
+.table__list-task-id{
+    height: 100px;
+    margin-top: -100px;
+    z-index: -1;
+    position: relative;
+}
+.table_view-status .status-main_name {
+    word-break: break-all;
+    display: block;
+    white-space: inherit;
+}
+.due_date-listing {
+    word-break: break-all;
+    display: block;
+}
+@media(max-width: 1499px){
+    .table__view {
+        width: 1260px;
+    }
+}
+@media(max-width: 767px){
+    .list_view-table-wrapper {
+        height: calc(100% - 95px);
+    }
+}

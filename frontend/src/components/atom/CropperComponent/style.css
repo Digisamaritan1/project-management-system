@@ -1,0 +1,29 @@
+.cropper_main {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.vue-advanced-cropper__background,
+.vue-advanced-cropper__foreground {
+  border-radius: 8px !important;
+}
+
+.vue-advanced-cropper__image-wrapper img {
+  max-height: fit-content;
+}
+.vue-preview__wrapper img {
+  max-height: fit-content;
+}
+
+.vue-advanced-cropper__image-wrapper {
+  border-radius: 8px !important;
+}
+
+.vue-preview--fill {
+  border-radius: 50% !important;
+}
+.stencil-square .vue-preview--fill {
+  border-radius: 5px !important;
+}

@@ -1,0 +1,155 @@
+.formkit__content-wrapper {
+    border-bottom: 1px solid #DFE1E6;
+}
+.formkit__content-wrapper .formkit-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+.formkit__content-wrapper label.formkit-label {
+    color: #505050;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.24px;
+    padding: 7px 0px 5px 0px !important;
+    display: flex;
+    align-items: center;
+}
+.formkit__content-wrapper .formkit-outer {
+    margin: 0px;
+    padding: 0px;
+}
+.formkit__content-wrapper .formkit-inner {
+    width: 100%;
+    box-shadow: none;
+    border-left: 1px solid #DFE1E6;
+    border-radius: 0px;
+    padding: 10px 20px 10px;
+}
+.formkit__content-wrapper .formkit-input,.formkit__content-wrapper-project-detail .formkit-input  {
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.24px !important;
+    padding: 0px;
+    color: #505050;
+}
+.formkit__content-padding {
+    padding: 9.5px;
+}
+.formkit__content-wrapper textarea {
+    resize: none;
+    min-height: 15px !important;
+    height: 20px !important;
+}
+.formkit__content-wrapper ul.formkit-messages {
+    position: relative;
+    padding: 0;
+}
+.formkit__content-wrapper li.formkit-message {
+    position: absolute;
+    top: -12px;
+    left: 8px;
+    font-size: 11px;
+    padding: 0;
+}
+
+
+/* project detail css */
+.formkit__content-wrapper-project-detail label.formkit-label {
+    padding: 0px;
+    margin: 0px;
+    line-height: 20.72px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formkit__content-wrapper-project-detail .formkit-label__wrapper {
+    max-width: 125px;
+}
+.formkit__content-wrapper-project-detail .formkit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formkit__content-wrapper-project-detail .custom-textarea-field-project-detail .formkit-wrapper {
+    align-items: baseline !important;
+}
+.formkit__content-wrapper-project-detail .custom-textarea-field-project-detail label.formkit-label{
+    padding-top: 10px;
+}
+.formkit__content-wrapper-project-detail .formkit-inner {
+    width: calc(100% - 42%);
+    box-shadow: none;
+    padding: 5px 10px;
+}
+.formkit__content-wrapper-project-detail .formkit-inner:focus-within {
+    box-shadow: 0 0 0 2px #0275ff;
+}
+.formkit__content-wrapper-project-detail .formkit-outer {
+    margin: 0px;
+}
+.formkit__content-wrapper-project-detail ul.formkit-messages {
+    width: calc(100% - 42%);
+    margin-left: auto;
+}
+.formkit__content-wrapper-project-detail .formkit-label__wrapper span img {
+    padding-right:0px;
+    padding-left: 10px;
+}
+.formkit__content-wrapper-project-detail span.text-ellipsis.label_ellipsis {
+    max-width: 72px;
+    display: block;
+    line-height: normal;
+}
+.formkit__content-wrapper-project-detail .custom__field-image {
+    margin: 0px 10px 0px 0px;
+}
+.formkit__content-wrapper-project-detail .formkit-input {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    resize: none;
+}
+.formkit__content-wrapper-project-detail .custom-textarea-field-project-detail .formkit-wrapper textarea  {
+    overflow-y: auto;
+}
+@media(max-width:767px){
+    .formkit__content-wrapper-project-detail ul.formkit-messages {
+        text-align: end;
+    }
+    .formkit__content-wrapper-project-detail::placeholder{
+        text-align: right;
+    }
+    .formkit__content-wrapper-project-detail .formkit-inner{
+        width: 50%;
+        justify-content: end;
+    }
+    .formkit__content-wrapper-project-detail .formkit-label__wrapper {
+        max-width: 40%;
+    }
+    .formkit__content-wrapper-project-detail .formkit-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+    .formkit__content-wrapper-project-detail span.text-ellipsis.label_ellipsis{
+        max-width: 240px;
+    }
+    .formkit__content-wrapper-project-detail .formkit-input{
+        text-align: end;
+        max-width: 370px;
+        text-align-last: right;
+    }
+    .formkit__content-wrapper-project-detail .formkit-input:focus {
+        text-align: start;
+    }
+}

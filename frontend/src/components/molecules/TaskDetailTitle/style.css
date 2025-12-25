@@ -1,0 +1,114 @@
+.task-detail-title {
+    padding-top: 0px;
+}
+/* .task-detail-title .task-name {
+    padding-left: 9.5px;
+} */
+.task-name .copy-icon {
+    width: 15px;
+    height: 15px;
+    margin: 0px 0px 0px 10px;
+
+}
+.task-name .title-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    /* max-width: 500px; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 9px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.input-border-color{
+    border: 2px solid #2f3990;
+    border-radius: 5px;
+    height: 28px;
+    padding: 4px;
+    width: 100%;
+}
+
+.task-name .input-border-color {
+    margin-left:5px;
+}
+
+.task-name span {
+    margin-left:5px
+}
+
+.task-detail-title ul {
+    padding: 0px;
+    margin: 0px;
+    /* height: 40px; */
+}
+
+.task-detail-title ul li {
+    display: flex;
+    align-items: center;
+}
+.fav__star-img{
+    min-width: 13.603px;
+    height: 13px;
+}
+.task-detail-sidebar .assignee-headtitle{
+    width: 100%;
+    margin-right: 16px;
+}
+.task-detail-sidebar .task-details-title-wrapper {
+    width: 100%;
+}
+
+.task-detail-sidebar .task-detail-title ul li:first-child {
+    width: 14px;
+}
+.task-detail-sidebar .task-detail-title ul li.task-name
+{
+    width: calc(100% - 163px);
+}
+.task-detail-sidebar .task-detail-title ul li.task-name span
+{
+    width: calc(100% - 35px);
+}
+.task__selected-type{
+    width:14px; 
+    height:14px;
+    object-fit: cover;
+}
+@media(max-width: 1199px){
+    .task-detail-sidebar .task-detail-title ul li.task-name
+    {
+        width: calc(100% - 98px);
+    }
+    .task-detail-sidebar .task-detail-title ul li.task-name span
+    {
+        width: calc(100% - 35px);
+    }
+}
+
+@media (max-width: 1024px){
+    .task-detail-sidebar .task-detail-title ul li.task-name
+    {
+        width: calc(100% - 82px);
+    }
+    .task-detail-sidebar .task-detail-title ul li.task-name span
+    {
+        width: calc(100% - 30px);
+    }
+}
+/* @media(max-width: 1366px){
+    .task-name .title-name {max-width: 300px;}
+}
+@media(max-width: 991px){
+    .task-name .title-name {max-width: 200px;}
+} */
+@media(max-width: 767px){
+    .task-name .title-name {font-size: 16px;}
+}
+@media(max-width: 414px){
+    .task-name .title-name {font-size: 14px;}
+}

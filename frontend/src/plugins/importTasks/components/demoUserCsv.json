@@ -1,0 +1,48 @@
+[
+    {
+      "email": "example1@gmail.com",
+      "role": "member",
+      "designation": "Junior Developer"
+    },
+    {
+      "email": "example2@gmail.com",
+      "role": "admin",
+      "designation": "Team Lead"
+    },
+    {
+      "email": "example3@gmail.com",
+      "role": "member",
+      "designation": "Senior Developer"
+    },
+    {
+      "email": "example4@gmail.com",
+      "role": "admin",
+      "designation": "Manager"
+    },
+    {
+      "email": "example5@gmail.com",
+      "role": "member",
+      "designation": "Senior Developer"
+    },
+    {
+      "email": "example6@gmail.com",
+      "role": "member",
+      "designation": "Intern"
+    },
+    {
+      "email": "example7@gmail.com",
+      "role": "member",
+      "designation": "Senior Developer"
+    },
+    {
+      "email": "example8@gmail.com",
+      "role": "member",
+      "designation": "Senior Developer"
+    },
+    {
+      "email": "example9@gmail.com",
+      "role": "member",
+      "designation": "Q/A Tester"
+    }
+  ]
+  

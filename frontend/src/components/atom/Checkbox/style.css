@@ -1,0 +1,95 @@
+.main-checkbox-component {
+    height: 15px;
+    width: 15px;
+}
+.main-checkbox-component input[type=checkbox] {
+    position: relative;
+    border: 1px solid #DFE1E6;
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: text-top;
+    height: 15px;
+    width: 15px;
+    -webkit-appearance: none;
+}
+.custom_field_checkbox.main-checkbox-component {
+    height: auto !important;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.main-checkbox-component input[type=checkbox]:checked {
+    background-color: #2F3990;
+    border: 1px solid #2F3990!important;
+}
+.custom_field_checkbox.main-checkbox-component input.is_checked {
+    background-color: #2F3990 !important;
+    border: 1px solid #2F3990!important;
+}
+.custom_field_checkbox.main-checkbox-component input.remove_checked {
+    background-color: transparent !important;
+    border: 1px solid #DFE1E6 !important;
+}
+.main-checkbox-component input[type=checkbox]:checked::before {
+    content: '';
+    position: absolute;
+    right: 53%;
+    top: 50%;
+    width: 3px;
+    height: 8px;
+    border: solid #FFF;
+    border-width: 0 1px 1px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+.advance_setting_warpper_check .checkbox-input {
+    border: 1px solid #DFE1E6 !important;
+}
+.advance_setting_warpper_check input[type=checkbox]:before {
+    right: 53%;
+    top: 50%;
+    width: 3px;
+    height: 8px;
+}
+.duplicatetask__converttask--wrapper input[type=checkbox]:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 3px;
+    height: 7px;
+    border: solid #FFF;
+    border-width: 0 1px 1px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+.duplicatetask__converttask--wrapper input[type=checkbox] {
+    position: relative;
+    border: 1px solid #DFE1E6 !important;
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: text-top;
+    height: 12px;
+    width: 12px;
+    -webkit-appearance: none;
+    position: relative;
+    top: 2px;
+}
+.project__name_ellipsis {
+    max-width: 210px;
+}
+@media(max-width: 767px){
+    .duplicatetask__converttask--wrapper input[type=checkbox] {height: 16px;width: 16px;top: 2px;}
+    .duplicatetask__converttask--wrapper input[type=checkbox]:before {right: 7px;top: 7px;width: 4px;height: 7px;}
+}

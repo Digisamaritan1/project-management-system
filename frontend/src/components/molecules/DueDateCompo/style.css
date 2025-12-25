@@ -1,0 +1,38 @@
+/* .calender-menu-class-duedate .dp__arrow_top {
+    left: 5%;
+    top: -1px;
+    height: 11px;
+    width: 11px;
+} */
+/* .calender-menu-class-duedate .dp__arrow_bottom{
+    left: 5%;
+    bottom: -1px;
+    height: 11px;
+    width: 11px;
+} */
+.dp__arrow_top{display: none;}
+.priority__component--wrapper .due-date .dp__main span {
+    font-size: 12px !important;
+    color: #818181 !important;
+    position: relative;
+    top: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+@media(max-width: 576px){
+    .create__task-div .due_date-listing{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 95px;
+    }
+}
+@media(max-width: 480px){
+    .create__task-div .due_date-listing{
+        max-width: 65px;
+    }
+}
+@media(max-width: 412px){
+    .create__task-div .due_date-listing{
+        max-width: 100%;
+    }
+}

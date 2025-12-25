@@ -1,0 +1,70 @@
+.count-block {
+    display: flex;
+    height: 13px;
+    min-width: 23px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 0 5px;
+    padding: 0 3.05px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 7px;
+}
+.table-span-wrapper span {
+    line-height: 18px;
+    width:110px;
+}
+.table-span-wrapper .due-date span {
+    font-size: 13px;
+    color: #3B3B3B;
+    font-weight: 400;
+    line-height: 20px;
+}
+.table-span-wrapper .status-main-div span {
+    width: auto;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    margin-left: 0px!important;
+}
+.subtask__wrapper{
+    min-width: 1127px;
+}
+.subtask__title{
+    min-width: 45%;
+}
+.add_subtask_list{
+    top: 15px;
+    right: 0;
+}
+.sub__task-item{
+    max-height: 350px; 
+    min-width: 1127px;
+    border: 1px solid #ececec; 
+    border-radius: 8px;
+}
+.subtask__item-input{
+    height: 36px;
+}
+.sub__task-item::-webkit-scrollbar{
+    width: 2px;
+    display: block!important;
+    background-color: #b3b3b3!important;
+}
+.ai-generate-subtask-div{
+    border-left: 1px solid #ececec;
+    border-radius: 8px;
+    border-right: 1px solid #ececec;
+}
+@media(max-width:1199px){
+    /* .subtask-mobile-width{
+        min-width: 910px!important;
+    } */
+}
+@media(max-width: 767px){
+    /* .count-block {padding: 2px 3.4px;min-width: auto;margin-left: 20px !important;border-radius: 20px !important;font-size: 12px !important;height: auto;} */
+}

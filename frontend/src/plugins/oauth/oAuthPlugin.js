@@ -1,0 +1,11 @@
+import oAuthWithGoogle from "./google/GoogleAuth.vue"
+import oAuthWithGithub from "./github/GithubAuth.vue"
+import oAuthProviders from "./oAuthProviders.vue";
+
+export default {
+    install(app) {
+        app.component('oAuthProviders', oAuthProviders);
+        app.component('oAuthWithGoogle', oAuthWithGoogle);
+        app.component('oAuthWithGithub', oAuthWithGithub);
+    }
+};

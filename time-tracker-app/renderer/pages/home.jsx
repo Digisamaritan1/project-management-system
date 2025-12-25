@@ -1,0 +1,508 @@
+import React, { useState, useEffect, useRef } from 'react'
+import Head from 'next/head'
+import { useDispatch, useSelector } from 'react-redux'
+import TrackerSelection from '../components/TrackerSelection/TrackerSelection'
+import { apiRequest } from '../utils/services'
+import { useRouter } from 'next/router'
+import { setComment, setTrackerStartTime } from '../store/timelog'
+import moment from 'moment'
+import store from '../store/store'
+import Modal from '../components/Modal/Modal'
+import ManualTimeEntry from '../components/ManualTimeEntry/ManualTimeEntry'
+import Loader from '../components/Loader/Loader'
+import { DateTime } from 'luxon';
+import TrackerTask from '../components/TrackerTask';
+import WasabiImage from '../components/WasabiImage/WasabiImage'
+import { fetchAndProcessProjects } from '../utils/projectUtils'
+
+export default function HomePage() {
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const companyUser = useSelector((state) => state.company.companyUser)
+  const currentCopany = useSelector((state)=> state.company.currentCompany)
+  const { user } = useSelector((state) => state.user)
+  
+  // Get projects from store
+  const { filteredProjects: projectOption, allProjects, isLoading: isProjectLoading } = useSelector((state) => state.project)
+
+  const [isTrackerPermission, setIsTrackerPermission] = useState(true);
+  const trackerRef = useRef(null);
+  const [isManualTimeModalOpen, setIsManualTimeModalOpen] = useState(false);
+  const [isSpinner,setIsSpinner] = useState(false);
+  const isInterNetLost = useSelector((state)=> state.auth.isInternetLost);
+  const [tasks, setTasks] = useState([]);
+  const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
+  const [selectedTaskData, setSelectedTaskData] = useState(null);
+  const [taskComment, setTaskComment] = useState('');
+
+  useEffect(() => {
+    init();
+  }, [companyUser])
+
+  // Effect to handle tasks when projects are loaded
+  useEffect(() => {
+    if (projectOption.length > 0 && companyUser.isTrackerUser) {
+      getTasksForList(projectOption);
+    }
+  }, [projectOption, companyUser.isTrackerUser])
+
+  const init = async () => {
+    if (!companyUser.isTrackerUser) {
+      setIsTrackerPermission(false);
+      return;
+    }
+    else {
+      setIsTrackerPermission(true);
+      
+      // Check if projects are already in store
+      if (allProjects.length === 0) {
+        // Fetch projects if not in store
+        await fetchAndProcessProjects(dispatch);
+      }
+    }
+  }
+
+  const getTasksForList = async (option) => {
+    try {
+      let ids = option.map((x) => x.value);
+      let startDate = new Date(new Date().setHours(0, 0, 0)).getTime();
+      let endDate = new Date(new Date().setHours(23, 59, 59)).getTime();
+      const projectIDs = ids;
+      let queryAndConditions = [
+          {
+              objId: {
+                  CompanyId: currentCopany?._id,
+              },
+          },
+          {
+            AssigneeUserId: {
+              $in: [user?._id]
+            }
+          },
+          { deletedStatusKey: 0 },
+          {
+              ProjectID: {
+                  objId: projectIDs && projectIDs.length ? { $in: projectIDs } : {},
+              },
+          },
+          // ...(filterQuery.value ? Object.entries(filterQuery.value).map(([key, value]) => ({ [key]: value })) : [])
+      ];
+
+      let obj = [
+          {
+              $match: {
+                  $and: queryAndConditions,
+                  $or: [
+                      { startDate: { dbDate: { $gte: startDate, $lte: endDate } } },
+                      { DueDate: { dbDate: { $gte: startDate, $lte: endDate } } },
+                      {
+                          $and: [
+                              { DueDate: { dbDate: { $gte: startDate } } },
+                              { startDate: { dbDate: { $lte: endDate } } }
+                          ]
+                      }
+                  ]
+              }
+          },
+          {
+              $lookup: {
+                  from: 'folders',
+                  localField: 'folderObjId',
+                  foreignField: '_id',
+                  as: 'folderArray',
+                  pipeline: [
+                      {
+                          $project: {
+                              name: 1
+                          }
+                      }
+                  ],
+              }
+          },
+          {
+              $lookup: {
+                  from: 'sprints',
+                  localField: 'sprintId',
+                  foreignField: '_id',
+                  as: 'sprintArray',
+                  pipeline: [
+                      {
+                          $project: {
+                              name: 1,
+                              folderId: 1
+                          }
+                      }
+                  ],
+              }
+          },
+          {
+              $unwind: '$sprintArray'
+          },
+          {
+              $unwind: { path: '$folderArray', preserveNullAndEmptyArrays: true }
+          },
+          { $sort: { DueDate: -1, _id: 1 } },
+      ]
+      const [queryRef, workedTasks] = await Promise.all([
+        apiRequest('post', `/api/v1/task/find`, { findQuery: obj }),
+        apiRequest('post', `/api/v1/timesheet`, {
+          queryeta: [
+            {
+              $match: {
+                $and: [
+                  { Loggeduser: { $in: [user?._id] } },
+                  { ProjectId: { $in: projectIDs } },
+                  { LogStartTime: { $gte: (startDate / 1000), $lte: (endDate / 1000) } },
+                  { logAddType: { $in: [0, 1] } }
+                ]
+              }
+            },
+            // Sort by TicketID and LogStartTime descending
+            {
+              $sort: {
+                TicketID: 1,
+                LogStartTime: -1
+              }
+            },
+            // Group by TicketID to get only the latest log
+            {
+              $group: {
+                _id: "$TicketID",
+                doc: { $first: "$$ROOT" }
+              }
+            },
+            // Replace root with the grouped doc
+            {
+              $replaceRoot: {
+                newRoot: "$doc"
+              }
+            },
+            {
+              $addFields: {
+                TaskId: { $toObjectId: "$TicketID" }
+              }
+            },
+            {
+              $lookup: {
+                from: 'tasks',
+                localField: 'TaskId',
+                foreignField: '_id',
+                as: 'taskData',
+                pipeline: [
+                  {
+                    $lookup: {
+                      from: 'folders',
+                      localField: 'folderObjId',
+                      foreignField: '_id',
+                      as: 'folderArray',
+                      pipeline: [
+                        { $project: { name: 1 } }
+                      ]
+                    }
+                  },
+                  {
+                    $lookup: {
+                      from: 'sprints',
+                      localField: 'sprintId',
+                      foreignField: '_id',
+                      as: 'sprintData',
+                      pipeline: [
+                        { $project: { name: 1, folderId: 1 } }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            { $unwind: '$taskData' }
+          ]          
+        })
+      ]);
+
+      // If you want to combine the results into one array:
+      const combinedResults = [
+        ...(workedTasks.data || []),
+        ...(queryRef.data || [])
+      ];
+      let finalResult = [];
+      combinedResults.forEach((item) => {
+        let obj = {}
+        if (item.TaskName) {
+          obj.taskName = item.TaskName
+          obj.key = item.TaskKey
+          obj.sprintName = item.sprintArray?.name || ''
+          obj.folderName = item.folderArray?.name || ''
+          let projectIndex = option.findIndex((x) => x.value === item.ProjectID)
+          if (projectIndex !== -1) {
+            obj.projectName = option[projectIndex].label
+          }
+        } else {
+          let projectIndex = option.findIndex((x) => x.value === item.ProjectId)
+          if (projectIndex !== -1) {
+            obj.projectName = option[projectIndex].label
+          }
+          obj.taskName = item.taskData.TaskName
+          obj.key = item.taskData.TaskKey
+          obj.sprintName = item.taskData.sprintData[0]?.name || ''
+          obj.folderName = item.taskData.folderArray[0]?.name || ''
+          obj.comment = item.LogDescription
+        }
+
+        obj.fullData = item;
+        
+        let key = finalResult.findIndex((x)=> x.key === obj.key)
+        if (key === -1) {
+          finalResult.push(obj);
+        } else {
+          if (obj.comment) {
+            finalResult[key].comment = obj.comment;
+          }
+        }
+      })
+      setTasks(finalResult)
+    } catch (error) {
+      console.error("Error fetching tasks for list:", error);
+    }
+  }
+
+  const handleStartTracker = () => {
+    const selectedData = trackerRef.current.getSelectedData();
+    setIsSpinner(true);
+    try {
+      window.ipc.send("start-listen-event");
+      let obj = {
+        userId: user?._id || "",
+        projectId: selectedData?.selectedProject?._id || "",
+        taskId: selectedData?.selectedTask?.value || "",
+        description: selectedData?.comment || "",
+        companyId: currentCopany?._id || "",
+        actionTime: Math.floor(Number(DateTime.utc().ts)/1000),
+        type: "timesheets"
+      }
+  
+      
+  
+      let url = `/api/v3/timeTracker/start`;
+      apiRequest('post', url, obj).then((response) => {
+        if (response.data.status) {
+          let taskName = selectedData?.selectedTask?.label.split(" | ")[1] || '';
+          let folderName = '';
+          let sprintName = '';
+          if (selectedData?.selectedList?.label !== 'List') {
+              let id = selectedData?.selectedList.value.split("_")[0];
+              folderName = selectedData?.selectedProject?.sprintsfolders[id]?.name || '';
+              if (selectedData?.selectedSprint?.value) {
+                
+                let idsprint = selectedData?.selectedSprint?.value.split("_")[0];
+                
+                sprintName = selectedData?.selectedProject?.sprintsfolders[id].sprintsObj[idsprint]?.name || '';
+              }
+          } else {
+            let id = selectedData?.selectedList.value.split("_")[0];
+            sprintName = selectedData?.selectedProject?.sprintsObj[id]?.name || '';
+          }
+          let taskKey = tasks.find((x)=> (x.fullData?.taskData?._id === selectedData?.selectedTask?.value) || (x.fullData?._id === selectedData?.selectedTask?.value));
+          let taskTypeImage = getTaskTypeImage(selectedData?.selectedProject?.ProjectName,taskKey?.fullData?.taskData?.TaskType)
+          
+          dispatch(setTrackerStartTime(response.data.statusText));
+          dispatch(setComment({
+            comment: selectedData?.comment,
+            sprintId : selectedData?.selectedSprint?.value ? selectedData?.selectedSprint?.value : selectedData?.selectedSprint?.id,
+            taskId : selectedData?.selectedTask?.value,
+            projectId : selectedData?.selectedProject?._id,
+            taskName: taskName,
+            projectName: selectedData?.selectedProject?.ProjectName,
+            folderName: folderName,
+            sprintName: sprintName,
+            taskTypeImage: taskTypeImage
+          }));
+          setIsSpinner(false);
+          router.push('/trackerRunning')
+        } else {
+          if (response.data.isPermissionDenied) {
+            setIsTrackerPermission(false);
+            setIsSpinner(false);
+          } else {
+            console.error('Something went wrong');
+            setIsSpinner(false);
+          }
+        }
+      }).catch((error) => {
+        setIsSpinner(false);
+        console.error(error);
+      })
+      
+    } catch (error) {
+      setIsSpinner(false);
+    }
+  };
+
+
+  const startTrackerFromTask = (task) => {
+    setSelectedTaskData(task);
+    setTaskComment(task.comment || '');
+    setIsTaskModalOpen(true);
+  }
+
+  const getTaskTypeImage = (projectName, key) => {
+    let project = projectOption.find((x) => x.label === projectName);
+    let imgUrl = "https://firebasestorage.googleapis.com/v0/b/erpproject-1addc.appspot.com/o/defaut_task_status_img.png?alt=media&token=570a9fca-e23a-41ee-a47b-d82fb766b1fd";
+    if (project?.taskTypeCounts?.length > 0) {
+      const match = project.taskTypeCounts.find((item) => item.value === key);
+      if (match?.taskImage) {
+        imgUrl = match?.taskImage;
+      }
+    }
+
+    return imgUrl;
+  };
+
+  return (
+    <React.Fragment>
+      <Head>
+        <title>Alian hub Tracker 2.0</title>
+      </Head>
+      <div>
+        {isSpinner && <Loader/>}
+        {!isTrackerPermission ? <>
+          <div className='flex justify-center items-center flex-col p-12 text-center'>
+            <div><img src="/images/png/Frame.png" alt='warning' /></div>
+            <div className='font-semibold text-md'>You don't have permission to use tracker. Please contact your administrator.</div>
+          </div>
+        </> :
+        <>
+          {!isTaskModalOpen && (
+            <div className="bg-[#f4f5f7] h-[calc(100vh-135px)] overflow-auto scrollbar-hide">
+            <div className="flex flex-col items-center overflow-y-scroll text-sm scrollbar-hide bg-white shadow-[0px_1.615384578704834px_12.115384101867676px_0px_#0000001F] rounded-2xl m-3">
+              <div className='text-red-400 mt-2.5'>{isInterNetLost ? 'Internet Connection Lost' : ''}</div>
+              {isProjectLoading ? (
+                <div className="flex justify-center items-center p-8">
+                  <Loader />
+                </div>
+              ) : (
+                <TrackerSelection
+                  ref={trackerRef}
+                  projectOption={projectOption}
+                />
+              )}
+
+              {/* Action Buttons */}
+              {!isProjectLoading && (
+                <div className="max-w-[94%] w-full flex justify-between h-[50px] items-center mt-[15px] mb-[15px]">
+                    <div className="w-1/2 text-center">
+                      <button
+                        className="text-[#2F3990] underline text-sm font-medium cursor-pointer"
+                        onClick={() => {
+                          setIsManualTimeModalOpen(true)
+                        }}
+                      >
+                        Add Manual Time
+                      </button>
+                    </div>
+                    <div className="w-1/2 flex justify-center">
+                      <button
+                        className="px-[25px] py-[10px] bg-[#1CB303] text-white rounded text-sm hover:bg-[#169302] transition-colors"
+                        onClick={handleStartTracker}
+                      >
+                        Start Tracker
+                      </button>
+                    </div>
+                </div>
+              )}
+
+              {/* Screenshot Section */}
+
+              {/* <div className="w-full mt-[2%]">
+                <div className="px-[15px] flex items-center text-[#818181] mt-[15px] text-[13px] w-[94%]">
+                  Latest Screen Capture
+                </div>
+                <div className="p-[45px_15px] w-full max-w-[94%] mx-auto bg-white rounded-[10px] mt-[5px] mb-[20px] text-center shadow-[0px_1.615384578704834px_12.115384101867676px_0px_#0000001f]">
+                  <img
+                    src="/images/png/no-screenshot.png"
+                    alt="No Screenshot"
+                    className="mx-auto mb-2.5"
+                  />
+                  <p className="text-xs font-normal text-[#818181]">
+                    You haven't worked on this task before
+                  </p>
+                </div>
+              </div> */}
+            </div>
+            {!isProjectLoading && (
+              <div>
+                <div className='w-[90%] flex justify-between mx-5 text-[#2F3990] font-medium'>
+                 {tasks.length > 0 && <div>Today's Tasks</div>}
+                </div>
+                {tasks.map((task) => (
+                <div key={task.key} className="bg-white shadow-sm rounded-xl p-4 m-4" onClick={() => startTrackerFromTask(task)}>
+                  <div className="flex items-start justify-between">
+                  <div className="flex items-start gap-3 w-full">
+                  <div className="flex-shrink-0">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center cursor-pointer`}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <path d="M12.4999 0.00012207C5.59988 0.00012207 -0.00012207 5.60012 -0.00012207 12.5001C-0.00012207 19.4001 5.59988 25.0001 12.4999 25.0001C19.3999 25.0001 24.9999 19.4001 24.9999 12.5001C24.9999 5.60012 19.3999 0.00012207 12.4999 0.00012207ZM9.37488 18.1251V6.87512L18.1249 12.5001L9.37488 18.1251Z" fill="#CFCFCF"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0 overflow-hidden">
+                    <div
+                      className="truncate"
+                      title={`${task?.folderName || ''} ${task?.sprintName || ''}`}
+                    >
+                      {task.key} | {task?.projectName && `${task?.projectName}`} 
+                      {task?.folderName && " / "}
+                      {task?.folderName && (
+                        <>
+                          <img
+                            src="/images/png/folder.png"
+                            className="w-[10px] h-[10px] mx-1 inline-block"
+                            alt="folder"
+                          />
+                          {task?.folderName}
+                        </>
+                      )}
+                      {task?.sprintName && `/ ${task?.sprintName}`}
+                    </div>
+                    <p className="text-base font-semibold text-gray-800 mt-1 flex items-center gap-1">
+                      <span className="text-yellow-500">
+                        <WasabiImage url={getTaskTypeImage(task.projectName, task.fullData.taskData?.TaskType)} isUser={false} className="!w-[15px] !h-[15px]" />
+                      </span> {task.taskName}
+                    </p>
+                  </div>
+                </div>
+
+                    {/* <div className="text-right text-gray-800 font-semibold text-lg">{task.totalTime}</div> */}
+                  </div>
+                </div>
+              ))}
+              </div>
+            )}
+          </div>
+          )}
+        </>
+        }
+
+        {/* Manual Time Entry Modal */}
+        <Modal
+          isOpen={isManualTimeModalOpen}
+          onClose={() => setIsManualTimeModalOpen(false)}
+          title="Add Manual Time"
+        >
+          <ManualTimeEntry onClose={() => setIsManualTimeModalOpen(false)} />
+        </Modal>
+
+        {/* Custom Task Modal */}
+        {isTaskModalOpen && (
+          <TrackerTask
+            selectedTaskData={selectedTaskData}
+            projects={allProjects}
+            onClose={() => {
+              setIsTaskModalOpen(false);
+              setSelectedTaskData(null);
+            }}
+          />
+        )}
+      </div>
+    </React.Fragment>
+  )
+}

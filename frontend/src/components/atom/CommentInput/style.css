@@ -1,0 +1,44 @@
+.write-message {
+    border:1px solid #DCDCDC;
+    width: -webkit-fill-available;
+    padding: 10px 15px;
+    /* border-radius: 6px; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; 
+    resize: none;
+    height: 56px; /* Initial height */
+    max-height: 250px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+}
+
+.write-message.disabled {
+    background-color: #e3e3e3;
+}
+
+.reply-box {
+    padding: 5px;
+    max-height: 300px;
+    bottom: 62px;
+    width: -webkit-fill-available;
+}
+.show__userlist{
+    max-height: 300px;
+    bottom: 65px;
+}
+.user__profile{
+   object-fit:cover;
+}
+.cancel__reply{
+   width: 10px !important; 
+   height: 10px !important;
+}
+.emplyoee__profile-img{
+    width: 25px !important; 
+    height: 25px !important;
+}
+.emplyoee__profile-img img{ max-width: 25px }
+.emp__profile-wrapper{
+    width: calc(100% - 25px) !important;
+}

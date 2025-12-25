@@ -1,0 +1,40 @@
+.subtask {
+    max-height: 290px;
+    overflow: auto;
+    display: contents;
+}
+.list_view_tasksList {
+    overflow-x: auto;
+  }
+.item-head-draggable-div span{
+    min-width: 160px;
+}
+.item-head-draggable-div:hover{cursor: grab;}
+.span_wrapper {
+    width: 100%;
+    display: flex !important;
+    max-width: max-content !important;
+}
+.subtask img.draggable_icon {
+    position: absolute;
+    left: 25px;
+}
+img.draggable_icon {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    z-index: 3;
+}
+.dragTask .parent__task-image {
+    display: none;
+}
+
+span.span_wrapper.task_right.cursor-pointer.custom_sticky {
+    position: sticky;
+    right: 0;
+    background: #f4f5f7;
+}
+.new-row .new-col-mobile{
+    min-width: unset !important;
+    max-width: unset !important;
+}

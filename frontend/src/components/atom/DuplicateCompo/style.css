@@ -1,0 +1,46 @@
+.duplicate__component--copysection{
+    padding: 14px 20px;
+    border: 1px solid #CFCFCF;
+    margin: 15px 20px 0px 20px;
+}
+.duplicate__component--wrapper{
+    border-radius: 12px 12px 0 0;
+}
+.duplicate__task-title{
+    padding: 15px 20px 14px 20px;
+}
+.copy__assignee-checkbox:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    border-top: 1px solid #DFE1E6;
+}
+.duplicate__component--copysection h3{
+    line-height: 23.68px;
+}
+.everything__label{
+   line-height: 19.2px;
+   margin-left: 13px;
+}
+.everything__label-text{
+   margin-left: 9px;
+   line-height: 19.2px;
+
+}
+.allcheckbox__component-wrapper{
+    max-height: 92px !important;
+}
+.checkbox__wrapper{
+    width: 160px;
+}
+.no_assignee{
+    height: 30px !important;
+}
+@media(max-width: 767px){
+    .duplicate__task-title .form-control {padding: 13px 10px !important;}
+    .allcheckbox__component-wrapper{
+        max-height: 120px !important;
+    }
+}

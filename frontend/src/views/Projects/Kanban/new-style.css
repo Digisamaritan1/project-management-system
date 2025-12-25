@@ -1,0 +1,224 @@
+.kanban-board {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px 10px 10px;
+    overflow-x: auto;
+    align-items: flex-start;
+    background: #FFF;
+    height: calc(100vh - 155px);
+}
+
+.kanban-board .kanban-column {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: transparent;
+    min-height: auto;
+    transition: outline 0.2s ease;
+    height: 100%;
+}
+
+.kanban-board .highlight-drop {
+    background-color: #e9e7e7;
+    outline-offset: -4px;
+}
+
+.kanban-board .status-color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.kanban-board .column-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.kanban-board .task-count {
+    color: #818181;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px 5px;
+    margin-left: 8px;
+    font-family: Roboto;
+    font-weight: 400;
+    letter-spacing: 0;
+    border: 1px solid #cfcfcf;
+    background: #dfe1e6;
+} 
+
+.kanban-board .kanban-card-wrapper {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: inherit;
+}
+
+.kanban-board .kanban-card-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.kanban-board .kanban-card-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.kanban-board .kanban-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 310px;
+    min-width: 310px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.kanban-board .kanban-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.kanban-board .kanban-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    border: 1px solid #ececec;
+    box-shadow: 0px 1px 6px 0px #4E4E4E1A;
+    font-size: 11px;
+    color: #818181;
+}
+
+.kanban-board .column-drop-area {
+    margin-top: auto;
+    border-radius: 0 0 8px 8px;
+}
+
+.kanban-board .add-task-section {
+    min-height: 107px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px 0px #4E4E4E1A;
+    margin: 10px 0;
+    border: 1px solid #ececec;
+}
+
+.kanban-board .add-task-icon {
+    padding: 5px;
+    background-color: #FFF;
+    left: 284px;
+    border-radius: 6px;
+    border: 1px solid #E0E0E0;
+}
+
+.kanban-card .option-list {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.kanban-card:hover .option-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.kanban-board .sub-task-count {
+    font-size: 10px;
+    background: transparent;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    padding: 0px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    min-width: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kanban-board .parent-task-count {
+    background: transparent;
+    border: 1px solid #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF0000;
+    min-width: 23px;
+    font-size: 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    padding: 0 5px;
+}
+
+.kanban-board .date-picker {
+    border: 1px solid #F4F5F7;
+}
+
+.kanban-board .task-count-section {
+    border: 1px solid #F4F5F7;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.kanban-board .priority__compo {
+    min-width: 22px;
+    border-radius: 50%;
+    border: 1px solid #F4F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 6px 6px;
+    font-size: 12px;
+}
+
+.kanban-board .board-task-comment-count img {
+    width: 13px;
+    height: 13px;
+}
+
+/* board view skeleton css */
+
+.kanban-board-skeleton {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    overflow-x: auto;
+    align-items: flex-start;
+    background: #FFF;
+    height: calc(100vh - 144px);
+}
+
+.kanban-column-skeleton {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: transparent;
+    min-height: auto;
+    transition: outline 0.2s ease;
+    height: 100%;
+}
+
+.kanban-card-wrapper-skeleton {
+    background-color: inherit;
+}
+
+.kanban-card-skeleton {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    border: 1px solid #DFE1E6;
+    box-shadow: 0px 1px 6px 0px #4E4E4E1A;
+}
+
+@media (max-width: 1690px) {
+    .kanban-board { height: calc(100vh - 195px); }
+}
+
+@media (max-width: 768px) {
+    .kanban-board { height: calc(100vh - 215px);}
+}

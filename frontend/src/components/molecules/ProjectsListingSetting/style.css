@@ -1,0 +1,216 @@
+.projectInfoTopLine p {
+    line-height: 21px;
+    margin: 0px 6px;
+    max-width: 360px;
+}
+.projectInfoTopLine a {
+    line-height: 19px;
+    margin: 0px 5px 0px 4px;
+    color: #3845B3;
+}
+.projectInfoTopLine a img {
+    margin-right: 4px;
+}
+.projectInfoTopLine {
+    margin-bottom: 14px;
+}
+.projectInfoDiv {
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 15%);
+    padding: 20px 18px 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+span.ProjectFirstLatter {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    line-height: 19px;
+    margin-left: 6px;
+}
+.project_status_info_area div span.sub-title-span {
+    line-height: 19px;
+    margin-bottom: 11px;
+}
+.share__everyone {
+    padding: 5px 9.32px;
+    color: #2f3990;
+    border: 1px solid #2f3990;
+    height: 30px;
+    background-color: transparent;
+}
+span.everyone-wrapper {
+    margin-right: 10px;
+}
+.share__private {
+    border: 1px solid #959595;
+    padding: 5px 9.43px;
+    height: 30px;
+    color: #959595;
+    background-color: transparent;
+}
+.p_owner {
+    border-right: 1px solid #CFCFCF;
+    padding: 0 45px 0 0px;
+}
+.p__owner-wrapper {
+    width: 30px;
+    min-width: 30px;
+}
+.p_sharewith {
+    border-right: 1px solid #CFCFCF;
+    padding-left: 30px;
+    padding-right: 45px;
+}
+.p_status {
+    border-right: 1px solid #CFCFCF;
+    padding-left: 30px;
+    padding-right: 45px;
+}
+.p_status-wrapper{
+    width: 272px;
+    min-width: 272px;
+}
+.task__type-wrapper{
+    width: 168px;
+    min-width: 168px;
+}
+.task_type_status {
+    border-right: 1px solid #CFCFCF;
+    padding-left: 30px;
+    padding-right: 45px;
+}
+.p__sharewith-wrapper{
+    width: 144px;
+    min-width: 144px;
+}
+.projectDataColorli{
+    list-style: none;
+}
+.pro_block{
+    row-gap: 12px;
+    column-gap: 6px;
+    padding: 0;
+}
+.p_status ul li span {
+    line-height: 19px;
+    padding: 4px 10px;
+    border-radius: 7px;
+}
+.task_type_statusul{
+    column-gap: 6px;
+    row-gap: 10px;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+.task_type_status_todo ul li span {
+    padding: 4px 10px;
+    border-radius: 7px;
+}
+.task_type_status_todo {
+    border-right: 1px solid #CFCFCF;
+    padding-left: 30px;
+    padding-right: 45px;
+}
+.task__typestatustodo-wrapper{
+    width: 240px;
+    min-width: 240px;
+}
+.task__typestatustodo-wrapper .task_type_statusul li {
+    height: 23px;
+}
+.p_requiredViews ul{
+    padding: 0;
+}
+.p_erpApp {
+    border-right: 1px solid #CFCFCF;
+    padding-left: 30px;
+    padding-right: 45px;
+}
+.p__erpApp-wrapper{
+    width: 129px;
+    min-width: 129px;
+}
+.p_requiredViews {
+    padding-left: 30px;
+}
+.p__requiredViews-wrapper{
+    width: 96px;
+    min-width: 96px;
+}
+.task_type{
+    padding: 5.5px 10px;
+}
+.setting__project-dropdown .search-project-filter {
+    min-width: 123px !important;
+    padding: 0 !important;
+}
+.setting__project-dropdown {
+    margin-top: 0px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin-left: 0px;
+}
+.setting__project-dropdown .drop-down-item{
+    padding: 0 !important;
+    /* justify-content: center !important; */
+    margin: 10px;
+}
+.erp_app {
+    width: 12px;
+    height: 12px;
+}
+.erp_app.tab_req, .erp_app.def_req{
+    width: 12px;
+    height: 10px;
+}
+.setting__dots{
+    top:-3px;
+ }
+ .setting__close-project{
+    padding: 9.5px !important;
+ }
+@media (max-width: 1880px){
+    .pro_block, .task_type_statusul, .p_requiredViews ul, .share-with-wrapperdata,  .Assignee-component .d-flex.align-items-center {justify-content: center !important;}
+    .p_status, .p_owner, .p_sharewith, .task_type_status_todo, .p_erpApp , .p_requiredViews, .task_type_status{padding: 0px 10px;text-align: center;width: 18%;}
+    .p__owner-wrapper , .p_status-wrapper,
+    .task__type-wrapper, .p__sharewith-wrapper, .task__typestatustodo-wrapper, .p__erpApp-wrapper, .p__requiredViews-wrapper{width: auto;min-width: auto;}
+
+}
+@media (max-width: 1600px){
+    .everyone-plantext, .make-private-plantext {padding: 3px;height: auto;}
+}
+@media (max-width: 1199px){
+    .projectInfoTopLine p {max-width: 50%;}
+}
+@media (max-width: 1024px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 30.9%;}
+    .project_status_info_area {flex-wrap: wrap;align-items: baseline;justify-content: space-between;} 
+    .p_owner, .p_sharewith, .p_status {margin-bottom: 15px;}
+    .p_erpApp, .task_type_status, .task_type_status_todo{margin-top: 15px;}
+    .p_requiredViews {margin-top: 30px;}
+}
+@media (max-width: 945px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 30.6%;}
+
+}
+@media (max-width: 840px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 46.8%;}
+}
+    @media (max-width: 767px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 46.5%;}
+}
+@media (max-width: 680px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 46%;}
+}
+@media (max-width: 600px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 45.8%;}
+}
+    @media (max-width: 576px){
+    .p_owner, .p_sharewith, .p_status, .p_erpApp, .p_requiredViews, .task_type_status, .task_type_status_todo {width: 100%;margin-bottom: 0px;margin-top: 0;border-right:0;}
+    .projectInfoTopLine p {max-width: 20%;}
+    .projectInfoTopLine a {font-size: 11px;}
+    .project__inToplinetextimg-wrapper{max-width: 81%;}
+    .projectInfoDiv {padding: 20px 15px;}
+    .p_sharewith:after ,  .p_owner:after, .p_sharewith:after, .p_status:after, .p_erpApp:after, .p_requiredViews:after, .task_type_status:after, .task_type_status_todo:after{content: '';background: #cfcfcf;width: 40%;height: 1px;display: block;margin: 20px auto;}
+}

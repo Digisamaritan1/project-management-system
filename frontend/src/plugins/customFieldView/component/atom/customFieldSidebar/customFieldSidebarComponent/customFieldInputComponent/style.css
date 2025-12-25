@@ -1,0 +1,308 @@
+.formkit__form-wrapper .formkit-label, .formkit__form-wrapper .formkit-legend{
+    font-family: 'Roboto';
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: 20.72px;
+    padding: 0px 0px 10px 0px;
+    color: #3A3A3A;
+}
+.formkit__form-wrapper .formkit-inner {
+    border-radius: 5px;
+    border: 1px solid #DFE1E6;
+    box-shadow: none;
+}
+.formkit__form-wrapper .formkit-input {
+    padding:6px;
+}
+.formkit__form-wrapper .formkit-outer {
+    margin-bottom: 20px !important;
+}
+.formkit__form-wrapper .formkit-fieldset {
+    border: none !important;
+    padding: 0px;
+}
+.formkit__form-wrapper .formkit-inner:focus-within {
+    box-shadow: none;
+}
+
+.formkit__form-wrapper .customCheckbox [data-type="checkbox"] .formkit-input ~ .formkit-decorator, .formkit__form-wrapper .customCheckbox  [data-type="radio"] .formkit-input ~ .formkit-decorator {
+    width: 30px;
+    height: 15px;
+    box-shadow: none !important;
+    background: #CFCFCF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.formkit__form-wrapper .formkit-dropdown-wrapper {
+    max-height: 200px !important;
+}
+.formkit__form-wrapper .customCheckbox [data-type="checkbox"] .formkit-input:checked ~ .formkit-decorator, .formkit__form-wrapper .customCheckbox [data-type="radio"] .formkit-input:checked ~ .formkit-decorator {
+    background: #3845B3;
+}
+.formkit__form-wrapper .customCheckbox [data-type="checkbox"] .formkit-input ~ .formkit-decorator .formkit-icon, .formkit__form-wrapper .customCheckbox [data-type="radio"] .formkit-input ~ .formkit-decorator .formkit-icon {
+    width: 0px;
+    height: 0px;
+    padding: 5.5px;
+    top: 2px;
+    left: 2px;
+    transform: inherit;
+    background: white;
+    border-radius: 20px;
+}
+.formkit__form-wrapper .customCheckbox [data-type="checkbox"] .formkit-input:checked ~ .formkit-decorator .formkit-icon, .formkit__form-wrapper .customCheckbox [data-type="radio"] .formkit-input:checked ~ .formkit-decorator .formkit-icon {
+    width: 0;
+    height: 0;
+    right: 2px !important;
+    left: inherit;
+    background: white;
+}
+.formkit__form-wrapper .helpCheckbox .formkit-fieldset, .formkit__form-wrapper .custom__field-checkbox .formkit-fieldset , .formkit__form-wrapper .custom__field-radio-help .formkit-fieldset, .formkit__form-wrapper .custom__field-radio-time-formate .formkit-fieldset{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.formkit__form-wrapper .helpCheckbox .formkit-options {
+    margin-bottom: 10px !important;
+}
+.formkit__form-wrapper .formkit-help {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17.76px;
+    color: #959595;
+    margin-bottom: 0px !important;
+}
+.formkit__form-wrapper .custom__field-required .formkit-label:after {
+    content: "*";
+    color: red;
+}
+.formkit__form-wrapper textarea {
+    resize: none;
+}
+
+.dropdown-custom-field ::-webkit-scrollbar,
+.checkbox-custom-field ::-webkit-scrollbar {
+    display: none;
+}
+.dropdown-custom-field .btn-add-new,
+.checkbox-custom-field .btn-add-new {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+.dropdown-custom-field .options-area,
+.checkbox-custom-field .options-area {
+    max-height: 470px;
+    overflow-y: scroll;
+}
+.dropdown-custom-field .dropdown-main,
+.checkbox-custom-field .checkbox-main {
+    position: relative;
+    font-size: 14px;
+}
+.dropdown-custom-field .dropdown-select,
+.checkbox-custom-field .checkbox-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+.dropdown-custom-field .arrow-dropdown,
+.checkbox-custom-field .arrow-dropdown {
+    float: right;
+    margin: -2px 5px;
+}
+.dropdown-custom-field .arrow-dropdown::before,
+.checkbox-custom-field .arrow-dropdown::before {
+    content: "";
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.dropdown-custom-field .custom__field-required.color-field .formkit-outer,
+.dropdown-custom-field .custom__field-required.option-field .formkit-outer,
+.checkbox-custom-field .custom__field-required.color-field .formkit-outer,
+.checkbox-custom-field .custom__field-required.option-field .formkit-outer {
+    margin: 0px!important;
+}
+.dropdown-custom-field .custom__field-required.color-field .formkit-input,
+.checkbox-custom-field .custom__field-required.color-field .formkit-input,
+.dropdown-custom-field .custom__field-required.option-field .formkit-input,
+.checkbox-custom-field .custom__field-required.option-field .formkit-input {
+    margin: 0px!important;
+    font-size: 14px;
+}
+.dropdown-custom-field .color-box,
+.checkbox-custom-field .color-box {
+    width: 31px;
+    height: 29px;
+}
+.dropdown-custom-field .textbox,
+.checkbox-custom-field .textbox {
+    width: 100%;
+    max-width: 248px;
+}
+.dropdown-custom-field .textboxedit {
+    width: 100%;
+    max-width: 236px;
+}
+.dropdown-custom-field .textboxedits {
+    width: 100%;
+    max-width: 220px;
+}
+.dropdown-custom-field .drag-icon,
+.checkbox-custom-field .drag-icon {
+    top: 5px;
+}
+/* .formkit-form {
+    max-height: calc(100vh - 326px);
+    overflow: auto;
+} */
+.formkit__form-wrapper .custom__field-radio [data-type="radio"] .formkit-input:checked ~ .formkit-decorator {
+    border-radius: 4px;
+    background: #2F3990;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    top: 4px;
+    height: 24px;
+}
+.formkit__form-wrapper .custom__field-radio [data-type="radio"] .formkit-input:checked ~ .formkit-decorator .formkit-icon {
+    color: transparent;
+}
+.formkit__form-wrapper .custom__field-radio input.formkit-input[type='radio'] ~ .formkit-decorator {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+.formkit__form-wrapper .custom__field-radio [data-type="radio"] .formkit-wrapper {
+    position: relative;
+    justify-content: center;
+}
+.formkit__form-wrapper .custom__field-radio [data-type='radio'] .formkit-inner {
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+}
+.formkit__form-wrapper .custom__field-radio ul.formkit-options {
+    padding: 9px 5px;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #2F3990;
+    align-items: center;
+}
+.formkit__form-wrapper .custom__field-radio li.formkit-option {
+    width: 33.33%;
+    margin: 0px !important;
+}
+.formkit__form-wrapper .custom__field-radio label.formkit-wrapper[data-checked="true"] .formkit-label {
+    color: white;
+}
+.formkit__form-wrapper .custom__field-radio.custom__field-Separator ul.formkit-options {
+    width: 117px;
+}
+.formkit__form-wrapper .custom__field-radio span.formkit-label {
+    font-family: 'Roboto';
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+    z-index: 1;
+    cursor: pointer;
+    color: #2F3990;
+    padding: 0px;
+}
+.formkit__form-wrapper .custom__field-checkbox [data-type="checkbox"] .formkit-input:checked ~ .formkit-decorator .formkit-icon {
+    color: white;
+}
+.formkit__form-wrapper .custom__field-checkbox [data-type="checkbox"] .formkit-input:checked ~ .formkit-decorator {
+    background-color: #2F3990;
+    width: 15px;
+    height: 15px;
+    border: none;
+    box-shadow: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.formkit__form-wrapper .custom__field-checkbox ul.formkit-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+.formkit__form-wrapper .custom__field-checkbox li.formkit-option {
+    flex: 0 0 36%;
+    margin-bottom: 10px !important;
+}
+.formkit__form-wrapper .custom__field-checkbox [data-type="checkbox"] .formkit-input ~ .formkit-decorator {
+    background-color: white;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #2F3990;
+    box-shadow: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.formkit__form-wrapper .custom__field-checkbox .formkit-help {
+    margin: 0px;
+}
+.formkit__form-wrapper .custom__field-checkbox .formkit-outer {
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #DFE1E6;
+}
+.formkit__form-wrapper .custom__field-checkbox .formkit-wrapper .formkit-label {
+    color: #3B3B3B;
+    font-family: 'Roboto';
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+    padding: 0px !important;
+}
+.formkit__form-wrapper .custom__field-checkbox [data-type="checkbox"] .formkit-wrapper {
+    align-items: end !important;
+}
+.formkit__form-wrapper .custom__field-radio-help .formkit-help,.formkit__form-wrapper .custom__field-radio-time-formate .formkit-help{
+    margin: 10px 0px 0px !important;
+}
+.formkit__form-wrapper .custom__field-radio-time-formate li.formkit-option {
+    width: 50%;
+    margin: 0px !important;
+}
+.formkit__form-wrapper .custom__field-radio-time-formate ul.formkit-options {
+    width: 156px;
+}
+.formkit__form-wrapper .helpCheckbox .formkit-options span.formkit-label {
+    text-transform: capitalize;
+    padding-bottom: 0px!important;
+    line-height: 17px;
+}
+.formkit__form-wrapper .helpCheckbox .formkit-options .formkit-inner {
+    box-shadow: none!important;
+    outline: none;
+    border: none!important;
+}
+.formkit__form-wrapper [data-type=radio] .formkit-inner,.formkit__form-wrapper [data-type=checkbox] .formkit-inner {
+    border: none !important;
+    box-shadow: none !important;
+}
+.formkit__form-wrapper input[type=number]::-webkit-inner-spin-button, 
+.formkit__form-wrapper input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+.formkit__form-wrapper  input[type=number] {
+  -moz-appearance: textfield;
+}
+.formkit__content-wrapper .custom-textarea-field .formkit-input {
+    min-height: 114px!important;
+    height: 114px!important;
+    white-space: break-spaces;
+}
+.formkit__content-wrapper .custom-textarea-field .formkit-wrapper {
+    align-items: flex-start;
+}

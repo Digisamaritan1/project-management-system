@@ -1,0 +1,107 @@
+[
+  {
+    "element": "#createtask_driver",
+    "popover": {
+      "title": "add_new_task_text",
+      "description": "create_new_task_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#createtaskinput_driver",
+    "popover": {
+      "title": "input_task_name_text",
+      "description": "input_task_name_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#createtaskstatus_driver",
+    "popover": {
+      "title": "choose_task_status_text",
+      "description": "choose_task_status_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#createtaskassignee_driver",
+    "popover": {
+      "title": "assign_task_text",
+      "description": "assign_task_description_text",
+      "side": "left",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#createtaskduedate_driver",
+    "popover": {
+      "title": "set_task_deadline_text",
+      "description": "set_task_deadline_description_text",
+      "side": "left",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#createtaskpriority_driver",
+    "popover": {
+      "title": "define_task_priority_text",
+      "description": "define_task_priority_description_text",
+      "side": "left",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#tasklist_driver",
+    "popover": {
+      "title": "view_task_list_text",
+      "description": "view_task_list_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#singletaskdisply",
+    "popover": {
+      "title": "task_information_text",
+      "description": "task_information_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#taskquickmenudriver",
+    "popover": {
+      "title": "quick_task_menu_text",
+      "description": "quick_task_menu_description_text",
+      "side": "left",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#taskquickmenu_driver",
+    "popover": {
+      "title": "task_actions_text",
+      "description": "task_actions_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "element": "#tasktoggle_driver",
+    "popover": {
+      "title": "subtask_toggle_text",
+      "description": "subtask_toggle_description_text",
+      "side": "bottom",
+      "align": "start"
+    }
+  },
+  {
+    "popover": {
+      "title": "task_tour_complete_text",
+      "description": "task_tour_complete_description_text"
+    }
+  }
+]

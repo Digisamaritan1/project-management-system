@@ -1,0 +1,83 @@
+.hourly_milestone th:nth-child(1),.hourly_milestone td:nth-child(1) {
+    width: 126px;
+    padding: 8px 0px 8px 16px;
+}
+.hourly_milestone th:nth-child(2) , .hourly_milestone td:nth-child(2) {
+    width: 222px;
+}
+.hourly_milestone th:nth-child(3) , .hourly_milestone td:nth-child(3) {
+    width: 78px;
+}
+.hourly_milestone th:nth-child(4) , .hourly_milestone td:nth-child(4) {
+    width: 100px;
+}
+.hourly_milestone th:nth-child(5) , .hourly_milestone td:nth-child(5) {
+    width: 118px;
+}
+.hourly_milestone th:nth-child(6) , .hourly_milestone td:nth-child(6) {
+    width: 105px;
+}
+.hourly_milestone th:nth-child(7) , .hourly_milestone td:nth-child(7) {
+    width: 158px;
+}
+.hourly_milestone th:nth-child(8) , .hourly_milestone td:nth-child(8) {
+    width: 94px;
+}
+.hourly_milestone th:nth-child(9) , .hourly_milestone td:nth-child(9) {
+    width: 113px;
+    padding-right: 20px;
+    position: relative;
+    text-align: center;
+}
+.hourly-milestone-input {
+    width: 98px;
+}
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(3) {
+    padding-top: 8px;
+}
+.hourly_milestone th:nth-child(9) {
+    padding-top: 14px;
+}
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(1),
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(2),
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(3),
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(4),
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(5),
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(6),
+/* .hourly_milestone .fixMilestone_wrapper_tr td:nth-child(7), */
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(8),
+.hourly_milestone .fixMilestone_wrapper_tr td:nth-child(9) {
+    padding-top: 13px;
+}
+.hourly_milestone tfoot td:nth-child(9) {
+    padding-top: 16px;
+}
+.hourly_milestone tfoot td:nth-child(3) {
+    padding-top: 12px;
+}
+.monthly-calendar {
+    width: 202px !important;
+}
+.padding_top_cal {
+    padding-top: 13px !important;
+}
+.image_size {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+.user_name_minute_family {
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.user_name_family {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.24px;
+    padding-left: 5px;
+}

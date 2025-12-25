@@ -1,0 +1,26 @@
+.toggle {
+  position: relative;
+  width: 32px;
+  height: 16px;
+  border-radius: 50px;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4%;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.toggle-button-active {
+  left: 54%;
+}

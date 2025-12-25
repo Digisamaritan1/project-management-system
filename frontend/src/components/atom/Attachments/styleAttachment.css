@@ -1,0 +1,94 @@
+.vue-pdf-embed canvas {
+    /* height: fit-content !important; */
+    width: 80% !important;
+    margin: 0 auto;
+}
+.vue-pdf-embed > div {
+    margin-bottom: 8px;
+    box-shadow: none;
+}
+
+.app-header-wrapper {
+    margin: 16px;
+    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+    color: #ddd;
+}
+.app-content {
+    padding: 24px 16px;
+}
+.link_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-around;
+    background-color: #2F3990;
+    border-radius: 5px;
+    width: 135px;
+    margin: 15px auto;
+}
+.no_preview_found {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.zoom_wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 8;
+  transform: translateX(-50%);
+  width: 215px;
+  margin: 0 auto;
+  background-color: #1F1F1F;
+  padding: 14px;
+  border-radius: 20px;
+}
+.sideArrowWrapper {
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  font-size: 18px;
+  border: none;
+  position: relative;
+  padding: 0px;
+  cursor: pointer;
+}
+.total_wrapper{
+  font-size: 18px;
+  color: white;
+  margin: 0 5px;
+}
+.zoomInOutButton {
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  position: relative;
+  padding: 0px;
+  cursor: pointer;
+}
+.zoomDisable {
+  color: #787878;
+  pointer-events: none;
+}
+.zoomInAfter {
+  font-size: 28px;
+  color: white;
+  margin: 0px 10px;
+}
+.no_preview_background {
+  background-color: #4c494c;
+  padding: 20px 90px 10px;
+  border-radius: 15px;
+}
+@media (max-width:767px) {
+  .sort_name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 110px;
+  }
+}

@@ -1,0 +1,446 @@
+<template>
+    <div class="custom-form" ref="formRef">
+        <div class="p-20px pt-0 pb-0 custom-form-container" v-if="Object.keys(formObj).length && fieldArray.length">
+            <div class="mb-2">
+                <h3 class="group_by_card">{{$t('dashboardCard.display')}}</h3>
+                <template v-for="(field, index) in fieldArray.filter(e => e.groupBy === 'display')" :key="index">
+                    <TextInputFieldComponent
+                        v-if="field?.type === 'text' && !field?.hidden" 
+                        :field="field"
+                        :index="index"
+                        :formObj="formObj"
+                        @update:form-obj="handleFormUpdate"
+                        @check-errors="checkErrors"
+                    />
+
+                    <DropDownListComponent
+                        v-else-if="field?.type === 'dropdown' && !field?.hidden && (field?.label === 'calculation' ? selectedMeasure === 1 || selectedMeasure === 2 : field?.label === 'timerange' ? selectedMeasure !== 3 : true)"
+                        :id="makeUniqueId(6)"
+                        :matchField="field?.label === 'status' ? 'key' : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'group_by' || field?.label === 'fields' ? 'id' || field?.label === 'logtype' : '_id'"
+                        :items="field?.label === 'show_assignees' ? [...teams, ...usersArray] : field?.label === 'location' ? allProjectsArray : field?.label === 'status' ? taskStatusArray : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? field?.options : []"
+                        :selectedItems="field?.label === 'show_assignees' ? selectedUser : field?.label === 'location' ? selectedProjects : field?.label === 'status' ? selectedStatus : field?.label === 'measure' ? selectedMeasure : field?.label === 'calculation' ? selectedCalculation : field?.label === 'timerange' ? selectedTimeRange : field?.label === 'logtype' ? selectedLogtype : field?.label === 'group_by' ? selectedGroupBy : field?.label === 'fields' ? selectedFields : []"
+                        :field="field"
+                        :displayType="field?.label === 'show_assignees' ? 'profile' : field?.label === 'location' ? 'project' : field?.label === 'status' ? 'color' : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? 'text' : ''"
+                        :is-multi-select="field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' ? false : true"
+                        :searchKey="field?.label === 'show_assignees' ? 'Employee_Name' : field?.label === 'location' ? 'ProjectName' : field?.label === 'status' ? 'name' : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? 'name' : ''"
+                        :getDisplayText="(item) => field?.label === 'location' ? `${props?.allProjectsArray?.find(e => e._id === item)?.ProjectName}` : field?.label === 'status' ? taskStatusArray?.find(e => e?.key === item)?.name : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' ? $t(`dashboardCard.${field?.options?.find(e => e?.id === item)?.name}`) : field?.label === 'fields' ? $t(`Header.${field?.options?.find(e => e?.id === item)?.name}`) : ''"
+                        :getDisplayTextOption="(item) => field?.label === 'location' ? `${props?.allProjectsArray?.find(e => e._id === item?._id)?.ProjectName}` : field?.label === 'status' ? taskStatusArray?.find(e => e?.key === item?.key)?.name : field?.label === 'measure' || field?.label === 'calculation'  || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' ? $t(`dashboardCard.${field?.options?.find(e => e?.id === item?.id)?.name}`) : field?.label === 'fields' ? $t(`Header.${field?.options?.find(e => e?.id === item?.id)?.name}`) : ''"
+                        :selectedItem="field?.label === 'measure' ? selectedMeasure : field?.label === 'calculation' ? selectedCalculation : field?.label === 'timerange' ? selectedTimeRange : field?.label === 'logtype' ? selectedLogtype : field?.label === 'group_by' ? selectedGroupBy : ''"
+                        @update:selected="updateData"
+                        :isMultiLanguage="field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? true : false"
+                        :error="field?.label === 'show_assignees' ? error : field?.label === 'location' ? errorProject : ''"
+                        :isCheckBox="field?.label === 'fields' ? true : false"
+                    />
+                    
+                    <ToggleFieldComponent 
+                        v-else-if="field?.type === 'radio' && !field?.hidden && (selectedMeasure === 3 || selectedMeasure === null)"
+                        :field="field"
+                        :formObj="formObj"
+                        @update:form-obj="handleFormUpdate"
+                        :index="index"
+                    />
+                </template>
+            </div>
+            <div class="mb-2">
+                <h3 class="group_by_card">{{$t('dashboardCard.data')}}</h3>
+                <template v-for="(field, index) in fieldArray.filter(e => e.groupBy === 'data')" :key="index">
+                    <TextInputFieldComponent 
+                        v-if="field?.type === 'text' && !field?.hidden && (selectedMeasure === 3 || selectedMeasure === null)" 
+                        :field="field"
+                        :index="index"
+                        :formObj="formObj"
+                        @update:form-obj="handleFormUpdate"
+                        @check-errors="checkErrors"
+                    />
+
+                    <DropDownListComponent
+                        v-else-if="field?.type === 'dropdown' && !field?.hidden && ((field?.label === 'calculation' || field?.label === 'show_assignees' ) && selectedMeasure ? selectedMeasure === 1 || selectedMeasure === 2 : field?.label === 'timerange' ? selectedMeasure !== 3 : true)"
+                        :id="makeUniqueId(6)"
+                        :matchField="field?.label === 'status' ? 'key' : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'group_by' || field?.label === 'fields' ? 'id' || field?.label === 'logtype' : '_id'"
+                        :items="field?.label === 'show_assignees' ? [...teams, ...usersArray] : field?.label === 'location' ? allProjectsArray : field?.label === 'status' ? taskStatusArray : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? field?.options : []"
+                        :selectedItems="field?.label === 'show_assignees' ? selectedUser : field?.label === 'location' ? selectedProjects : field?.label === 'status' ? selectedStatus : field?.label === 'measure' ? selectedMeasure : field?.label === 'calculation' ? selectedCalculation : field?.label === 'timerange' ? selectedTimeRange : field?.label === 'logtype' ? selectedLogtype : field?.label === 'group_by' ? selectedGroupBy : field?.label === 'fields' ? selectedFields : []"
+                        :field="field"
+                        :displayType="field?.label === 'show_assignees' ? 'profile' : field?.label === 'location' ? 'project' : field?.label === 'status' ? 'color' : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? 'text' : ''"
+                        :is-multi-select="field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' ? false : true"
+                        :searchKey="field?.label === 'show_assignees' ? 'Employee_Name' : field?.label === 'location' ? 'ProjectName' : field?.label === 'status' ? 'name' : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? 'name' : ''"
+                        :getDisplayText="(item) => field?.label === 'location' ? `${props?.allProjectsArray?.find(e => e._id === item)?.ProjectName}` : field?.label === 'status' ? taskStatusArray?.find(e => e?.key === item)?.name : field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' ? $t(`dashboardCard.${field?.options?.find(e => e?.id === item)?.name}`) : field?.label === 'fields' ? $t(`Header.${field?.options?.find(e => e?.id === item)?.name}`) : ''"
+                        :getDisplayTextOption="(item) => field?.label === 'location' ? `${props?.allProjectsArray?.find(e => e._id === item?._id)?.ProjectName}` : field?.label === 'status' ? taskStatusArray?.find(e => e?.key === item?.key)?.name : field?.label === 'measure' || field?.label === 'calculation'  || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' ? $t(`dashboardCard.${field?.options?.find(e => e?.id === item?.id)?.name}`) : field?.label === 'fields' ? $t(`Header.${field?.options?.find(e => e?.id === item?.id)?.name}`) : ''"
+                        :selectedItem="field?.label === 'measure' ? selectedMeasure : field?.label === 'calculation' ? selectedCalculation : field?.label === 'timerange' ? selectedTimeRange : field?.label === 'logtype' ? selectedLogtype : field?.label === 'group_by' ? selectedGroupBy : ''"
+                        @update:selected="updateData"
+                        :isMultiLanguage="field?.label === 'measure' || field?.label === 'calculation' || field?.label === 'timerange' || field?.label === 'logtype' || field?.label === 'group_by' || field?.label === 'fields' ? true : false"
+                        :error="field?.label === 'show_assignees' ? error : field?.label === 'location' ? errorProject : ''"
+                        :isCheckBox="field?.label === 'fields' ? true : false"
+                    />
+
+                    <ToggleFieldComponent 
+                        v-else-if="field?.type === 'radio' && !field?.hidden && (selectedMeasure === 3 || selectedMeasure === null)"
+                        :field="field"
+                        :formObj="formObj"
+                        @update:form-obj="handleFormUpdate"
+                        :index="index"
+                    />
+                </template>
+            </div>
+            <div v-if="cardType !== 'time_tracking' && componentId !== 'QueueListComp'">
+                <div class="custom-field card-advanced-filter">
+                    <h3 class="group_by_card">{{$t('Filters.filter')}}</h3>
+                    <template v-for="(field, index) in fieldArray.filter(e => e.groupBy === 'filter')" :key="index">
+                        <HomeTaskFilter 
+                            class="custom-field" 
+                            :selectedProjects="filteredProjects?.filter(project =>selectedProjects.includes(project._id)) ?? []" 
+                            @selectedFilter="(e) => taskFilter = e" 
+                            :selected="taskFilter" 
+                            :isValidateFilter="isValidateFilter"
+                            :filterField="selectedMeasure && (selectedMeasure === 1 || selectedMeasure === 2) ? ['AssigneeUserId'] : []"
+                            v-if="field.label === 'add_filter'" />
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-component-btn">
+            <button type="button" @click="handleTabCheck" class="cancel-btn">{{ $t('Projects.cancel') }}</button>
+            <button type="submit" @click="handleSubmit" :disabled="submitted" class="submit-btn">{{ $t('Projects.save') }}</button>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import {inject} from 'vue';
+import { useStore } from "vuex";
+import { useI18n } from "vue-i18n";
+import { useCustomComposable } from '@/composable';
+import { useValidation } from "@/composable/Validation.js";
+import { onMounted, ref,computed, watch, onUnmounted } from "vue";
+import DropDownListComponent from "@/components/templates/Dashboard/DropDownListComponent.vue";
+import ToggleFieldComponent from "@/components/templates/Dashboard/ToggleFieldComponent.vue";
+import TextInputFieldComponent from "@/components/templates/Dashboard/TextInputFieldComponent.vue";
+import HomeTaskFilter from '@/components/molecules/TaskFilter/HomeTaskFilter.vue'
+
+const { t } = useI18n();
+const store = useStore();
+const { getters } = store;
+const {makeUniqueId,checkPermission} = useCustomComposable()
+const userId = inject("$userId");
+const teams = computed(() => {
+    const teamsArr = getters["settings/teams"];
+    return teamsArr.map((x) => {
+        return {
+            ...x,
+            "_id": "tId_"+x._id,
+            "Employee_Name": x.name,
+            "Employee_profileImageURL": ""
+        }
+    })
+});
+
+const taskStatusArray = computed(() => JSON.parse(JSON.stringify(getters["settings/AllTaskStatus"]?.settings || [])));
+
+const selectedUser = ref([]);
+const selectedStatus = ref([]);
+const selectedProjects = ref([]);
+const filteredProjects = ref([]);
+const selectedFields = ref([]);
+const taskFilter = ref([]);
+const selectedMeasure = ref(null);
+const selectedCalculation = ref(null);
+const selectedTimeRange = ref(null);
+const selectedGroupBy = ref(null);
+const selectedLogtype = ref(null);
+const isValidateFilter = ref(true);
+
+//props
+const props = defineProps({
+    fieldsArray: {
+        type: Array,
+        default: () => [],
+        required: true
+    },
+    allProjectsArray: {
+        type: Array,
+        default: () => [],
+        required: true
+    },
+    isEditCard: {
+        type: Boolean,
+        default: false,
+        required: true
+    },
+    cardType: {
+        type: String,
+        default: 'dashboard',
+        required: true
+    },
+    componentId: {
+        type: String,
+        default: '',
+    }
+});
+const usersArray = computed(() => {
+    let lableAray = props.fieldsArray.map(field => field.label);
+    const timeRange = lableAray.includes("timerange");
+    const measure = selectedMeasure.value;
+    const allUsers = JSON.parse(JSON.stringify(getters["users/users"]))
+    const currentUserOnly = allUsers.filter(user => user._id === userId.value);
+
+    const makeFilterCond = (key) => {
+        const permission = checkPermission(key);
+        if (permission === 2 || permission === true) return allUsers;
+        if (permission === 1) {
+            selectedUser.value = [userId.value]; // eslint-disable-line
+            return currentUserOnly;
+        }
+        return currentUserOnly;
+    };
+
+    if (!timeRange) return allUsers;
+    if (measure === 1) {
+        return makeFilterCond('sheet_settings.workload_timesheet');
+    } else if (measure === 2) {
+        return makeFilterCond('sheet_settings.tracker_timesheet');
+    } else {
+        return allUsers;
+    }
+});
+
+const error = ref('');
+const formObj = ref({});
+const formRef = ref(null);
+const errorProject = ref('');
+const submitted = ref(false);
+const fieldArray = ref(JSON.parse(JSON.stringify(props.fieldsArray)));
+
+const { checkErrors, checkAllFields } = useValidation();
+
+watch(()=>selectedUser.value, (newValue) => {
+    if (newValue.length) error.value = "";
+},{deep:true,immediate: true});
+
+watch(()=>selectedProjects.value, (newValue) => {
+    if (newValue.length) errorProject.value = "";
+},{deep:true,immediate: true});
+
+onMounted(() =>{
+    initializeFormObject();
+});
+
+onUnmounted(() => {
+    resetForm();
+});
+
+// Methods
+const initializeFormObject = () => {
+    for (const item of fieldArray.value) {
+        formObj.value[item.name] = {
+            value: item.value,
+            rules: item.rules,
+            name: item.label,
+            error: "",
+            placeHolder: item.placeHolder,
+            hidden: item.hidden,
+            disabled: item.disabled,
+            options: item.options
+        };
+    }
+    
+    initializeSelectedValues();
+};
+
+const initializeSelectedValues = () => {
+    if (formObj.value?.projectId) {
+        selectedProjects.value = props.isEditCard 
+            ? (formObj.value?.projectId?.value?.length ? formObj.value?.projectId?.value : (props.allProjectsArray?.map(e => e._id) || [])) 
+            : (props.allProjectsArray?.map(e => e._id) || []);
+        filteredProjects.value = props.allProjectsArray.filter(project =>
+            selectedProjects.value.includes(project._id));
+    }
+
+    if (formObj.value?.AssigneeUserId) {
+        selectedUser.value = props.isEditCard 
+            ? (formObj.value?.AssigneeUserId?.value?.length ? formObj.value?.AssigneeUserId?.value : (usersArray.value?.map(e => e._id) || [])) 
+            : (usersArray.value?.map(e => e._id) || []);
+        if(formObj.value?.measure?.value !== null) {
+            if(formObj.value?.measure?.value === 1) {
+                if(checkPermission('sheet_settings.workload_timesheet') === 1) {
+                    selectedUser.value = selectedUser.value?.filter((e)=>e == userId.value);
+                } else if(checkPermission('sheet_settings.workload_timesheet') === null) {
+                    selectedUser.value = [userId.value];
+                }
+            } else if(formObj.value?.measure?.value === 2) {
+                if(checkPermission('sheet_settings.tracker_timesheet') === 1) {
+                    selectedUser.value = selectedUser.value?.filter((e)=>e == userId.value);
+                } else if(checkPermission('sheet_settings.workload_timesheet') === null) {
+                    selectedUser.value = [userId.value];
+                }
+            }
+        }
+    }
+
+    if (formObj.value?.statusArray) {
+        selectedStatus.value = props.isEditCard 
+            ? (formObj.value?.statusArray?.value?.length ? formObj.value?.statusArray?.value : (taskStatusArray.value?.map(e => e.key) || []))
+            : (taskStatusArray.value?.map(e => e.key) || []);
+    }
+    if (formObj.value?.measure) {
+        selectedMeasure.value = formObj.value?.measure?.value;
+    }
+    if (formObj.value?.calculation) {
+        selectedCalculation.value = formObj.value?.calculation?.value;
+    }
+    if (formObj.value?.timerange) { 
+        selectedTimeRange.value = formObj.value?.timerange?.value;
+    }
+    if (formObj.value?.fields) { 
+        selectedFields.value = props.isEditCard ? (formObj.value?.fields?.value || []) :  (formObj.value?.fields?.options?.map((x) => x.id) || []);
+    }
+    if (formObj.value?.logtype) { 
+        selectedLogtype.value = formObj.value?.logtype?.value;
+    }
+    if(formObj.value?.filter){
+       taskFilter.value=formObj.value?.filter?.value || [];
+    }
+    if(formObj.value?.groupBy){
+        selectedGroupBy.value=formObj.value?.groupBy?.value;
+    }
+};
+
+const resetForm = () => {
+    formObj.value = {};
+    submitted.value = false;
+    selectedUser.value = [];
+    selectedProjects.value = [];
+    selectedStatus.value = [];
+    selectedMeasure.value = null;
+    selectedCalculation.value = null;
+    selectedTimeRange.value = null;
+    selectedLogtype.value = null;
+    selectedGroupBy.value = null;
+    filteredProjects.value = [];
+    selectedFields.value = [];
+};
+
+//emit
+const emit = defineEmits(['handleFunction', 'closeSidebar']);
+
+// Form submission
+const handleSubmit = async () => {
+    error.value = "";
+    errorProject.value = "";
+    const filteredData = Object.fromEntries(
+        // eslint-disable-next-line
+        Object.entries(formObj.value).filter(([_, field]) => !field.hidden)
+    );
+    
+    if (formObj.value?.AssigneeUserId && !selectedUser.value.length) {
+        error.value = t(`dashboardCard.error_assignees`);
+    }
+    
+    if (formObj.value?.projectId && !selectedProjects.value.length) {
+        errorProject.value = t(`dashboardCard.error_location`);
+    }
+    const valid = await checkAllFields(filteredData);
+
+    if (!valid || errorProject.value || error.value) {
+        return;
+    }
+
+    const isValidFilter = validateItems(taskFilter.value);
+    if(!isValidFilter){
+        isValidateFilter.value = isValidFilter;
+        return;
+    }
+    else{
+       isValidateFilter.value = true; 
+    }
+
+    const emitData = Object.fromEntries(
+        // eslint-disable-next-line
+        Object.entries(formObj.value).filter(([_, field]) => !field.disabled).map(([key, field]) => [key, field.value])
+    );
+
+    taskFilter.value.forEach((item) => {
+        delete item.isValidate;
+    });
+
+    // Override specific values
+    if (formObj.value.AssigneeUserId) emitData.AssigneeUserId = selectedUser.value;
+    if (formObj.value.projectId) emitData.projectId = selectedProjects.value;
+    if (formObj.value.statusArray) emitData.statusArray = selectedStatus.value;
+    if (formObj.value.measure) emitData.measure = selectedMeasure.value;
+    if (formObj.value.calculation) emitData.calculation = selectedCalculation.value;
+    if (formObj.value.timerange) emitData.timerange = selectedTimeRange.value;
+    if (formObj.value.fields) emitData.fields = selectedFields.value;
+    if (formObj.value.logtype) emitData.logtype = selectedLogtype.value;
+    if (formObj.value.groupBy) emitData.groupBy = selectedGroupBy.value;
+    emit('handleFunction', emitData,taskFilter.value);
+    submitted.value = true;
+};
+
+
+// Cancel function
+const handleTabCheck = () => {
+    formObj.value={};
+    emit('closeSidebar', false);
+};
+
+const handleFormUpdate = (updatedFormObj) => {
+    formObj.value = updatedFormObj
+};
+const updateData = (val,field) => {
+    if(field?.label === 'show_assignees'){
+        selectedUser.value = val;
+    }else if(field?.label === 'location'){
+        selectedProjects.value = val;
+    }else if(field?.label === 'status'){
+        selectedStatus.value = val;
+    }else if(field?.label === 'measure'){
+        selectedMeasure.value = val.id;
+    }else if(field?.label === 'calculation'){
+        selectedCalculation.value = val.id;
+    }else if(field?.label === 'timerange'){
+        selectedTimeRange.value = val.id;
+    }else if(field?.label === 'logtype'){
+        selectedLogtype.value = val.id;
+    }else if(field?.label === 'group_by'){
+        selectedGroupBy.value = val.id;
+    }else if(field?.label === 'fields'){
+        selectedFields.value = val;
+    }
+};
+const validateItems = (inputs) => {
+    let isValid = true; // Assume the array is valid initially
+    const chechEmptyArray = inputs.filter((x) => !Object.keys(x.name).length);
+    if(chechEmptyArray && chechEmptyArray.length > 0){
+        return isValid;
+    }
+    inputs?.forEach(item => {
+        item.isValidate = true;
+
+        if (typeof item.name !== "object" || Object.keys(item.name).length === 0) {
+            item.isValidate = false;
+        }
+        if (typeof item.comparison !== "object" || Object.keys(item.comparison).length === 0) {
+            item.isValidate = false;
+        }
+        if (item.name.value === "DueDate") {
+            if (item.values.length === 0) {
+                item.isValidate = false;
+            }
+            if(item.values.includes('Date range') && item.date === ''){
+                item.isValidate = false;
+            }
+        } else {
+            if (!Array.isArray(item.values) || item.values.length === 0) {
+                item.isValidate = false;
+            }
+        }
+        if (item.isValidate === false) {
+            isValid = false;
+        }
+    });
+    return isValid;
+}
+
+</script>
+
+<style scoped src="./style.css"></style>

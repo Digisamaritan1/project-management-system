@@ -1,0 +1,125 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.advancePermission h3 {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
+}
+
+.cls-import {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.section-right {
+    background-color: #f4f5f7;
+}
+
+.white_box {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.blue_btn.vs-button-primary.vs-button-filled,
+.blue_btn {
+    font-size: 16px;
+    padding: 7px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+
+.projectSecurityAndPermissionWrapper {
+    max-height: calc(100vh - 105px);
+    overflow: auto;
+}
+
+.projectSecurityAndPermissionWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.projectSecurityAndPermissionWrapper .switch {
+    width: 42px;
+    height: 22px;
+}
+
+.projectSecurityAndPermissionWrapper .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.projectSecurityAndPermissionWrapper input:checked+.slider {
+    background-color: #4ED164;
+}
+
+.projectSecurityAndPermissionWrapper .slider.round {
+    border-radius: 22px;
+}
+
+.projectSecurityAndPermissionWrapper .slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #DFE1E6;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.projectSecurityAndPermissionWrapper input:checked+.slider:before {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.projectSecurityAndPermissionWrapper .slider.round:before {
+    border-radius: 50%;
+}
+
+.projectSecurityAndPermissionWrapper .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 1.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.permission-allow-text label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.permission-allow-text p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #535358;
+}
+.Settings-pointer-event-none {
+    pointer-events: none;
+}
+.search__input{
+    max-width:392px !important;
+}
+@media (max-width: 1024px) {
+    .setting-section-right:has(.projectSecurityAndPermissionWrapper) {
+        width: 100%;
+        overflow: auto;
+    }
+    .actionListName {
+        left: -1;
+        min-width: 200px;
+    }
+}

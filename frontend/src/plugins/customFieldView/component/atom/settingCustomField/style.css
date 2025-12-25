@@ -1,0 +1,169 @@
+.custom-field__table-wrapper {
+    padding: 20px;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    background: #fff;
+}
+.custome-field-table {
+    max-height: calc(100vh - 205px);
+    overflow: auto;
+}
+.custome-field-table tbody tr td span {
+    color: #6B6B6B;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.24px;
+}
+.custome-field-table tbody tr td .project_bg{
+    color: #535358;
+}
+.custome-field-table tbody tr .edit__item{
+    opacity: 0;
+}
+.custome-field-table tbody tr:hover .edit__item{
+    opacity: 1;
+}
+
+    table{
+        background:#fff;
+        border:0px;
+    }
+    table thead {
+    border-radius: 6px 6px 0px 0px;
+    background: #F4F5F7;
+    position: sticky;
+    top: -20px;
+    z-index:1;
+}
+    table td,th{
+        border-left:0px;
+        border-right:0px;
+    }
+    table th{
+        text-align:left;
+        padding:13px 10px;
+        border:0px;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        color: #3a3a3a
+    }
+    table td{
+        padding:3px 10px;
+    }
+    table tbody tr:first-child td{
+        border-top:0px;
+    }
+    table th:last-child, table td:last-child {
+    text-align: right;
+}
+table thead tr th:first-child {
+    width: 21%;
+}
+
+table thead tr th:nth-child(2) {
+    width: 10%;
+}
+table thead tr th:nth-child(3) {
+    width: 10%;
+}
+table thead tr th:nth-child(4) {
+    width: 15%;
+}
+table thead tr th:nth-child(5) {
+    width: 20%;
+}
+table thead tr th:nth-child(6) {
+    width: 10%;
+}
+table thead tr th:nth-child(7) {
+    width: 9%;
+}
+table thead tr th:last-child {
+    width: 5%;
+}
+    .type{
+        padding:4.5px 5px;
+        border-radius:5px;
+        border-radius: 5px;
+        width: fit-content;
+        align-items:center;
+    }
+    .type svg{margin-right:3px;}
+    .project_bg {
+    border-radius: 6px;
+    background: #ECEEF1;
+    padding: 4.5px 10px;
+    width: fit-content;
+}
+.project_ellipsis {
+    max-width: 220px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.created_by img{margin-right:5px;}
+.custom__field-error .position-ab {
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.customField-wrapper .disable {
+    opacity: 0.3;
+}
+.customField__accesdenied {
+    height: calc(100vh - 230px);
+}
+.field__title__type {
+    max-width: 220px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.ml_1 {
+    margin-left: 10px;
+}
+.field__title__name {
+    max-width: 150px;
+    display: block;
+}
+.field__type,.field__user_name {
+    max-width: 80px;
+}
+@media(max-width:1440px){
+    .custome-field__table {
+        width: 1280px;
+    }
+    .custom-field__table-wrapper {
+        overflow: auto;
+    }
+    table thead tr th:first-child {
+        width: 18%;
+    }
+    table thead tr th:last-child {
+        width: 8%;
+    }
+}
+@media(max-width:767px){
+    .custome-field-table tbody tr .edit__item{
+        display: inline-block;
+    }
+}
+@media(max-width:680px){
+    .addcustomfield-btn input.form-control {
+        width: fit-content!important;
+    }
+}
+@media(max-width:480px){
+    .addcustomfield-btn {
+        flex-wrap: wrap;
+    }
+    .addcustomfield-btn input.form-control {
+        width: 100%!important;
+        margin-bottom: 10px;
+    }
+} 

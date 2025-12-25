@@ -1,0 +1,87 @@
+.input__Search{
+    margin: 10px 0 8px 0;
+}
+ .input__Search::placeholder {
+    font-size: 16px !important;
+    color: #949DA8 !important;
+}
+.Project-name-sidebar{
+    padding-left: 10px;
+}
+.converted__sidebar .sidebar-body {
+    background-color: #F4F5F7 !important;
+}
+.inital-box{
+    margin-left: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.24px;
+    color: #FFF;
+}
+.mainConverToSubTask
+.browse__project-wrapper .Project-name-sidebar {
+    padding-left: 15px;
+    color: #525255;
+    line-height: 20.72px;
+}
+ .browse__project-wrapper {
+    padding: 8px 10px;
+    border-radius: 5px;
+    height: 36px;
+    cursor: pointer;
+}
+ .browse__project-wrapper:hover{
+    background: #F0F0F0;
+}
+.duplicate__component-with--convertlist {
+    border: 1px solid rgb(207, 207, 207);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+.duplicatetask__converttask--wrapper {
+    padding: 15px;
+}
+.duplicatetask__converttask--wrapper .convert__projecttask-wrapper {
+    border-radius: 0 0 12px 12px !important;
+    margin: 0 !important;
+    padding-top: 30px !important;
+    max-height: none!important;
+}
+.movetask__converttask--wrapper .convert__projecttask-wrapper {
+    padding-top: 0px !important;
+}
+.duplicate__component-with--convertlist .duplicate_component_only {
+    max-height: 300px !important;
+}
+.project__icon{
+    width: 20px !important;
+    height: 20px !important;
+}
+.create__task-title{
+    padding: 15px 20px 14px 20px;
+}
+.create__component--wrapper{
+    border-radius: 12px 12px 0 0;
+}
+@media(max-width: 1900px){
+    .duplicate__component-with--convertlist .duplicate_component_only {max-height: 230px !important;}
+}
+@media(max-width: 767px){
+    .input__Search {margin: 15px 0 10px 0;height: 50px !important;border-radius: 6px !important;border: 1px solid #E0E0E0 !important;background: #F0F0F0 !important;}
+    .browse__project-wrapper:hover{background: transparent;}
+    .browse__project-wrapper{height: 50px;}
+    .duplicatetask__converttask--wrapper {padding: 0px;overflow: auto;height: 100%;}
+    .duplicate__component--wrapper{border-radius: 0 !important;}
+    .duplicatetask__project--sprintList, .duplicatetask__converttask--wrapper .convert__projecttask-wrapper {max-height: fit-content !important;  height: auto !important;}
+    .duplicatetask__converttask--wrapper .convert__projecttask-wrapper {max-height: none!important;}
+    .duplicate__component-with--convertlist .duplicate_component_only {max-height: 180px !important;}
+    .duplicatetask__converttask--wrapper .allcheckbox__component-wrapper{max-height: 120px;}
+    .converted__sidebar .sidebar-body {background-color: #fff !important;}
+}

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+::-webkit-scrollbar{
+  width: 0%;
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+/* Make sure buttons inside the drag region are NOT draggable */
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+
+@layer utilities {
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;  /* Chrome, Safari and Opera */
+    }
+  }
+  

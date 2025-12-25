@@ -1,0 +1,48 @@
+img.screenShotDisplay__innerImageTimelog {
+    width: 100%;
+   height: 78px;
+   -o-object-fit: cover;
+   object-fit: cover;
+   border-radius: 6px;
+   cursor: pointer;
+   margin: 0 auto;
+   position: relative;
+   transition: 0.5s all ease-in-out;
+   z-index: 1;
+   margin-bottom: 5px;
+}
+.screenShotTime__screenshot--mainImage {
+   max-width: 158px;
+   width: 100%;
+}
+.screenShotDisplay__screenshotActivity{
+   margin-top: 10px;
+}
+.screenShotDisplay {
+   padding: 9px;
+   width: 100%;
+   border-radius: 10px;
+   box-sizing: border-box;
+   background: #F4F5F7;
+   min-width: 158px;
+   width: 100%;
+}
+.screenShotDisplay__timedispalyImg{
+   font-size: 13px;
+}
+
+.screenShotDisplay__timecheckbox {
+   display: flex;
+   justify-content: space-between;
+}
+
+img.screenShotDisplay__timedispalyImg--profileImage {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+}
+
+.isSelectedImage {
+   border: 1px solid #2F3990;
+   padding: 8px;
+}

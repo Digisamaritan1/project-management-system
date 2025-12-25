@@ -1,0 +1,37 @@
+.sattus-color-div {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    position: relative;
+    top: 1px;
+}
+.status__deatil-wrapper:first-child {
+    border-top: 0 !important;
+}
+.old__newstatustitle-wrapper {
+    border-bottom: 1px solid #DFE1E6;
+    top: 0;
+}
+.task__type-wrapper .task__type-width {
+    height: auto !important;
+    width: auto !important;
+    margin-left: 0 !important;
+}
+.conforms__task-component .task__type-wrapper ,.select__tasktype.task__type-wrapper{
+    padding: 3px 10px;
+    width: 50%;
+    height: 30px;
+}
+.task_type-title{
+    top: 6px;
+}
+.convert__type{
+    object-fit: cover;
+    width:14px; 
+    min-width: 14px;
+    height: 14px;
+}
+.error__msg-text{
+   margin-top: -4px;
+   left: 0;
+}

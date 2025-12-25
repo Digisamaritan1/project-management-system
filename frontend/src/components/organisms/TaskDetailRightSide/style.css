@@ -1,0 +1,129 @@
+.task-detail-right-side {
+    max-width: 375px;
+    width: 100%;
+    padding: 15px 13px 15px 17px;
+    border-left: 1px solid #DFE1E6;
+}
+.task-detail-right-side-label {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    align-items: center;
+}
+.task-detail-right-side-label h4{
+    padding: 0px;
+    margin: 0px;
+    width: 40.5%;
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.task-detail-right-side-label span {
+    border-radius: 7px;
+    border-width: 2px;
+    height: 24px;
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    padding: 3px 8px 0px 8px;
+}
+.details-heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    margin: 0px 0px 12px 0px
+}
+
+.reporter-img{
+    vertical-align: middle;
+    width:25px;
+    height:25px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+}
+
+.priority-comp span{
+    border-radius: 7px;
+    border-width: 2px;
+    height: 24px;
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    padding: 0px 8px 3px 8px;
+}
+.taskdetail-label{
+    font-weight: 400;
+    font-size: 13px !important;
+    line-height: 19px !important;
+    color: #000000;
+}
+.priority-comp:hover {
+    background-color: #dfe1e6;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #818181;
+    position: relative;
+    left: 0px;
+    width: 65%;
+}
+.priority-comp.taskdetail-label {
+    width: 65%;
+    border-radius: 4px;
+    padding: 8.5px 10px;
+}
+.due-date.taskdetail-label:hover {
+    background-color: #dfe1e6;
+}
+.due-date.taskdetail-label{
+    /* padding: 8.5px 10px;
+    max-width: 189px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer; */
+    padding: 8.5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 65.2%;
+}
+.task-detail-right-wrapper {
+    width: 50%;
+}
+.task-created-by {
+    max-width: 150px;
+}
+
+.remaining-estimate-text{
+    font-size: 13px;
+    font-family: 'Roboto';
+}
+@media(max-width: 1199px){
+    .task-detail-right-side {max-width: 310px;}
+    .task-detail-right-side-label h4{width: 46%;}
+    .due-date.taskdetail-label {width: 60%;}
+    .priority-comp:hover,.priority-comp.taskdetail-label {width: 59%;}
+}
+@media(max-width: 1024px){
+    .task-detail-right-side {max-width: 288px;}
+}
+@media(max-width: 767px){
+    h4.details-heading {font-size: 16px;font-weight: 600 !important;}
+    .due-date.taskdetail-label:hover {background-color: transparent;}
+    .task-detail-right-side {max-width: 100%; background-color: #fff;padding:0;margin-top: 20px;padding: 10px;}
+    .due-date.taskdetail-label {width: calc(100% - 35%);text-align: right;padding: 0 !important;}
+    .task-detail-right-side-label{margin-bottom: 0;height: 50px;border-bottom: 1px solid #DFE1E6;justify-content: space-between;}
+    .task-detail-right-wrapper{justify-content: flex-end;text-align: right;width: auto;width: calc(100% - 35%);display: flex;}
+    .priority-comp:hover,.priority-comp.taskdetail-label {text-align: right;width: calc(100% - 35%);justify-content: end;display: flex;}
+    .task-detail-right-side-label h4{width: 35%;font-size: 16px;font-weight: 400;}
+    .taskdetail-label, .task-esitmate-hours{font-size: 16px !important;padding-right: 0 !important;}
+}
