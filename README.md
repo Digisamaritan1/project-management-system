@@ -1,163 +1,81 @@
-# Project Management System
+# 1. Nodejs Configuration
 
-An open-source **Project Management System** built with **Vue 3** and **Node.js**, designed to manage **projects, tasks, and timesheets** efficiently.  
-This application is suitable for individuals, teams, and organizations looking for a customizable and self-hosted solution.
+### 1.1 Nodejs Configuration
 
-Maintained by **Alian Software**.
+Kindly navigate to your project's folder.
 
-## Modules
-
-- Project management (create, update, track projects)
-- Task management with status tracking
-- Timesheet logging and reporting
-- User-based access control
-- Modular frontend and backend architecture
-- API-driven backend (Node.js)
-- Modern Vue 3 frontend (Composition API)
-- Realtime update & notifications
-- AI based operations
-
-## Tech Stack
-
-#### Frontend
-- Vue 3 (Composition API)
-- Vue Router
-- State Management (Vuex – as per your setup)
-- Axios for API communication
-
-#### Backend
-- Node.js
-- Express.js
-- RESTful APIs
-- Database (MongoDB – update as applicable)
-- Authentication & Authorization
-- Firebase (FCM notifications)
+1. You must verify that **Npm (v10.2.4)** and **Node (v20.11.1)** are installed for the relevant version. If you're not sure about the version, try to run the given command in the command prompt: <mark style="color:red;">**npm run check-version**</mark>&#x20;
+2.  If both the **Node** and **Npm versions** match, then the screen will display the output as shown below:\
 
 
-## Installation & Setup
- #### Clone the Repository
- ``` 
- git clone https://github.com/aliansoftwareteam/AlianHub-Project-Management-System.git
- ```
+    <figure><img src="https://changing-tan-fo0twr3suc-0i4duujol5.edgeone.dev/image199.png" alt=""><figcaption></figcaption></figure>
 
- #### Installation guidelines documentation
- - https://help.alianhub.com
+Else, the screen will display the output as shown below:
+
+<figure><img src="https://spicy-cyan-m3fajvyv6s-2nvmt5gv5f.edgeone.dev/image153.png" alt=""><figcaption></figcaption></figure>
+
+Kindly check if Node is pre-installed in your system. If not, then you need to install it before running Step 1.&#x20;
+
+### Reference to Node Installation:&#x20;
+
+1. [_**Node.js Official Website**_](https://nodejs.org/download/release/v20.11.1/)&#x20;
+2. Using NVM [_**https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating**_](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
+### 1.2 Vue CLI install
+
+After the completion of node configuration you need to install the Vue cli using the following Command. Also you can refer to the [official site](https://cli.vuejs.org/guide/installation.html).
+
+```bash
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+```
+
+After installation, you will have access to the `vue` binary in your command line. You can verify that it is properly installed by simply running `vue`, which should present you with a help message listing all available commands.
+
+You can check you have the right version with this command:
+
+```
+vue --version
+```
 
 
-## ✨ Key Features
-#### 📊 Dashboard (New)
-- Customize Layouts
-- Custom Reports
+# 2. Server Startup
 
-#### 👀 Views
-- List View
-- Board View
-- Table View
-- Calendar View
+### 2.1 Start Server and Installation
 
-#### 📁 Project
-- Enable specific features
-- Create milestones
-- Create checklist
-- Set dynamic permissions
-- Import and Export (New)
-- Comments
-- Audits
-- Workload management
-- Custom field creation
-- Status management
-- Add assignee
-- Sprint management
+Go back to your command prompt after completing Step 1. Now, use the command:
 
-#### ✅ Task
-- #### Track each task with:
-  - Screen screenshots
-  - Keystrokes
-  - Mouse events
-- Drag-and-drop features
-- Group-wise task views
-- Create subtasks
-- Create checklist
-- Import and Export (New)
-- Progress tracking
-- Add tags
-- Add attachments
-- Due dates and reminders
-- Comments
-- Audits
-- Set priority
-- Move, merge, duplicate tasks
-- Convert tasks to sprint and subtasks
-- Manage tasks
+<mark style="color:red;">**npm run basic-install**</mark>
 
-#### 🔍 Advanced Search Filters
-- Task-wise search
-- Project-wise search
-- Search by due date
-- Search by status
-- Search by assigned to
-- Search by created by
-- Search by priority
-- Save your filters
+NOTE: if this step thows issue related to the BUILD failure, then you can follow this steps in your terminal
 
-#### ⏱️ Timesheet & Reports
-- Project timesheet
-- User timesheet
-- Workload timesheet
-- Tracker timesheet
-- Milestone report
+```
+// Considering working directory as projects root directory
+> cd installation
+> npm run build
 
-#### 🔔 Notification
-- Mention notification
-- External notification
-- Email notification
+// On successful build completion, change directory to root
+> cd ..
 
-#### 🤖 AI Integration
-- Write with AI
-- Create project templates using AI
-- Create tasks and subtasks using AI
-- Generate checklist using AI
-- Write descriptions using AI
+// Run the server using any of the below commands
+> npm run start 
+// OR
+> node server.js
+```
 
-#### 🧩 Custom Fields
-- Checkbox
-- Dropdown
-- Text area
-- Date
-- Number
-- Text
-- Money
-- Phone number
-- Email
+This command will generate <mark style="color:red;">env</mark> files and a build for installation.
 
-#### 💬 Chat & Communication
-- Real-time chat
-- Create channels
+When the command is done, it will display the output on your command prompt as shown on the screen below.&#x20;
 
-#### ⚙️ Other
-- Realtime updates (New)
-- Multilingual support (New)
-- Local storage (New)
-- 40+ dynamic permissions per company
-- Pre-built project management templates
-- Create custom roles and permissions
-- Third-party integrations:
-  - Google Sheets
-  - YouTube
-  - Figma
-  - And more
+<figure><img src="https://spicy-cyan-m3fajvyv6s-2nvmt5gv5f.edgeone.dev/image153.png" alt=""><figcaption></figcaption></figure>
 
-## 🌍 Built for Everyone
-- Finance & Accounting
-- Marketing
-- HR & Recruiting
-- Engineering & Product
-- Sales & CRM
-- IT
+Thereafter, navigate to <mark style="color:blue;">**http://localhost:4000**</mark>  in your browser.
 
-## 🤝 Contributing
-Contributions are welcome!  
-Please fork the repository and submit a pull request.
 
-## 📄 License
-This project is open-source and available under the **MIT License**.
+
+# 3. Installation Guide
+
+Please make sure to follow through the installation guide properly without skipping any step.
+
+[_**Please follow this document**_](https://help.alianhub.com/app-installation-and-start-guide/4.-installation-guide/4.2-mongodb-verification)
