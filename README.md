@@ -8,11 +8,11 @@ Kindly navigate to your project's folder.
 2.  If both the **Node** and **Npm versions** match, then the screen will display the output as shown below:\
 
 
-    <figure><img src="https://changing-tan-fo0twr3suc-0i4duujol5.edgeone.dev/image199.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image199.png" alt=""><figcaption></figcaption></figure>
 
 Else, the screen will display the output as shown below:
 
-<figure><img src="https://spicy-cyan-m3fajvyv6s-2nvmt5gv5f.edgeone.dev/image153.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image153.png" alt=""><figcaption></figcaption></figure>
 
 Kindly check if Node is pre-installed in your system. If not, then you need to install it before running Step 1.&#x20;
 
@@ -68,7 +68,7 @@ This command will generate <mark style="color:red;">env</mark> files and a build
 
 When the command is done, it will display the output on your command prompt as shown on the screen below.&#x20;
 
-<figure><img src="https://spicy-cyan-m3fajvyv6s-2nvmt5gv5f.edgeone.dev/image153.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image153.png" alt=""><figcaption></figcaption></figure>
 
 Thereafter, navigate to <mark style="color:blue;">**http://localhost:4000**</mark>  in your browser.
 
@@ -79,3 +79,74 @@ Thereafter, navigate to <mark style="color:blue;">**http://localhost:4000**</mar
 Please make sure to follow through the installation guide properly without skipping any step.
 
 [_**Please follow this document**_](https://help.alianhub.com/app-installation-and-start-guide/4.-installation-guide/4.2-mongodb-verification)
+
+
+<br>
+<br>
+<br>
+
+
+# Time Tracker Configuration
+
+### Time Tracker Setup
+
+1. Please make sure you have setup Alianhub before you setup time tracker. You need to verify that Npm (v10.2.4) and Node (v20.11.1) are installed for the relevant version in your system.
+2. Also, make sure that you install the correct version of Python before moving forward with Time Tracker. The required version of Python is v2.7.2. Download from [_**Here**_](https://www.python.org/downloads/release/python-272)_**.**_
+3. If you are generating build from mac, you must have [Xcode](https://developer.apple.com/xcode/) installed.
+
+**Kindly check if Node is pre-installed in your system. If not, then you need to install it before running Step 1.**
+
+**Reference to Node Installation:**&#x20;
+
+1. [_**Node.js Official Website**_](https://nodejs.org/download/release/v20.11.1/)&#x20;
+2. Using NVM [_**https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating**_](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+3. After checking the node version you need to create a <mark style="color:red;">**.env**</mark> file. For creating a <mark style="color:red;">**.env**</mark> file go to the Renderer folder in your project. As shown in the image below.
+4.  Then in the renderer folder create file name <mark style="color:red;">**.env**</mark>.\
+    \
+
+
+    <figure><img src=".gitbook/assets/image30 (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+    <figure><img src=".gitbook/assets/tracker2.png" alt=""><figcaption></figcaption></figure>
+
+**Note:** It is necessary to add '.'  (dot in prefix in name of env variable). Make sure you add it.&#x20;
+
+5.  In that <mark style="color:red;">**.env**</mark> file add the variables as shown below.\
+    \
+    <mark style="color:red;">**APIURL=**</mark>
+
+    <mark style="color:red;">**APP\_MONGO\_APP\_ID=**</mark>
+
+    <mark style="color:red;">**APP\_MONGO\_CONNECTION\_URI=**</mark>\
+    \
+    You need to insert the **APIURL**, which corresponds to the APIURL listed in your Alian hub environment file. For the values of <mark style="color:red;">**APP\_MONGO\_APP\_ID**</mark> and <mark style="color:red;">**APP\_MONGO\_CONNECTION\_URI**</mark>, use the same values as <mark style="color:red;">**MONGO\_APP\_ID**</mark> and <mark style="color:red;">**MONGODB\_URL**</mark> from your Alian hub environment file, respectively.\
+
+
+6. In package.json, if you don't have credentials for certificate while generating build, it is recommended that you remove the following keys from package.json:
+  
+    - certificateFile
+    - certificatePassword
+7.  After setup of your .env file you need to generate a build for time tracker.\
+    \
+    First you have to install all the packages with the following command:
+
+    Command: '**npm install' or** '**npm install --legacy-peer-deps'**
+
+    Then to generate a build, in your root folder hit the following command according to your OS.
+
+    Windows : '**npm run build'**
+
+    iOS: '**npm run build:ios**'
+
+    Linux: '**npm run build**'\
+
+8. After generating the build redirect to the dist folder. As shown in the image below.
+
+<figure><img src=".gitbook/assets/tracker3.png" alt=""><figcaption></figcaption></figure>
+
+9. At dist folder application is generated and ready to install.
+
+<figure><img src=".gitbook/assets/tracker4.png" alt=""><figcaption></figcaption></figure>
+
