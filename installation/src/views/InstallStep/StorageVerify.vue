@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-md-6 mb-10">
                     <div class="form-group">
-                        <label for="wasabiUserId">Wasabi UserId</label>
+                        <label for="wasabiUserId">Wasabi Account ID</label>
                         <InputText
                             id="wasabiUserId"
                             class="login-input mt-10"
