@@ -46,8 +46,17 @@ exports.deleteBucketInWasabi = (companyId) => {
 exports.createNewBucketInWasabi = (companyId) => {
     return new Promise(async (resolve, reject) => {
         try {
+            const s3ClientInstance = new S3Client({
+                region: awsRef.region,
+                credentials: {
+                    accessKeyId: awsRef.wasabiAccessKey,
+                    secretAccessKey: awsRef.wasabiSecretAccessKey,
+                },
+                endpoint: awsRef.wasabiEndPoint,
+                requestHandler
+            });
             const command = new CreateBucketCommand({ Bucket: companyId });
-            const response = await s3Client.send(command);
+            const response = await s3ClientInstance.send(command);
             logger.info(`Bucket is created successfully for company ${companyId}`);
             resolve(response);
         } catch (error) {
@@ -79,7 +88,16 @@ exports.updateLocalWasabiFiles = (companyId, path, file) => {
             ContentType: exports.getContentType(fileName)
         };
         try {
-            s3Client.send(new PutObjectCommand(params))
+            const s3ClientInstance = new S3Client({
+                region: awsRef.region,
+                credentials: {
+                    accessKeyId: awsRef.wasabiAccessKey,
+                    secretAccessKey: awsRef.wasabiSecretAccessKey,
+                },
+                endpoint: awsRef.wasabiEndPoint,
+                requestHandler
+            });
+            s3ClientInstance.send(new PutObjectCommand(params))
             .then(() => {
                 resolve(updatedFilePath);
             }).catch((error)=>{
