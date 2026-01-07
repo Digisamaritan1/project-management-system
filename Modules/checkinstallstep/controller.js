@@ -593,26 +593,6 @@ self.addEventListener('push', event => {
 };
 
 
-function restartServer() {
-    console.info("Restarting server...");
-
-    // Resolve project root from controller.js
-    const rootDir = path.resolve(__dirname, "../../..");
-
-    // Run package.json start command
-    exec("npm run start", {
-        cwd: rootDir,
-        detached: true,
-        stdio: "ignore"
-    });
-
-    // Exit current process
-    setTimeout(() => {
-        process.exit(0);
-    }, 500);
-}
-
-
 /**
  * Check Install Step
  * @param {Object} req 
@@ -939,8 +919,8 @@ exports.checkinstallstep = (req, res) => {
                             res.json({...generateRes});
                         }, 5000);
                         setTimeout(() => {
-                            restartServer();
-                        }, 10000);
+                            process.exit();
+                        }, 15000);
                     });
                 });
             });
