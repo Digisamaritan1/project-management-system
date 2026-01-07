@@ -917,10 +917,8 @@ exports.checkinstallstep = (req, res) => {
                         setTimeout(() => {
                             emitListener(bodyData?.eventId, {step: "STOP"});
                             res.json({...generateRes});
-                        }, 5000);
-                        setTimeout(() => {
                             process.exit();
-                        }, 15000);
+                        }, 5000);
                     });
                 });
             });
