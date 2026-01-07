@@ -286,6 +286,7 @@
                     } else {
                         stepDesc.value[`step${bData.step}Desc`][0].subStep = 1;
                     }
+                    window.location.reload();
                 }, 2000)
             })
         } catch (error) {
@@ -298,6 +299,7 @@
                 } else {
                     stepDesc.value[`step${bData.step}Desc`][0].subStep = 1;
                 }
+                window.location.reload();
             }, 2000)
         }
     }

@@ -1,5 +1,6 @@
 
 const { exec } = require('child_process');
+const path = require("path");
 const fs = require('fs');
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
@@ -916,6 +917,7 @@ exports.checkinstallstep = (req, res) => {
                         setTimeout(() => {
                             emitListener(bodyData?.eventId, {step: "STOP"});
                             res.json({...generateRes});
+                            process.exit();
                         }, 5000);
                     });
                 });
