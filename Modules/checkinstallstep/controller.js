@@ -13,6 +13,7 @@ const serviceFun = require("../serviceFunction.js");
 const pjson = require('../../package.json');
 const { requestHandler } = require('../../Config/config.js');
 const aiModals = require('../../utils/aiModals.json');
+const { makeUniqueId } = require('../../utils/commonFunctions.js');
 
 exports.envVar = {
     "JWT_SECRET": require('crypto').randomBytes(16).toString('hex'),
@@ -213,13 +214,15 @@ exports.checkStorageConnection = (req, cb) => {
             endpoint: process.env.WASABIENDPOINT,
             requestHandler
         });
-        const bucketName = process.env.USERPROFILEBUCKET;
-        const command = new CreateBucketCommand({ Bucket: bucketName});
+        // Create Wasabi Bucket
+        const userBucketName = `user_images_${makeUniqueId(6)}`;
+        const command = new CreateBucketCommand({ Bucket: userBucketName });
         s3Client.send(command).then((data) => {
             exports.envVar.WASABI_SECRET_ACCESS_KEY = bodyData.wasabiSecretAccessKey;
             exports.envVar.WASABI_ACCESS_KEY = bodyData.wasabiAccessKey;
             exports.envVar.WASABI_USERID = bodyData.wasabiUserId;
             exports.envVar.STORAGE_TYPE = "wasabi";
+            exports.envVar.USERPROFILEBUCKET = userBucketName;
             serviceFun.writeFile(installStepsFilePath, JSON.stringify({installSteps: exports.installSteps, envVar: exports.envVar}, null, 4), () => {
                 cb({
                     status: true,
