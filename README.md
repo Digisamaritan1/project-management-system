@@ -1,18 +1,229 @@
-# 1. Nodejs Configuration
+
+<p align="center">
+  <img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" width="180">
+</p>
+
+<p align="center">
+  <h3 align="center">AlianHub - Open Source Project Management System/CRM </h3>
+</p>
+
+<hr>
+
+## Overview
+Alian Hub is an ultimate tool comprised of CRM, CMS, project management, HR management, Time management, Sales & Resource Management, and Finance & Account Management. Buy Alian Hub and manage all your business operations anytime from anywhere. Manage Your Work the Way You Like. Experience the ease of having everything in one place. Boost productivity, enhance collaboration, and simplify your operations with our comprehensive platform. Ready to revolutionize how you work? Discover the power of consolidation with our all-in-one solution. A comprehensive Self-hosted project management solution to handle mundane tasks seamlessly with no effort. Increase team productivity and security with your own database.
+
+## 📸 Screenshots
+
+<figure><img src="https://camo.envatousercontent.com/2e9929775fb8cb081f7addce3e0c169dd7d3e303/68747470733a2f2f616c69616e6875622e636f6d2f61737365742f696d616765732f30332d73696e676c652d6170702d616c69616e6875622d312e6a7067" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://camo.envatousercontent.com/3bdbac1a6f216d18695eb4a0425c1db36a8b391e/68747470733a2f2f616c69616e6875622e636f6d2f61737365742f696d616765732f30322d7465616d2d746f6765746865722d616c69616e6875622e6a7067" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://camo.envatousercontent.com/d0d0b2d1f3594a76e3b4bdbaeefdf038d74451fb/68747470733a2f2f616c69616e6875622e636f6d2f61737365742f696d616765732f6275696c742d666f722d65766572796f6e652d6e65772d64657369676e2e6a7067" alt=""><figcaption></figcaption></figure>
+
+<br/>
+
+## Tech Stack
+
+### Frontend
+- Vue.js 3 (Composition API)
+- Vue Router
+- Vuex (state management)
+- Custom CSS
+- Axios for API communication
+
+### Backend
+- Node.js
+- Express.js
+- RESTful API architecture
+
+### Database
+- MongoDB
+- Mongoose ODM
+
+### Other Tools & Integrations
+- JWT-based authentication
+- Role & permission management
+- Real-time features (WebSockets / polling)
+- AI integrations
+
+<br/>
+
+## Usage / Functional Workflow
+
+### 1. User Authentication
+- Users sign up or log in to the platform
+- Role-based access and permissions are applied dynamically
+
+### 2. Dashboard Overview
+- Users land on a customizable dashboard
+- View project summaries, reports, and key metrics
+
+### 3. Project Creation & Configuration
+- Create new projects
+- Enable or disable project-specific features
+- Define milestones, sprints, statuses, and custom fields
+- Assign team members with dynamic permissions
+
+### 4. Task Management Workflow
+- Create tasks, subtasks, and checklists
+- Assign tasks to users
+- Set priorities, due dates, and reminders
+- Track progress with real-time updates
+- Attach files, add comments, and tags
+- Move tasks across different views (List, Board, Table, Calendar, Table)
+
+### 5. Task Tracking & Monitoring
+- Track user activity such as screenshots, keystrokes, and mouse events
+- Monitor productivity and task progress
+
+### 6. Advanced Search & Filters
+- Search tasks by project, status, assignee, creator, due date, and priority
+- Save frequently used filters
+
+### 7. Timesheets & Reports
+- Log time automatically or manually
+- View project, user, and workload timesheets
+- Generate milestone and performance reports
+
+### 8. Notifications & Communication
+- Receive mention, email, and external notifications
+- Use real-time chat and communication channels for collaboration
+
+### 9. AI-Powered Assistance
+- Generate tasks, subtasks, and checklists using AI
+- Write task descriptions and project templates with AI
+
+### 10. Administration & Permissions
+- Manage roles and permissions
+- Create custom roles per company
+- Control access to features using dynamic permission rules
+
+<br/>
+
+## ✨ Key Features
+
+### 📊 Dashboard
+- Customize layouts
+
+### 🧩 Task View
+- List view
+- Board view
+- Table view
+- Calendar view
+- Table view
+
+### ✅ Task Management
+- Track each task with:
+    - screen screenshots,
+    - keystrokes,
+    - mouse events
+- Drag-and-drop functionality
+- Group-wise task views
+- Create subtasks
+- Create checklists
+- Progress tracking
+- Add tags
+- Add attachments
+- Due dates and reminders
+- Comments
+- Audits
+- Set priority
+- Move, merge, and duplicate tasks
+- Convert tasks to sprints and subtasks
+- Manage tasks efficiently
+
+### 🔍 Advanced Search Filters
+- Task-wise search
+- Project-wise search
+- Search by due date
+- Search by status
+- Search by assignee
+- Search by creator
+- Search by priority
+- Save filters
+
+### ⏱️ Timesheet & Reports
+- Project timesheet
+- User timesheet
+- Workload timesheet
+- Tracker timesheet
+- Milestone reports
+
+### 🔔 Notifications
+- Mention notifications
+- External notifications
+- Email notifications
+
+### 📁 Project Management
+- Enable specific features per project
+- Create milestones
+- Create checklists
+- Set dynamic permissions
+- Import and export projects
+- Comments
+- Audits
+- Workload management
+- Custom field creation
+- Status management
+- Add assignees
+- Sprint management
+
+### 🤖 AI Integration
+- Write with AI
+- Create project templates using AI
+- Create tasks and subtasks using AI
+- Generate checklists using AI
+- Write task descriptions using AI
+
+### 🧩 Custom Fields
+- Checkbox
+- Dropdown
+- Text area
+- Date
+- Number
+- Text
+- Money
+- Phone number
+- Email
+
+### 💬 Chat & Communication
+- Real-time chat
+- Create communication channels
+
+### ⚙️ Other Features
+- Real-time updates
+- Multilingual support
+- Single-click updates
+- Local storage support
+- 40+ dynamic permissions per company
+- Pre-built project management templates
+- Create custom roles and permissions
+- Third-party integrations (Google Sheets, YouTube, Figma, and more)
+
+### 🌍 Built For Everyone
+- Finance & Accounting
+- Engineering & Product
+- Marketing
+- Sales & CRM
+- HR & Recruiting
+- IT
+
+<br/>
+
+## Nodejs Configuration
 
 ### 1.1 Nodejs Configuration
 
 Kindly navigate to your project's folder.
 
 1. You must verify that **Npm (v10.2.4)** and **Node (v20.11.1)** are installed for the relevant version. If you're not sure about the version, try to run the given command in the command prompt: <mark style="color:red;">**npm run check-version**</mark>&#x20;
-2.  If both the **Node** and **Npm versions** match, then the screen will display the output as shown below:\
+2.  If both the **Node** and **Npm versions** match, then the screen will display the output as shown below:
 
-
-    <figure><img src=".gitbook/assets/image199.png" alt=""><figcaption></figcaption></figure>
+<figure style="text-align: center;"><img src="https://help.alianhub.com/~gitbook/image?url=https%3A%2F%2F756612007-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FfAZK2jZ3mL4ir3caZa0b%252Fuploads%252FXgzJHGaQpP25B6dOu3X4%252Fimage199.png%3Falt%3Dmedia%26token%3Dcf6062a8-c630-4ea3-8e10-c95e7bfd06c5&width=768&dpr=4&quality=100&sign=71ce933e&sv=2" alt=""><figcaption></figcaption></figure>
 
 Else, the screen will display the output as shown below:
 
-<figure><img src=".gitbook/assets/image153.png" alt=""><figcaption></figcaption></figure>
+<figure style="text-align: center;"><img src="https://help.alianhub.com/~gitbook/image?url=https%3A%2F%2F756612007-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FfAZK2jZ3mL4ir3caZa0b%252Fuploads%252FJen3wdY1Xo46PbXQTrWK%252Fimage89.png%3Falt%3Dmedia%26token%3D2039f8f1-788e-4d62-b4f1-65b0a15bcd1e&width=768&dpr=4&quality=100&sign=815ac522&sv=2" alt=""><figcaption></figcaption></figure>
 
 Kindly check if Node is pre-installed in your system. If not, then you need to install it before running Step 1.&#x20;
 
@@ -40,7 +251,7 @@ vue --version
 ```
 
 
-# 2. Server Startup
+## Server Startup
 
 ### 2.1 Start Server and Installation
 
@@ -74,7 +285,7 @@ Thereafter, navigate to <mark style="color:blue;">**http://localhost:4000**</mar
 
 
 
-# 3. Installation Guide
+## Installation Guide
 
 Please make sure to follow through the installation guide properly without skipping any step.
 
@@ -86,7 +297,7 @@ Please make sure to follow through the installation guide properly without skipp
 <br>
 
 
-# 4. Time Tracker Setup Guide
+## Time Tracker Setup Guide
 
 ### Prerequisites
 
@@ -229,3 +440,85 @@ The application will be generated inside this folder.
 <figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FfzZ9TKAQ45PEi4dZnuZg%2Fimage.png?alt=media&#x26;token=00ed129d-d021-402a-b2df-60aa6b38df82" alt=""><figcaption></figcaption></figure>
 
 The Time Tracker application is now **ready for installation**.
+
+</br>
+
+## Contribution Guidelines
+Thank you for considering contributing to this project!
+We welcome contributions that help improve features, fix bugs, enhance performance, or improve documentation.
+
+### How to Contribute
+#### 1. Fork the Repository
+- Fork the repository to your GitHub account
+- Clone your fork locally
+
+#### 2. Create a Branch
+- Create a new branch for your feature or fix:
+- `feature/your-feature-name`
+- `bugfix/issue-description`
+
+#### 3. Install Dependencies
+- Install frontend and backend dependencies separately
+- Ensure MongoDB is running locally or configured correctly
+
+#### 4. Make Your Changes
+- Follow existing project structure and coding standards
+- Keep changes focused and minimal
+- Add comments where necessary for clarity
+- Ensure your code does not break existing functionality
+
+#### 5. Test Your Changes
+- Test frontend functionality in the browser
+- Test backend APIs using Postman or similar tools
+- Verify database changes carefully
+
+#### 6. Commit Your Changes
+Write clear and meaningful commit messages:
+- `feat: add task priority filter`
+- `fix: resolve task status update issue`
+- `docs: update README usage section`
+
+#### 7. Push & Open a Pull Request
+- Push your branch to your fork
+- Open a Pull Request (PR) to the main branch
+- Clearly describe:
+  - What you changed
+  - Why the change is needed
+  - Any related issues
+
+<br/>
+
+## Coding Standards
+
+#### Frontend (Vue 3)
+- Use Vue 3 Composition API
+- Keep components modular and reusable
+- Use meaningful variable and component names
+- Avoid unnecessary re-renders
+
+#### Backend (Node.js)
+- Follow REST API best practices
+- Keep controllers, services, and routes separated
+- Validate request data properly
+- Handle errors consistently
+
+#### Database (MongoDB)
+- Keep schemas clean and well-structured
+- Avoid breaking changes without discussion
+- Use proper indexing when required
+
+<br/>
+
+## Feature Requests
+For new features:
+- Explain the use case clearly
+- Describe expected behavior
+- Provide mockups or examples if available
+
+<br/>
+
+## Reporting Bugs
+If you find a bug:
+- Check existing issues first
+- Provide clear steps to reproduce
+- Include screenshots or logs if possible
