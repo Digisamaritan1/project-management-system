@@ -441,3 +441,85 @@ The application will be generated inside this folder.
 <figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FfzZ9TKAQ45PEi4dZnuZg%2Fimage.png?alt=media&#x26;token=00ed129d-d021-402a-b2df-60aa6b38df82" alt=""><figcaption></figcaption></figure>
 
 The Time Tracker application is now **ready for installation**.
+
+</br>
+
+## Contribution Guidelines
+Thank you for considering contributing to this project!
+We welcome contributions that help improve features, fix bugs, enhance performance, or improve documentation.
+
+### How to Contribute
+#### 1. Fork the Repository
+- Fork the repository to your GitHub account
+- Clone your fork locally
+
+#### 2. Create a Branch
+- Create a new branch for your feature or fix:
+- `feature/your-feature-name`
+- `bugfix/issue-description`
+
+#### 3. Install Dependencies
+- Install frontend and backend dependencies separately
+- Ensure MongoDB is running locally or configured correctly
+
+#### 4. Make Your Changes
+- Follow existing project structure and coding standards
+- Keep changes focused and minimal
+- Add comments where necessary for clarity
+- Ensure your code does not break existing functionality
+
+#### 5. Test Your Changes
+- Test frontend functionality in the browser
+- Test backend APIs using Postman or similar tools
+- Verify database changes carefully
+
+#### 6. Commit Your Changes
+Write clear and meaningful commit messages:
+- `feat: add task priority filter`
+- `fix: resolve task status update issue`
+- `docs: update README usage section`
+
+#### 7. Push & Open a Pull Request
+- Push your branch to your fork
+- Open a Pull Request (PR) to the main branch
+- Clearly describe:
+  - What you changed
+  - Why the change is needed
+  - Any related issues
+
+<br/>
+
+## Coding Standards
+
+#### Frontend (Vue 3)
+- Use Vue 3 Composition API
+- Keep components modular and reusable
+- Use meaningful variable and component names
+- Avoid unnecessary re-renders
+
+#### Backend (Node.js)
+- Follow REST API best practices
+- Keep controllers, services, and routes separated
+- Validate request data properly
+- Handle errors consistently
+
+#### Database (MongoDB)
+- Keep schemas clean and well-structured
+- Avoid breaking changes without discussion
+- Use proper indexing when required
+
+<br/>
+
+## Feature Requests
+For new features:
+- Explain the use case clearly
+- Describe expected behavior
+- Provide mockups or examples if available
+
+<br/>
+
+## Reporting Bugs
+If you find a bug:
+- Check existing issues first
+- Provide clear steps to reproduce
+- Include screenshots or logs if possible
