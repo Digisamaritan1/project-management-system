@@ -1,6 +1,10 @@
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" width="180">
+  <img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" width="180">
+</p>
+
+<p align="center">
+  <h3 align="center">AlianHub - Open Source Project Management System/CRM </h3>
 </p>
 
 <hr>
