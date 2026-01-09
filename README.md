@@ -86,67 +86,146 @@ Please make sure to follow through the installation guide properly without skipp
 <br>
 
 
-# Time Tracker Configuration
+# 4. Time Tracker Setup Guide
 
-### Time Tracker Setup
+### Prerequisites
 
-1. Please make sure you have setup Alianhub before you setup time tracker. You need to verify that Npm (v10.2.4) and Node (v20.11.1) are installed for the relevant version in your system.
-2. Also, make sure that you install the correct version of Python before moving forward with Time Tracker. The required version of Python is v2.7.2. Download from [_**Here**_](https://www.python.org/downloads/release/python-272)_**.**_
-3. If you are generating build from mac, you must have [Xcode](https://developer.apple.com/xcode/) installed.
+Before setting up the Time Tracker, ensure that **AlianHub** is already configured on your system.
 
-**Kindly check if Node is pre-installed in your system. If not, then you need to install it before running Step 1.**
+#### Required Software Versions
 
-**Reference to Node Installation:**&#x20;
+Please verify that the following tools are installed with the specified versions:
 
-1. [_**Node.js Official Website**_](https://nodejs.org/download/release/v20.11.1/)&#x20;
-2. Using NVM [_**https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating**_](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
-3. After checking the node version you need to create a <mark style="color:red;">**.env**</mark> file. For creating a <mark style="color:red;">**.env**</mark> file go to the Renderer folder in your project. As shown in the image below.
-4.  Then in the renderer folder create file name <mark style="color:red;">**.env**</mark>.\
-    \
+* [**Node.js**](https://nodejs.org/en/download)**:** v20.19.0 or higher
+* **npm:** v9.6.7 or higher
+* [**Python**](https://www.python.org/downloads/)**:**  v3.13.5 or higher
+* [**Git**](https://git-scm.com/install/windows)**:** v2.52.0 or higher
 
+> ⚠️ **Important:** Installing the correct Python version is mandatory before proceeding.
 
-    <figure><img src=".gitbook/assets/image30 (1).png" alt=""><figcaption></figcaption></figure>
+#### macOS Requirement
 
+If you are generating the build on **macOS**, ensure that [**Xcode**](https://developer.apple.com/xcode/) is installed on your system.
 
+***
 
-    <figure><img src=".gitbook/assets/tracker2.png" alt=""><figcaption></figcaption></figure>
+### Node.js Installation
 
-**Note:** It is necessary to add '.'  (dot in prefix in name of env variable). Make sure you add it.&#x20;
+First, check whether Node.js is already installed or not in your **Git Bash** or **Command Prompt(Terminal)**:
 
-5.  In that <mark style="color:red;">**.env**</mark> file add the variables as shown below.\
-    \
-    <mark style="color:red;">**APIURL=**</mark>
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FvszpTiyp8PHqk4hsBpte%2Fimage.png?alt=media&#x26;token=255d6821-357c-4b25-a3a1-acb2c4a26e32" alt=""><figcaption></figcaption></figure>
 
-    <mark style="color:red;">**APP\_MONGO\_APP\_ID=**</mark>
+```
+node -v
+npm -v
+```
 
-    <mark style="color:red;">**APP\_MONGO\_CONNECTION\_URI=**</mark>\
-    \
-    You need to insert the **APIURL**, which corresponds to the APIURL listed in your Alian hub environment file. For the values of <mark style="color:red;">**APP\_MONGO\_APP\_ID**</mark> and <mark style="color:red;">**APP\_MONGO\_CONNECTION\_URI**</mark>, use the same values as <mark style="color:red;">**MONGO\_APP\_ID**</mark> and <mark style="color:red;">**MONGODB\_URL**</mark> from your Alian hub environment file, respectively.\
+If Node.js is not installed, use one of the following methods:
 
+* **Official Node.js Website:** [**https://nodejs.org/en/download**](https://nodejs.org/en/download)
+* **Using NVM (Recommended)**\
+  <https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating>
 
-6. In package.json, if you don't have credentials for certificate while generating build, it is recommended that you remove the following keys from package.json:
-  
-    - certificateFile
-    - certificatePassword
-7.  After setup of your .env file you need to generate a build for time tracker.\
-    \
-    First you have to install all the packages with the following command:
+***
 
-    Command: '**npm install' or** '**npm install --legacy-peer-deps'**
+### Environment Configuration
 
-    Then to generate a build, in your root folder hit the following command according to your OS.
+After confirming the Node.js version, you must create a `.env` file.
 
-    Windows : '**npm run build'**
+#### Steps to Create `.env` File
 
-    iOS: '**npm run build:ios**'
+Navigate to the **`time-tracker-app`** folder in the project root.
 
-    Linux: '**npm run build**'\
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2F9PXTldEAJDTl7XOP3lkO%2Fimage.png?alt=media&#x26;token=5e22fa69-7c74-44e6-9d1b-081bd6cfb658" alt=""><figcaption></figcaption></figure>
 
-8. After generating the build redirect to the dist folder. As shown in the image below.
+Now, navigate to the **`renderer`** folder.
 
-<figure><img src=".gitbook/assets/tracker3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2F1UMazqWtXQj2qVc3BMBf%2Fimage.png?alt=media&#x26;token=89546e69-a09a-476e-853f-2229f579b6f1" alt=""><figcaption></figcaption></figure>
 
-9. At dist folder application is generated and ready to install.
+Create a file named **`.env`** file inside the **`renderer`**  folder.
 
-<figure><img src=".gitbook/assets/tracker4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2F8osIoDlBS4pUKlfOupy3%2Fimage.png?alt=media&#x26;token=97185e50-a375-4217-932d-2048dbc2165b" alt=""><figcaption></figcaption></figure>
 
+> ⚠️ **Note:**\
+> The file name must start with a **dot `.`** delimiter. This is mandatory.
+
+#### Environment Variables
+
+Add the following variable to the `.env` file:
+
+```
+APIURL=
+```
+
+* Set the `APIURL` value based on the **API URL defined in your AlianHub environment configuration**.
+
+***
+
+### Installing Dependencies
+
+After completing the environment setup, install the required packages. Open your **Git Bash** and navigate to the '**time-tracker-app**' folder path like below.
+
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FEUtB4MpE3zpDLS6ALWOM%2Fimage.png?alt=media&#x26;token=afa9b2d0-d3d3-4384-b6cb-88e7fc25b899" alt=""><figcaption></figcaption></figure>
+
+Run one of the following commands:
+
+```bash
+npm install
+```
+
+or (if dependency conflicts occur):
+
+```bash
+npm install --legacy-peer-deps
+```
+
+***
+
+### Generating the Build
+
+Once dependencies are installed, generate the build according to your operating system.
+
+Now, just open your **package.json** file inside your **`time-tracker-app`** folder. Check below keys are exists or not. If it exists, then remove these two keys.
+
+```
+"certificateFile": "C:/mycert.pfx",
+"certificatePassword": "YourPassword123"
+```
+
+Now run the command in your **Git Bash** to generate the application. If you are getting any error while generating a build. Then try using the **Command Prompt (CMD)** or **Windows PowerShell.** Make sure you perform this action with **Run as Administrator.**
+
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FRIvJ03ZESaHrBoZzjr3M%2Fimage.png?alt=media&#x26;token=1d9d3ef2-5afb-4c6c-b1b1-e7e894f813a3" alt=""><figcaption></figcaption></figure>
+
+#### Build Commands
+
+* **Windows**
+
+  ```bash
+  npm run build
+  ```
+* **macOS (iOS build)**
+
+  ```bash
+  npm run build:ios
+  ```
+* **Linux**
+
+  ```bash
+  npm run build
+  ```
+
+***
+
+### Build Output
+
+After the build process completes:
+
+Navigate to the **`dist`** A folder that is generated in your **`time-tracker-app`**  root directory.
+
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FZyXgtImOXoUHnoFoXe62%2Fimage.png?alt=media&#x26;token=fabeb96c-184b-4185-8d1a-ba12690e9d76" alt=""><figcaption></figcaption></figure>
+
+The application will be generated inside this folder.
+
+<figure><img src="https://756612007-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfAZK2jZ3mL4ir3caZa0b%2Fuploads%2FfzZ9TKAQ45PEi4dZnuZg%2Fimage.png?alt=media&#x26;token=00ed129d-d021-402a-b2df-60aa6b38df82" alt=""><figcaption></figcaption></figure>
+
+The Time Tracker application is now **ready for installation**.
