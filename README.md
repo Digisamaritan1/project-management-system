@@ -1,8 +1,6 @@
 
-<center><img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" alt="" ></center>
-
-<p style="text-align: center; font-size: 25px; font-weight: 600">
-    AlianHub - Open Source Project Management System/CRM
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" width="180">
 </p>
 
 <hr>
