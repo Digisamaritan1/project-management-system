@@ -1,5 +1,5 @@
 
-<figure style="text-align: center"><img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" alt="" ><figcaption></figcaption></figure>
+<center><img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" alt="" ></center>
 
 <p style="text-align: center; font-size: 25px; font-weight: 600">
     AlianHub - Open Source Project Management System/CRM
