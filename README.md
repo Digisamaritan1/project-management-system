@@ -45,7 +45,6 @@ Alian Hub is an ultimate tool comprised of CRM, CMS, project management, HR mana
 - Role & permission management
 - Real-time features (WebSockets / polling)
 - AI integrations
-- Third-party integrations (Google Sheets, YouTube, Figma, etc.)
 
 <br/>
 
@@ -71,7 +70,7 @@ Alian Hub is an ultimate tool comprised of CRM, CMS, project management, HR mana
 - Set priorities, due dates, and reminders
 - Track progress with real-time updates
 - Attach files, add comments, and tags
-- Move tasks across different views (List, Board, Table, Calendar)
+- Move tasks across different views (List, Board, Table, Calendar, Table)
 
 ### 5. Task Tracking & Monitoring
 - Track user activity such as screenshots, keystrokes, and mouse events
