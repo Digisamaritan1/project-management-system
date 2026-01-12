@@ -2,7 +2,7 @@
   <img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" width="180">
 </p>
 
-<h3 align="center">AlianHub - Open Source Project Management System/CRM </h3>
+# AlianHub - Open Source Project Management System/CRM
 
 <hr>
 
