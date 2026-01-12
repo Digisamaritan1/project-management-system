@@ -1,16 +1,13 @@
-
 <p align="center">
   <img src="https://alianhub.com/wp-content/uploads/2024/03/Logo-1.png" width="180">
 </p>
 
-<p align="center">
-  <h3 align="center">AlianHub - Open Source Project Management System/CRM </h3>
-</p>
+<h3 align="center">AlianHub - Open Source Project Management System/CRM </h3>
 
 <hr>
 
 ## Overview
-Alian Hub is an ultimate tool comprised of CRM, CMS, project management, HR management, Time management, Sales & Resource Management, and Finance & Account Management. Buy Alian Hub and manage all your business operations anytime from anywhere. Manage Your Work the Way You Like. Experience the ease of having everything in one place. Boost productivity, enhance collaboration, and simplify your operations with our comprehensive platform. Ready to revolutionize how you work? Discover the power of consolidation with our all-in-one solution. A comprehensive Self-hosted project management solution to handle mundane tasks seamlessly with no effort. Increase team productivity and security with your own database.
+Alian Hub is an open-source, project and team management platform designed to streamline workflows, improve collaboration, and give you full control over your data.
 
 ## 📸 Screenshots
 
@@ -38,7 +35,6 @@ Alian Hub is an ultimate tool comprised of CRM, CMS, project management, HR mana
 
 ### Database
 - MongoDB
-- Mongoose ODM
 
 ### Other Tools & Integrations
 - JWT-based authentication
@@ -70,7 +66,7 @@ Alian Hub is an ultimate tool comprised of CRM, CMS, project management, HR mana
 - Set priorities, due dates, and reminders
 - Track progress with real-time updates
 - Attach files, add comments, and tags
-- Move tasks across different views (List, Board, Table, Calendar, Table)
+- Move tasks across different views (List, Board, Table, Calendar)
 
 ### 5. Task Tracking & Monitoring
 - Track user activity such as screenshots, keystrokes, and mouse events
@@ -289,12 +285,11 @@ Thereafter, navigate to <mark style="color:blue;">**http://localhost:4000**</mar
 
 Please make sure to follow through the installation guide properly without skipping any step.
 
-[_**Please follow this document**_](https://help.alianhub.com/app-installation-and-start-guide/4.-installation-guide/4.2-mongodb-verification)
+[_**Please follow this document**_](https://help.alianhub.com/app-installation-and-start-guide/1.-nodejs-configuration)
 
 
 <br>
-<br>
-<br>
+
 
 
 ## Time Tracker Setup Guide
@@ -486,7 +481,6 @@ Write clear and meaningful commit messages:
   - Why the change is needed
   - Any related issues
 
-<br/>
 
 ## Coding Standards
 
@@ -507,7 +501,7 @@ Write clear and meaningful commit messages:
 - Avoid breaking changes without discussion
 - Use proper indexing when required
 
-<br/>
+
 
 ## Feature Requests
 For new features:
@@ -515,10 +509,42 @@ For new features:
 - Describe expected behavior
 - Provide mockups or examples if available
 
-<br/>
+
 
 ## Reporting Bugs
 If you find a bug:
 - Check existing issues first
 - Provide clear steps to reproduce
 - Include screenshots or logs if possible
+
+
+
+## Communities
+Join our community to ask questions, share ideas, and collaborate with other contributors.
+- **GitHub Discussions** – Feature ideas, questions, and announcements
+- **GitHub Issues** – Bug reports and feature requests
+- Community contributions are always welcome
+
+
+## Author
+**Alian Software**
+
+Alian Software is a technology-driven company focused on building scalable, secure, and innovative digital solutions. We specialize in modern web applications, SaaS platforms, and enterprise-grade systems using cutting-edge technologies.
+
+- Expertise in Full-Stack Development
+- SaaS & Product Engineering
+- AI-Driven Solutions
+
+
+🌐 **Website**: https://aliansoftware.com <br/>
+📧 **Contact**: support@aliansoftware.net
+
+
+## Social Media
+- **LinkedIn**: https://www.linkedin.com/showcase/alian-hub
+- **Facebook**: https://www.facebook.com/AlianHub
+- **Instagram**: https://www.instagram.com/alian_hub
+
+
+## License
+This project is MIT licensed.
