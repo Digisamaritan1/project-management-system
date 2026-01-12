@@ -66,7 +66,7 @@ Alian Hub is an open-source, project and team management platform designed to st
 - Set priorities, due dates, and reminders
 - Track progress with real-time updates
 - Attach files, add comments, and tags
-- Move tasks across different views (List, Board, Table, Calendar)
+- Move tasks across different views (List, Board, Table, Calendar, Workload)
 
 ### 5. Task Tracking & Monitoring
 - Track user activity such as screenshots, keystrokes, and mouse events
@@ -106,7 +106,7 @@ Alian Hub is an open-source, project and team management platform designed to st
 - Board view
 - Table view
 - Calendar view
-- Table view
+- Workload view
 
 ### ✅ Task Management
 - Track each task with:
@@ -122,7 +122,6 @@ Alian Hub is an open-source, project and team management platform designed to st
 - Add attachments
 - Due dates and reminders
 - Comments
-- Audits
 - Set priority
 - Move, merge, and duplicate tasks
 - Convert tasks to sprints and subtasks
@@ -157,7 +156,6 @@ Alian Hub is an open-source, project and team management platform designed to st
 - Set dynamic permissions
 - Import and export projects
 - Comments
-- Audits
 - Workload management
 - Custom field creation
 - Status management
@@ -174,7 +172,7 @@ Alian Hub is an open-source, project and team management platform designed to st
 ### 🧩 Custom Fields
 - Checkbox
 - Dropdown
-- Text area
+- Textarea
 - Date
 - Number
 - Text
@@ -187,14 +185,10 @@ Alian Hub is an open-source, project and team management platform designed to st
 - Create communication channels
 
 ### ⚙️ Other Features
-- Real-time updates
 - Multilingual support
-- Single-click updates
-- Local storage support
-- 40+ dynamic permissions per company
+- Local/Cloud storage support
 - Pre-built project management templates
 - Create custom roles and permissions
-- Third-party integrations (Google Sheets, YouTube, Figma, and more)
 
 ### 🌍 Built For Everyone
 - Finance & Accounting
