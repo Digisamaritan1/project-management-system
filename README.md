@@ -6,8 +6,8 @@
 
 <hr>
 
-## Demo Link
- - https://demo.alianhub.com
+## Live Demo
+Explore the live application here: https://demo.alianhub.com
 
 ## Overview
 Alian Hub is an open-source, project and team management platform designed to streamline workflows, improve collaboration, and give you full control over your data.
