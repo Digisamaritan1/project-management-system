@@ -2,66 +2,6 @@ const { HandleBothNotification } = require('../tasks/helpers/handleNotification'
 const { HandleHistory } = require('../tasks/helpers/helper');
 
 exports.init = (app) => {
-    /**
-     * @swagger
-    *  components:
-    *    schemas:
-    *      sendNotification:
-    *        type: object
-    *        required:
-    *          - companyId
-    *          - key
-    *          - notificationTitle
-    *          - notificationKey
-    *          - notificationId
-    *          - companyOwnerId
-    *        properties:
-    *         companyId:
-    *           type: string
-    *           required: true
-    *           description: This is the dcoument id of selected company.
-    *         key:
-    *           type: string
-    *           required: true
-    *           description: This is the type of notification like project or task.
-    *         notificationTitle:
-    *           type: string
-    *           required: true
-    *           description: This is the title for the notification email subject.
-    *         notificationKey:
-    *           type: string
-    *           required: true
-    *           description: This is the key unique key name of notification.
-    *         notificationId:
-    *           type: string
-    *           required: true
-    *           description: This is the document id of notification collection.
-    *         companyOwnerId:
-    *           type: string
-    *           required: true
-    *           description: This is the document id of owner user.
-     */
-    /**
-     * @swagger
-     *  /api/v1/sendNotification:
-     *    post: 
-     *      description: This API is used for send notification email
-     *      tags: [Notifications]
-     *      requestBody:
-     *        required: true
-     *        content:
-     *          application/json:
-     *            schema:
-     *              $ref: '#/components/schemas/sendNotification'
-     *      responses:
-     *          "200":
-     *              description: status:true/false,statusText:message
-     */
-
-    /**
-     * Send Notification Mail API
-     */
-    // app.post('/api/v1/sendNotification', ctrl.sendNotification);
 
     /**
      * @swagger
