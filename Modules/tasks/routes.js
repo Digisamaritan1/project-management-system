@@ -4,6 +4,7 @@ const tabSyncTaskCtrl = require('./controller/getTabSyncTasks');
 const advanceFilter = require('./helpers/manageGlobalFilter');
 const getTaskCtrl = require('./helpers/getTasksData');
 const { handleEvents } = require('../Company/eventController');
+const logger = require('../../Config/loggerConfig');
 
 exports.init = (app) => {
     app.post('/api/tasks', (req, res) => {
@@ -13,11 +14,10 @@ exports.init = (app) => {
                 res.send({status: true, statusText: 'Task created successfully.'});
             })
             .catch((error) => {
-                console.log('ERROR: ', error.message);
                 res.send({status: false, statusText: error.message});
             });
         } catch (error) {
-            console.log('ERROR: ', error.message);
+            logger.error("Error in /api/tasks POST route:", error.message);
             res.send({status: false, statusText: error.message});
         }
     });
@@ -28,8 +28,7 @@ exports.init = (app) => {
             res.send({status: true, statusText: 'Task updated successfully.',data:response});
         })
         .catch((error) => {
-            console.log('ERROR: ', error);
-            console.error("ERRORsssss: ", error.message);
+            logger.error("Error in /api/tasks/ PATCH route:", error.message);
             res.send({status: false, statusText: error.message});
         });
     });
@@ -45,11 +44,10 @@ exports.init = (app) => {
                 }
             })
             .catch((error) => {
-                console.log('ERROR: ', error.message);
                 res.send({status: false, statusText: error.message});
             });
         } catch (error) {
-            console.log('ERROR: ', error.message);
+            logger.error("Error in /api/v2/tasks POST route:", error.message);
             res.send({status: false, statusText: error.message});
         }
     });
@@ -60,8 +58,7 @@ exports.init = (app) => {
             res.send({status: true, statusText: 'Task updated successfully.',data:response});
         })
         .catch((error) => {
-            console.log('ERROR: ', error);
-            console.error("ERRORsssss: ", error.message);
+            logger.error("Error in /api/v2/tasks PATCH route:", error.message);
             res.send({status: false, statusText: error.message});
         });
     });
@@ -72,7 +69,7 @@ exports.init = (app) => {
             res.send({status: true, statusText: 'Task updated successfully.',data:response});
         })
         .catch((error) => {
-            console.error("ERRORsssss: ", error.message);
+            logger.error("Error in /api/v2/importTasks PATCH route:", error.message);
             res.send({status: false, statusText: error.message});
         });
     });
