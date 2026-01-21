@@ -22,9 +22,6 @@
 @import 'blur.css';
 @import 'lineheight.css';
 @import 'loader.css';
-/* @import 'size.css';
-@import 'animation.css';
-@import 'transition.css'; */
 .disableInputField{
     pointer-events: none;
 }

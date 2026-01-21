@@ -234,10 +234,6 @@
     const isSubmitSend = ref(true);
     const isSubmitSMPTverify = ref(true);
     const smtpStep = ref(1);
-    // const stepDesc = ref({
-    //     name: "Verification Your SMTP",
-    //     subStep: 1
-    // });
     const $toast = useToast();
     
     const handleSubmit = () => {
@@ -263,7 +259,6 @@
                     isSubmitSend.value = true;
                     $toast.error(`Please check your SMTP credentials. ${res.data.error}`,{position: 'top-right'});
                 }).catch((err) => {
-                    // Add Error Message
                     $toast.error(`Please check your SMTP credentials. ${err}`,{position: 'top-right'});
                 })
             } else {
@@ -291,7 +286,6 @@
                     isSubmitSMPTverify.value = true;
                     $toast.error(`Your verification code invalid. Please check your code.`,{position: 'top-right'});
                 }).catch((err) => {
-                    // Add Error Message
                     $toast.error(`Your verification code invalid. ${err}`,{position: 'top-right'});
                 })
             } else {
