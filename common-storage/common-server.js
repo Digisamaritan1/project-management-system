@@ -50,32 +50,6 @@ exports.handleCreateCompanyDataStorageFunForUpload = async(bodyData,companyId) =
     })
 }
 
-/**
- * 
- * @param {object} companyId 
- * @param {object} _ 
- * @param {string} fileData 
- * @returns 
- */
-exports.handleChargeebeCreditNotUpload = (companyId,_,fileData,id) => {
-    return new Promise((resolve, reject) => {
-        try {
-            let filePath = `USER_PROFILES/InvoiceAndCreditNotes/CreditNotes/${companyId}/${id}.pdf`;
-            let fullPath = newPath.join(__dirname, '../storage', filePath);
-            fs.writeFile(fullPath, Buffer.from(fileData,'binary'), (error) => {
-                if (error) {
-                    loggerConfig.error(`Credit Note Download Error ${error.message ? error.message : error}`);
-                    return;
-                }
-                resolve()
-            });
-        } catch (error) {
-            loggerConfig.error(`Erro While Uploading Credit Note In STorage: ${error.message ? error.message : error}`);
-            reject(error);
-        }
-    })
-}
-
 exports.handleBucketSizeUpdateCron = () => {
     getBucketSizeStorage();
 }
