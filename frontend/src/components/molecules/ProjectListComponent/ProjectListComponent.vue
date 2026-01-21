@@ -4,7 +4,7 @@
         <div class="searchBox px-010rem blue cursor-default border-bottom-serach" id="projectrightside_driver" v-if="!showArchivedProjects">
             <img v-if="clientWidth <= 1300" :src="sidebarArrowIcon" alt="sidebarArrowIcon" class="cursor-pointer mr-1" @click="$emit('close')">
             <div class="form-control d-flex">
-                <input type="text" v-model="search" :placeholder="$t('PlaceHolder.search')" ref="projectSearchInput" id="projectrightsidesearch_driver" class="serach-inputbox webkit-avilable ml-0" @input="updateSearch">
+                <input type="text" v-model="search" :placeholder="$t('PlaceHolder.search')" ref="projectSearchInput" id="projectrightsidesearch_driver" class="serach-inputbox webkit-available ml-0" @input="updateSearch">
 
                 <div class="d-flex align-items-center">
                     <DropDown id="project_filter_options" class="project_filter_options" title="Project search filter">

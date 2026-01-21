@@ -6,12 +6,12 @@
                     <div class="position-ab d-flex align-items-center justify-content-center z-index-7 h-100 w-100 bg-dark-gray3" v-if="inProgress">
                         <Spinner :isSpinner="true"/>
                     </div>
-                    <div class="bg-white border-radius-8-px p-15px webkit-avilable">
+                    <div class="bg-white border-radius-8-px p-15px webkit-available">
                         <!-- CHANNEL NAME -->
                         <div class="d-flex align-items-center">
                             <label class="text-nowrap mr-10px">{{$t('Category.cateory_name')}}<span class="red">*</span></label>
                             <div class="position-re w-100">
-                                <input type="text" v-model.trim="categoryName.value" :placeholder="$t(`PlaceHolder.enter_category_name`)" class="form-control webkit-avilable"
+                                <input type="text" v-model.trim="categoryName.value" :placeholder="$t(`PlaceHolder.enter_category_name`)" class="form-control webkit-available"
                                     @keyup="checkErrors({'field':categoryName,
                                         'name':categoryName.name,
                                         'validations':categoryName.rules,
@@ -145,10 +145,5 @@ function createCategoryFun() {
     font-size: 11px; 
     bottom: -14px;
     left: 0px;
-}
-.webkit-avilable{
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
 }
 </style>
