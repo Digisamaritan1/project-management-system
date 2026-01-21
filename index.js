@@ -99,7 +99,7 @@ function initializeControllers() {
     })
     //IMPORT CUSTOM FILES
     require('./Modules/auth/init').init(app);
-    require('./Modules/notification1/init').init(app);
+    require('./Modules/notification/init').init(app);
     require('./Modules/import_settings/init').init(app);
     require('./Modules/tasks/init.js').init(app);
     require('./Modules/sprints/init.js').init(app);
