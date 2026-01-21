@@ -163,8 +163,8 @@
     //computed
     const status = computed(() => getters['settings/projectMilestoneStatus']);
     // image
-    const renameicon = require("@/assets/images/editmilestone.png");
-    const deleteicon = require("@/assets/images/Deletemilestone.png");
+    const renameicon = require("@/assets/images/editing.png");
+    const deleteicon = require("@/assets/images/DeleteIcon.png");
     const addIcon = require("@/assets/images/svg/addIconmilestoneSvg.svg");
 
     defineComponent({

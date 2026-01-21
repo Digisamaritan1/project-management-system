@@ -263,8 +263,8 @@ export const getImageUrl = (item) => {
                 : require("@/assets/images/timegrey.png");
         case 'Priority':
             return appStatus
-                ? require("@/assets/images/priorityblue.png")
-                : require("@/assets/images/prioritygrey.png");
+                ? require("@/assets/images/flagblue.png")
+                : require("@/assets/images/flaggrey.png");
         case 'Time Tracking':
             return appStatus
                 ? require("@/assets/images/timevalueblue.png")

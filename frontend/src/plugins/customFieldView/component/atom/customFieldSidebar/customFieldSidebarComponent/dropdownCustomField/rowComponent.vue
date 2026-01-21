@@ -87,7 +87,7 @@ const deleteIcon = require("@/assets/images/svg/Delete_gray.svg");
 const dragIcon = require("@/assets/images/svg/drag_icon.svg");
 const editIcon = require("@/assets/images/svg/edit_icon.svg");
 const deleteImage = require('@/assets/images/delete1.png');
-const saveImage = require('@/assets/images/save.png');
+const saveImage = require('@/assets/images/png/priority_low.png');
 
 watch(() => props.isDeletable, (val) => {
     isDeletable.value = val;

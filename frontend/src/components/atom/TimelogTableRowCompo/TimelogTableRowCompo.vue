@@ -47,8 +47,8 @@
             <span class="d-flex justify-content-between align-items-center">
                 <img src="@/assets/images/eye_icon_vector.png" class="cursor-pointer eyeicon" @click="$emit('viewDetail', item)"/>
                 <div class="projectDetailAction d-flex" v-if="item.Loggeduser === userId">
-                    <img v-if="item.logAddType === 0" src="@/assets/images/edit_icon.png" class="cursor-pointer mr-1 edit__icon-image" @click.stop="$emit('showEdit', item)" />
-                    <img src="@/assets/images/delete_icon.png" class="cursor-pointer" @click.stop="$emit('deleteTime', item)"/>
+                    <img v-if="item.logAddType === 0" src="@/assets/images/svg/editmilestone.svg" class="cursor-pointer mr-1 edit__icon-image" @click.stop="$emit('showEdit', item)" />
+                    <img src="@/assets/images/delete.png" class="cursor-pointer" @click.stop="$emit('deleteTime', item)"/>
                 </div>
             </span>
         </td>
@@ -71,7 +71,7 @@
     const userId =  inject('$userId');
 
     const timeTrackerIcon = require("@/assets/images/svg/time_tracker.svg");
-    const subTaskImage = require("@/assets/images/subtask2.png");
+    const subTaskImage = require("@/assets/images/png/subTaskIcon.png");
 
 
     const changeTimeFormat = (start1,end1) => {

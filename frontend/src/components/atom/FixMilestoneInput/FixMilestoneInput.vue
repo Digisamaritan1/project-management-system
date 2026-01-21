@@ -152,7 +152,7 @@
             required:true
         }
     });
-    const saveImage = require('@/assets/images/save.png');
+    const saveImage = require('@/assets/images/png/priority_low.png');
     const deleteImage = require('@/assets/images/delete1.png');
     const startDate = ref('');
     const endDate = ref('');

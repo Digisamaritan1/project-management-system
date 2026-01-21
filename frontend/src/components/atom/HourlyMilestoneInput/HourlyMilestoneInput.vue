@@ -292,7 +292,7 @@
     const emit = defineEmits(['addHourlyMilestone','sidebar']);
 
     // variable 
-    const saveImage = require('@/assets/images/save.png');
+    const saveImage = require('@/assets/images/png/priority_low.png');
     const deleteImage = require('@/assets/images/delete1.png');
     const billingPer = ref('');
     const rangeObjectWatch = ref({});

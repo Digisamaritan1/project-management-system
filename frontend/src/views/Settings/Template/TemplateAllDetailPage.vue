@@ -90,7 +90,7 @@ import { projectComponentsIcons } from '@/composable/commonFunction';
 
     const multipleAssigneBlue = require("@/assets/images/png/mutipleblue.png");
     const timeBlue = require("@/assets/images/timeBlue.png");
-    const priorityBlue = require("@/assets/images/priorityblue.png");
+    const priorityBlue = require("@/assets/images/flagblue.png");
     const timetrackingBlue = require("@/assets/images/timevalueblue.png");
     const milestoneBlue = require("@/assets/images/checkflagblue.png");
     const tagsBlue = require("@/assets/images/tagsblue.png");

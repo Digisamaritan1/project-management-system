@@ -48,7 +48,7 @@
     import InputText from '@/components/atom/InputText/InputText.vue';
     import { useCustomComposable } from "@/composable";
     import allCountries from "./allCountry.js";
-    const arrow = require("@/assets/images/dropdownarrow.png")
+    const arrow = require("@/assets/images/dd-full-arrow.png")
     const {makeUniqueId} = useCustomComposable();
     const activeCountry = ref({isoCode:''});
     defineComponent({
