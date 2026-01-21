@@ -278,7 +278,7 @@ exports.createCustomFields = ({tasks, userData, projectData}) => {
                         resolve({tasks: tasks, customFields: customFieldsArr});
                     })
                     .catch((error) => {
-                        console.log("error here:", error);
+                        logger.error("Error in exports.createCustomFields hook:", error.message);
                         reject(error)
                     });
             } catch (error) {
@@ -375,7 +375,7 @@ function buildRequestData({ task, customFieldKey, userData, projectData }) {
 
             resolve(fieldObject);
         } catch (error) {
-            console.error("Error in buildRequestData:", error);
+            logger.error("Error in buildRequestData hook:", error.message);
             reject(error);
         }
     });

@@ -343,35 +343,9 @@ function getSprintData(id) {
                 return;
             }
             let projectId = id;
-            // const uid = companyUserDetail.value.userId;
-            // let publicQuery = {
-            //     private:false,
-            //     projectId : BSON.ObjectId(projectId)
-            // }
-        
-            // let snapPublicQuery = {
-            //     "fullDocument.private" : false,
-            //     "fullDocument.projectId" : BSON.ObjectId(projectId)
-            // }
-            // let privateQuery = {
-            //     private:true,
-            //     projectId : BSON.ObjectId(projectId)
-            // }
-        
-            // let snapPrivateQuery = {
-            //     "fullDocument.private" : true,
-            //     "fullDocument.projectId" : BSON.ObjectId(projectId)
-            // }
-            // if(companyUserDetail.value.roleType !== 1 && companyUserDetail.value.roleType !== 2) {
-            //     privateQuery.AssigneeUserId = {
-            //         $in:[uid]
-            //     }
-            //     snapPrivateQuery['fullDocument.AssigneeUserId'] = {$in:[uid]}
-            // }
             dispatch("projectData/setSprints",{projectId}).then((sprintss) => {
                 sprintData.value = sprintss;
                 resolve(sprintss);
-            }).catch(() => {
             })
         } catch (error) {
             reject(error);
@@ -390,22 +364,6 @@ function getFolderData(id) {
                 return;
             }
             let projectId = id;
-            // const uid = companyUserDetail.value.userId;
-            // let publicQuery = {
-            //     private:false,
-            //     projectId : BSON.ObjectId(projectId)
-            // }
-        
-            // let snapPublicQuery = {
-            //     "fullDocument.projectId" : BSON.ObjectId(projectId)
-            // }
-            // let privateQuery = {
-            //     projectId : BSON.ObjectId(projectId)
-            // }
-        
-            // let snapPrivateQuery = {
-            //     "fullDocument.projectId" : BSON.ObjectId(projectId)
-            // }
             dispatch("projectData/setFolders",{projectId}).then((folders) => {
                 folderData.value = folders;
                 resolve(folders);

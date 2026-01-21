@@ -569,7 +569,7 @@ exports.convertToListSubTask = (companyId, projectData, subTask, sprintObj, oldS
                     logger.error(`error in update task count : ${error}`)
                 });
             }).catch((error) => {
-                console.log(error,"ERROR")
+                logger.error("Error in convert to list subtask mongo query", error.message);
             });
         } catch (error) {
             reject(error);
@@ -1024,7 +1024,7 @@ exports.getTaskCount = async(companyId, sprintId) => {
             }
         })
     } catch (error) {
-        console.error(`Error fetching task count: ${error}`);
+        logger.error(`Error fetching task count: ${error.message}`);
         return { success: false, error: "Error fetching task count" };
     }
 }
