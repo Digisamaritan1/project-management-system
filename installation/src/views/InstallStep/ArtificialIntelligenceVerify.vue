@@ -120,7 +120,6 @@
             allModels.value = [];
             formData.value.aiModel.value = "";
             isSubmitSend.value = true;
-            // Add Error Message
         })
     })
 </script>

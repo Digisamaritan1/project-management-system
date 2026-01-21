@@ -1,10 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
-// import checkinstallstep from './checkinstallstep'
 import { useCustomComposable } from '@/composable'
 const routes = [
-	// Check Install Step
-	// ...checkinstallstep,
 	{
         path: '/',
         name: 'Install_Step',
@@ -29,7 +25,6 @@ const router = createRouter({
 	routes
 })
 
-// const authInst = getAuth();
 const {setTitle} = useCustomComposable()
 router.beforeEach((to, _, next) => {
 	setTitle({title: to.meta.title, prefix: "Alian Hub | "});

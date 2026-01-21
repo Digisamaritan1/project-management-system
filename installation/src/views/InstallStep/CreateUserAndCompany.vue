@@ -166,37 +166,21 @@
                 <button type="submit" class="btn-blue btn-login font-roboto-sans bg-blue white cursor-pointer btn-full mt-20 mb-0-i" @click="addUserAndCompany" :disabled="isSpinner" :class="{'disabled': isSpinner}">Submit</button>
             </div>
         </div>
-        <!-- <div class="map-wrapper" v-if="isCompanyProcess"> -->
-            <!-- <div class="card"> -->
-                <div v-if="isCompanyProcess">
-                    <div v-if="stepDesc && stepDesc.length && stepDesc.length !== 1">
-                        <div style="margin: 30px 0px;">
-                            <div class="sub-steps d-flex align-items-center mb-20px" v-for="(row, stepIndex) in stepDesc" :key="stepIndex" :class="{'opacity-5' : row.status === 'remaining' }">
-                                <span class="">{{row.name}}</span>
-                                <img
-                                    v-if="row.status !== 'remaining'"
-                                    :src="row.status === 'inprogress' ? inProgressImg : row.status === 'done' ? smallsuccessImg :  smallerrorImg"
-                                    width="25"
-                                    height="25"
-                                />
-                            </div>
-                        </div>
+        <div v-if="isCompanyProcess">
+            <div v-if="stepDesc && stepDesc.length && stepDesc.length !== 1">
+                <div style="margin: 30px 0px;">
+                    <div class="sub-steps d-flex align-items-center mb-20px" v-for="(row, stepIndex) in stepDesc" :key="stepIndex" :class="{'opacity-5' : row.status === 'remaining' }">
+                        <span class="">{{row.name}}</span>
+                        <img
+                            v-if="row.status !== 'remaining'"
+                            :src="row.status === 'inprogress' ? inProgressImg : row.status === 'done' ? smallsuccessImg :  smallerrorImg"
+                            width="25"
+                            height="25"
+                        />
                     </div>
                 </div>
-            <!-- </div> -->
-        <!-- </div> -->
-        <!-- <Modal v-model="isCompanyProcess" :header="false" :footer="false" >
-            <template #body>
-                <div>
-                    <div class="pr-2 pl-2 pt-5 pb-5 text-center main-text">
-                        {{stepCompanyProcessMessage}} 
-                        <div class="mt-3">
-                            <img :src="inProgressImg" />
-                        </div>
-                    </div>
-                </div>
-            </template>
-        </Modal> -->
+            </div>
+        </div>
     </div>
 </template>
 <script setup>
@@ -204,7 +188,6 @@
     import { Country, State,City }  from 'country-state-city';
     import axios from 'axios';
     import * as env from '@/config/env';
-    // import Modal from "@/components/atom/Modal/Modal.vue";
     import inProgressImg from "@/assets/images/svg/inprogress.gif";
     import smallsuccessImg from "@/assets/images/svg/smallsucess.svg";
     import smallerrorImg from "@/assets/images/svg/smallerror.svg";
@@ -236,7 +219,6 @@
     const isSpinner = ref(false);
     const errorMessage = ref("");
     const confirmationErr = ref("");
-    // const coutryArray = ref([]);
     const stateArray = ref([]);
     const cityArray = ref([]);
     const phoneCode = ref([]);
@@ -712,14 +694,6 @@ input:focus {
     outline: none;
     border-color: #2f3990;
 }
-/* button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 25px;
-} */
 option {
     padding: 10px;
     font-size: 16px;

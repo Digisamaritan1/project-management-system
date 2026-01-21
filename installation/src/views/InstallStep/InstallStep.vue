@@ -14,7 +14,6 @@
                         <img :src="errorImg" />
                     </div>
                     <div v-if="mainStep && mainStep === 100">
-                        <!-- <img :src="successImg" /> -->
                         <p class="text-center">Please Wait a moment</p>
                         <h2 class="text-center">All Step is Done</h2>
                     </div>
@@ -175,7 +174,6 @@
         if (
             (bData.step === 1 && stepDesc.value.step1Desc[0].subStep === 1) || 
             (bData.step === 2 && stepDesc.value.step2Desc[0].subStep === 1) || 
-            // (bData.step === 3 && stepDesc.value.step3Desc[0].subStep === 1) ||
             (bData.step === 3 && stepDesc.value.step3Desc[0].subStep === 1) ||
             (bData.step === 4 && stepDesc.value.step4Desc[0].subStep === 1) ||
             (bData.step === 5 && stepDesc.value.step5Desc[0].subStep === 1) ||
@@ -218,7 +216,6 @@
                             }
                         }, 2000)
                     }
-                    // Error Message
                     return;
                 }
                 stepDesc.value[`step${bData.step}Desc`][stepDesc.value[`step${bData.step}Desc`].length-1].status = "done";
@@ -252,7 +249,6 @@
                     }
                 } else {
                     source.close();
-                    // Add Error Message
                     $toast.error(`Please check your credentials. ${res.data.error}`,{position: 'top-right'});
                     if (!step) {
                         stepDesc.value[`step${bData.step}Desc`][0].status = "error";
@@ -276,7 +272,6 @@
                 }
             }).catch((err) => {
                 source.close();
-                // Add Error Message
                 console.error("ERROR IN INSTALL STEP", err);
                 stepDesc.value[`step${bData.step}Desc`][0].status = "error";
                 
@@ -291,7 +286,6 @@
             })
         } catch (error) {
             source.close();
-            // Add Error Message
             stepDesc.value[`step${bData.step}Desc`][0].status = "error";
             setTimeout(() => {
                 if (bData.step === 9) {

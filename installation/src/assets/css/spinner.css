@@ -2,8 +2,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 160px; /* adjust to the size of your logo */
-  height: 160px; /* adjust to the size of your logo */
+  width: 160px; 
+  height: 160px;
   position: relative;
 }
 

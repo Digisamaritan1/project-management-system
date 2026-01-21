@@ -1,13 +1,10 @@
-//DIPSHA KALARIYA --> Global Validation Function For Validation in All Forms(17-06-2021)
 export const ValidationFunction = {
-    //Its Contains only number value Like 458 (DIPSHA)
     OnlyNumber: function (event) {
         const char = String.fromCharCode(event.keyCode)
         if (!/[0-9]/.test(char)) {
           event.preventDefault()
         }
     },
-    //Its Contains Float number value Like 45.8 (DIPSHA)
     OnlyFloatNumber(event) {
         let val = event.target.value.replace(/[^0-9/.]/g,'');      
         if (val.charAt(0) == '.'){
@@ -18,7 +15,6 @@ export const ValidationFunction = {
             event.preventDefault();
         }
     },
-    //Its Contains Mobile Number Input value Like 157988974946 (DIPSHA)
     OnlyPhoneNumber(event){
         const char = String.fromCharCode(event.keyCode)
         if (!/[0-9]/.test(char)) {
@@ -70,7 +66,6 @@ export const ValidationFunction = {
       );
       cb(result);
     },
-    //Its Contains only Character value Like dipsha (DIPSHA)
     OnlyCharacter: function (event) {
       const char = String.fromCharCode(event.keyCode)
       if (!/[a-zA-Z ]/.test(char)) {
