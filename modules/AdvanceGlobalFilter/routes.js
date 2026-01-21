@@ -1,5 +1,5 @@
 const ctrl = require('./controller');
-const { searchComments } = require('../Comments/controller');
+const { searchComments } = require('../comments/controller');
 
 exports.init = (app) => {
     app.post('/api/v1/advance/filter/create', ctrl.saveFilter);

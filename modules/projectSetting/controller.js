@@ -3,7 +3,7 @@ const {dbCollections} = require('../../Config/collections');
 const logger = require("../../Config/loggerConfig");
 const { SCHEMA_TYPE } = require('../../Config/schemaType');
 const { MongoDbCrudOpration } = require("../../utils/mongo-handler/mongoQueries");
-const { updateCommentSprint } = require("../Comments/controller");
+const { updateCommentSprint } = require("../comments/controller");
 
 const fp = `${__dirname}/`;
 const {writeFile} = require("fs");

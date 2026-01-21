@@ -11,7 +11,7 @@ const { handleTaskAttachmentsDuplicateFunctionality } = require(`../../../common
 const { getCachedCompanyData } = require('../../../utils/planHelper');
 const serviceFun = require("../../serviceFunction");
 const socketEmitter = require('../../../event/socketEventEmitter');
-const { updateCommentCollection, addCommentCollection } = require('../../Comments/controller');
+const { updateCommentCollection, addCommentCollection } = require('../../comments/controller');
 
 /* ------------- TASK ------------- */
 exports.HandleTask = async (companyId, object, isUpdate, id = null, userData) => {
