@@ -7,7 +7,7 @@ const config =  require('./Config/config.js');
 const awsRef =  require('./Config/aws.js');
 const logger = require("./Config/loggerConfig");
 const packJOSNData = require("./package.json");
-const { makeDefaultBrandSettings } = require("./Modules/Admin/common/controller.js");
+const { makeDefaultBrandSettings } = require("./modules/Admin/common/controller.js");
 
 const app = express();
 app.use(cors({origin: '*'}));
@@ -69,7 +69,7 @@ function initializeControllers() {
     const { startInterval } = require("./middlewares/mongoConnector/helper.js");
     startInterval();
     const { currentDirectory } = require(`./common-storage/common-${process.env.STORAGE_TYPE}.js`);
-    const { preCompanySetup, } = require("./Modules/Company/controller2.js");
+    const { preCompanySetup, } = require("./modules/Company/controller2.js");
     app.get("/api/v1/setPresetCompany/:id", (req, res) => {
         if (req.params && req.params.id && req.params.id === config.PRECOMPANYKEY) {
             preCompanySetup();
@@ -79,76 +79,76 @@ function initializeControllers() {
         }
     })
     //IMPORT CUSTOM FILES
-    require('./Modules/auth/init').init(app);
-    require('./Modules/notification/init').init(app);
-    require('./Modules/import_settings/init').init(app);
-    require('./Modules/tasks/init.js').init(app);
-    require('./Modules/sprints/init.js').init(app);
-    require('./Modules/logTime/init.js').init(app);
-    require('./Modules/milestone/init.js').init(app);
-    require('./Modules/Company/init.js').init(app);
-    require('./Modules/trackerDownload/init.js').init(app);
-    require('./Modules/notification/notification-middleware/init').init(app);
-    require('./Modules/notification/prepare-notification-data/init').init(app);
-    require('./Modules/projectSetting/init').init(app);
-    require('./Modules/taskIndex/init').init(app);
-    require('./Modules/createProject/init.js').init(app);
-    require('./Modules/notification-count/init').init(app);
-    require('./Modules/notification/sendEmail/init').init(app);
-    require('./Modules/trackerUserPermission/init').init(app);
-    require('./Modules/checkinstallstep/init').init(app);
-    require('./Modules/SaasAdmin/init').init(app);
+    require('./modules/auth/init').init(app);
+    require('./modules/notification/init').init(app);
+    require('./modules/import_settings/init').init(app);
+    require('./modules/tasks/init.js').init(app);
+    require('./modules/sprints/init.js').init(app);
+    require('./modules/logTime/init.js').init(app);
+    require('./modules/milestone/init.js').init(app);
+    require('./modules/Company/init.js').init(app);
+    require('./modules/trackerDownload/init.js').init(app);
+    require('./modules/notification/notification-middleware/init').init(app);
+    require('./modules/notification/prepare-notification-data/init').init(app);
+    require('./modules/projectSetting/init').init(app);
+    require('./modules/taskIndex/init').init(app);
+    require('./modules/createProject/init.js').init(app);
+    require('./modules/notification-count/init').init(app);
+    require('./modules/notification/sendEmail/init').init(app);
+    require('./modules/trackerUserPermission/init').init(app);
+    require('./modules/checkinstallstep/init').init(app);
+    require('./modules/SaasAdmin/init').init(app);
     if(process.env.NODE_ENV === "production") {
         require('./cron.js')
     }
-    require('./Modules/Admin/admin.js').init(app);
-    require('./Modules/emailTemplate/init').init(app);
-    require('./Modules/email-notification/init').init(app);
-    require(`./Modules/storage/${currentDirectory}/init`).init(app);
-    require('./Modules/AI/init').init(app);
-    require('./Modules/usersModule/init').init(app);
-    require('./Modules/Project/init').init(app);
-    require('./Modules/Teams/init').init(app);
-    require('./Modules/tours/init').init(app);
-    require('./Modules/AdvanceGlobalFilter/init.js').init(app);
-    require('./Modules/settings/settingCurrency/init').init(app);
-    require('./Modules/settings/settingNotifications/init').init(app);
-    require('./Modules/projectRules/init').init(app);
-    require('./Modules/EstimatedTime/init').init(app);
-    require('./Modules/customField/init').init(app);
-    require('./Modules/ProjectTemplates/init').init(app);
-    require('./Modules/settings/templates/init').init(app);
-    require('./Modules/settings/ProjectStatusTemplate/init').init(app);
-    require('./Modules/settings/securityPermissions/init').init(app);
-    require('./Modules/settings/restrictedExtensions/init').init(app);
-    require('./Modules/UserId/init').init(app);
-    require('./Modules/settings/Members/init').init(app);
-    require('./Modules/Apps/init').init(app)
-    require('./Modules/projectTabs/init').init(app)
-    require('./Modules/Comments/init').init(app);
-    require('./Modules/TimeSheet/init').init(app);
-    require('./Modules/MainChats/init').init(app);
-    require('./Modules/notification/app-notification/init').init(app);
-    require('./Modules/History/init').init(app);
-    require('./Modules/settings/Category/init').init(app);
-    require('./Modules/settings/Roles/init').init(app);
-    require('./Modules/settings/Designation/init').init(app);
-    require('./Modules/settings/CompanyUserStatus/init').init(app);
-    require('./Modules/settings/fileExtensions/init').init(app);
-    require('./Modules/settings/commonDateFormate/init').init(app);
-    require('./Modules/settings/taskPriority/init').init(app);
-    require('./Modules/settings/settingMilestone/init').init(app);
-    require('./Modules/MediaFiles/init').init(app);
-    require("./Modules/SubscriptionPlan/init").init(app);
-    require("./Modules/subscription/init").init(app);
-    require("./Modules/PlaneFeature/init").init(app);
-    require("./Modules/Invoice/init").init(app);
-    require("./Modules/generateMongoId/init").init(app);
-    require("./Modules/UserDashboard/init.js").init(app);
-    require("./Modules/affiliate/init").init(app);
-    require("./Modules/oAuth/init.js").init(app);
-    require("./Modules/githubOAuth/init.js").init(app);
-    require("./Modules/googleOAuth/init.js").init(app);
+    require('./modules/Admin/admin.js').init(app);
+    require('./modules/emailTemplate/init').init(app);
+    require('./modules/email-notification/init').init(app);
+    require(`./modules/storage/${currentDirectory}/init`).init(app);
+    require('./modules/AI/init').init(app);
+    require('./modules/usersModule/init').init(app);
+    require('./modules/Project/init').init(app);
+    require('./modules/Teams/init').init(app);
+    require('./modules/tours/init').init(app);
+    require('./modules/AdvanceGlobalFilter/init.js').init(app);
+    require('./modules/settings/settingCurrency/init').init(app);
+    require('./modules/settings/settingNotifications/init').init(app);
+    require('./modules/projectRules/init').init(app);
+    require('./modules/EstimatedTime/init').init(app);
+    require('./modules/customField/init').init(app);
+    require('./modules/ProjectTemplates/init').init(app);
+    require('./modules/settings/templates/init').init(app);
+    require('./modules/settings/ProjectStatusTemplate/init').init(app);
+    require('./modules/settings/securityPermissions/init').init(app);
+    require('./modules/settings/restrictedExtensions/init').init(app);
+    require('./modules/UserId/init').init(app);
+    require('./modules/settings/Members/init').init(app);
+    require('./modules/Apps/init').init(app)
+    require('./modules/projectTabs/init').init(app)
+    require('./modules/Comments/init').init(app);
+    require('./modules/TimeSheet/init').init(app);
+    require('./modules/MainChats/init').init(app);
+    require('./modules/notification/app-notification/init').init(app);
+    require('./modules/History/init').init(app);
+    require('./modules/settings/Category/init').init(app);
+    require('./modules/settings/Roles/init').init(app);
+    require('./modules/settings/Designation/init').init(app);
+    require('./modules/settings/CompanyUserStatus/init').init(app);
+    require('./modules/settings/fileExtensions/init').init(app);
+    require('./modules/settings/commonDateFormate/init').init(app);
+    require('./modules/settings/taskPriority/init').init(app);
+    require('./modules/settings/settingMilestone/init').init(app);
+    require('./modules/MediaFiles/init').init(app);
+    require("./modules/SubscriptionPlan/init").init(app);
+    require("./modules/subscription/init").init(app);
+    require("./modules/PlaneFeature/init").init(app);
+    require("./modules/Invoice/init").init(app);
+    require("./modules/generateMongoId/init").init(app);
+    require("./modules/UserDashboard/init.js").init(app);
+    require("./modules/affiliate/init").init(app);
+    require("./modules/oAuth/init.js").init(app);
+    require("./modules/githubOAuth/init.js").init(app);
+    require("./modules/googleOAuth/init.js").init(app);
 }
 
 // FIRES EVENT WHEN THE ENV IS UPDATED
@@ -170,13 +170,13 @@ if (!process.env.STORAGE_TYPE) {
     process.env.STORAGE_TYPE = "wasabi";
 }
 
-require('./Modules/checkinstallstep/init').init(app);
+require('./modules/checkinstallstep/init').init(app);
 
 // SWAGGER CONFIGURATION
-require('./Modules/swaggerAPI/init').init(app, config.APIURL);
+require('./modules/swaggerAPI/init').init(app, config.APIURL);
 
 // COMMON CODE 
-require('./Modules/common/init').init(app);
+require('./modules/common/init').init(app);
 
 const { initSocket } = require("./socket/socketinit.js");
 //FOR CHECK SERVER RUNNING OR NOT
@@ -184,9 +184,9 @@ app.get("/health", (req, res) => {
     res.send("Server is running in "+config.NODE_ENV);
 });
 
-fs.watch(__dirname + "/Modules/Template/", (event_type, file_name) => {
+fs.watch(__dirname + "/modules/Template/", (event_type, file_name) => {
     try {
-        delete require.cache[require.resolve(__dirname + "/Modules/Template/" + file_name)];;
+        delete require.cache[require.resolve(__dirname + "/modules/Template/" + file_name)];;
     } catch (error) {
         console.error("ERROR in remove cache", error);
     }

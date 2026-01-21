@@ -1,5 +1,5 @@
 const loggerConfig = require("../Config/loggerConfig");
-const { createCompanyDataStorageFun, getBucketSizeStorage, uploadStorageThumbnailFile, storageRef, generateSignedUrl,cleanUpTrackshotStorage } = require("../Modules/storage/server/helpers/bucket.helper");
+const { createCompanyDataStorageFun, getBucketSizeStorage, uploadStorageThumbnailFile, storageRef, generateSignedUrl,cleanUpTrackshotStorage } = require("../modules/storage/server/helpers/bucket.helper");
 const fs = require('fs');
 const newPath = require("path")
 const thumbnailArray = require('../thumbnail.json');

@@ -1,7 +1,7 @@
 const loggerConfig = require("../Config/loggerConfig");
 const { SCHEMA_TYPE } = require("../Config/schemaType");
-const { updateCompanyFun } = require("../Modules/Company/controller/updateCompany");
-const { uploadMainFileForbase64Thumbnail, uploadFileWasabiPromise, getBucketSize, createCompanyDataWasabi, getUserProfilePresignedUrl, getPresignedUrl, copyWasabiImage, cleanUpTrackshotStorage } = require("../Modules/storage/wasabi/controller");
+const { updateCompanyFun } = require("../modules/Company/controller/updateCompany");
+const { uploadMainFileForbase64Thumbnail, uploadFileWasabiPromise, getBucketSize, createCompanyDataWasabi, getUserProfilePresignedUrl, getPresignedUrl, copyWasabiImage, cleanUpTrackshotStorage } = require("../modules/storage/wasabi/controller");
 const fs = require("fs");
 
 exports.currentDirectory = 'wasabi';

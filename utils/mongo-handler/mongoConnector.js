@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const logger = require('../../Config/loggerConfig');
-const sendMailRef = require('../../Modules/service.js');
+const sendMailRef = require('../../modules/service.js');
 const config = require('../../Config/config.js');
 process.on('uncaughtException', (err) => {
     if(err.name.includes("MongoNetworkError")) {

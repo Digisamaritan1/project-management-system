@@ -1,7 +1,7 @@
 const { dbCollections } = require("../../../Config/collections");
 const logger = require("../../../Config/loggerConfig");
 const emailNotificationHandlerCtrl = require("../../notification/email-notification-handler/controllerV2")
-const {handleNotificationtFun} = require("../../../Modules/notification/prepare-notification-data/controllerV2");
+const {handleNotificationtFun} = require("../../../modules/notification/prepare-notification-data/controllerV2");
 const { SCHEMA_TYPE } = require("../../../Config/schemaType");
 const mongoose = require("mongoose");
 const { MongoDbCrudOpration } = require("../../../utils/mongo-handler/mongoQueries");

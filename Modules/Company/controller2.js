@@ -6,7 +6,7 @@ const companyRef = require('./controller.js');
 const helperCtr = require('../auth/controller/helper.js');
 let errorArray = [];
 const config = require('../../Config/config.js');
-const sendMailRef  = require("../../Modules/service.js");
+const sendMailRef  = require("../../modules/service.js");
 const fs = require('fs');
 exports.preCompanySetup = (preCompanyNumber) => {
     let totalPreCompany = preCompanyNumber || 10;

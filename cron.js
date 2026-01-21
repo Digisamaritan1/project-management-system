@@ -1,8 +1,8 @@
 const schedule = require("node-schedule");
 const logger = require("./Config/loggerConfig");
-const taskIndexRef = require("./Modules/taskIndex/controller");
+const taskIndexRef = require("./modules/taskIndex/controller");
 const { handleBucketSizeUpdateCron } = require(`./common-storage/common-${process.env.STORAGE_TYPE}.js`);
-const aiRef = require("./Modules/AI/controller")
+const aiRef = require("./modules/AI/controller")
 
 
 // // This cron job executes daily at midnight (12 AM) and retrieves the file size from Wasabi storage
