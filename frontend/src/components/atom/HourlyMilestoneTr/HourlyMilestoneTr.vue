@@ -245,7 +245,7 @@
     const error = ref('');
     const isVisible = ref(false);
     const deleteIcon = require("@/assets/images/delete1.png");
-    const saveIcon = require("@/assets/images/save.png");
+    const saveIcon = require("@/assets/images/png/priority_low.png");
     const milestoneStatusArray = ref(props.settingMilestoneStatus);
     const status = ref('');
     const statusArrayMilestone = ref([]);

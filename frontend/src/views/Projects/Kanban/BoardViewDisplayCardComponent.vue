@@ -165,7 +165,7 @@
                             </div>
                         </span>
                         <span v-if="!isSubTask && element?.subTasks" class="d-flex align-items-center task-count-section" :class="myCounts > 0 ? 'mr-5px' : ''">
-                            <img class="mr-5px" src="@/assets/images/png/subTaskShape.png" />
+                            <img class="mr-5px" src="@/assets/images/png/subTaskIcon.png" />
                             <span class="font-size-12" :style="{'color': (element.isExpanded && element?.subtaskArray?.length > 0) ? '#2F3990' : ''}">
                                 {{(showArchiveVar || searchedTask) ? element?.subtaskArray?.length : element?.subTasks}}
                             </span>

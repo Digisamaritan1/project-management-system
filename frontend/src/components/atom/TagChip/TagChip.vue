@@ -96,11 +96,11 @@ const {makeUniqueId,sanitizeInput,checkPermission} = useCustomComposable();
 const clientWidth = inject('$clientWidth');
 const threedots = require("@/assets/images/svg/tagdots.svg")
 const cross = require("@/assets/images/svg/tagcross.svg")
-const renameimage = require("@/assets/images/editmilestone.png")
+const renameimage = require("@/assets/images/editing.png")
 const showClass = ref(false)
-const deleteimage = require("@/assets/images/Deletemilestone.png")
+const deleteimage = require("@/assets/images/DeleteIcon.png")
 const colorimage = require("@/assets/images/palette.png")
-const saveimage = require("@/assets/images/save.png")
+const saveimage = require("@/assets/images/png/priority_low.png")
 const cancelimage = require("@/assets/images/svg/deletered.svg")
 import { apiRequest } from '../../../services';
 const showSidebar = ref(false)

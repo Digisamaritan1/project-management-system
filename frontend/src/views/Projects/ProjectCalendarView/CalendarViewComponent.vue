@@ -26,7 +26,7 @@
     import dayGridPlugin from '@fullcalendar/daygrid';
     import timeGridPlugin from '@fullcalendar/timegrid';
     import interactionPlugin from '@fullcalendar/interaction';
-    import subTask from '@/assets/images/subtask1.png';
+    import subTask from '@/assets/images/png/subtaskShapeBlue.png';
     // import * as helper from '@/views/Timesheet/helper';
     import SpinnerComp from '@/components/atom/SpinnerComp/SpinnerComp.vue';
     import taskClass from "@/utils/TaskOperations";

@@ -173,7 +173,7 @@
     const statushistory = require('@/assets/images/svg/statushistory.svg');
     const deleteMilestone = require('@/assets/images/svg/DeleteMilestone.svg');
     const deleteImage = require('@/assets/images/delete1.png');
-    const saveImage = require('@/assets/images/save.png');
+    const saveImage = require('@/assets/images/png/priority_low.png');
     const refundDate = ref(new Date());
     const  { checkErrors,checkAllFields } = useValidation();
     const formDataRefund = ref({refundAmount: {type: 'number',name: 'refundamount',value: '',rules: "required"}});

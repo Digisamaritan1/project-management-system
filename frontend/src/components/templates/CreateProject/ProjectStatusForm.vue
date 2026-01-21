@@ -162,7 +162,7 @@ const {makeUniqueId} = useCustomComposable();
         name: "Projects-Status-form",
     })
     const deletered = require("@/assets/images/svg/deletered.svg");
-    const saveData = require("@/assets/images/save.png");
+    const saveData = require("@/assets/images/png/priority_low.png");
     const dragIcon = require("@/assets/images/svg/Swip.svg");
     const templateEditIcon = require('@/assets/images/svg/edit_icon.svg');
     const templateDeleteIcon = require('@/assets/images/svg/closeLeftHover.svg');
