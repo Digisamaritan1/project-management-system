@@ -649,7 +649,6 @@ function getSprintData(id) {
             dispatch("mainChat/setChatSprints",{projectId}).then((sprintss) => {
                 sprintData.value = sprintss;
                 resolve(sprintss);
-            }).catch(() => {
             })
         } catch (error) {
             reject(error);

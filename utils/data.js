@@ -1103,11 +1103,11 @@ exports.importCompanyRules = async(companyName,type,projectId) => {
                         return;
                     })
                     .catch((error) => {
-                        console.error("ERROR in delete rules: ", error);
+                        logger.error("Error in delete rules:", error.message);
                         return;
                     })
                 } catch (error) {
-                    console.error("ERROR in delete rules: ", error);
+                    logger.error("ERROR in delete rules: ", error.message);
                     return;
                 }
             })
@@ -1335,7 +1335,8 @@ exports.importCompanyRules = async(companyName,type,projectId) => {
                     })
                 })
                 .catch((error) => {
-                    console.error("ERROR in add parent rules: ", error);
+                    logger.error("ERROR in add parent rules: ", error.message);
+                    reject(error);
                 })
             })
         } catch (error) {
@@ -1754,8 +1755,8 @@ exports.importUserNotifications = async (companyName, uid) => {
                 resolve();
             })
             .catch((error) => {
+                logger.error("ERROR in notification settings import: ", error.message);
                 reject(error);
-                console.error("ERROR in notification settings import: ", error);
             });
         } catch (error) {
             reject(error);
@@ -1873,7 +1874,7 @@ exports.importProjectTabComponents = (companyName) => {
                     }
                     await MongoDbCrudOpration(companyName, obj, "save");
                 } catch (error) {
-                    console.log(error,"error");
+                    logger.error("Error in exports.importProjectStatusTemplate hook:", error.message);
                 }
             });
 
@@ -1884,7 +1885,7 @@ exports.importProjectTabComponents = (companyName) => {
             });
 
         } catch (error) {
-            console.error("ERROR in importProjectStatusTemplate:", error);
+            logger.error("Error in exports.importProjectStatusTemplate hook:", error.message);
         }
     });
 }
@@ -1976,19 +1977,19 @@ exports.importProjectApps = (companyName) => {
                     }
                     await MongoDbCrudOpration(companyName, obj, "save");
                 } catch (error) {
-                    console.log(error,"ERROR IN IMPORT PROJECT APPS");
+                    logger.error("Error in savePromises variable in exports.importProjectApps hook:", error.message);
                 }
             });
 
             await Promise.allSettled(savePromises).then(() => {
                 resolve();
             }).catch((error) => {
-                console.log("ERROR IN APPS",error);
+                logger.error("Error in Promise.allSettled inside exports.importProjectApps hook:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importProjectStatusTemplate:", error);
+            logger.error("Error in exports.importProjectApps hook:", error.message);
         }
     });
 }
@@ -2014,19 +2015,19 @@ exports.importTaskStatusTemplate = (companyName) => {
                     }
                     await MongoDbCrudOpration(companyName, obj, "save");
                 } catch (error) {
-                    console.log(error,"error");
+                    logger.error("savePromises error in exports.importTaskStatusTemplate hook:", error.message);
                 }
             });
 
             await Promise.allSettled(savePromises).then(() => {
                 resolve();
             }).catch((error) => {
-                console.log("ERROR IN IMPORT TASK STATUS TEMPLATE");
+                logger.error("Error in Promise.allSettled inside exports.importTaskStatusTemplate hook:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importProjectStatusTemplate:", error);
+            logger.error("Error in exports.importTaskStatusTemplate hook:", error.message);
         }
     });
 }
@@ -2052,19 +2053,19 @@ exports.importTaskTypeTemplate = (companyName) => {
                     }
                     await MongoDbCrudOpration(companyName, obj, "save");
                 } catch (error) {
-                    console.log(error,"error");
+                    logger.error("ERROR IN IMPORT TASK TYPE TEMPLATE:", error.message);
                 }
             });
 
             await Promise.allSettled(savePromises).then(() => {
                 resolve();
             }).catch((error) => {
-                console.log("ERROR IN IMPORT TASK TYPE TEMPLATE");
+                logger.error("Error in Promise.allSettled inside exports.importTaskTypeTemplate hook:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importProjectStatusTemplate:", error);
+            logger.error("Error in exports.importTaskTypeTemplate hook:", error.message);
         }
     });
 }
@@ -2223,7 +2224,7 @@ exports.createDefaultMainChats = (companyId) => {
                 resolve(true)
             })
             .catch((error) => {
-                console.log("ERROR: ", error);
+                logger.error("ERROR in createDefaultMainChats: ", error.message);
                 reject(error)
             })
         } catch (error) {
@@ -2406,7 +2407,7 @@ exports.importStatusType = (companyName) => {
                 resolve();
             })
         } catch (error) {
-            console.error("ERROR IN IMPORT STATUS TYPE",error);
+            logger.error("ERROR in importStatusType:", error.message);
             reject(error);
         }
     });
@@ -2433,19 +2434,19 @@ exports.importProjectStatusTemplate = async (companyName) => {
                     }
                     await MongoDbCrudOpration(companyName, obj, "save");
                 } catch (error) {
-                    console.error(error,"error");
+                    logger.error("ERROR IN IMPORT PROJECT STATUS TEMPLATE:", error.message);
                 }
             });
 
             Promise.allSettled(savePromises).then(() => {
                 resolve();
             }).catch((error) => {
-                console.error("ERROR IN IMPORT PROJECT STATUS TEMPLATE");
+                logger.error("Error in Promise.allSettled inside exports.importProjectStatusTemplate hook:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importProjectStatusTemplate:", error);
+            logger.error("ERROR in importProjectStatusTemplate:", error.message);
         }
     })
 };
@@ -2472,12 +2473,12 @@ exports.importRestrictedExtensions = (companyName) => {
             .then((res) => {
                 resolve(res);
             }).catch((error) => {
-                console.log("ERROR IN IMPORT RESTRICTED EXTENSIONS");
+                logger.error("Error in importRestrictedExtensions:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importRestrictedExtensions:", error);
+            logger.error("Error in importRestrictedExtensions:", error.message);
         }
     })
 }
@@ -2510,12 +2511,12 @@ exports.importCustomFields = (companyName) => {
             .then((res) => {
                 resolve(res);
             }).catch((error) => {
-                console.log("ERROR IN IMPORT CUSTOM FIELDS");
+                logger.error("Error in importCustomFields:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importCustomFields:", error);
+            logger.error("ERROR in importCustomFields:", error.message);
         }
     })
 };
@@ -2547,12 +2548,12 @@ exports.importTours = (companyName) => {
             .then((res) => {
                 resolve(res);
             }).catch((error) => {
-                console.log("ERROR IN IMPORT TOURS FIELDS");
+                logger.error("Error in importTours:", error.message);
                 reject(error);
             });
 
         } catch (error) {
-            console.error("ERROR in importTours:", error);
+            logger.error("ERROR in importTours:", error.message);
         }
     })
 };
