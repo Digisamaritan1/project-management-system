@@ -221,8 +221,7 @@ const projectViews = ref([]);
 const projectApps = ref([]);
 const isInvalidPrompt = computed(() => {
     const cat = category.value?.trim();
-    // const desc = useCaseDescription.value?.trim();
-    const invalid = isSpinner.value || !cat; // (!!desc && desc.length < 10);
+    const invalid = isSpinner.value || !cat;
     return invalid;
 });
 const isInvalidViews = computed(() => {

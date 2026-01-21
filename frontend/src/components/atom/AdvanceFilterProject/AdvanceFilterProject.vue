@@ -20,37 +20,6 @@
                         <img v-if="props.projectObj?.isPrivateSpace" :src="round_clock" alt="time" title="Private project" class="ml-2px">
                         <img v-if="!props.projectObj?.isPrivateSpace" :src="round_clock_open" alt="time" title="Private project" class="ml-2px">
                     </div>
-                    <!-- <div v-if="findParticularProject(props.projectObj.projectId)">
-                        <div v-if="props.projectObj.project === true">
-                            <span class="advancefilter__body--taskstatus gray81">
-                                {{findParticularProject(props.projectObj.projectId)?.ProjectName}}
-                                <span class="advancefilter__body--pipeline">
-                                    {{moment(props.projectObj.createdAt * 1000).format('ddd, D MMM, YYYY [at] h:mm a')}}
-                                </span>
-                            </span>
-                        </div>
-                        <div v-else>
-                            <span class="advancefilter__body--taskstatus gray81" v-if="findParticularProject(props.projectObj.projectId).sprintsObj[props.projectObj.sprintId]?.name">
-                                {{findParticularProject(props.projectObj.projectId).ProjectName}} / 
-                                {{findParticularProject(props.projectObj.projectId).sprintsObj[props.projectObj.sprintId ? props.projectObj.sprintId : '']?.name}}
-                                <span class="advancefilter__body--pipeline">
-                                    {{moment(props.projectObj.createdAt * 1000).format('ddd, D MMM, YYYY [at] h:mm a')}}
-                                </span>
-                            </span>
-                            <span class="advancefilter__body--taskstatus gray81" v-if="!findParticularProject(props.projectObj.projectId).sprintsObj[props.projectObj.sprintId]?.name">
-                                {{findParticularProject(props.projectObj.projectId).ProjectName}} /
-                                <template v-for="(folder,folderIndex) in findParticularProject(props.projectObj.projectId).sprintsfolders" :key="folderIndex">
-                                    <span v-if="folder.sprintsObj[props.projectObj.sprintId]?.name">
-                                        <img src="@/assets/images/folder.png" /> {{folder.name}} / 
-                                    </span>
-                                    {{folder.sprintsObj[props.projectObj.sprintId]?.name}}
-                                </template>
-                                <span class="advancefilter__body--pipeline">
-                                    {{moment(props.projectObj.createdAt * 1000).format('ddd, D MMM, YYYY [at] h:mm a')}}
-                                </span>
-                            </span>
-                        </div>
-                    </div> -->
                     <div class="d-flex align-items-center">
                         <span class="advancefilter__body--marginright"><img :src="favourite ? filledStar : blankStar" /></span>
                         <span class="advancefilter__body--taskname m-0 text-ellipse black d-block advancefilter__body--width" v-html="highlightSearchTerm(props.projectObj.ProjectName)"></span>

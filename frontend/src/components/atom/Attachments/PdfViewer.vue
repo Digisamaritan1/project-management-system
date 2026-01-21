@@ -150,7 +150,6 @@ const handleTextSelection = () => {
 
         // Get bounding box of entire selection
         const boundingRect = range.getBoundingClientRect();
-        // const containerRect = pdfContainer.value.getBoundingClientRect();
         const canvas = canvasRefs.value[pageNumber];
         const canvasRect = canvas.getBoundingClientRect();
 

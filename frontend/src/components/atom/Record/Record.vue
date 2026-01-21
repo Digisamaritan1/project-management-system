@@ -157,10 +157,8 @@ function stopRecord(directUpload = true){
             },
         };
         if(directUpload) {
-            // self.sendMediaFile([{data: file, name:"audio.mp3", fileType: "audio"}]);
             emit("stop", recordedData.value);
         } else {
-            // self.showModalRecord = true;
             emit("stop", recordedData.value);
         }
     }).catch((e) => {

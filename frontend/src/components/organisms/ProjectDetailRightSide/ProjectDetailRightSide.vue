@@ -10,7 +10,6 @@
                     @update:projectstatus="(val,val1) => updateStatus(val,val1)"
                 />
             </div>
-             <!-- v-if="checkPermission('project.project_status_change',projectData?.isGlobalPermission)!== null" -->
             <div class="d-flex project-right-side-label" v-if="projectData?.projectCreatedBy">
                 <h4 :class="{'font-size-14 font-weight-500 status__title' : clientWidth > 767 ,'font-size-16 font-weight-400' : clientWidth <=767}">{{$t('Comment.created_by')}}</h4>
                 <UserProfile

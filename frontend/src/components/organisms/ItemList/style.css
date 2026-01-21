@@ -25,26 +25,6 @@ img.draggable_icon {
     left: 6px;
     z-index: 3;
 }
-/* .subtask-wrapper::-webkit-scrollbar {
-    display: none;
-}
-
-.subtask-wrapper {
-    max-height: 220px;
-    overflow-y: auto;
-} */
-/* .Task.main-task{
-    position: sticky;
-    top: 43px;
-    z-index: 6;
-    background-color: #fff;
-    } */
-/* .subtask-scroll {
-    max-height: 100px;
-    width: 100%;
-    min-width: fit-content;
-}
-.subtask-scroll::-webkit-scrollbar{display: none;} */
 .dragTask .parent__task-image {
     display: none;
 }

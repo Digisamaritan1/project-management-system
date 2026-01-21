@@ -79,9 +79,6 @@
                 </button>
             </div>
             <RegisterViewComponent @handleChange="handleChange" :isSpinner="isSpinner" />
-            <!-- <div class="create-accountlink text-center">
-                <span class="font-roboto-sans font-weight-normal font-weight-400 gray">{{$t('Auth.NotR')}}? <router-link :style="[{'pointer-events' : isSpinner ? 'none' : ''}]" to="/signup" class="light-purple font-weight-500">{{$t('Auth.createAcc')}}</router-link></span>
-            </div> -->
             </form>
             <div class="custom-divider my-1" v-if="isDevider">
                 <div class="custom-divider-text">Or Continue With</div>
@@ -281,7 +278,6 @@ defineComponent({
                 Cookies.remove('refreshToken');
                 Cookies.remove('accessToken');
                 errorMessage.value = t("Toast.Password_reset_link");
-                // $toast.warning(t("Toast.Password_reset_link"),{position: 'top-right'});
                 return;
             }
             const userId = user.data.uid;

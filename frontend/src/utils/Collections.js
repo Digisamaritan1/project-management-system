@@ -33,7 +33,6 @@ const dbCollections = {
     COLLECTION_INFO: "collection_info",
     INVOICES: 'invoices',
     SUBSCRIPTIONS: 'subscriptions',
-    // SUBSCRIPTIONPRICE:'subscriptionPrice',
     PRICES:"prices",
     PROJECT_TEMPLATES : "project_templates",
     UPDATE_TYPESENCE_REPO:'update_typesence_repo',

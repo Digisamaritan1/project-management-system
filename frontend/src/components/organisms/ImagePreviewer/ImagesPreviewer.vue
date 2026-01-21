@@ -102,15 +102,6 @@ const props = defineProps({
 const {initSlider, mouseDown, mouseLeave, mouseUp, mouseMove} = dragScroll();
 const {checkPosition} = imagesContainerAdjust();
 const {setFileImage} = fileImageReplacer()
-
-// const clientWidth = ref(window.innerWidth);
-
-// window.onresize = () => {
-//     clientWidth.value = window.innerWidth;
-// }
-
-// provide("clientWidth", clientWidth);
-
 defineComponent({
     name: "Slider_Component"
 })

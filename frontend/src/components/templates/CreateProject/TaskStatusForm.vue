@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display task status detail for blank project form as step-6 in create project module.
-========================================================================================== -->
 <template>
 <div class="statusHeader statusHeader_two">
     <h3 v-if="fromWhich == ''" class="heading_text bg-light-gray mt-0px"

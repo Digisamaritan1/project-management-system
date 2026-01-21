@@ -64,7 +64,6 @@
 }
 @media(max-width: 767px) {
     .sidebar-content {width: 100vw !important;}
-    /* .back-drop {display: none;} */
     .listsidebar-search {padding: 15.5px 10px;}
     .converted__sidebar .sidebar-body {background-color: #fff !important;}
 }

@@ -1,7 +1,3 @@
-<!--
-    File Name: ProjectFilter.vue
-    Created By: Parth Detroja
--->
 <template>
     <div class="project-global-filter-main bg-white d-flex align-items-center position-re border-radius-6-px"
         :class="{ 'ml-10-px': clientWidth > 767, 'ml-010': clientWidth <= 767 }" title="Advance Project Filter">

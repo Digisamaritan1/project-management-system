@@ -600,11 +600,7 @@
                     })
                 })
             }
-            // if (filterIds.length === 0 && teamsIds.length === 0) {
-            //     users.value.forEach((element) => {
-            //         userArray.push(element._id)
-            //     });
-            // }
+
             let filterProject = selectedFilters.value.filter((x)=>{return x.type == "Projects"});
             let mongo_search_eta_parameters = [];
             let projectArray = [];
@@ -698,7 +694,6 @@
                         _id: {
                             date: "$Date",
                             user: "$UserId",
-                            // projectId: "$ProjectId"
                         },
                         data: {
                             $push: {
@@ -996,7 +991,6 @@
                             });
                             if(element.userId.toString().trim() === userId.trim()){
                                 totalLoghrs += totalMin;
-                                // totalLoghrs += totalMin;
                                 if(element.logType == 0){
                                     manuallyLog += totalMin; 
                                 }

@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display particular template details for template based project in create project module.
-========================================================================================== -->
 <template>
 <div>
     <div v-if="!manageTemplate" class="setting_templateDetail_wrapper">
@@ -13,9 +9,6 @@
        <div class="template-backdelete-wrapper">
             <h4 class="text-blue" v-if="isUseTemplate" :class="[{'useTemplateDetailArrowProject':route.name !== 'Template'}]">
             </h4>
-            <!-- <h4 class="text-blue" v-if="isExportTemplate && currentSelectedKey == 0 && route.name == 'Template'">
-                <button class="use-template-btn cursor-pointer" type="button">Export</button>
-            </h4> -->
         </div>
         <div v-if="templateView && Object.keys(templateView).length > 0" class="template-scroll-wrapper overflow-x-hidden style-scroll">
             <button v-if="route.name === 'Template' && currentSelectedKey == 0" type="button" @click="deleteSelectedTemplate(templateView)" class="deleteTemplateBtn cursor-pointer" >{{ $t('Templates.delete_template') }}</button>

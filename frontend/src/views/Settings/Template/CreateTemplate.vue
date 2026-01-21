@@ -332,7 +332,6 @@ const  { checkAllFields } = useValidation();
                 Description : formData.value.templateDetail.description.value,
                 CompanyId: CompanyDatabase.value,
                 CompanyName: CompanyDatabase.value,
-                // 'TemplateCategory': self.selectedCategory,
                 LeadUserId: [companyUser.value.userId],
                 updatedAt: new Date(),
                 createdAt: new Date(),

@@ -28,7 +28,6 @@
             <div :class="`d-flex align-items-center ${clientWidth > 412 ? '' : 'justify-content-between'}`">
                 <!-- checklist -->
 
-                <!-- <img style="margin-right: 5px;" :src="checklist" class="cursor-pointer" alt="dateImage"/> -->
 
                 <!-- ASSIGNEE -->
                 <div class="d-flex align-items-center">

@@ -11,7 +11,6 @@
                             <div class="d-flex align-items-center justify-content-between save__filtercancel-wrapper" v-if="clientWidth <= 767">
                                 <h3 class="black">{{$t('Filters.save_this_filters')}}</h3>
                                 <a href="#" class="mr-10px" @click.stop.prevent="$refs.saveFilterRef.click(), inputName='', isInvalid=false">{{$t('Projects.cancel')}}</a>
-                                <!-- <button class="btn-primary" type="button" style="padding: 0px; background: transparent;" @click.stop.prevent="$emit('save', inputName), resetField()">{{$t("Projects.save")}}</button> -->
                             </div>
                         </template>
                         <template #button>

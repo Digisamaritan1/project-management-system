@@ -126,7 +126,6 @@ const sprintSearch = ref(false);
 const loadingData = ref({});
 const companyUserDetail = computed(() => getters["settings/companyUserDetail"]);
 // UPDATE PROJECTS VALUE ON DATABSE SNAP
-// const projects = ref([]);
 const isSpinner = ref(false);
 const sprintData = ref([])
 const folderData = ref({})

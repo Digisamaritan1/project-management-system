@@ -1,9 +1,4 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display all the emplate & project details for save new project in create project module.
-========================================================================================== -->
 <template>
-<!-- <img :src="back_arrow" class="templateDetailAllArrow" @click="emit('closeTemplateDetailAll')"> -->
 <div class="afterClickCreateProjectstep usetemplate-wrapper" :class="{'useTemplate-mobiledevice': clientWidth <= 767 }">
     <div id="project-step-container" class="mobile-projectName-category-wrapper">
         <ProjectForm v-model="formData"/>

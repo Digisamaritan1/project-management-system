@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display all project selected detail for blank project form as step-9 in create project module.
-========================================================================================== -->
 <template>
 <div id="project-step-container" class="ProjectShareGraphicModel addProjectEnabale borderChange mobile-project-taskstatus-section project-detail-setup">
     <div class="modalHeader bg-light-gray mb-28px"

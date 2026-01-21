@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display template bacis detail for template create module.
-========================================================================================== -->
 <template>
 <div>
     <div id="project-step-container">

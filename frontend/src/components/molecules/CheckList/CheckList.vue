@@ -1,7 +1,3 @@
-<!--
-    Filename: Checklist.vue
-    Assignee: Parth Detroja [30-05-2023]
--->
 <template>
     <div :class="[{'position-re':!props.planCondition}]" class="pt-20px">
         <div v-if="!props.planCondition">

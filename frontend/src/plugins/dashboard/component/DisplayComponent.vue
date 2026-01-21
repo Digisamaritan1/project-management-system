@@ -89,7 +89,6 @@ const dueDateComp = ref('');
 const allTaskStatusArray = ref(JSON.parse(JSON.stringify(TaskStatusArray.value)));
 const subtask = require ('@/assets/images/svg/subtaskicon.svg')
 const greenCheck = require("@/assets/images/svg/green_check.svg");
-// const dragIcon = require("@/assets/images/svg/Swip.svg");
 const props = defineProps({
     taskObj : {type:Object,required:true},
     lable : {type:String,default: ''},

@@ -4,12 +4,7 @@
         <teleport to="#top_section" v-if="showHeader">
             <div class="templateBtnWrapper" id="import-default-template" v-if="!isDisplayDetail">
                 <div class="Add-default-template d-flex">
-                <!-- <button type="button"  class="btn btn-blue-line cursor-pointer">Import Template</button> -->
                 <button type="button" @click="openSidebar('createTemplate')" class="btn btn-blue cursor-pointer mr-0">+ {{ $t('Templates.add_new_templete') }}</button>
-                <!-- <button type="button" @click="openSidebar('createTemplateWithAI')" class="ai-button cursor-pointer ml-1">
-                    <img src="@/assets/images/svg/ai_image_white.svg" class="mr-5-px" alt="AI icon"/>
-                    {{ $t('Templates.try_with_ai') }}
-                </button> -->
                 </div>
             </div>
         </teleport>

@@ -446,7 +446,6 @@ span.font-size-12.font-weight-400 {
 }
 @media(max-width: 767px){
     .top-filter-section {max-width: 43%;width: 100%;}
-/* .task-fitler-search, .assignee-filter .assignee-user, .assignee-status, .assignee-filter{ display: none;} */
 .task-fitler-search .form-control{height: 30px;}
 .task-filter-assignee, .task-filtersearch {width: 100% !important; }
 .task-filtersearchassignee-wrapper {justify-content: flex-start !important;flex-wrap: nowrap !important;}

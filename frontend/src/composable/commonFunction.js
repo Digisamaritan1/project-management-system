@@ -41,7 +41,6 @@ export const getConvertedTimeString = (n, type) => {
         var rminutes = Math.round(minutes);
         if (type == 'update') {
             if (rhours > 0 || rminutes > 0 || (rhours > 0 && rminutes > 0)) {
-                // return rhours.toString().padStart(2, '0') + ':' + rminutes.toString().padStart(2, '0');
                 return (rhours >= 0 && rhours <= 9 ? "0" + rhours : rhours) + ':' + ((rminutes >= 0 && rminutes <= 9) ? "0" + rminutes : rminutes);
             } else {
                 return ''

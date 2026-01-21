@@ -1,7 +1,3 @@
-<!--
-    Filename: SubChecklist.vue
-    Assignee: Parth Detroja [30-05-2023]
--->
 <template>
     <ul class="ul-sub-items">
         <li v-for="(item, index) in data" :key="index" :style="{'margin-left' : !item.subItems ? (clientWidth <=767 ? '10px' : '20px') : (clientWidth <=767 ? '10px' : '20px')}">

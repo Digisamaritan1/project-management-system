@@ -231,7 +231,6 @@ export const getTaskData = (projectObject, timesheetDocArray) => {
                         count += 1;
                         countFunction(userRecord[count]);
                     } else {
-                        // let ind = result.findIndex((x) => { return row.data.map(item => { return item.taskId }).includes(x._id)})
                         let ind = result.findIndex((x)=>{return x._id === row.taskId})
                         if (ind === -1) {
                             count += 1;

@@ -14,7 +14,6 @@
                 alt="" 
                 :style="{width: width, height: width}" />
              </template>
-            <!-- <img :src="data.image" alt="user image" class="profile-image asignee-profile" :title="data.title ? data.title : 'N/A'" :style="{width: width, height: width, verticalAlign: 'middle'}"/> -->
             <!-- STATUS -->
             <img v-if="showDot" :src="data.isOnline ? onlineDot : offlineDot" alt="user status" class="user-status"/>
         </template>

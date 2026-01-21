@@ -818,11 +818,6 @@ const handleSelected = (field, item, option) => {
     }
     if(field === 'keys') {
         item.name = option;
-        // if(props.inputs && props.inputs.length){
-        //     if(props.inputs[0].displayData.length === 0){
-        //         emit('apply', {type: 'custom'})
-        //     }   
-        // }
     }
 };
 const handleArrayOption = (data) => {

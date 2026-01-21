@@ -1,9 +1,5 @@
 <template>
     <div>
-        <!-- <div class="d-flex align-items-center justify-content-between">
-            <h4 class="task-details-subtitle"></h4>
-            <img :src="addIcon" alt="addIcon" class="cursor-pointer" @click="createSubTask = true">
-        </div> -->
         <div class="overflow-auto style-scroll mobile__bg--withPadding mt-10px">
             <div class="w-100 d-flex align-items-center justify-content-between">
                 <span :class="{'font-size-16 font-weight-600' : clientWidth <= 767 , 'font-size-14 font-weight-700' : clientWidth > 767 }" class="font-weight-700 font-size-14">{{$t('ProjectDetails.subtask')}}</span>
@@ -17,9 +13,7 @@
             </div>
             <div class="d-flex p-1 position-re subtask-mobile-width subtask__wrapper pl-0"  v-if="clientWidth > 767">
                 <div class="d-flex align-items-center justify-content-between subtask__title w-100">
-                    <span class="font-size-12 font-weight-500 gray81">{{$t('Members.name')}}</span>
-                    <!-- <span :class="{'font-size-16 font-weight-600' : clientWidth <=767 , 'font-size-14 font-weight-700' : clientWidth > 767 }" class="font-weight-700 font-size-14">Subtask</span> -->
-                    <!-- ({{task.subTasks || 0}}) -->
+                    <span class="font-size-12 font-weight-500 gray81">{{$t('Members.name')}}</span>                   
                 </div>
                 <div class="d-flex align-items-center justify-content-between table-span-wrapper w-100">
                     <span class="font-size-12 font-weight-500 gray81">{{$t('Header.Chat')}}</span>
@@ -27,7 +21,6 @@
                     <span class="font-size-12 font-weight-500 gray81" v-if="checkPermission('task.task_due_date',project?.isGlobalPermission) !== null">{{$t('Projects.due_date')}}</span>
                     <span class="font-size-12 font-weight-500 gray81" v-if="checkPermission('task.task_priority',project?.isGlobalPermission) !== null && checkApps('Priority')">{{$t('Projects.priority')}}</span>
                     <span class="font-size-12 font-weight-500 gray81" v-if="checkPermission('task.task_status',project?.isGlobalPermission) !== null">{{$t('Projects.status')}}</span>
-                    <!-- <img v-if="checkPermission('task.sub_task_create',project?.isGlobalPermission) === true" :src="addIcon" alt="addIcon" class="cursor-pointer add_subtask_list position-ab" @click="createSubTask = true"> -->
                 </div>
             </div>
             <template v-if="isMainSpinner">

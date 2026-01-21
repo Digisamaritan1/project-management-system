@@ -1,11 +1,9 @@
 .sprintWrapper::-webkit-scrollbar {
     display: none;
 }
-/* .sprint.position-re{min-width: min-content;} */
 .sprint_name--wrapper {
     position: sticky;
     left: 0;
-    /* top: 0; */
 }
 .text-ellipse {
     text-overflow: ellipsis;
@@ -53,11 +51,6 @@
 .share__with-assignee .user-status {
     display: none;
 }
-/* .itemSprintWrapper {
-    width: 100%;
-    max-width: 100%;
-    min-width: min-content;
-} */
 
 .sprint .item_wrapper:last-child {
     margin-bottom: 5px;
@@ -67,11 +60,7 @@
     width: auto;
     max-width: 100%;
     min-width: max-content;
-    position: relative;
-    /* min-width: max-content; */
-    /* overflow-y: auto;
-    max-height: 375px; */
-    
+    position: relative;    
 }
 .section_head {
     background-color: #F6F7FB!important;
@@ -92,7 +81,6 @@
 }
 
 .new-row .new-col1 {
-    /* width: 40%; */
     border-right: 1px solid #CFCFCF;
     background-color: #fff;
     position: sticky;
@@ -234,14 +222,6 @@ span.duedate-new .due-date span, span.key-new {
     width: auto;
     max-width: 100%;
 }
-/* .item_wrapper .task
-{
-    position: sticky;
-    left: 0;
-    z-index: 6;
-    top: 43px;
-    background-color: #fff;
-} */
 .item_wrapper .item_back_sub{
     z-index: 2 !important;
 }
@@ -675,7 +655,6 @@ span.duedate-new .due-date span, span.key-new {
 }
 @container dashboard(max-width:575px){
    
-    /* .common-section{  height: 43px;} */
     .subTaskAddRemove.SubTaskAdd .new-row .new-col1 {
         width: calc(30% - 20px);
     }

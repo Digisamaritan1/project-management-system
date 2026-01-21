@@ -1,6 +1,4 @@
 * {
-    /* margin: 0;
-    padding: 0; */
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     outline: none;
@@ -311,9 +309,6 @@ table {
 .timeLogWrapper td.editdelete img {
     margin-right: 1rem;
 }
-.timeLogWrapper td.editdelete img:last-child {
-    /* margin-right: 0; */
-}
 .timeLogWrapper .userProfileFilter img.profile-image {
  
     border: 2px solid #fff !important;
@@ -345,118 +340,6 @@ table {
     height: 30px;
     border-radius: 30px;
 }
-/* calendar css start 23-05-2023*/
-/* .calender-menu-class-range-picker {
-    min-width: 380px;
-}
-.dp__cell_inner.dp__pointer.dp__range_between, 
-.dp__calendar_header_item {
-    border-color: transparent;
-    color: #000;
-    border-radius: 0;
-    white-space: nowrap;
-    text-align: center;
-    vertical-align: middle;
-    min-width: 32px;
-    height: 29px;
-    line-height: 24px;
-    font-size: 12px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    padding: 2px;
-    font-family: 'Roboto';
-}
-.dp__calendar_item {
-    margin: 0px;
-}
-.dp__calendar_row {
-    margin: 0px 0;
-}
-.dp__today {
-    border: 0;
-    background: #ebf4f8;
-    font-weight: 700;
-}
-.dp__action_row {
-    border-top: 1px solid #DFE1E6;
-    padding: 8px 10px;
-}
-.dp__cell_inner.dp__cell_disabled {
-    pointer-events: none;
-    background-color: #eee;
-    opacity: .6;
-}
-.dp__cell_inner.dp__cell_offset.dp__cell_disabled {
-    background: transparent;
-}
-.dp__sidebar_left{
-    border-right: 1px solid #DFE1E6;
-
-}
-.dp__action_buttons .btn {
-    margin: 0 0 0 10px;
-}
-.dp__cell_inner.dp__pointer.dp__range_between, 
-.dp__cell_inner.dp__cell_disabled.dp__range_between {
-    background-color: #ebf4f8;
-    border-color: transparent;
-}
-.dp__cell_inner.dp__cell_offset.dp__cell_disabled, 
-.dp__cell_inner.dp__cell_disabled , 
-.dp__cell_inner.dp__cell_disabled.dp__range_between{
-    color: #999;
-    cursor: not-allowed;
-    text-decoration: line-through;
-    min-width: 32px;
-    height: 29px;
-    line-height: 24px;
-    font-size: 12px;
-    padding: 2px;
-    font-family: 'Roboto';
-}
-.dp__cell_inner.dp__pointer.dp__range_start {
-    background-color: #2f3990;
-    font-size: 12px;
-    line-height: 24px;
-    height: 29px;
-    font-family: 'Roboto';
-}
-.dp__month_year_wrap button.dp__btn.dp__month_year_select {
-    padding: 2px !important;
-    font-size: 14px;
-    color: #000;
-    font-family: 'Roboto';
-}
-.dp__cell_inner.dp__pointer,
-.dp__cell_inner.dp__cell_disabled.dp__range_end,
-.dp__overlay_cell.dp__overlay_cell_pad {
-    line-height: 24px;
-    height: 29px;
-    font-size: 12px;
-    padding: 2px;
-    font-family: 'Roboto';
-}
-.dp__cell_inner.dp__cell_disabled.dp__range_end,
-.dp__overlay_cell_active,
-.dp__cell_inner.dp__pointer.dp__range_end{
-    background-color: #2f3990;
-    font-size: 12px;
-    padding: 2px;
-    font-family: 'Roboto';
-}
-.dp__calendar_header_separator {
-    display: none;
-}
-
-.dp__cell_inner.dp__cell_offset.dp__pointer {
-    color: #999;
-}
-.dp__month_year_select:hover, .dp__inner_nav:hover, .dp__overlay_cell:hover{
-    background: transparent !important;
-}
-.dp__inner_nav svg path {
-    fill: #000 !important;
-} */
 button.dp__btn.dp__month_year_col_nav {
     padding: 0 !important;
 }
@@ -536,9 +419,7 @@ button.dp__btn.dp__month_year_col_nav {
     margin: -1px -1px 0 -1px;
     transform: rotate(45deg) translate(-50%, -50%);
 }
-/* .timelog-usercount-dropdown input[type='checkbox']:checked:before {
-    opacity: 1;
-} */
+
 .userfilter-list{
     margin-left: 3px; 
     font-size: 12.921px;
@@ -554,20 +435,7 @@ table.time-logtable td.editdelete img.eyeicon {
     align-items: center;
     justify-content: center;
 }
-/* .date-userprofile-wrapper .range-picker.rangeComp {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000;
-    font-family: Roboto;
-    border: 1px solid #dfe1e6;
-    padding: 4px 10px 4px 33px!important;
-    border-radius: 4px;
-    text-align: center;
-    background-position: 10px;
-    background-repeat: no-repeat;
-    background-image: url('../../assets/images/svg/calendar_img.svg');
-} */
+
 .timelog_main .user-list-top.userlist-screenshot-listtop{
     top: -20px !important;
     z-index: 999;
@@ -593,9 +461,6 @@ table.time-logtable td.editdelete img.eyeicon {
 }
 @media(max-width: 1440px){
     .timeLogWrapper td:first-child {width: 20%;}
-    /* .timeLogWrapper{overflow: auto;} */
-    /* .timeLogWrapper .user-list-top {position: unset;} */
-    /* .timeLogWrapper .user-list-top.userlist-screenshot-listtop{position: sticky;} */
     .mainTableDiv .timelog-table-thead {top: -20px;}
     .mainTableDiv .time-logtable {height: 100%;border-right: 2px solid #dfe1e6 !important;}
 }
@@ -614,7 +479,6 @@ table.time-logtable td.editdelete img.eyeicon {
     @media(max-width: 991px){
     .timeLogWrapper .user-list-top {flex-wrap: wrap;flex-direction: column;}
     .timeLogWrapper .userProfileFilter {padding-left: 20px;}
-    /* .timeLogWrapper .date-userprofile-wrapper {margin-bottom: 15px;} */
     .timeLogWrapper thead:after {content: '';position: absolute;border: 1px solid #dfe1e6;width: 100%;}
     .dropdown-button-timelog{
         width: 120px;
@@ -622,7 +486,6 @@ table.time-logtable td.editdelete img.eyeicon {
     }
 }
 @media(max-width: 767px){
-    /* .timeLogWrapper .user-list-top {flex-direction: row;} */
     .timeLogWrapper .date-userprofile-wrapper {margin-bottom: 0px; margin-right: 10px;}
     .timelog-usercount-dropdown{margin-left: 0;margin-top: 0;}
     .userfilter-list{font-size: 16px;margin-left: 10px;}
@@ -643,7 +506,6 @@ table.time-logtable td.editdelete img.eyeicon {
 }
 @media(max-width: 647px){
     .timeLogWrapper .user-list-top {flex-direction: column;}
-    /* .timeLogWrapper .date-userprofile-wrapper {margin-bottom: 15px;} */
 }
 @media(max-width: 576px){
     .timeLogWrapper .user-list-top {flex-wrap: wrap;}

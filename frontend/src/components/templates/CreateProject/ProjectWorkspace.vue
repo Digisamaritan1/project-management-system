@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project workspace detail for blank project form as step-3 in create project module.
-========================================================================================== -->
 <template>
 <div class="ProjectShareGraphicContentWrapper">
     <div class="modalHeader bg-light-gray mb-30px"
@@ -16,7 +12,6 @@
                 <img :src="jadeworkspaceBlue" alt="images" v-if="!theModel.privateSpaceValue.value && checkPublicPlan() === true" />
                 <img :src="jadeworkspaceGray" alt="images" v-if="theModel.privateSpaceValue.value || checkPublicPlan() === false" />
                 <p :class="{'Workspace-desktop-text': clientWidth > 767 , 'Workspace-text-mobile': clientWidth <= 767}">{{`${selectedCompany.Cst_CompanyName}'s ${$t("Projects.workspace")}`}}</p>
-                <!-- <p>{{userDetail.companies && userDetail.companies.filter((x) => x.id === $CompanyDatabase)[0].Cst_CompanyName}}'s Workspace</p> -->
             </div>
             <div class="shareGraphicPrivate" @click="switchWorkSpace(true)" :class="{'add':theModel.privateSpaceValue.value , 'font-size-13 border-radius-5-px ': clientWidth > 767, 'font-size-16 border-radius-6-px ': clientWidth <= 767,'disablePlan' : checkPrivatePlan() === false }">
                 <img :src="pratcceBlue" alt="images" v-if="theModel.privateSpaceValue.value" />

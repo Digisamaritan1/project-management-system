@@ -24,7 +24,6 @@
                     <img :src="triangleBlack" alt="triangleBlack">
                     <Skelaton class="border-radius-5-px ml-10px" style="height: 20px; width: 150px;"/>
                 </div>
-                <!-- <Skelaton v-for="i in 5" :key="i" class="border-radius-5-px skelaton__option mb-5px"/> -->
                 <div v-for="i in 5" :key="i" class="sprint" style="background-color: #f4f5f7" :style="`${i == 5 ? 'margin-bottom: 0px !important;' : ''}`">
                     <div class="d-flex align-items-center">
                         <Skelaton class="border-radius-5-px status-sprint" style="width: 80px;"/>

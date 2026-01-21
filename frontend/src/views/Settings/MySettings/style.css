@@ -239,7 +239,6 @@ img.dropdown-arrow {
 }
 
 .setting-section-right:has(.my-settings-main) {
-    /* height: calc(100vh - 100px); */
     overflow: auto;
     background: #f4f5f7;
 }

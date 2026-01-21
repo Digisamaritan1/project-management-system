@@ -1,7 +1,3 @@
-<!--
-    Filename: Checklist.vue
-    Assignee: Parth Detroja [30-05-2023]
--->
 <template>
     <div class="checklist-main mobile__bg--withPadding">
         <div class="tree_main">
@@ -16,9 +12,6 @@
                                 <label class="font-weight-normal font-size-14 d-flex ml-10-px black" :class="[{'w-90': row.name.length > 100}]">
                                     <span class="text-ellipsis font-size-14 font-weight-500 black" :title="row.name">{{ row.name }}</span>
                                 </label>
-                                <!-- <div class="d-flex ml-10-px">
-                                    <span class="d-flex align-items-center font-size-13 font-weight-400 GunPowder">({{ row.checkItem }}/{{ row.totalSubItems }})</span>
-                                </div> -->
                             </div>
                         </div>
                     </div>

@@ -183,7 +183,6 @@
     const isEveryOne = ref(false);
     onMounted(async () => {
         getUserData();
-        // initData(dateRange.value.startDate, dateRange.value.endDate);
     })
 
     watch(() => props.projectData,(prValue) => {
@@ -229,7 +228,6 @@
     const handleDate = (modelData) => {
         dateRange.value.startDate = modelData.dateVal[0]
         dateRange.value.endDate = modelData.dateVal[1]
-        // initData(modelData.dateVal[0] ? modelData.dateVal[0] : '',modelData.dateVal[1] ? modelData.dateVal[1]: '');
     }
     const getTaskDataFunction = (projectObject,cb) => {
         isSpinner.value = true;
@@ -349,7 +347,6 @@
                         _id: {
                             date: "$Date",
                             user: "$UserId",
-                            // projectId: "$ProjectId"
                         },
                         data: {
                             $push: {
@@ -619,7 +616,6 @@
                         });
                         if(element.userId.toString().trim() === userId.trim()){
                             totalLoghrs += totalMin;
-                            // totalLoghrs += totalMin;
                             if(element.logType == 0){
                                 manuallyLog += totalMin; 
                             }
@@ -682,8 +678,6 @@
     function openFilterMenu(){
         try{
             filterSearch.value ='';
-            // const userIds = usersArray.value.map(user => user.id);
-            // const userData = users.value.filter(user => userIds.includes(user._id));
             getUserData();
             helper.getFinalFilter(filterType.value, users.value, teams.value, projects.value).then((filterRes) => {
                 if(filterRes.status){

@@ -1,8 +1,3 @@
-<!-- =========================================================================================
-    File Name: CreateProjectSidebar.vue
-    Created By : Dipsha Kalariya
-    Commnet : This file is used as main sidebar of create project module.
-========================================================================================== -->
 <template>
 <div class="createProjectSidebarWrapper commonProjectSidebar createTemplateProjectSidebarWrapper d-flex flex-row h-100 overflow-hidden" id="useTemplateId">
     <div id="back_arrow_id" class="">

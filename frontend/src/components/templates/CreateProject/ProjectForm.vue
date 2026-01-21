@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project bacis detail for blank project form as step-1 in create project module.
-========================================================================================== -->
 <template>
 <div>
     <div class="createprojectContent whitebodyContent_v2">
@@ -164,7 +160,6 @@ const  { checkErrors } = useValidation();
     }
     // Regex for validate alpha numeric
     const removeSpecialCharacter = () => {
-        // ValidationFunction.onlyAlphaNumericAllowed(theModel.value.projectCode.value);
         emit('update:modelValue', theModel.value)
     }
     function updateAssignee(event, type){

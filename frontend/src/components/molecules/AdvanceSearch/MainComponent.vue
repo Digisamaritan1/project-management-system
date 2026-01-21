@@ -1,7 +1,3 @@
-<!--
-    File Name: MainComponent.vue
-    Created By: Parth Detroja
--->
 <template>
   <div class="position-re h-100vh" v-if="checkPermission('project') !== null && checkPermission('project.project_list') !== null && checkPermission('task.task_list') !== null">
     <SpinnerComp :is-spinner="!loading" />
@@ -50,13 +46,6 @@
             class="advancefilter__body--left style-scroll"
             :class="[{ 'd-flex': clientWidth <= 1199 }]"
           >
-            <!-- <div @click="activeTab='all',searchTasks()" class="d-flex align-items-center advancefilter__body--marginbottom cursor-pointer" :class="[{'advancefilter__body--active':activeTab === 'all'}]">
-                            <span class="d-block" style="width:16px">
-                                <img v-if="activeTab === 'all'" :src="allImageblue" alt="allImageblue">
-                                <img v-else :src="allImage" alt="allImage">
-                            </span>
-                            <span class="advancefilter__body--name GunPowder advancefilter__body--left--image">All</span>
-                        </div> -->
             <div
               @click="activeTab === 'tasks' ? '' : taskTab()"
               class="d-flex align-items-center advancefilter__body--marginbottom cursor-pointer"
@@ -408,10 +397,6 @@ import ProjectFilter from "@/components/atom/AdvanceFilterProject/AdvanceFilterP
 import CommentFilter from "@/components/atom/AdvanceFilterComments/AdvanceFilterComments.vue";
 import FieldsTableAdvance from "@/components/molecules/TaskFilterAdvance/FieldsTableAdvance.vue";
 import FieldsActionsAdvance from "@/components/molecules/TaskFilterAdvance/FieldsActionAdvance.vue";
-// import TaskStatusSidebar from '@/components/molecules/TaskStatusSidebar/TaskStatusSidebar.vue'
-// import "@/components/molecules/TaskFilter/style.css";
-// import Assignee from "@/components/molecules/Assignee/Assignee.vue";
-// import TaskFilterBlock from '@/components/molecules/TaskFilter/TaskFilter.vue'
 import LinkFilter from "@/components/atom/AdvanceFilterLinks/AdvanceFilterLinks.vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
@@ -434,8 +419,6 @@ const projectImageBlue = require("@/assets/images/svg/projectTabBlue.svg");
 const filterImage = require("@/assets/images/svg/filterImage.svg");
 const FileslinksBlue = require("@/assets/images/svg/FileslinksBlue.svg");
 const fileLinks = require("@/assets/images/svg/Fileslinks.svg");
-// const allImageblue = require("@/assets/images/svg/all_image_blue_svg.svg");
-// const allImage = require("@/assets/images/svg/all_image_svg.svg");
 const fileImageBlue = require("@/assets/images/svg/file_image_blue_svg.svg");
 const fileImage = require("@/assets/images/svg/file_image_svg.svg");
 const accessDeniedImage = require("@/assets/images/access_denied_img.png");
@@ -1405,21 +1388,6 @@ function debouncer(timeout = 1000) {
   });
 }
 
-// This functions is used for the filter all links from the description or comments
-// const linkify = (str) => {
-//     let string = str;
-//     let result = [];
-//     try {
-//         if (str != '' && str != undefined) {
-//             //eslint-disable-next-line
-//             result = string.match(urlRegex.value);
-//         }
-//         return [...new Set(result)];
-//     } catch (error) {
-//         console.error(error);
-//         return result;
-//     }
-// };
 /**
  * This function is used to perfom filter based on selected fields
  * @param {String} query
@@ -1638,12 +1606,6 @@ const manageArray = (type) => {
   } else if (type === "type") {
     arrayData = commentType;
   }
-  // else if (type === "TaskTypeKey") {
-  //     arrayData = taskTypeArray;
-  // }
-  // else if (type === "tagsArray") {
-  //     arrayData = tagsArray;
-  // }
   return arrayData;
 };
 const clearFilter = async () => {

@@ -159,10 +159,6 @@
 .checkbox-custom-field .drag-icon {
     top: 5px;
 }
-/* .formkit-form {
-    max-height: calc(100vh - 326px);
-    overflow: auto;
-} */
 .formkit__form-wrapper .custom__field-radio [data-type="radio"] .formkit-input:checked ~ .formkit-decorator {
     border-radius: 4px;
     background: #2F3990;

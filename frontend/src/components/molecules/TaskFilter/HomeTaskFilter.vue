@@ -1,7 +1,3 @@
-<!--
-    File Name: TaskFilter.vue
-    Created By: Parth Detroja
--->
 <template>
     <div class="bg-white d-flex align-items-center position-re border-radius-6-px" :class="{'mr-15' : clientWidth > 767 , 'mr-010' : clientWidth <= 767}">
         <div class="bottom-filter-section bg-white home_card" >

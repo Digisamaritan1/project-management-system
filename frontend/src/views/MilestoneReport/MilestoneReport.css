@@ -101,9 +101,7 @@
 .milestone-report-wrapper .milestone-report-table tr th.border-color-highlight-left:first-child::after,.milestone-report-wrapper .milestone-report-table tr td.td_class_border:first-child::after{
     right: 0px !important;
 }
-/* .milestone-report-wrapper .milestone-report-table .padding_warpper_sheet {
-    z-index: 10;
-} */
+
 .milestone-report-wrapper .milestone-report-table thead tr:nth-child(1) {
     border-radius: 4px;
 }
@@ -115,9 +113,7 @@
     line-height: 23.68px;
     color: #000000;
 }
-/* .milestone-report-wrapper .milestone-report-table .thtitle-wrapper {
-    padding: 0px 27px 0 23px;
-} */
+
 .milestone-report-wrapper .milestone-report-table thead tr:nth-child(1) th.fixed .thtitle div {
     font-family: 'Roboto';
     font-style: normal;
@@ -160,7 +156,6 @@
 }
 .milestone-report-wrapper .milestone-report-table tr.fixed:nth-child(2) th {
     padding: 4.5px 0!important;
-    /* cursor: pointer; */
 }
 .milestone-report-wrapper .milestone-report-table tr.fixed th:before
  {
@@ -168,7 +163,6 @@
     border-top: 1px solid #cfd0d3 !important;
     display: block;
     position: absolute;
-    /* height: -webkit-fill-available; */
     width: 100%;
     right: 0;
     top: -1px;
@@ -192,7 +186,6 @@
     right: 30%;
 }
 .milestone-report-wrapper .milestone-report-table .days-selected-dropdown {
-    /* margin-right: 23px; */
     height: 21px;
     text-align: left !important;
 }
@@ -201,7 +194,6 @@
     height: 27px;
     border-left: 1px solid #CFD0D3;
     position: relative;
-    /* border-bottom: 1px solid #dfe1e6; */
 }
 .milestone-report-wrapper .milestone-report-table tr:first-child th:last-child::before {
     content: '';
@@ -397,15 +389,7 @@ tr.fixed th {
 .lightGreyColor {
     color: #3B3B3B;
 }
-/* .FilterDropDown {
-    width: 586.99px;
-} */
-/* .milestone-report-wrapper .filterBy {
-    border: 1px solid #DFE1E6;
-    padding: 4px 8px;
-    border-radius: 5px;
-    background-color: white;
-} */
+
 .milestone-report-wrapper .filter_table_wrapper {
     padding: 0px 15px;
     background-color: #F4F5F7;

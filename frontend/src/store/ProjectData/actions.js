@@ -194,7 +194,6 @@ export const getPaginatedTasks = ({state, commit}, payload) => {
                         if (response.count?.[0]?.count) {
                             resCount = { [foundKey]: response?.count[0]?.count || 0 };
                         } else {
-                            // resCount = { [foundKey]: state.tasks[pid][sprintId].found[foundKey] || 0};
                             resCount = { [foundKey]: (state.tasks[pid][sprintId].found[foundKey] === 1 ? 0 : state.tasks[pid][sprintId].found[foundKey]) || 0 };
                         }
                     } else {
@@ -212,7 +211,6 @@ export const getPaginatedTasks = ({state, commit}, payload) => {
     
                             if(doc.DueDate && doc.DueDate > 0) {
                                 doc.DueDate = new Date(doc.DueDate * 1000);
-                                // doc.dueDateDeadLine = doc.dueDateDeadLine.map((x) => JSON.parse(x)).map((x) => ({date: new Date(x.date * 1000)}));
                             }
     
                             commit('mutateTypesenseTasks', {found: resCount, nextPage: {[indexKey]: (cursor || 0) + responseData?.length || 0}, pid: pid, sprintId: sprintId, data: {...doc}})

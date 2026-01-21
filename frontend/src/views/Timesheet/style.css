@@ -367,21 +367,8 @@ table.table.timesheet_table p {
     max-width: 140px;
 }
 .table.timesheet_table tr {
-  /* height: 48px; */
   border-bottom: 1px solid #cfd0d4;
 }
-/* span.default-status-squer {
-  position: absolute;
-  display: flex!important;
-  align-items: center;
-} */
-/* .logType_show{position: relative;}
-.logType_show span.default-status-squer {
-  bottom: 0px;
-  text-align: center;
-  transform: translateX(-50%);
-  left: 50%;
-} */
 table.table.open_project_table .data-row,table.table.open_project_table .data-row td.fixed{
   background-color: #ebebeb!important;
 }
@@ -424,12 +411,7 @@ td .inner_div span:last-child {
     margin-top: 7px;
     font-size: 15px;
 }
-/* th.fixed div{
-  font-size: 15px;
-} */
-/* tr.open_project_data {
-  border-bottom: 0px solid #cfd0d4!important;
-} */
+
 .timesheetDropdown_wrapper .inital-box {
   height: 28px;
   width: 28px;
@@ -487,7 +469,6 @@ td .inner_div span:last-child {
   padding: 0 10px 10px;
 }
 .timesheetDropdown_wrapper .wf_body.filter_body_scroll {
-  /* padding: 10px 10px 0px; */
   border: 1px solid #ececec;
   margin: 0px 10px 10px;
 }
@@ -502,7 +483,6 @@ td .inner_div span:last-child {
   white-space: nowrap;
 }
 .timesheetDropdown_wrapper .wf_body.filter_body_scroll {
-  /* padding: 10px 10px 0px; */
   border: 1px solid #ececec;
   margin: 0px 10px 10px;
   max-height: 205px;

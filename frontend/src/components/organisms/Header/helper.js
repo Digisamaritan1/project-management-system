@@ -17,7 +17,6 @@ export function useHelper() {
             show:true,
             showerr: () => {
                 return true;
-                // return this.rules && this.checkPermission(this.rules.project, this.companyUserDetail.roleType) !== null && this.checkPermission(this.rules.project.project_list, this.companyUserDetail.roleType) !== null;
             },
             submenu: [],
             isActive: true
@@ -28,7 +27,6 @@ export function useHelper() {
             show:checkPermission('sheet_settings.workload_timesheet') !== null || checkPermission('sheet_settings.project_timesheet') !== null || checkPermission('sheet_settings.user_timesheet') !== null,
             shower: () => {
                 return true;
-                // return this.rules && this.checkPermission(this.rules.sheet_settings, this.companyUserDetail.roleType) !== null && (this.checkPermission(this.rules.sheet_settings.user_timesheet, this.companyUserDetail.roleType) !== null || this.checkPermission(this.rules.sheet_settings.project_timesheet, this.companyUserDetail.roleType) !== null || this.checkPermission(this.rules.sheet_settings.workload_timesheet, this.companyUserDetail.roleType) !== null);
             },
             submenu: [
                 {
@@ -38,7 +36,6 @@ export function useHelper() {
                     show: checkPermission('sheet_settings.user_timesheet') !== null,
                     showerr: () => {
                         return true;
-                        // return this.rules && this.checkPermission(this.rules.sheet_settings.user_timesheet, this.companyUserDetail.roleType) !== null;
                     }
                 },
                 {
@@ -48,7 +45,6 @@ export function useHelper() {
                     show: checkPermission('sheet_settings.project_timesheet') !== null,
                     shower: () => {
                         return true;
-                        // return this.rules && this.checkPermission(this.rules.sheet_settings.project_timesheet, this.companyUserDetail.roleType) !== null;
                     }
                 },
                 {
@@ -58,7 +54,6 @@ export function useHelper() {
                     show: checkPermission('sheet_settings.workload_timesheet') !== null,
                     shower: () => {
                         return true;
-                        // return this.rules && this.checkPermission(this.rules.sheet_settings.workload_timesheet, this.companyUserDetail.roleType) !== null;
                     }
                 },
                 {
@@ -68,7 +63,6 @@ export function useHelper() {
                     show: checkPermission('sheet_settings.tracker_timesheet') !== null,
                     shower: () => {
                         return true;
-                        // return this.rules && this.checkPermission(this.rules.sheet_settings.workload_timesheet, this.companyUserDetail.roleType) !== null;
                     }
                 }
             ]

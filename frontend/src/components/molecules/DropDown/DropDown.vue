@@ -27,12 +27,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="position-ab bg-white gray border border-radius-5-px z-index-7 box-shadow-4 drop-down-menu" v-if="dropdownVisible">
-                <div style="padding: 5px; font-size: 13px; top: 25px;">
-                    <slot name="options">
-                    </slot>
-                </div>
-            </div> -->
         </teleport>
     </div>
 </template>

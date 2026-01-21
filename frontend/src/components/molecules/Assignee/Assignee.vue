@@ -198,10 +198,7 @@ const unselectedUser = computed(() => {
 function selectFun(event) {
     selectedUser.value.includes(event.id) ? emit('removed', event) : emit('selected', event)
 }
-// Temporary team assign hide
-// const teams = computed(() => {
-//     return getters["settings/teams"]
-// })
+
 const detailedOptions = computed(() => {
     let res = [
         {
@@ -209,13 +206,6 @@ const detailedOptions = computed(() => {
             options: []
         },
     ];
-    // Temporary team assign hide
-    // if(isDisplayTeam.value) {
-    //     res.unshift({
-    //         label: t('Projects.assignee_teams'),
-    //         options: []
-    //     })
-    // }
     userSortArray.value.forEach((x) => {
         const designationKey = companyUsers.value.filter((y) => y.userId === x.id)?.[0]?.designation;
         const designation = designations.value?.filter((x) => x.key === designationKey)[0]?.name;
@@ -223,23 +213,7 @@ const detailedOptions = computed(() => {
         res.forEach((group) => {
             group.options.push(x);
         })
-
-        // Temporary team assign hide
-        // res[isDisplayTeam.value ? 1: 0].options.push(x);
     })
-    // Temporary team assign hide
-    // if (isDisplayTeam.value) {
-    //     res[0].options = teams.value.filter((tf) => unselectedUser.value.indexOf('tId_'+tf._id) !== -1 || selectedUser.value.indexOf('tId_'+tf._id) !== -1).map((tRow) => ({
-    //         teamColor: tRow.teamColor,
-    //         assigneeUsersArray: tRow.assigneeUsersArray,
-    //         id: 'tId_'+tRow._id,
-    //         value: 'tId_'+tRow._id,
-    //         label: tRow.name,
-    //         image: "",
-    //         designation: "",
-    //         type: 'team'
-    //     }))
-    // }
     return res;
 });
 

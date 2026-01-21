@@ -106,16 +106,6 @@
                 </div>
             </template>
         </VueDatePicker>
-        <!-- <VueDatePicker
-            time-picker
-            text-input
-            v-model="time"
-            :clearable="false"
-            :hide-input-icon="true"
-            @text-submit="handleTime"
-        >
-
-        </VueDatePicker> -->
     </div>
 </template>
 

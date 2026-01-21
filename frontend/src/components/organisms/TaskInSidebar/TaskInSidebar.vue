@@ -5,7 +5,6 @@
             <div class="d-flex align-items-center task__desc-wrapper text-ellipsis" :class="[{'pointer-event-none' : isSpiner == true}]" :style="[{width : clientWidth > 767 ? '59%' : '50%'}]">
                 <div class="taskStatusInSidebar" :style="[{'background-color': taskStatus && taskStatus.textColor,'color':taskStatus && taskStatus.textColor}]"></div>
                 <div class="text-ellipsis pr-10px pl-2px">
-                    <!-- <div v-if="data.isParentTask === false"><span class="text-ellipsis gray parent-taskname-merge font-size-12">{{taskData.filter((x) => x.id === data.ParentTaskId)[0]?.TaskName}}</span></div> -->
                     <div v-if="data.isParentTask === false" class="text-ellipsis d-block w-100 data__is-parenttask"><span class="text-ellipsis gray parent-taskname-merge font-size-11 font-weight-400 text-capitalize">{{taskData.filter((x) => x._id === data.ParentTaskId)[0]?.TaskName || data.parentTaskName}}</span></div>
                     <div class="text-ellipsis d-block w-100 mt--1px">
                         <img v-if="data.isParentTask === false" :src="subTaskDefineArrowImg">
@@ -36,7 +35,6 @@
                                 :key="'user'+index" @click="usersFilter(user)"
                             >
                                 <div class="d-flex align-items-center" :title="user.label">
-                                    <!-- <img :src="user.image" class="profile-image" alt="user image"> -->
                                     <UserProfile
                                         :showDot="true"
                                         :data="{ image: user.Employee_profileImageURL, title: user.Employee_Name}"

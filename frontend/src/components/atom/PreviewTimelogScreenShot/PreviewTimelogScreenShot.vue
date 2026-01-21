@@ -29,7 +29,6 @@
                             class="cursor-pointer timelog-user-status"
                             :thumbnail="'25x25'"
                         />
-                        <!-- <img :src="screenShotdetail.userProfile ? screenShotdetail.userProfile : '@/assets/images/default_user.png'" :alt="screenShotdetail.userId" style="width:20px;height:20px;border-radius:50%;"/> -->
                         <span class="font-size-12 gray ml-10px">{{screenShotdetail.userName}}</span>
                     </span>
                 </div>

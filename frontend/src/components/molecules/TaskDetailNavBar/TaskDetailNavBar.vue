@@ -9,11 +9,6 @@
                 >
                     {{ projectName }}
                 </span>
-                <!-- <img
-                    class="task_detail_navbar_img"
-                    src="@/assets/images/svg/breadcrum.svg"
-                    alt="breadcrum"
-                > -->
                 <img :src="crossline" alt="crossline" />
             </li>
             <li v-if="isFolderSprint">
@@ -29,11 +24,6 @@
                         {{ folderName }}
                     </span>
                 </div>
-                <!-- <img
-                    class="task_detail_navbar_img"
-                    src="@/assets/images/svg/breadcrum.svg"
-                    alt="breadcrum"
-                > -->
                 <img :src="crossline" alt="crossline" />
             </li>
             <li>
@@ -44,11 +34,6 @@
                 >
                     {{ sprintName }}
                 </span>
-                <!-- <img
-                    class="task_detail_navbar_img"
-                    src="@/assets/images/svg/breadcrum.svg"
-                    alt="breadcrum"
-                > -->
                 <img :src="crossline" alt="crossline" />
             </li>
             <li v-if="isParent">
@@ -67,11 +52,6 @@
                 >
                     {{ parentKey }}
                 </span>
-                <!-- <img
-                    class="task_detail_navbar_img"
-                    src="@/assets/images/svg/breadcrum.svg"
-                    alt="breadcrum"
-                > -->
                 <img :src="crossline" alt="crossline" />
                 <span
                     class="task_detail_navbar"
