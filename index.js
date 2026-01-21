@@ -7,7 +7,7 @@ const config =  require('./Config/config.js');
 const awsRef =  require('./Config/aws.js');
 const logger = require("./Config/loggerConfig");
 const packJOSNData = require("./package.json");
-const { makeDefaultBrandSettings } = require("./modules/Admin/common/controller.js");
+const { makeDefaultBrandSettings } = require("./modules/admin/common/controller.js");
 
 const app = express();
 app.use(cors({origin: '*'}));
@@ -101,11 +101,11 @@ function initializeControllers() {
     if(process.env.NODE_ENV === "production") {
         require('./cron.js')
     }
-    require('./modules/Admin/admin.js').init(app);
+    require('./modules/admin/admin.js').init(app);
     require('./modules/emailTemplate/init').init(app);
     require('./modules/email-notification/init').init(app);
     require(`./modules/storage/${currentDirectory}/init`).init(app);
-    require('./modules/AI/init').init(app);
+    require('./modules/ai/init').init(app);
     require('./modules/usersModule/init').init(app);
     require('./modules/Project/init').init(app);
     require('./modules/Teams/init').init(app);
