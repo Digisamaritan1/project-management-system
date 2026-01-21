@@ -9,12 +9,12 @@
                     <div class="position-ab d-flex align-items-center justify-content-center z-index-7 w-100 h-100 bg-dark-gray3" v-if="inProgress">
                         <Spinner :isSpinner="true"/>
                     </div>
-                    <div class="bg-white border-radius-8-px p-15px webkit-avilable">
+                    <div class="bg-white border-radius-8-px p-15px webkit-available">
                         <!-- CHANNEL NAME -->
                         <div class="d-flex align-items-center">
                             <label class="text-nowrap mr-10px">{{$t('Channel.channel_name')}}<span class="red">*</span></label>
                             <div class="position-re w-100">
-                                <input type="text" v-model.trim="channelName.value" :placeholder="$t(`PlaceHolder.enter_channel_name`)" class="form-control webkit-avilable"
+                                <input type="text" v-model.trim="channelName.value" :placeholder="$t(`PlaceHolder.enter_channel_name`)" class="form-control webkit-available"
                                     @keyup="checkErrors({'field':channelName,
                                         'name':channelName.name,
                                         'validations':channelName.rules,
@@ -48,7 +48,7 @@
                                 <span>{{$t('Channel.or')}}</span>
                                 <div class="d-flex align-items-center mt-10px text-nowrap">
                                     <input v-if="!uploadFileName" type="text" :placeholder="$t('Channel.choose_to_upload')" class="form-control" v-model.trim="icon.name" readonly/>
-                                    <input v-else type="text" :placeholder="uploadFileName ? uploadFileName : $t('Channel.choose_to_upload')" class="form-control webkit-avilable" readonly/>
+                                    <input v-else type="text" :placeholder="uploadFileName ? uploadFileName : $t('Channel.choose_to_upload')" class="form-control webkit-available" readonly/>
                                     <button class="btn-primary p0x-10px" @click="$refs.fileInputUser.click()">{{$t('Templates.upload')}}</button>
                                     <input type="file" ref="fileInputUser" class="d-none" name="img" @change="previewImage" accept="image/x-png,image/jpeg,image/jpg" id="upload-photo"/>
                                 </div>
