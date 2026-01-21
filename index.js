@@ -7,7 +7,7 @@ const config =  require('./Config/config.js');
 const awsRef =  require('./Config/aws.js');
 const logger = require("./Config/loggerConfig");
 const packJOSNData = require("./package.json");
-const { makeDefaultBrandSettings } = require("./modules/Admin/common/controller.js");
+const { makeDefaultBrandSettings } = require("./modules/admin/common/controller.js");
 
 const app = express();
 app.use(cors({origin: '*'}));
@@ -96,16 +96,16 @@ function initializeControllers() {
     require('./modules/notification-count/init').init(app);
     require('./modules/notification/sendEmail/init').init(app);
     require('./modules/trackerUserPermission/init').init(app);
-    require('./modules/checkinstallstep/init').init(app);
+    require('./modules/check-install-step/init').init(app);
     require('./modules/SaasAdmin/init').init(app);
     if(process.env.NODE_ENV === "production") {
         require('./cron.js')
     }
-    require('./modules/Admin/admin.js').init(app);
+    require('./modules/admin/admin.js').init(app);
     require('./modules/emailTemplate/init').init(app);
     require('./modules/email-notification/init').init(app);
     require(`./modules/storage/${currentDirectory}/init`).init(app);
-    require('./modules/AI/init').init(app);
+    require('./modules/ai/init').init(app);
     require('./modules/usersModule/init').init(app);
     require('./modules/Project/init').init(app);
     require('./modules/Teams/init').init(app);
@@ -123,9 +123,9 @@ function initializeControllers() {
     require('./modules/settings/restrictedExtensions/init').init(app);
     require('./modules/UserId/init').init(app);
     require('./modules/settings/Members/init').init(app);
-    require('./modules/Apps/init').init(app)
+    require('./modules/apps/init').init(app)
     require('./modules/projectTabs/init').init(app)
-    require('./modules/Comments/init').init(app);
+    require('./modules/comments/init').init(app);
     require('./modules/TimeSheet/init').init(app);
     require('./modules/MainChats/init').init(app);
     require('./modules/notification/app-notification/init').init(app);
@@ -170,7 +170,7 @@ if (!process.env.STORAGE_TYPE) {
     process.env.STORAGE_TYPE = "wasabi";
 }
 
-require('./modules/checkinstallstep/init').init(app);
+require('./modules/check-install-step/init').init(app);
 
 // SWAGGER CONFIGURATION
 require('./modules/swaggerAPI/init').init(app, config.APIURL);
