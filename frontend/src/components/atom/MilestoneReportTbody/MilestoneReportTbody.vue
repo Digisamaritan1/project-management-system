@@ -55,7 +55,6 @@
     // Variable
     const currencyIndex = ref('');
     const prevCurrencyIndex = ref('');
-    // const totalCurrency = ref(0)
 
     // image
     const arrowToogle = require("@/assets/images/table_arrow.png");

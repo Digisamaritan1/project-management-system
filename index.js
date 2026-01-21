@@ -157,8 +157,6 @@ fs.watchFile(__dirname+'/.env', () => {
 })
 
 // SET MIDDLEWARE
-// require('./Config/setMiddleware.js').setMiddlewareWithC(app);
-// require('./Config/setMiddleware.js').setMiddleware(app);
 require('./Config/setMiddleware.js').setMiddlewareWithCV2(app);
 require('./Config/setMiddleware.js').setMiddlewareV2(app);
 
@@ -167,9 +165,6 @@ require('dotenv').config();
 if (process.env.MONGODB_URL) {
     initializeControllers();
 }
-// if (process.env.CANYONLICENSEKEY) {
-//     initializeControllers();
-// }
 
 if (!process.env.STORAGE_TYPE) {
     process.env.STORAGE_TYPE = "wasabi";

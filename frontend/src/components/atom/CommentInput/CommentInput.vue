@@ -147,10 +147,6 @@ onMounted(() => {
             ghost: user.ghostUser
         }
     })
-
-    // nextTick(() => {
-    //     autoResize()
-    // })
 })
 
 watch(()=> props.loadingChat, (val) => {

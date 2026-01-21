@@ -273,10 +273,6 @@
         .catch((error) => {
             console.error("ERR: ", error);
         })
-        // let url = downloadObj.url.includes('http') ? downloadObj.url : itemData.value.downloadUrl;
-        // download(url, props.data.filename).catch((error) => {
-        //     console.error('Error while downloading file.', error);
-        // });
     };
     function downloadurl (e) {
         itemData.value.downloadUrl = e;

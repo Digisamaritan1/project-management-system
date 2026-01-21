@@ -400,10 +400,6 @@ onMounted(() => {
             }
         });
     }
-    // const ele = document.getElementById(props.inputId);
-    // if(ele){
-    //     ele.focus();
-    // }
 })
 function convertDateAndTime(timeformat,seconds,dateFormat) {
     try {

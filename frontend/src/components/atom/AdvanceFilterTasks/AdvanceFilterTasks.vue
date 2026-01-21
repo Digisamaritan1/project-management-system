@@ -90,7 +90,6 @@
     const companyId = inject("$companyId");
     // variable
     const isTaskDetail = ref(false);
-    // const selectedTask = ref({});
     const projectId = ref('');
     const sprintId = ref('');
     const taskId = ref('');
@@ -153,10 +152,7 @@
         isTaskDetail.value = true;
         projectId.value = task.ProjectID
         sprintId.value = task.sprintId
-        taskId.value = task._id
-        // generateTaskURL(task,companyId.value).then((url)=>{
-        //     window.open(url, '_blank');
-        // });  
+        taskId.value = task._id  
     };
     // Open task in new tab
     const openInNewTab = (task) => {

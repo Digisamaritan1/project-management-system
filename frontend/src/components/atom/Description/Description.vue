@@ -40,8 +40,6 @@ const { t } = useI18n();
 const mardownInit = markdownit({
     html: true
 })
-// mardownInit.renderer.rules.strong_open = () => "<b>";
-// mardownInit.renderer.rules.strong_close = () => "</b>";
 
 import PromptSidebar from "@/components/molecules/PromptSidebar/PromptSidebar.vue"
 
@@ -213,7 +211,6 @@ function initEditor() {
             blockIndex.value = editor.value.blocks.getCurrentBlockIndex();
             try {
                 editor.value.save().then((res) => {
-                    // isChanged.value = JSON.stringify(props.description?.blocks) != JSON.stringify(res?.blocks) ? true : false
                     if(JSON.stringify(props.description?.blocks) != JSON.stringify(res?.blocks)){
                         saveData();
                     }
@@ -416,35 +413,7 @@ async function injectBlocks (newBlocks) {
     checkContentSize()
 }
 
-// async function cancelData () {
-//     if(Object.keys(tempBlock.value).length > 0){
-//         if(props.description){
-//             if(typeof props.description === 'string'){
-//                 const blockCount = editor.blocks.getBlocksCount();
-//                 for (let i = blockCount - 1; i >= 0; i--) {
-//                     editor.blocks.delete(i);
-//                 }
-//                 blockIndex.value = 1;
-//                 converter.blocks.renderFromHTML(props.description);
-//             }else{
-//                 editor?.render(props.description);
-//                 if(!Object.keys(tempBlock.value).length){
-//                     tempBlock.value = props.description;
-//                 }
-//             }
-//         }else{
-//             let obj = {
-//                 blocks: []
-//             }
-//             editor?.render(obj);
-//         }
-//     }
-// }
-
 function resetAiBlocks() {
-    // const currIndex = blockIndex.value;
-    // editor.blocks.delete(currIndex - 1);
-
     document.querySelectorAll("[data-type=WW_AI]").forEach((x) => {
         const blockId = x?.parentElement?.parentElement?.dataset?.id
         const deleteIndex = editor.value.blocks.getBlockIndex(blockId)

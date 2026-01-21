@@ -127,7 +127,6 @@ const initializeChart = () => {
     chartInstance.value = Highcharts.chart(props.chartId, {
         chart: {
             type: 'bar', // Horizontal stacked bar chart
-            // scrollablePlotArea: { minWidth: 800 }
         },
         title: {
             text: props.chartTitle
@@ -141,9 +140,7 @@ const initializeChart = () => {
                 enabled: false // Hide x-axis labels
             },
             gridLineWidth: 0.5,
-            lineWidth: 0,
-            // min: 0,
-            // scrollbar: { enabled: true }
+            lineWidth: 0
         },
         yAxis: {
             min: 0,
@@ -194,7 +191,6 @@ const initializeChart = () => {
                 stacking: 'normal', // Enable stacking
                 dataLabels: {
                     enabled: isDataLabels.value,
-                    // format: '<span>{series.name}</span>: {point.percentage:.1f} %', // Display percentage
                     format: '<span>{series.name}</span>: {point.y}', // Display value
                     style: {
                         fontSize: '14px',

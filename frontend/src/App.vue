@@ -87,7 +87,6 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 const paymentInit = inject("paymentInit");
 // IMAGES
-// import logo from '@/assets/images/png/logo.png'
 const logo = "/api/v1/getlogo?key=logo&type=desktop";
 import underMaintainanceImg from '@/assets/images/under_maintenance.png'
 import { useRoute, useRouter } from 'vue-router';
@@ -363,11 +362,6 @@ async function getFirebaseData() {
                                             })
                                         }
                                     }
-                                    // if(getters['settings/planFeatureDisplay'] && !(getters['settings/planFeatureDisplay']).length){
-                                    //     dispatch('settings/setplanFeatureDisplay').catch((error) =>{
-                                    //         console.error('ERROR in set Set Chargebee',error)
-                                    //     })
-                                    // }
                             })
                             .catch((error) => {
                                 console.error("ERROR in set file extentions: ", error)
@@ -617,7 +611,6 @@ function notificationPermissionRequest() {
         }
     } else {
         $toast.error(t("Toast.notification_permission"),{position: 'top-right'});
-        // generateFcmToken();
     }
 }
 
