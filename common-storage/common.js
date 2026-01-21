@@ -118,36 +118,6 @@ exports.handleCreateCompanyDataStorageFunForUpload = async(bodyData,companyId) =
     })
 }
 
-/**
- * 
- * @param {object} companyId 
- * @param {string} localFilePath 
- * @param {object} filedata
- * @returns 
- */
-exports.handleChargeebeCreditNotUpload = (companyId,localFilePath,filedata,id) => {
-    return new Promise((resolve, reject) => {
-        try {
-            fs.writeFile(localFilePath, Buffer.from(filedata,'binary'), (error) => {
-                if (error) {
-                    loggerConfig.error(`Credit Note Download Error ${error.message ? error.message : error}`);
-                    return;
-                }
-                let path = `InvoiceAndCreditNotes/CreditNotes/${companyId}/${id}.pdf`;
-                uploadFileWasabiPromise(companyId,path,localFilePath, true,localFilePath,'',true).then(()=>{
-                    resolve();
-                }).catch((error)=>{
-                    loggerConfig.error(`Error While Uploading Credit Note In Wasabi: ${error.message ? error.message : error}`);
-                    reject(error);
-                })
-            });
-        } catch (error) {
-            loggerConfig.error(`Error While Uploading Credit Note In Wasabi: ${error.message ? error.message : error}`);
-            reject(error);
-        }
-    })
-}
-
 exports.handleBucketSizeUpdateCron = () => {
     getBucketSize();
 }
