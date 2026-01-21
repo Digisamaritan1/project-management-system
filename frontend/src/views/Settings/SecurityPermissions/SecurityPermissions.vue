@@ -15,7 +15,6 @@
                 <div class="advancePermission">
                     <div class="d-flex align-items-center justify-content-between headerclass pb-1">
                         <h3 class="font-roboto-sans black font-weight-500">{{$t('Permissions.advanced_permission')}}</h3>
-                        <!-- <a href="#" class="cls-import blue font-roboto-sans" @click.prevent="importRules">Import Default Rules</a> -->
                     </div>
                     <div class="white_box bg-white box-shadow-2">
                         <div class="advancePermissionContent">

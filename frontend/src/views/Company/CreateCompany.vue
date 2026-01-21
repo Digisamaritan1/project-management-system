@@ -349,11 +349,7 @@
                     return false;
                 })
 
-                // if(!(isProductOwner || (env?.CANYONLICENSETYPE === "Extended License" && env?.CANYON_IS_SINGLE_APP == 'false'))) {
-                //     $toast.error(t("Toast.Only_product_owner_can_create_a_company"), {position: "top-right"})
-                //     logOut();
-                //     return;
-                // }
+
                 mainSpinner.value = false;
                 
                 nextTick(() => {
@@ -594,12 +590,6 @@
             isSpinner.value = true;
             apiRequestWithoutCompnay("post", env.CREATE_COMPANY, companyData).then(async(res)=>{
                 if(res.data.status === true){
-                    // if (res.data?.paymentObj?.data?.subscription?.id) {
-                    //     commit("settings/mutateCompanies", {
-                    //         data: {...res.data?.companyData?.data, SubcriptionId: res.data?.paymentObj?.data?.subscription?.id},
-                    //         op: "added",
-                    //     })
-                    // }
                     localStorage.setItem('selectedCompany', res.data.companyId);
                     Cookies.remove('refferCode');
                 }else{

@@ -1,9 +1,5 @@
 <template>
     <div class="timeLogWrapper" v-if="checkApps('TimeTracking')" :class="{ 'timelog_main': isShow === true}">
-        <!-- <div class="cursor-pointer d-flex align-items-center back__Wrapper" v-if="isShow === true" @click="isShow = false">
-            <img :src="backArrow">
-            <h3 class="backClass black font-roboto-sans m-0">{{$t('UserTimesheet.back')}}</h3>
-        </div> -->
         <div class="user-list-top d-flex justify-content-between position-sti flex-wrap" :class="{ 'userlist-screenshot-listtop': isShow === true}">
             <div class="d-flex align-items-center date-userprofile-wrapper" v-if="isShow" @click="isShow = false">
                 <img :src="backArrow">
@@ -17,8 +13,6 @@
                     :preSelectable="false"
                     :message="$t('Toast.date_range')"
                 />
-                <!-- <img :src="closeIcon" v-if="Object.keys(selectedDates).length > 0" @click="initData()">  -->
-
                 <div class="d-flex align-items-center userProfileFilter">
                     <UserProfile
                         v-for="user in users"
@@ -177,7 +171,6 @@
     const isAddLog = ref(true);
     const isShow = ref(false);
     const route = useRoute();
-    // const closeIcon = require("@/assets/images/svg/CloseSidebar.svg");
     const selectedDates = ref({})
     const skip = ref(0);
     const limit = ref(10);

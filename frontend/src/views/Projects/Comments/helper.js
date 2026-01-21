@@ -230,14 +230,11 @@ export const bakeMessage = async ({messageData, edited}) => {
 export const sendMessage = async ({messageData, edited}) => {
     return new Promise((resolve, reject) => {
         try {
-            // apiRequestWithoutCompnay("get", `/api/v1/getTime?zone=${timeZone}`).then((res) => {
                 if(!edited) {
                     delete messageData.reply;
                     const params = {
                         data: {
                             ...messageData,
-                            // createdAt: new Date(res.data),
-                            // updatedAt: new Date(res.data)
                         }
                     }
                     apiRequest('post', `${env.API_COMMENTS}`, params).then((response) => {
@@ -252,9 +249,6 @@ export const sendMessage = async ({messageData, edited}) => {
                 } else {
                     const messageId = messageData._id;
                     delete messageData._id;
-                    // messageData.createdAt = new Date(messageData.createdAt);
-                    // messageData.updatedAt = new Date(res.data);
-
                     const params = {
                         id: messageId,
                         data: { ...messageData },

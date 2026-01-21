@@ -10,8 +10,6 @@
                     <div class="thead position-sti">
                         <div class="tr">
                             <div class="th">
-                                <!-- <div class="blank_wrapper1"></div>
-                                <div class="blank_wrapper2"></div> -->
                                 <div class="header_col_blank"></div>
                                 <div class="header_col header_col__email">{{$t('Auth.email')}}</div>
                                 <div class="header_col header_col__browser">{{$t('Notification.browser')}}</div>

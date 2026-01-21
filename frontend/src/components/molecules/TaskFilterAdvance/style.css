@@ -199,12 +199,7 @@ body {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-/* .section-wrapper-clear-all span.drop-icon {
-    border: 1px solid #2F3990;
-    border-radius: 4px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-} */
+
 .section-wrapper-clear-all .saveFilterImageDropDown {
     border: 1px solid #2F3990;
     border-radius: 4px;
@@ -414,13 +409,9 @@ body {
 .savefilter-inputserach-wrapper {padding: 20px;}
 .cls-custom-dd .search-project-filter, .filter-selectall-options, .update-searchfilter-dropdown, .save-thisfilters-dropdown{margin-left: 0;margin-top: 0;}
 .bottom-filter-section {max-height: 500px;width: 100%;padding: 0;}
-/* .custom-filters-col:nth-child(1) {width: 100%;margin-right: 0;} */
 .custom-filters-table .where-title{max-width: 100%;width: 100%;border-radius: 8px 8px 0 0;height: 50px;display: flex;align-items: center;background-color: #E9E9E9 ;}
 .custom-filters-detailwrapper {width: 100%;flex-wrap: wrap;justify-content: space-between;}
 .custom-filters-col .selected-options {width: 100%;max-width: 100%;height: 50px;border-radius: 8px !important;}
-/* .filter-status-fieldwrapper{width: 47.5%;margin-left: 10px;margin-right: 0px !important;min-width: 47.5%;} */
-/* .filter-operator{margin-left: 0px !important;margin-right: 10px !important;width: 47.5%;min-width: 47.5%;} */
-/* .filter-status-fieldwrapper, .filter-operator {border-radius: 8px;height: 50px;margin-bottom: 20px;} */
 .cursor-pointer.filter-status-field {border-radius: 12px;background: #F4F5F7;padding: 10px;height: 50px;margin: 10px;}
 .filter-status-dropdpown .search-project-filter {padding: 0px 10px 10px 10px;margin: -10px 0 0 0;}
 
@@ -430,7 +421,6 @@ body {
 .cancel-title-donewrapper .done {color: #2F3990;font-size: 18px;font-weight: 700;line-height: 23.4px;}
 .custom-filters-table .select-option {border-radius: 8px !important;height: 50px !important;}
 .custom-filters-table {background: #F8F9FB;border-radius: 11px 11px;margin-bottom: 20px !important;}
-/* .custom-filters-col {padding-bottom: 20px;} */
 .custom-filters-col:nth-child(4) {width: 100%;max-width: 100%;height: 50px;margin: 0 10px !important;}
 .custom-filters-table .date-picker-wrapper {width: 100%;height: 50px;border-radius: 8px !important;}
 .custom-filters-table  .date-img-wrapper{background-color: transparent;padding: 0 !important;}

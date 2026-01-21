@@ -53,7 +53,6 @@ const router = createRouter({
 	routes
 })
 
-// const authInst = getAuth();
 const jsonData = require('../../../brandSettings.json');
 const {setTitle} = useCustomComposable()
 router.beforeEach(async(to, _, next) => {
@@ -70,9 +69,7 @@ router.beforeEach(async(to, _, next) => {
 	const app = localUserId ? await apiRequestWithoutCompnay('get',`${env.USER_UPATE}/${localUserId}`) : null;
 	let user = app && app?.status === 200 ? app?.data || null : null;
 	
-	// onAuthStateChanged(authInst, (user) => {
 		// CHECK META FOR AUTH REQUIRED
-		// const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 		const requiresAuth = to.meta.requiresAuth;
 		const token = Cookies.get('accessToken') || '';
 		// SET PAGE TITLE
@@ -98,7 +95,6 @@ router.beforeEach(async(to, _, next) => {
 			next();
 			return;
 		}
-	// })
 })
 
 function removeCodeParam(url) {

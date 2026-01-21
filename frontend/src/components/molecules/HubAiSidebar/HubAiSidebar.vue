@@ -417,13 +417,6 @@ function regenerate () {
     sendMessageToAi(true);
 }
 
-// function checkResponse(response,preFormat) {
-//     if(typeof response === "object"){
-//         let format = preFormat.replace('{', '').replace('}', '').split(',');
-//         return Object.keys(response).every(value => format.includes(value));
-//     }
-// }
-
 function receiveTextPart(textPart,index) {
     fullText.value += textPart;
     parseJsonAiText(index);

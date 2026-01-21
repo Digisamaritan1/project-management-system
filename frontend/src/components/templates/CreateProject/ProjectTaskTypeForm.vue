@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project task type detail for blank project form as step-4 in create project module.
-========================================================================================== -->
 <template>
 <div class="statusHeader statusHeader_one">
     <div class="bg-light-gray"  :class="{'border-radius-5-px': clientWidth > 767 , 'border-radius-8-px': clientWidth <= 767 } ">
@@ -64,7 +60,6 @@
                 <label :class="{'taskstatustitle-desktop': clientWidth > 767 , 'taskstatustitle-mobile': clientWidth <= 767}" >{{$t('Projects.task_type')}}</label>
                 <DragDropField v-if="theModel.taskTypeField.value && Object.keys(theModel.taskTypeField.value).length > 0" :group="{ name: 'task_type_group' }" :isDeletable="true" :isChangeColor="false" :modelValue="theModel.taskTypeField.value.taskTypes"  @enter:updateFieldValue="addedTaskType" @click:updateFieldValue="addedTaskType" @input:deleteFieldValue="manageDeleteData" @resetTaskTypeErr="taskTypeError=''" @renameUpdate="(val) => {renameUpdate(val)}" :addTaskType="addTaskType" @disbaleButton="(val)=>{$emit('disableNext',val)}" :isTemplate="isTemplate" :useDataArray="useTaskTypeArr" @update:modelValue="manageSelectedOption" :from="'task_type'"/>
                 <div class="addStatusBtn searchValue mb-0">
-                    <!-- <input type="file" style="display: none;" ref="task_type_image" accept="image/*" @change="checkFile"> -->
 
                     <button class="cursor-pointer btn btn-primary" type="button" v-if="!addTaskType" @click="taskTypeName = '',isTaskSidebarOpen = true,isTemplate = false,$emit('openTaskTYpe',true),taskTypeTemplates.map((x)=>{return x.isEditable = false})" id="createprojecttasktypenew_driver">+ {{$t('Home.add_task_type')}}</button>
                     <div class="d-flex align-items-center justify-content-between" v-else>
@@ -103,7 +98,6 @@ const { t } = useI18n();
     const templateDeleteIcon = require('@/assets/images/svg/closeLeftHover.svg');
     const saveIcon = require("@/assets/images/svg/right_tick_green.svg");
     const deletered = require("@/assets/images/svg/deletered.svg");
-    // const companyId = inject("$companyId");
     const taskTypeTemplates = ref([]);  
     const isSpinner = ref(false);
     const clientWidth = inject("$clientWidth");

@@ -205,12 +205,6 @@ function generatePrompts(isRegenerate = false){
     })
 }
 
-// function checkResponse(response,preFormat) {
-//     if(typeof response === "object"){
-//         let format = preFormat.replace('{', '').replace('}', '').split(',');
-//         return Object.keys(response).every(value => format.includes(value));
-//     }
-// }
 
 function scrollBottom(){
     const element = document.getElementById(content.value.uID);

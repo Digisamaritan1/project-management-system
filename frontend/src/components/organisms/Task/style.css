@@ -2,7 +2,6 @@
 
 .list-group-item {
   z-index: 1;
-  /* position: relative; */
 }
 
 .task-options-image {
@@ -11,7 +10,6 @@
   padding: 4px 5px;
   border-radius: 4px;
   color: #818181;
-  /* margin-left: 5px; */
 }
 div.task-options div {
   margin-left: 5px;
@@ -42,7 +40,6 @@ div.task-options div:last-child div {
   min-width:14px;
 }
 .edit__taskname{
-  /* max-width: 80%; */
   color: #6b6b6b;
 }
 .img__parent-task{

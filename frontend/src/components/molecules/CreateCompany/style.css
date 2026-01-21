@@ -16,7 +16,6 @@ ul.imageUplaod {
     border-radius: 5px;
     padding: 30px;
     overflow: auto;
-    /* height: calc(100vh - 200px); */
 }
 .companyWrapper__content {
     height: calc(100vh - 200px);
@@ -414,9 +413,6 @@ button {
 }
 
 @media (max-width:991px) {
-    /* ul.imageUplaod li{
-        max-width: 140px;
-    } */
     .imageUplaod li.active{
         position: relative;
     }
@@ -431,10 +427,6 @@ button {
 @media (max-width:767px) {
     ul.imageUplaod {
         grid-template-columns: repeat(2, 1fr);
-        /* gap: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around; */
     }
     .setting-section-right:has(.workSpaceSection){
         width: 100%;

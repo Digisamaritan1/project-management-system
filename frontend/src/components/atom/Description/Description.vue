@@ -19,7 +19,6 @@
                 <button v-else @click="isShow = false" class="hide_show">{{$t('Description.show_less')}}</button>
             </div>
             <div class="d-flex justify-content-start description-action mt-10px mb-15px description-padding">
-                <!-- <button class="outline-primary mr-10px" @click="cancelData()">{{$t('Projects.cancel')}}</button> -->
                 <button v-if="isChanged" class="btn-primary" @click="saveData()">{{$t('Projects.save')}}</button>
             </div>
 

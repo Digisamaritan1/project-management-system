@@ -11,22 +11,6 @@ defineComponent({
 </script>
 
 <style lang="css" scoped>
-/* .skelaton-loader {
-    animation: loading 1s infinite;
-} */
-
-/* @keyframes pulse-bg {
-    0% {
-      background-color: #2f3990;
-    }
-    50% {
-      background-color: #f241cd;
-    }
-    100% {
-      background-color: #41d7ff;
-    }
-} */
-
 @keyframes loading {
   to {
     background-position-x: -20%;

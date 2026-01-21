@@ -5,17 +5,14 @@
 .screnshotpreviewHover__taskNameKey{
     border-radius: 12px;
     padding: 10px;
-    /* height: 82px; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
 }
 .screnshotpreviewHover__taskNameKey--propjectDetail{
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 17.76px;
-    /* padding-bottom: 23.25px; */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

@@ -123,17 +123,6 @@
                     <!-- TOP SECTION -->
                     <div v-if="rules && Object.keys(rules).length">
                         <div class="bg-white p-1 d-flex mobile-profileimg-namewrapper">
-                            <!-- <UserProfile
-                                :showDot="false"
-                                :data="{
-                                    image: getUser(userId).Employee_profileImageURL,
-                                    title: getUser(userId).Employee_Name
-                                }"
-                                width="45px"
-                                style="margin: 0px !important;"
-                                ref="profile_menu_dd"
-                                class="profile-lg-square"
-                            /> -->
                             <img v-if="!getUser(userId).Employee_profileImageURL" :src="getUser(userId).Employee_profileImageURL" alt="user_profile" class="profile-lg-square">
                             <WasabiIamgeCompp v-else :userImage="true" :thumbnail="'35x35'" :data="{title:getUser(userId).Employee_Name, url: getUser(userId).Employee_profileImageURL}" class="profile-lg-square"/>
                             <div class="d-flex flex-column cursor-pointer mobile-degignation-wrapper" :class="{'pl-1': clientWidth > 1200, 'pt-20': clientWidth <= 1200 }">

@@ -1,11 +1,9 @@
 .sprintWrapper::-webkit-scrollbar {
     display: none;
 }
-/* .sprint.position-re{min-width: min-content;} */
 .sprint_name--wrapper {
     position: sticky;
     left: 0;
-    /* top: 0; */
 }
 .text-ellipse {
     text-overflow: ellipsis;
@@ -234,14 +232,6 @@ span.duedate-new .due-date span, span.key-new {
     width: auto;
     max-width: 100%;
 }
-/* .item_wrapper .task
-{
-    position: sticky;
-    left: 0;
-    z-index: 6;
-    top: 43px;
-    background-color: #fff;
-} */
 .item_wrapper .item_back_sub{
     z-index: 2 !important;
 }
@@ -696,7 +686,6 @@ span.duedate-new .due-date span, span.key-new {
 }
 @media(max-width:575px){
    
-    /* .common-section{  height: 43px;} */
     .subTaskAddRemove.SubTaskAdd .new-row .new-col1 {
         width: calc(30% - 20px);
     }

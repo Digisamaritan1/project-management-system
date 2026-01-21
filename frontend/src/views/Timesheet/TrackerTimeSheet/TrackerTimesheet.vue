@@ -847,10 +847,7 @@ span.chipusername_wrapper button {
 .checklist-main input{
     margin-right: 5px;
 }
-    
-/* .timesheet__wrapper .wf_filter::-webkit-scrollbar{
-    display: none;
-} */
+
 .wf__filter-wrapper {
     display: flex;
     align-items: center;

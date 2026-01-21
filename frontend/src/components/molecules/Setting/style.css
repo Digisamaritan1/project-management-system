@@ -87,10 +87,6 @@
     padding-left: 40px;
 }
 
-/* .settingProfileFormSubmission.settingProfileFormSubmission_info form {
-    width: 600px;
-} */
-
 .settingProfileFormSubmission.settingProfileFormSubmission_info .row {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -225,17 +221,13 @@ input.form-control {
 #blue-btn-savecompany{
     margin-left: 15px !important;
     width: 130px !important;
-    /* height: 30px !important; */
 }
 
 .setting-section-right:has(.mySettingSection) {
-    /* padding: 20px 10px 0px 10px; */
-    /* height: calc(99vh - 90px); */
     background: #f4f5f7;
 }
 
 .task_priority_wrapper {
-    /* top: 20px; */
     width: 49%;
     position: relative;
 }
@@ -251,7 +243,6 @@ h2.task_priority_wrapper_value {
     line-height: 27px;
     letter-spacing: 0px;
     text-align: left;
-    /* padding-bottom: 10px; */
     color: #000;
     margin: 30px 0px 10px;
 }
@@ -409,7 +400,6 @@ h2.task_priority_wrapper_value {
     cursor: pointer;
     font-family: 'Roboto';
     min-height: 30px;
-    /* width: 77px; */
 }
 
 .milestone_status_button {

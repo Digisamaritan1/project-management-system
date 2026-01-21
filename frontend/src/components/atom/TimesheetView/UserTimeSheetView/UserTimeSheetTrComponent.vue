@@ -1,7 +1,6 @@
 <template>
     <tr class="white-row">
         <td class="fixed" :class="{'cursor-pointer' : trData.totalLoggedHours !== 0}"  @click="toggle(), getTimesheetData(trData)">
-            <!-- <img v-if="trData.totalLoggedHours !== 0" alt="" :src="table_arrow" class="taable_arrow" :class="{'row-open': rowOpen}"/> -->
             <img :style="{'opacity': (trData.totalLoggedHours !== 0)?1:0.1}"  alt="" :src="table_arrow" class="taable_arrow" :class="{'row-open': rowOpen && (trData.totalLoggedHours !== 0)}"/>
             <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
@@ -17,8 +16,6 @@
                         width="30px"
                         :thumbnail="'30x30'"
                     />
-                    <!-- <img alt="" v-if="trData.profileImage && trData.profileImage != null && trData.profileImage != ''"
-                        :src="trData.profileImage" class="timesheet_user_profile" :title="trData.name"/> -->
                     <img alt="" v-else src="@/assets/images/default_user.png" class="timesheet_user_profile"
                         :title="trData.name"/>
                     <p class="user_hrs_name">{{ trData.name }}</p>

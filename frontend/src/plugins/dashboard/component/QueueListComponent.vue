@@ -30,7 +30,6 @@
 </template>
 <script setup>
 import {ref,computed, inject, onMounted, provide, nextTick, watch } from 'vue';
-// import SkelatonVue from '../Skelaton/Skelaton.vue';
 import SkelatonVue from '@/components/atom/Skelaton/Skelaton.vue';
 import ConvertToSubTaskSidebar from '@/components/molecules/ConvertToSubTaskSidebar/ConvertToSubTaskSidebar.vue';
 import { useStore } from 'vuex';

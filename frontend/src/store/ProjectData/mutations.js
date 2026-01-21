@@ -256,7 +256,6 @@ export const mutateUpdateFirebaseTasks = (state, payload) => {
                     const taskIndex = state.tasks[pid][sprintId].tasks.findIndex((x) => x._id === data._id);
 
                     if(taskIndex === -1) {
-                        // state.tasks[pid][sprintId].found[``] += 1;
                         state.tasks[pid][sprintId].tasks = [...state.tasks[pid][sprintId].tasks, data];
                     } else {
                         state.tasks[pid][sprintId].tasks[taskIndex] = {...state.tasks[pid][sprintId].tasks[taskIndex], ...data};
@@ -276,7 +275,6 @@ export const mutateUpdateFirebaseTasks = (state, payload) => {
                                 state.tasks[pid][sprintId].tasks[taskIndex].subtaskArray = [data];
                             }
                         }
-                        // state.tasks[pid][sprintId].tasks[taskIndex].subTasks = state?.tasks?.[pid]?.[sprintId]?.tasks[taskIndex]?.subtaskArray?.length || 0;
                     }
                     else if(dragDropcheck === true && state.tasks[pid][sprintId].tasks[taskIndex].subtaskArray === undefined && data.ParentTaskId){
                         state.tasks[pid][sprintId].tasks[taskIndex].subtaskArray = [data];

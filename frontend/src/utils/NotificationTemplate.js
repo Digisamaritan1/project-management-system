@@ -186,8 +186,6 @@ export const projectMileStoneStatusAddForHourly = (milestoneobj) => {
     padding-left: 5px;  border-radius: 5px; font-weight: 500;background-color:${milestoneobj.changebackgroundColor ? milestoneobj.changebackgroundColor : ''}; color:${milestoneobj.textColor ? milestoneobj.textColor : ''};">${milestoneobj.status}</span></strong> for <strong>${sanitizeInput(milestoneobj.ProjectName)}</strong> project.</p>`;
 } 
 export const newProjectMileStoneStatusAdd = (milestoneobj) => {
-    // return `<p>Status of <strong>${milestoneobj.editMilestoneName}</strong> Milestone is added <strong><span style="padding-right: 5px;
-    // padding-left: 5px;  border-radius: 5px; font-weight: 500;background-color:${milestoneobj.changebackgroundColor ? milestoneobj.changebackgroundColor : ''}; color:${milestoneobj.textColor ? milestoneobj.textColor : ''};">${milestoneobj.status}</span></strong> for <strong>${sanitizeInput(milestoneobj.ProjectName)}</strong> project.</p>`;
     return `<p>In project <strong>${sanitizeInput(milestoneobj.ProjectName)}</strong> <span style="padding-right: 5px;
     padding-left: 5px;  border-radius: 5px; font-weight: 500;background-color:${milestoneobj.changebackgroundColor ? milestoneobj.changebackgroundColor : ''}; color:${milestoneobj.textColor ? milestoneobj.textColor : ''};">${milestoneobj.status}</span></strong> status is Added in <strong>${milestoneobj.editMilestoneName}</strong> milestone.</p>`
 } 

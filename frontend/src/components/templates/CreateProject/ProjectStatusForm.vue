@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project status detail for blank project form as step-5 in create project module.
-========================================================================================== -->
 <template>
 <div class="taskStatusSection statusTaskWrapper">
     <div class="bg-light-gray text-center mb-30px"

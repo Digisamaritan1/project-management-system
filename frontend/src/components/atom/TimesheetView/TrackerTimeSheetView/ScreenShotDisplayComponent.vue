@@ -22,7 +22,6 @@
                     :thumbnail="'20x20'"
                     class="screenShotDisplay__timedispalyImg--profileImage"
                 />
-                <!-- <img :src="trackshotI.userProfile ? trackshotI.userProfile : '@/assets/images/default_user.png'" :alt="trackshotI.userId" class="screenShotDisplay__timedispalyImg--profileImage"/> -->
             </div>
         </div>
         <PreviewTimelogScreenShot v-if="isScreemnShotOPen === true" :screenShotdetail="screenShotdetail" :isScreemnShotOPen="isScreemnShotOPen" @isSSopen="(val) => {isScreemnShotOPen = val}" />

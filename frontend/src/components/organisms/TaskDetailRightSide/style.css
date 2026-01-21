@@ -86,11 +86,6 @@
     background-color: #dfe1e6;
 }
 .due-date.taskdetail-label{
-    /* padding: 8.5px 10px;
-    max-width: 189px;
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer; */
     padding: 8.5px 10px;
     border-radius: 4px;
     cursor: pointer;

@@ -667,23 +667,6 @@ function getFolderData(id) {
                 return;
             }
             let projectId = id;
-            // ATTENTION PLEASE DO NOT REMOVE THIS COMMENTED CODE AS IT IS REQUIRED WHEN WE IMPLEMENT SOCKT IN IT
-            // const uid = companyUserDetail.value.userId;
-            // let publicQuery = {
-            //     private:false,
-            //     projectId : BSON.ObjectId(projectId)
-            // }
-
-            // let snapPublicQuery = {
-            //     "fullDocument.projectId" : BSON.ObjectId(projectId)
-            // }
-            // let privateQuery = {
-            //     projectId : BSON.ObjectId(projectId)
-            // }
-
-            // let snapPrivateQuery = {
-            //     "fullDocument.projectId" : BSON.ObjectId(projectId)
-            // }
             dispatch("mainChat/setChatFolders",{projectId}).then((folders) => {
                 resolve(folders);
                 folderData.value = folders;
@@ -694,7 +677,6 @@ function getFolderData(id) {
     })
 }
 
-// const isLoading = ref(false);
 const getSprintFolderData = async (id) => {
     try {
         loadingSprints.value = true;

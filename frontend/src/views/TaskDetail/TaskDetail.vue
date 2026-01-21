@@ -61,7 +61,6 @@
                 </div>
             </template>
             <template #body>
-                <!-- <SpinnerComp :is-spinner="(task && Object.keys(task).length) ? Object.keys(task).length > 2  ? false : true : isSpinner" v-if="isSpinner"/> -->
                 <TaskDetailBody
                     v-if="task !== undefined"
                     :task="task"
@@ -157,7 +156,6 @@
     const { getters,dispatch,commit } = useStore();
     const { getUser } = useGetterFunctions();
 
-    // const toggleTaskDetail = inject('toggleTaskDetail')
     const $toast = useToast();
     let isTaskDetailSideBar = ref(props.isTaskDetailSideBar);
 

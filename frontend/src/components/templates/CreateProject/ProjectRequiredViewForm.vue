@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project required views default detail for blank project form as step-8 in create project module.
-========================================================================================== -->
 <template>
  <div id="project-step-container" class="ProjectShareGraphicModel addProjectEnabale borderChange mobile-project-taskstatus-section">
     <div class="modalHeader bg-light-gray text-center"
@@ -18,7 +14,6 @@
             <div v-for="(viewList, index) in requiredViewobj.value" :key="index" :class="{'outline-required': !viewList.viewStatus, 'outline-primary': viewList.viewStatus}" class="position-re requiredListItem d-flex align-items-center justify-content-between mb-20px">
                 <div class="Icon_text d-flex align-items-center">
                     <img :src="!viewList.viewStatus ? projectComponentsIcons(viewList.keyName).icon : projectComponentsIcons(viewList.keyName).activeIcon" :alt="viewList.name">
-                    <!-- <h4 style="margin: 0px 0px 0px 5px;" class="changesFont margin-left-value">{{viewList.name}}</h4> -->
                     <span class="changesFont margin-left-value ml-5px" :class="{'enableapp-list-desktop': clientWidth > 767 , 'enableapp-list-mobile': clientWidth <= 767,'blue':viewList.viewStatus}">{{$t(`ViewList.${viewList.name}`)}}</span>
                 </div>
                 <div class="text-toggle d-flex align-items-center">
@@ -116,8 +111,6 @@ const brandSettings = computed(() => getters['brandSettingTab/brandSettings']);
                     } else {
                         x.setAsDefault = false;
                         x.viewStatus = false;
-                        // requiredViewobj.value.value.filter((x) => x.name === "List")[0].setAsDefault = true;
-                        // mainArray.value.filter((x) => x.name === "List")[0].setAsDefault = true;
                     }
                 }
             } else {

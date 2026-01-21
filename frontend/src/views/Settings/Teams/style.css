@@ -84,9 +84,6 @@ ul.ul-colors.ul-color-sidebar-popup {
         width: 100%;
         overflow: auto;
     }
-    /* .title-team-user span:last-child {
-        margin-right: 45px;
-    } */
 }
 
 @media (max-width:412px) {

@@ -152,13 +152,9 @@ const filterCategories = computed(() => {
     border: 1px solid #DFE1E6;
     border-radius: 6px;
     padding: 10px;
-    /* width: calc(25% - 20px); */
-    /* max-width: calc(25% - 20px); */
     margin: 0 0px 20px !important;
 }
 .prompt-wrapper{
-    /* padding: 20px 5px;
-    margin: 0 -10px; */
     width: 100%;
     box-sizing: content-box;
 }

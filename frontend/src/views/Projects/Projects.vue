@@ -267,28 +267,6 @@
                                                     <span v-if="!editProject2" class="text-ellipsis font-weight-bold text-capitalize black list-view-header-title ml-12px"  @dblclick="projectName.value = projectData?.ProjectName, editProject = true" :title="projectData.ProjectName">
                                                         {{ projectData?.ProjectName }} 
                                                     </span>
-                                                    <!-- <span v-if="editProject2 ">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            v-model.trim="projectName.value"
-                                                            placeholder="Project name"
-                                                            style="height: 20px;"
-                                                            :maxLength="250"
-                                                            :minLength="3"
-                                                            :isOutline="false"
-                                                            :isDirectFocus="true"
-                                                            @blur="editProject2 = false"
-                                                            :style="{borderColor: !projectName.error.length ? '#cecece' : 'red'}"
-                                                            @keypress.enter="projectName.value !== projectData?.ProjectName ? updateProjectName() : editProject2 = false"
-                                                            @keyup="checkErrors({'field':projectName,
-                                                            'name':projectName.name,
-                                                            'validations':projectName.rules,
-                                                            'type':projectName.type,
-                                                            'event':$event.event})"
-                                                        />
-                                                        <div class="red position-ab z-index-1 font-size-11 text-nowrap" style="bottom: -10px; left: 0px;">{{projectName.error}}</div>
-                                                    </span> -->
                                                 </div>
                                                 </div>
                                             </template>
@@ -298,12 +276,6 @@
                                                 </button>
                                             </template>
                                             <template #options>
-                                                <!-- <DropDownOption @click="toggleShowAllTasks(!projectData?.showAllTasks)" v-if="false">
-                                                    <div class="d-flex justify-content-between w-100">
-                                                        <span>Show all Tasks</span>
-                                                        <Toggle :modelValue="projectData?.showAllTasks" @click="toggleShowAllTasks(!projectData?.showAllTasks)" class="filter-toggle" width="20"/>
-                                                    </div>
-                                                </DropDownOption> -->
                                                 <div id="projectoptionslist_driver">
                                                     <DropDownOption v-if="projectData?.isPrivateSpace && clientWidth<=767" class="border-bottom mb-20px">
                                                         <Assignee
@@ -389,14 +361,6 @@
                                                             <span :class="{'font-size-16': clientWidth <= 767 }" class="font-weight-400 gray4b">{{$t('Projects.close_project')}}</span>
                                                         </div>
                                                     </DropDownOption>
-                                                    <!-- <DropDownOption @click="$refs[`projectdd_${projectData._id || ''}`].click(), showSidebar = true,archive=1">
-                                                        <div class="d-flex align-items-center project-mobile-desc avtar-options" :class="`${clientWidth <= 767 ? 'project_detail_dropdown_wrapper' : ''}`">
-                                                            <div class="d-flex align-items-center">
-                                                                <img :src="inventoryIcon" alt="inventoryIcon" class="mr-20px">
-                                                            </div>
-                                                            <span :class="{'font-size-16': clientWidth <= 767 }" class="font-weight-400 gray4b">{{$t('Projects.archive')}}</span>ee
-                                                        </div>
-                                                    </DropDownOption> -->
                                                     <DropDownOption  v-if="checkPermission('project.project_delete',projectData.isGlobalPermission) === true" @click="$refs[`projectdd_${projectData._id || ''}`].click(), showSidebar = true,archive=2">
                                                         <div class="d-flex align-items-center project-mobile-desc avtar-options" :class="`${clientWidth <= 767 ? 'project_detail_dropdown_wrapper' : ''}`">
                                                             <div class="d-flex align-items-center">
@@ -796,8 +760,6 @@
                     </div>
                     <div class="text-center">
                         <h1>{{$t('Tour.tour_completed')}}</h1>
-                        <!-- <div class="mb-20px tourendmodal__description">{{$t('Tour.do_you_have_any')}}</div> -->
-                        <!-- <button class="btn-primary tourendmodal__watch_button font-size-16" @click="currentVideoUrl == 0 ? updateTourStatusInUser('isProjectAndNavbarTour'):'',openVideo()">Watch Video</button> -->
                     </div>
                 </div>
             </template>
@@ -903,7 +865,6 @@ const eyeIcon = require('@/assets/images/svg/PriorityIcon/watchProjectEye.svg');
 const accessDenied = require("@/assets/images/access_denied_img.png");
 const listDropIcon = require("@/assets/images/svg/list_view_dropicon.svg");
 const publicIcon = require("@/assets/images/svg/public_folder.svg");
-// const listViewIcon = require("@/assets/images/svg/listViewSvg.svg");
 const noProjectsIcon = require("@/assets/images/svg/No-Search-Result.svg");
 const horizontalDots = require("@/assets/images/svg/horizontalDots.svg");
 const horizontalDotsMobile = require("@/assets/images/svg/threedot_mobile_list.svg");
@@ -1014,8 +975,7 @@ const copy = require("@/assets/images/svg/copy-link.svg")
     const calenderSelectDate = ref(0)
     const permissionSidebar = ref(false);
     const projectSearchText = ref("");
-    // const isSprintLoad = ref(false);
-    // const folderSprintsData = ref({})
+
     const prevMonth = () => {
         if (!calendarDate.value) {
             const now = new Date();
@@ -1164,8 +1124,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
     const taskNameSearch = ref(true)
     const taskKeySearch = ref(false)
     const taskDescriptionSearch = ref(false)
-
-    // const projects = ref([]);
     const projectData = ref({});
     const showArchived = ref(false);
     const taskSearch = ref("");
@@ -1177,7 +1135,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
     const currentActive = ref('');
     const embedViews = ref([])
     const Uid = ref('embed'+ makeUniqueId(6));
-    // const prevDateVal = ref(false);
     const isRuleData = ref(false)
     const rulePermission = ref(true)
 
@@ -1204,11 +1161,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
             image: require("@/assets/images/groupbySattus.png"),
             id: 0,
         },
-        // {
-        //     label: "Assignee",
-        //     image: require("@/assets/images/peopleGray.png"),
-        //     id: 1,
-        // },
         {
             label: "priority",
             image: require("@/assets/images/groupbyFlag.png"),
@@ -1258,9 +1210,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
         if (key === "calendar" && status) {
             defaultMonth()
         }
-        // if (status) {
-        //     defaultMonth()
-        // }
     }
     watch(projectData,(newVal,oldVal) => {
         if(newVal._id != oldVal._id){
@@ -1748,9 +1697,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
                         }
                     }
                 }
-                // if(getUser(userId.value)?.tourStatus?.isTaskTour == undefined || getUser(userId.value)?.tourStatus?.isTaskTour === false || (getUser(userId.value)?.tourStatus == undefined || Object.keys(getUser(userId.value)?.tourStatus).length == 0)) {
-                //     secondTour.value.drive()
-                // }
             }
         },1500)
     })
@@ -2151,7 +2097,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
     provide('isRouteRequired', true);
     const hanldeProjectTaktypeTour = ref(null);
     const hanldeProjectLastStep = ref(null);
-    // const hanldeProjectViewAndOption = ref(null);
     const hanldeBlankProjectTour = () => {
         if(companyUserDetail.value && (companyUserDetail.value.roleType === 1 || companyUserDetail.value.roleType === 2)) {
             if(getUser(userId.value)?.tourStatus?.isProjectTour == undefined || getUser(userId.value)?.tourStatus?.isProjectTour === false || (getUser(userId.value)?.tourStatus == undefined || Object.keys(getUser(userId.value)?.tourStatus).length == 0)) {
@@ -2182,7 +2127,6 @@ const copy = require("@/assets/images/svg/copy-link.svg")
     provide('hanldeBlankProjectTour', hanldeBlankProjectTour);
     provide('hanldeProjectTaktypeTour', hanldeProjectTaktypeTour);
     provide('hanldeProjectLastStep', hanldeProjectLastStep);
-    // provide('hanldeProjectViewAndOption', hanldeProjectViewAndOption);
     const users = computed(() => getters["users/users"]);
     const teams = computed(() => getters["settings/teams"])
     /**

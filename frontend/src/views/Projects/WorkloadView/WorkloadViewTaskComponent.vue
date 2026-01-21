@@ -136,15 +136,13 @@
     }
     const openLogSetailSideBar = (isOpen,data,key,taskObj) => {
         if (isOpen) {
-            // if (Object.keys(projectObjectData.value.projectFinalLogs).includes(data.fullDate)) {
-                if (key == 'task') {
-                    taskDataLogView.value = taskObj
-                } else {
-                    taskDataLogView.value = {}
-                }
-                colData.value = data.mainDate;
-                isLogTimeOpen.value = true;
-            // }
+            if (key == 'task') {
+                taskDataLogView.value = taskObj
+            } else {
+                taskDataLogView.value = {}
+            }
+            colData.value = data.mainDate;
+            isLogTimeOpen.value = true;
         }
     }
 </script>

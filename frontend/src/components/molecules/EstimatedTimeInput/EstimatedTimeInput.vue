@@ -154,10 +154,6 @@ onUnmounted(() => {
     cursor: pointer;
 }
 
-/* .time-display:hover {
-  background: #e9ecef;
-} */
-
 .time-inputs {
   display: flex;
   align-items: center;
@@ -188,7 +184,6 @@ onUnmounted(() => {
 
 .separator {
   font-weight: bold;
-  /* color: #007bff; */
   user-select: none;
 }
 

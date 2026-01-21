@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project alian defaul app detail for blank project form as step-7 in create project module.
-========================================================================================== -->
 <template>
 <div id="project-step-container" class="ProjectShareGraphicModel addProjectEnabale borderChange mobile-project-taskstatus-section">
     <div class="modalHeader bg-light-gray text-center p-1" :class="{'border-radius-5-px': clientWidth > 767 , 'border-radius-8-px': clientWidth <= 767}">

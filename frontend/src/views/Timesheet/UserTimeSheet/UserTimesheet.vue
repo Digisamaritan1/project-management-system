@@ -89,7 +89,6 @@
                                                     :thumbnail="'22x22'"
                                                     @click="handleFilterItem(item,'checkEvent',true)"
                                                 />
-                                                <!-- <img v-if="filterType.toLowerCase() == 'users'" :src="item.profile ? item.profile : defaultImage" :alt="item.name" class="timesheet_user_profile" @click="handleFilterItem(item,'checkEvent',true)"/> -->
                                                 <span class="filter_list_item cursor-pointer" @click="handleFilterItem(item,'checkEvent',true)">{{ item.name }}</span>
                                             </a>
                                         </span>
@@ -127,7 +126,6 @@
                             <span class="chipusername_wrapper" v-for="(chip,chipKey) in selectedFilters" :key="chipKey">
                                 <span class="user_name" :title="chip.name" >
                                         {{  `${$t(`general.${chip.type.slice(0,-1)}`)} : ${chip.name}` }}
-                                        <!-- {{ `${chip.type=='Users' ? 'User' : 'Teams' ? 'Team' : 'Projects' ? 'Projects' : 'Projects'}  ${chip.name}` }} -->
                                     </span>
                                     <button @click.stop.prevent="handleFilterItem(chip,'remove')" type="button" class="btn-close vs-chip--close cursor-pointer">
                                         <img :src="close" alt="cancel"/>
@@ -186,7 +184,6 @@
             RangePickerComp,
         }
     })
-    // const defaultImage = require("@/assets/images/default_user.png")
     const close = require("@/assets/images/svg/close_timesheet.svg")
     const router = useRouter()
     const { getters , dispatch} = useStore();
@@ -226,9 +223,7 @@
     })
     const finalFilter = ref([]);
     const companyUserDetail = computed(() => getters["settings/companyUserDetail"]);
-    const usersArray = ref([]);
-    // dateRange.value.startDate = new Date(date.getFullYear(), date.getMonth(), 1);
-    // dateRange.value.endDate = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    const usersArray = ref([]); 
     selectedDates.value = [dateRange.value.startDate,dateRange.value.endDate];
     const projects = ref([]);
     const projectsGetter = computed(() => getters["projectData/allProjects"]);

@@ -54,9 +54,3 @@ defineComponent({
 
 
 </script>
-
-<style scoped>
-/* .main-setting_wrapper{
-    height: calc(100vh - 101px);
-} */
-</style>

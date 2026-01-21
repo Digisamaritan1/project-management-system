@@ -27,7 +27,6 @@
     import timeGridPlugin from '@fullcalendar/timegrid';
     import interactionPlugin from '@fullcalendar/interaction';
     import subTask from '@/assets/images/png/subtaskShapeBlue.png';
-    // import * as helper from '@/views/Timesheet/helper';
     import SpinnerComp from '@/components/atom/SpinnerComp/SpinnerComp.vue';
     import taskClass from "@/utils/TaskOperations";
     import { taskDueDateAdd, taskDueDateChange, taskStartAndDueDateChange, taskStartAndDueDateAdd } from '@/utils/NotificationTemplate';
@@ -113,9 +112,7 @@
 
     const handleEventsSelect = (events) => {
         isOpenModel.value = true;
-        // modalStartDate.value = events.start;
         const endDate = events.end;
-        // modalEndDate.value = new Date(endDate.setDate(endDate.getDate() - 1));
         emits('openTaskModel', {
             modalStartDate: events.start,
             modalEndDate: new Date(endDate.setDate(endDate.getDate() - 1))
@@ -126,7 +123,6 @@
         let isUpdate = false;
         if (events.event.startStr !== events.oldEvent.startStr) {
             isUpdate = true;
-            // updateStartDate(events);
         }
         if (events.event.endStr !== events.oldEvent.endStr) {
             if (isUpdate) {
@@ -225,7 +221,6 @@
                 }
                 const bgColor = project.taskStatusData && project.taskStatusData.length ? project.taskStatusData.find((x) => x.key === data.statusKey).bgColor : 'red';
                 const textColor = project.taskStatusData && project.taskStatusData.length ? project.taskStatusData.find((x) => x.key === data.statusKey).textColor : 'white';
-                // data.dueDateDeadLine = data?.dueDateDeadLine.map((x) => JSON.stringify({date: x?.date?.seconds ? x.date.seconds : ""}));
                 let obj = {
                     allDay: true,
                     id: data._id,
@@ -274,7 +269,6 @@
                     }
                     const bgColor = project.taskStatusData && project.taskStatusData.length ? project.taskStatusData.find((x) => x.key === taskData.statusKey).bgColor : 'red';
                     const textColor = project.taskStatusData && project.taskStatusData.length ? project.taskStatusData.find((x) => x.key === taskData.statusKey).textColor : 'white';
-                    // taskData.dueDateDeadLine = taskData?.dueDateDeadLine.map((x) => JSON.stringify({date: x?.date?.seconds ? x.date.seconds : ""}));
                     task.title = taskData.TaskName;
                     task.start = formatDate(taskData.startDate);
                     task.end = formatDate(new Date(taskData.DueDate).getTime()+86400000);
@@ -303,7 +297,6 @@
                     taskData.isStartDate = false;
                     taskData.startDate = taskData.DueDate;
                 }
-                // taskData.dueDateDeadLine = taskData?.dueDateDeadLine.map((x) => JSON.stringify({date: x?.date?.seconds ? x.date.seconds : ""}));
                 calendarData.push({
                     allDay: true,
                     id: taskData._id,
@@ -470,7 +463,6 @@
                     task: updateObj.task,
                     project: updateObj.project
                 }
-                // updateStartDate(event)
                 apiRequest("patch", env.V2_TASKS, startAndDueDateObj)
                 .then(() => {
                     $toast.success(t('Toast.Start_and_Due_date_updated_successfully'),{position: 'top-right'});

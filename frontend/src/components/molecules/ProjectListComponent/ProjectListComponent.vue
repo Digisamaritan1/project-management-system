@@ -253,9 +253,6 @@ onMounted(() => {
     });
 })
 
-// watch(filterdProjects, () => {
-//     emit("loadMoreProjects")
-// }, { deep: true });
 
 watch([clearFilterSignal, search], ([clearFilterNewVal, searchNewVal]) => {
     if (clearFilterNewVal > 0 && searchNewVal) {

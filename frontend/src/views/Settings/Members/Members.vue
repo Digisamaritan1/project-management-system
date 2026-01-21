@@ -246,12 +246,8 @@
     const importUserData = ref([]);
 
     const handleImportClick = () => {
-    // if (!importTaskPermission) {
-    //     $toast.error(t("Toast.Upgrade_for_import"), {position: "top-right"});
-    //     return;
-    // }
-    showImportModal.value = true;
-};
+        showImportModal.value = true;
+    };
 
     const designations = computed(() => {
         return getters['settings/designations'].filter((x) => !x.isDelete);
@@ -518,10 +514,7 @@
     function importUserDb() {
         showLoader.value = true;
         const evId = `ev_${makeUniqueId(12)}`;
-
-		// const source = new EventSource(`http://localhost:4000/importUser/events/${evId}`); // LOCAL ENVIRONMENT
-
-		const source = new EventSource(`${env.API_URI}/importUser/events/${evId}`); // PRODUCTION ENVIRONMNET
+		const source = new EventSource(`${env.API_URI}/importUser/events/${evId}`);
 
 		source.onmessage = (event) => {
 			const { data } = JSON.parse(event.data);

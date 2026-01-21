@@ -14,8 +14,6 @@
                     width="30px"
                     :thumbnail="'30x30'"
                 />
-                <!-- <img alt="" v-if="user.profileImage && user.profileImage != null && user.profileImage != ''"
-                    :src="user.profileImage" class="timesheet_user_profile" :title="user.name"/> -->
                 <img alt="" v-else src="@/assets/images/default_user.png" class="timesheet_user_profile"
                     :title="user.name"/>
                 <p class="user_hrs_name">{{ user.name }}</p>

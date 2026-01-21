@@ -120,7 +120,6 @@
                             <img src="@/assets/images/Assign.png" alt="unassigned"/>
                             <h5 class="text-ellipse item-title" :style="`color: ${item.textColor ? item.textColor : '#818181'}; background-color: ${item.backColor ? item.backColor : 'transparent'}; margin-left: 5px;`">{{$t('general.unassigned')}}</h5>
                         </div>
-                        <!-- <span>{{getTaskCount(item)}} Tasks</span> -->
                         <span class="font-size-14 ml-6px dark-gray">{{searchedTask ? filteredTasksGetter.length : tasksFound}} {{$t('Notification.tasks')}}</span>
                     </template>
                     <template v-else>
@@ -129,7 +128,6 @@
                             <WasabiImage v-if="item.image" :data="{url: item.image, title: item.name}" class="mr-5px"/>
                             {{item.name}}
                         </span>
-                        <!-- <span>{{getTaskCount(item)}} Tasks</span> -->
                         <span class="dark-gray font-size-13 font-weight-400 ml-6px tasks__title">{{searchedTask ? filteredTasksGetter.length : tasksFound}} {{$t('Notification.tasks')}}</span>
                     </template>
                 </div>
@@ -726,7 +724,6 @@ function prepareIndexData () {
 }
 .table__list-id{
     height: 100px;
-    /* margin-top: -100px; */
     position: absolute;
     bottom: 0;
     z-index: -1;

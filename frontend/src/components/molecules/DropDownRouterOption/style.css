@@ -1,7 +1,4 @@
-/* .drop-down-item {
-} */
 .project-mobile-desc {
-    /* color: #818181; */
     color: inherit !important;
     font-size: 12px;
 }
@@ -19,7 +16,6 @@
         font-size: 16px;
         line-height: 30px;
         color: inherit !important;
-        /* color: #4B4B4B !important; */
         background: #F4F5F7 !important;
         border-radius: 12px !important;
     }

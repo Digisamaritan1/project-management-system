@@ -22,7 +22,6 @@
                         <div class="breadcrumb d-flex align-items-center">
                             <div class="pipeline padding_right_report" v-if="clientWidth > 767">
                                 <router-link class="milestone_reports_family blue text-decoration-underline" :to="`/${companyId}/project`" >{{$t('UserTimesheet.back_projects')}}</router-link>
-                                <!-- <a href="#" >Back to Projects</a> -->
                             </div>
                             <div class="pipeline padding_right_report">
                                 <span class="milestone_reports_family black">{{$t('UserTimesheet.milestone_reports')}}</span>

@@ -25,7 +25,6 @@
             </div>
         </div> 
         <div class="calendar__main-component">
-            <!-- <SpinnerComp :is-spinner="loading" v-if="loading" class="position-re mt-30px"/> -->
             <div class="p-10px" v-if="loading">
                 <div class="calendar__taskdisplay--wrapper-skelaton mb-10px" v-for="(ele,index) in 3" :key="index">
                     <SkelatonVue :style="{width: '40%', height: '11px', margin: '5px 0px 5px 5px'}" :class="{}"/>
@@ -182,7 +181,6 @@ const searchMongoTasks = (date = null, reset = true) => {
         let startDate = date == null ? new Date(dateValue.value.setHours(0, 0, 0)).getTime() : new Date(date.setHours(0, 0, 0)).getTime();
         let endDate = date == null ? new Date(dateValue.value.setHours(23, 59, 59)).getTime() : new Date(date.setHours(23, 59, 59)).getTime();
         const projectIDs = cardObject.value.projectId.length ? cardObject.value.projectId : JSON.parse(JSON.stringify(allProjects.value)).map((e) => e?._id);
-        // const statusKeys = cardObject.value.statusArray || [];
         let queryAndConditions = [
             {
                 objId: {
@@ -198,9 +196,6 @@ const searchMongoTasks = (date = null, reset = true) => {
             ...(filterQuery.value ? Object.entries(filterQuery.value).map(([key, value]) => ({ [key]: value })) : [])
         ];
 
-        // if (statusKeys && statusKeys.length) {
-        //     queryAndConditions.push({ statusKey: { $in: statusKeys } });
-        // }
 
         let obj = [
             {

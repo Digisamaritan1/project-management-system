@@ -1,10 +1,5 @@
 <template>
     <div class="mainProjectlistingInSetting">
-        <!-- <div class="form-mianDiv">
-            <InputText
-                placeholder="Search by project name"
-            />
-        </div> -->
         <div v-if="checkPermission('settings.settings_project_list') != null && checkPermission('project.project_details') != null">
             <div class="lising_mainDiv p-1 position-re">
                 <div class="totalCountActiveClose d-flex justify-content-between position-re">

@@ -130,11 +130,6 @@
     const timelogDetail = ref({});
 
     const totalDuration = computed(() => {
-        // var sub_total_Data = props.taskLogArray.reduce((acc, item) =>
-        //     acc + parseFloat(item.LogTimeDuration ? item.LogTimeDuration : 0),0);
-        // if (isNaN(sub_total_Data)) {
-        //     sub_total_Data = 0;
-        // }
         return secondsToHms(totalTimeDuration.value);
     })
 

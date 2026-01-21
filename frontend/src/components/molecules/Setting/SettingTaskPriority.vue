@@ -223,12 +223,6 @@ async function savedata() {
             isDisabled.value =true
             let name = generateFileName(selectFile.value[0].name,env.STORAGE_TYPE);
             const filePath = `taskPriorities/${name}`
-            // let storageFolder = `${companyId.value}/taskPriorities/`;
-            // await firebaseUpload(selectFile.value[0], storageFolder, name).then((imgURL) => {
-            //     previewImage.value = imgURL;
-            //     confirmationErr.value ='';
-            //     selectFile.value = null
-            // });
 
             const apiFormData = new FormData();
             apiFormData.append("path", filePath);

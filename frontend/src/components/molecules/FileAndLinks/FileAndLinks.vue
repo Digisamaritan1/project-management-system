@@ -1,7 +1,3 @@
-<!--
-    File name: FileAndLinks.vue
-    Assignee: Parth Detroja
--->
 <template>
     <div class="font-roboto-sans overflow-y-auto bg-white h-100 all__filelinks-wrapper">
         <div class="bg-white position-re h-100">

@@ -852,7 +852,6 @@ export function taskListHelper() {
                 indexKey.value = "kanbanIndex";
 
                 sprints.forEach((sprint, index) => {
-                    // sprint.isExpanded = false;
                     let tmp = []
                     arr.forEach((x, arrIndex) => {
                         tmp.push({
@@ -881,17 +880,6 @@ export function taskListHelper() {
             } else if(type === 1) {
                 indexKey.value = "assigneeIndex";
 
-                // await getCollectionData({
-                //     collectionName: `${companyId.value}_${dbCollections.TASKS}`,
-                //     search: {
-                //         q:"*",
-                //         "group_by": "AssigneeUserId",
-                //         "filter_by": `ProjectID:=${project.value._id}`,
-                //         "group_limit": 1,
-                //         "per_page": 250
-                //     }
-                // })
-                // .then((result) => {
                     let assigneeGroups = [].grouped_hits.map((x) => x.group_key[0]).map((x) => x.sort((a,b) => a > b ? 1 : -1));
                     assigneeGroups.forEach((group => {
                         let assignees = group.sort((a,b) => a > b ? 1 : -1)
@@ -938,15 +926,9 @@ export function taskListHelper() {
                             });
                         })
 
-                        // sprint.items = tmp.filter((x) => x.tasksArray.length || !x.users.length).sort((a, b) => a.users.length < b.users.length ? 1 : -1);
                         sprint.items = tmp;
                     })
                     return;
-                // })
-                // .catch((error) => {
-                //     console.error("ERROR in get groups: ", error);
-                //     return;
-                // })
             } else if(type === 2) {
                 // PRIOTITIES
                 indexKey.value = "priorityIndex";
@@ -1055,7 +1037,6 @@ export function taskListHelper() {
                                     }
                                 }
                             }
-                            // return `${key} :>= ${seconds} && ${key} :<= ${seconds + dayHrs}`
 
                         case "lt":
                             if (dateFormat) {
@@ -1075,7 +1056,6 @@ export function taskListHelper() {
                                     }
                                 }
                             }
-                            // return `${key} :<= ${seconds + dayHrs}`
 
                         case "gt":
                             if (dateFormat) {
@@ -1095,7 +1075,6 @@ export function taskListHelper() {
                                     }
                                 }
                             }
-                            // return `${key} :>= ${seconds}`
 
                         default:
                             return {[key]: null}
@@ -1185,7 +1164,6 @@ export function taskListHelper() {
                     .then(() => {
                         groupedTasks.value = sprints;
                         cb(groupedTasks.value)
-                        // getTaskArray();
 
                         const sprintData = sprints[0];
 
@@ -1205,7 +1183,6 @@ export function taskListHelper() {
                 } else {
                     groupedTasks.value = sprints;
                     cb(groupedTasks.value)
-                    // getTaskArray();
                 }
             } else {
                 cb([])

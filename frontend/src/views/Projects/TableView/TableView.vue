@@ -132,10 +132,6 @@ const props = defineProps({
         type:String,
         default:''
     },
-    // calendarDateChange: {
-    //     type: Function,
-    //     default: () => false
-    // }
 })
 const project = inject('selectedProject')
 const searchedTask = inject('searchedTask');
@@ -153,7 +149,6 @@ watch([() => props.grouped, () => props.sprints,taskData], ([newGroup, newSprint
             groupedTasks.value = resp;
         });
     }
-    // globalSortKey.value = ''
 });
 const totalTaskInFirstSprint = computed(() => {
     if(getters['projectData/tableTasks'][props.projectData._id] && getters['projectData/tableTasks'][props.projectData._id][props.sprints[0]?.id]) {

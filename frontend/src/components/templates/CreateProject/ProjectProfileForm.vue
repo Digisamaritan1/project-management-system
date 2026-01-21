@@ -1,7 +1,3 @@
-<!-- =========================================================================================
-    Created By : Dipsha Kalariya
-    Commnet : This component is used to display project profile detail for blank project form as step-2 in create project module.
-========================================================================================== -->
 <template>
 <div class="createprojectproject-usetemplateclass">
     <div class="form-group ProjectShareGraphicColorWrapper d-flex">
@@ -105,9 +101,7 @@ const { t } = useI18n();
         emit('update:modelValue', theModel.value);
     }
     onMounted(()=>{
-        // if(theModel.value.selectedColor.value === ''){
-            generateColor();
-        // }
+        generateColor();
     })
     function selectedColor(val){
         theModel.value.selectedColor.value = val;

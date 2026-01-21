@@ -125,7 +125,6 @@
                             <span class="chipusername_wrapper" v-for="(chip,chipKey) in selectedFilters" :key="chipKey">
                                 <span class="user_name" :title="chip.name" >
                                     {{  `${$t(`general.${chip.type.slice(0,-1)}`)} : ${chip.name}` }}
-                                        <!-- {{ `${chip.type=='Users' ? 'User' : 'Teams' ? 'Team' : 'Projects' ? 'Projects' : 'Projects'}  ${chip.name}` }} -->
                                 </span>
                                 <button @click="handleFilterItem(chip,'remove')" type="button" class="btn-close vs-chip--close cursor-pointer">
                                     <img :src="close" alt="cancel"/>
@@ -482,7 +481,6 @@
                             $group: {
                                 _id: {
                                     date: "$Date",
-                                    // user: "$Loggeduser",
                                     projectId: "$ProjectId"
                                 },
                                 data: {
