@@ -16,31 +16,12 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.raw({limit: '50mb'}));
 
 // Set Maintenance Mode
-if (!config.UNDER_MAINTENANCE || config.UNDER_MAINTENANCE == "false") {
-    app.use(express.static(path.join(__dirname, './frontend/dist')));
-    app.use(express.static(path.join(__dirname, './installation/dist')));
-    // RUN FRONTEND SERVER
-    app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, './frontend/dist/index.html'));
-    });
-} else {
-    // RUN UNDER MAINTENANCE SERVER
-    app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, './under-maintenance/index.html'));
-    });
-
-    app.use(express.static(path.join(__dirname, 'under-maintenance')));
-    app.use(express.static(path.join(__dirname, 'log')));
-    app.use((req, res, next) => {
-        if (req.path === "/api/v1/finalupgradeprocess"
-            || req.path.indexOf("/api/v1/upgradeProcess/events") !== -1
-            || req.path.indexOf("/api/v1/realLog/events") !== -1
-        ) {
-            return next(); // Continue to the next middleware or route handler
-        }
-        res.sendFile(path.join(__dirname, './under-maintenance/index.html'));
-    })
-}
+app.use(express.static(path.join(__dirname, './frontend/dist')));
+app.use(express.static(path.join(__dirname, './installation/dist')));
+// RUN FRONTEND SERVER
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, './frontend/dist/index.html'));
+});
 
 // ADD DEFAULT BRAND SETTINGS
 makeDefaultBrandSettings()

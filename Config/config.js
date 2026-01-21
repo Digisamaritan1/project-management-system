@@ -48,8 +48,6 @@ module.exports = {
     AI_MODEL:process.env.AI_MODEL,
 
     STORAGE_TYPE:process.env.STORAGE_TYPE,
-
-    UNDER_MAINTENANCE: process.env.UNDER_MAINTENANCE,
     myCache: myCache,
     USERPROFILEBUCKET: process.env.USERPROFILEBUCKET,
     requestHandler: new NodeHttpHandler({
