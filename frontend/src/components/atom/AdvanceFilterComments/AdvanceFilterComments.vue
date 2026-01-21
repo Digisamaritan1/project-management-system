@@ -111,7 +111,6 @@
 <script setup>
     import { useToast } from 'vue-toast-notification';
     import { defineProps,inject,nextTick,provide,ref } from 'vue';
-    // import { useCustomComposable } from '@/composable';
     import TaskDetail from '@/views/TaskDetail/TaskDetail.vue'
     import { useRoute, useRouter } from 'vue-router';
     import WasabiImage from "@/components/atom/WasabiIamgeCompp/WasabiIamgeCompp.vue";
@@ -122,10 +121,6 @@
     const {getDateAndTime} = useProjects();
     const route = useRoute();
     const router = useRouter();
-    // import { useRoute, useRouter } from 'vue-router';
-    // const route = useRoute();
-    // const router = useRouter();
-    // const {changeText} = useCustomComposable();
     const $toast = useToast();
 
     // inject
@@ -134,7 +129,6 @@
 
     // variable 
     const isTaskDetail = ref(false);
-    // const selectedTask = ref({});
     const projectId = ref('');
     const sprintId = ref('');
     const taskId = ref('');

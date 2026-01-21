@@ -133,7 +133,6 @@ const initializeChart = () => {
     chartInstance.value = Highcharts.chart(props.chartId, {
         chart: {
             type: 'column',
-            // scrollablePlotArea: { minWidth: 800 }
         },
         title: { text: props.chartTitle },
         xAxis: {
@@ -143,9 +142,7 @@ const initializeChart = () => {
             categories: chartDataCopy.value.map(item => item.name),
             labels: { style: { fontSize: '14px' } },
             gridLineWidth: 0.5,
-            lineWidth: 0,
-            // min: 0,
-            // scrollbar: { enabled: true }
+            lineWidth: 0
         },
         yAxis: {
             title: {

@@ -50,7 +50,6 @@ import { storageHelper } from "@/composable/commonFunction";
 
 const {handleStorageImageRequest} = storageHelper();
 const companyId = inject("$companyId");
-// import Pdf from 'vue-pdf';
 defineComponent({
     name: "AttchmentSingleComponent"
 });
