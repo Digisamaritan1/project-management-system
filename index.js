@@ -116,7 +116,7 @@ function initializeControllers() {
     require('./modules/project-rules/init').init(app);
     require('./modules/estimated-time/init').init(app);
     require('./modules/custom-field/init').init(app);
-    require('./modules/ProjectTemplates/init').init(app);
+    require('./modules/project-templates/init').init(app);
     require('./modules/settings/templates/init').init(app);
     require('./modules/settings/ProjectStatusTemplate/init').init(app);
     require('./modules/settings/securityPermissions/init').init(app);
