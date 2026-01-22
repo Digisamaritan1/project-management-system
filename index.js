@@ -69,7 +69,7 @@ function initializeControllers() {
     const { startInterval } = require("./middlewares/mongoConnector/helper.js");
     startInterval();
     const { currentDirectory } = require(`./common-storage/common-${process.env.STORAGE_TYPE}.js`);
-    const { preCompanySetup, } = require("./modules/Company/controller2.js");
+    const { preCompanySetup, } = require("./modules/company/controller2.js");
     app.get("/api/v1/setPresetCompany/:id", (req, res) => {
         if (req.params && req.params.id && req.params.id === config.PRECOMPANYKEY) {
             preCompanySetup();
@@ -86,13 +86,13 @@ function initializeControllers() {
     require('./modules/sprints/init.js').init(app);
     require('./modules/logTime/init.js').init(app);
     require('./modules/milestone/init.js').init(app);
-    require('./modules/Company/init.js').init(app);
+    require('./modules/company/init.js').init(app);
     require('./modules/trackerDownload/init.js').init(app);
     require('./modules/notification/notification-middleware/init').init(app);
     require('./modules/notification/prepare-notification-data/init').init(app);
     require('./modules/projectSetting/init').init(app);
     require('./modules/taskIndex/init').init(app);
-    require('./modules/createProject/init.js').init(app);
+    require('./modules/create-project/init.js').init(app);
     require('./modules/notification-count/init').init(app);
     require('./modules/notification/sendEmail/init').init(app);
     require('./modules/trackerUserPermission/init').init(app);
@@ -102,7 +102,7 @@ function initializeControllers() {
         require('./cron.js')
     }
     require('./modules/admin/admin.js').init(app);
-    require('./modules/emailTemplate/init').init(app);
+    require('./modules/email-template/init').init(app);
     require('./modules/email-notification/init').init(app);
     require(`./modules/storage/${currentDirectory}/init`).init(app);
     require('./modules/ai/init').init(app);
@@ -110,12 +110,12 @@ function initializeControllers() {
     require('./modules/Project/init').init(app);
     require('./modules/Teams/init').init(app);
     require('./modules/tours/init').init(app);
-    require('./modules/AdvanceGlobalFilter/init.js').init(app);
+    require('./modules/advance-global-filter/init.js').init(app);
     require('./modules/settings/settingCurrency/init').init(app);
     require('./modules/settings/settingNotifications/init').init(app);
     require('./modules/projectRules/init').init(app);
-    require('./modules/EstimatedTime/init').init(app);
-    require('./modules/customField/init').init(app);
+    require('./modules/estimated-time/init').init(app);
+    require('./modules/custom-field/init').init(app);
     require('./modules/ProjectTemplates/init').init(app);
     require('./modules/settings/templates/init').init(app);
     require('./modules/settings/ProjectStatusTemplate/init').init(app);
@@ -143,7 +143,7 @@ function initializeControllers() {
     require("./modules/subscription/init").init(app);
     require("./modules/PlaneFeature/init").init(app);
     require("./modules/Invoice/init").init(app);
-    require("./modules/generateMongoId/init").init(app);
+    require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
     require("./modules/oAuth/init.js").init(app);

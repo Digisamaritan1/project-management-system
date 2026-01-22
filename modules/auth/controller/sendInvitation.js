@@ -5,11 +5,11 @@ const mongoRef = require('../../../utils/mongo-handler/mongoQueries');
 const btoa = require('btoa');
 const { SCHEMA_TYPE } = require("../../../Config/schemaType.js");
 const mongoose = require("mongoose");
-const { updateCompanyFun } = require("../../Company/controller/updateCompany.js");
+const { updateCompanyFun } = require("../../company/controller/updateCompany.js");
 const { getUserByQueyFun } = require("../../usersModule/controller.js");
 const { updateMemberFunction } = require('../../settings/Members/controller.js');
 const logger = require("../../../Config/loggerConfig.js");
-const { emitListener } = require("../../Company/eventController.js");
+const { emitListener } = require("../../company/eventController.js");
 
 
 async function batchUpdate(arr, eventId) {
