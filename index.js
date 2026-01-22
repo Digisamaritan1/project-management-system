@@ -107,7 +107,7 @@ function initializeControllers() {
     require(`./modules/storage/${currentDirectory}/init`).init(app);
     require('./modules/ai/init').init(app);
     require('./modules/usersModule/init').init(app);
-    require('./modules/Project/init').init(app);
+    require('./modules/project/init').init(app);
     require('./modules/Teams/init').init(app);
     require('./modules/tours/init').init(app);
     require('./modules/advance-global-filter/init.js').init(app);
@@ -141,7 +141,7 @@ function initializeControllers() {
     require('./modules/media-files/init').init(app);
     require("./modules/SubscriptionPlan/init").init(app);
     require("./modules/subscription/init").init(app);
-    require("./modules/PlaneFeature/init").init(app);
+    require("./modules/plane-feature/init").init(app);
     require("./modules/invoice/init").init(app);
     require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
