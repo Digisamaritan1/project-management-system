@@ -62,7 +62,7 @@ exports.sendForgotPasswordEmail = (req,res) => {
             }
             mongoRef.MongoDbCrudOpration('global', obj, "updateOne").then(()=>{
                 let link =  `${config.WEBURL}/#/reset-password/${response._id}/${token}/${req.body.token}/${req.body.tokenId}`
-                let mail = require("../../Template/forgotPassword")(userEmail, link);
+                let mail = require("../../template/forgotPassword")(userEmail, link);
                 sendMail.SendEmail(mail.subject, mail.mail, userEmail, true, (result) => {
                     if(result.status) {
                         res.send({

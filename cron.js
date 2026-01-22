@@ -1,6 +1,6 @@
 const schedule = require("node-schedule");
 const logger = require("./Config/loggerConfig");
-const taskIndexRef = require("./modules/taskIndex/controller");
+const taskIndexRef = require("./modules/task-index/controller");
 const { handleBucketSizeUpdateCron } = require(`./common-storage/common-${process.env.STORAGE_TYPE}.js`);
 const aiRef = require("./modules/ai/controller")
 

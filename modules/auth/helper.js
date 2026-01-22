@@ -129,7 +129,7 @@ exports.sendTooManyRequestMail = (ip, data) => {
                 logger.error(`Send Too Many Request User Not Found Error`);
                 return;
             }
-            let mail = require("../Template/securityAlertMail.js")(resData.Employee_Name, ip);
+            let mail = require("../template/securityAlertMail.js")(resData.Employee_Name, ip);
             sendMail.SendEmail(mail.subject, mail.mail, resData.Employee_Email, true, (result) => {
                 if (result.status) {
                     let uobject = {

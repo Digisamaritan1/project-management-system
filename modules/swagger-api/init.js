@@ -32,13 +32,13 @@ exports.init = (app, apiUrl) => {
             "./modules/company/routes.js",
             './modules/notification/prepare-notification-data/routes.js',
             "./modules/notification/notification-middleware/routes.js",
-            "./modules/projectSetting/routes.js",
+            "./modules/project-setting/routes.js",
             "./modules/trackerDownload/routes.js",
-            "./modules/taskIndex/routes.js",
+            "./modules/task-index/routes.js",
             "./modules/create-project/routes.js",
             "./modules/notification-count/routes.js",
             "./modules/trackerUserPermission/routes.js",
-            "./modules/SaasAdmin/routes.js",
+            "./modules/saas-admin/routes.js",
         ]
     };
 

@@ -90,14 +90,14 @@ function initializeControllers() {
     require('./modules/trackerDownload/init.js').init(app);
     require('./modules/notification/notification-middleware/init').init(app);
     require('./modules/notification/prepare-notification-data/init').init(app);
-    require('./modules/projectSetting/init').init(app);
-    require('./modules/taskIndex/init').init(app);
+    require('./modules/project-setting/init').init(app);
+    require('./modules/task-index/init').init(app);
     require('./modules/create-project/init.js').init(app);
     require('./modules/notification-count/init').init(app);
     require('./modules/notification/sendEmail/init').init(app);
     require('./modules/trackerUserPermission/init').init(app);
     require('./modules/check-install-step/init').init(app);
-    require('./modules/SaasAdmin/init').init(app);
+    require('./modules/saas-admin/init').init(app);
     if(process.env.NODE_ENV === "production") {
         require('./cron.js')
     }
@@ -107,16 +107,16 @@ function initializeControllers() {
     require(`./modules/storage/${currentDirectory}/init`).init(app);
     require('./modules/ai/init').init(app);
     require('./modules/usersModule/init').init(app);
-    require('./modules/Project/init').init(app);
-    require('./modules/Teams/init').init(app);
+    require('./modules/project/init').init(app);
+    require('./modules/teams/init').init(app);
     require('./modules/tours/init').init(app);
     require('./modules/advance-global-filter/init.js').init(app);
     require('./modules/settings/settingCurrency/init').init(app);
     require('./modules/settings/settingNotifications/init').init(app);
-    require('./modules/projectRules/init').init(app);
+    require('./modules/project-rules/init').init(app);
     require('./modules/estimated-time/init').init(app);
     require('./modules/custom-field/init').init(app);
-    require('./modules/ProjectTemplates/init').init(app);
+    require('./modules/project-templates/init').init(app);
     require('./modules/settings/templates/init').init(app);
     require('./modules/settings/ProjectStatusTemplate/init').init(app);
     require('./modules/settings/securityPermissions/init').init(app);
@@ -124,9 +124,9 @@ function initializeControllers() {
     require('./modules/UserId/init').init(app);
     require('./modules/settings/Members/init').init(app);
     require('./modules/apps/init').init(app)
-    require('./modules/projectTabs/init').init(app)
+    require('./modules/project-tabs/init').init(app)
     require('./modules/comments/init').init(app);
-    require('./modules/TimeSheet/init').init(app);
+    require('./modules/time-sheet/init').init(app);
     require('./modules/main-chats/init').init(app);
     require('./modules/notification/app-notification/init').init(app);
     require('./modules/history/init').init(app);
@@ -139,14 +139,14 @@ function initializeControllers() {
     require('./modules/settings/taskPriority/init').init(app);
     require('./modules/settings/settingMilestone/init').init(app);
     require('./modules/media-files/init').init(app);
-    require("./modules/SubscriptionPlan/init").init(app);
+    require("./modules/subscription-plan/init").init(app);
     require("./modules/subscription/init").init(app);
-    require("./modules/PlaneFeature/init").init(app);
+    require("./modules/plane-feature/init").init(app);
     require("./modules/invoice/init").init(app);
     require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
-    require("./modules/oAuth/init.js").init(app);
+    require("./modules/oauth/init.js").init(app);
     require("./modules/github-oauth/init.js").init(app);
     require("./modules/google-oauth/init.js").init(app);
 }
@@ -173,7 +173,7 @@ if (!process.env.STORAGE_TYPE) {
 require('./modules/check-install-step/init').init(app);
 
 // SWAGGER CONFIGURATION
-require('./modules/swaggerAPI/init').init(app, config.APIURL);
+require('./modules/swagger-api/init').init(app, config.APIURL);
 
 // COMMON CODE 
 require('./modules/common/init').init(app);
@@ -184,9 +184,9 @@ app.get("/health", (req, res) => {
     res.send("Server is running in "+config.NODE_ENV);
 });
 
-fs.watch(__dirname + "/modules/Template/", (event_type, file_name) => {
+fs.watch(__dirname + "/modules/template/", (event_type, file_name) => {
     try {
-        delete require.cache[require.resolve(__dirname + "/modules/Template/" + file_name)];;
+        delete require.cache[require.resolve(__dirname + "/modules/template/" + file_name)];;
     } catch (error) {
         console.error("ERROR in remove cache", error);
     }

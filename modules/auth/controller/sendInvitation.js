@@ -210,10 +210,10 @@ exports.sendInvitationEmailFun = (bodyData) => {
         
                                 if(userId === "") {
                                     let link = `${config.WEBURL}/#/invitation?companyId=${companyId}-${re._id}`;
-                                    sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),re);
+                                    sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),re);
                                 } else {
                                     let link = `${config.WEBURL}/#/verify-invitation?id=${btoa(`userId=${userId}&companyId=${companyId}&docId=${re._id}&linkId=${token}`)})}`;
-                                    sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),re);
+                                    sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),re);
                                 }
                             }).catch((error) => {
                                 reject({status: false, statusText: error});
@@ -252,10 +252,10 @@ exports.sendInvitationEmailFun = (bodyData) => {
                                 
                                 if(userId === "") {
                                     let link = `${config.WEBURL}/#/invitation?companyId=${companyId}-${resp._id}`;
-                                    sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),resp);
+                                    sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),resp);
                                 } else {
                                     let link = `${config.WEBURL}/#/verify-invitation?id=${btoa(`userId=${userId}&companyId=${companyId}&docId=${resp._id}&linkId=${token}`)})}`;
-                                    sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),resp);
+                                    sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),resp);
                                 }
                             }).catch((error)=>{
                                 reject({status: false, statusText: error});
@@ -424,10 +424,10 @@ exports.sendInvitationEmail = (req,res) => {
 
                         if(userId === "") {
                             let link = `${config.WEBURL}/#/invitation?companyId=${companyId}-${re._id}`;
-                            sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),re);
+                            sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),re);
                         } else {
                             let link = `${config.WEBURL}/#/verify-invitation?id=${btoa(`userId=${userId}&companyId=${companyId}&docId=${re._id}&linkId=${token}`)})}`;
-                            sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),re);
+                            sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),re);
                         }
                     }).catch((error) => {
                         res.send({status: false, statusText: error});
@@ -466,10 +466,10 @@ exports.sendInvitationEmail = (req,res) => {
                         
                         if(userId === "") {
                             let link = `${config.WEBURL}/#/invitation?companyId=${companyId}-${resp._id}`;
-                            sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),resp);
+                            sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),resp);
                         } else {
                             let link = `${config.WEBURL}/#/verify-invitation?id=${btoa(`userId=${userId}&companyId=${companyId}&docId=${resp._id}&linkId=${token}`)})}`;
-                            sendMailFunction(require("../../Template/sendEmailInvitation")(link, companyName),resp);
+                            sendMailFunction(require("../../template/sendEmailInvitation")(link, companyName),resp);
                         }
                     }).catch((error)=>{
                         res.send({status: false, statusText: error});

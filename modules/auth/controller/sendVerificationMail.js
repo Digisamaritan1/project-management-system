@@ -1,5 +1,5 @@
 const mongoRef = require('../../../utils/mongo-handler/mongoQueries');
-const senVerificationMailTemplate = require("../../Template/sendEmailVerification.js")
+const senVerificationMailTemplate = require("../../template/sendEmailVerification.js")
 const sendMail = require("../../service.js");
 const config = require("../../../Config/config");
 const { dbCollections } = require('../../../Config/collections');
@@ -35,7 +35,7 @@ exports.sendVerificationEmailPromise = (userId,email) => {
             }
             mongoRef.MongoDbCrudOpration('global', obj, "updateOne").then(()=>{
                 let verificationLink = `${config.WEBURL}/#/verify-email/${uid}/${token}`
-                let mail = require("../../Template/sendEmailVerification.js")(verificationLink,config.WEBURL);
+                let mail = require("../../template/sendEmailVerification.js")(verificationLink,config.WEBURL);
                 sendMail.SendEmail(mail.subject,mail.mail, userEmail, true, (result) => {
                     if(result.status) {
                         resolve({

@@ -461,7 +461,7 @@ const verifyLocalAuth = async (reqData, cb) => {
                 link = `${config.WEBURL}/admin/#/set-new-password/${token}`;
             }
 
-            const mail = require("../Template/passwordExpiredMail")(reqData.email, link);
+            const mail = require("../template/passwordExpiredMail")(reqData.email, link);
             sendMail.SendEmail(mail.subject, mail.mail, reqData.email, true, (result) => {
                 if (result.status) {
                     cb({
@@ -718,7 +718,7 @@ exports.sendForgotPassword = (req, res, next) => {
             if (reqData.key === "admin") {
                 link = `${config.WEBURL}/admin/#/reset-password/${token}`;
             }
-            let mail = require("../Template/forgotPassword")(reqData.email, link);
+            let mail = require("../template/forgotPassword")(reqData.email, link);
             sendMail.SendEmail(mail.subject, mail.mail, reqData.email, true, (result) => {
                 if (result.status) {
                     res.status(200).json({

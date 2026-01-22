@@ -20,7 +20,7 @@ exports.init = (app) => {
 
     // Get Email Templates
     app.get("/api/v1/getEmailTemplates", (req, res) => {
-        res.send({verifyEmail: require("../Template/sendEmailVerification.js")('${link}','','${brandName}'),resetEmail: require("../Template/forgotPassword.js")('${email}', '${link}','${brandName}'), invitationEamil: require("../Template/sendEmailInvitation.js")('${link}','${companyName}','${brandName}')});
+        res.send({verifyEmail: require("../template/sendEmailVerification.js")('${link}','','${brandName}'),resetEmail: require("../template/forgotPassword.js")('${email}', '${link}','${brandName}'), invitationEamil: require("../template/sendEmailInvitation.js")('${link}','${companyName}','${brandName}')});
     });
 
     // Get Connections
