@@ -138,7 +138,7 @@ function initializeControllers() {
     require('./modules/settings/commonDateFormate/init').init(app);
     require('./modules/settings/taskPriority/init').init(app);
     require('./modules/settings/settingMilestone/init').init(app);
-    require('./modules/MediaFiles/init').init(app);
+    require('./modules/media-files/init').init(app);
     require("./modules/SubscriptionPlan/init").init(app);
     require("./modules/subscription/init").init(app);
     require("./modules/PlaneFeature/init").init(app);
