@@ -173,7 +173,7 @@ if (!process.env.STORAGE_TYPE) {
 require('./modules/check-install-step/init').init(app);
 
 // SWAGGER CONFIGURATION
-require('./modules/swaggerAPI/init').init(app, config.APIURL);
+require('./modules/swagger-api/init').init(app, config.APIURL);
 
 // COMMON CODE 
 require('./modules/common/init').init(app);
