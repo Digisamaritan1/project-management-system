@@ -95,7 +95,7 @@ function initializeControllers() {
     require('./modules/create-project/init.js').init(app);
     require('./modules/notification-count/init').init(app);
     require('./modules/notification/sendEmail/init').init(app);
-    require('./modules/trackerUserPermission/init').init(app);
+    require('./modules/tracker-user-permission/init').init(app);
     require('./modules/check-install-step/init').init(app);
     require('./modules/saas-admin/init').init(app);
     if(process.env.NODE_ENV === "production") {
@@ -144,7 +144,7 @@ function initializeControllers() {
     require("./modules/plane-feature/init").init(app);
     require("./modules/invoice/init").init(app);
     require("./modules/generate-mongo-id/init").init(app);
-    require("./modules/UserDashboard/init.js").init(app);
+    require("./modules/user-dashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
     require("./modules/oauth/init.js").init(app);
     require("./modules/github-oauth/init.js").init(app);
