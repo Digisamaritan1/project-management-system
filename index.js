@@ -129,7 +129,7 @@ function initializeControllers() {
     require('./modules/TimeSheet/init').init(app);
     require('./modules/MainChats/init').init(app);
     require('./modules/notification/app-notification/init').init(app);
-    require('./modules/History/init').init(app);
+    require('./modules/history/init').init(app);
     require('./modules/settings/Category/init').init(app);
     require('./modules/settings/Roles/init').init(app);
     require('./modules/settings/Designation/init').init(app);
