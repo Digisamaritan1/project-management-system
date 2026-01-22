@@ -7,7 +7,7 @@ const socketEmitter = require('../../../event/socketEventEmitter');
 const logger = require('../../../Config/loggerConfig');
 
 const { getNotificationSetttings } = require("../prepare-notification-data/settings-controllerV2");
-const { sendFCMNotification } = require("./sendNotification");
+const { sendFCMNotification } = require("./send-notification");
 const config = require('../../../Config/config');
 const { getUsersDetails } = require("../prepare-notification-data/user-controllerV2");
 const fs = require('fs');
