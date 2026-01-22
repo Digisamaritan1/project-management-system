@@ -146,7 +146,7 @@ function initializeControllers() {
     require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
-    require("./modules/oAuth/init.js").init(app);
+    require("./modules/oauth/init.js").init(app);
     require("./modules/github-oauth/init.js").init(app);
     require("./modules/google-oauth/init.js").init(app);
 }
