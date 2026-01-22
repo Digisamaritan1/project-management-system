@@ -126,7 +126,7 @@ function initializeControllers() {
     require('./modules/apps/init').init(app)
     require('./modules/project-tabs/init').init(app)
     require('./modules/comments/init').init(app);
-    require('./modules/TimeSheet/init').init(app);
+    require('./modules/time-sheet/init').init(app);
     require('./modules/main-chats/init').init(app);
     require('./modules/notification/app-notification/init').init(app);
     require('./modules/history/init').init(app);
