@@ -113,7 +113,7 @@ function initializeControllers() {
     require('./modules/advance-global-filter/init.js').init(app);
     require('./modules/settings/settingCurrency/init').init(app);
     require('./modules/settings/settingNotifications/init').init(app);
-    require('./modules/projectRules/init').init(app);
+    require('./modules/project-rules/init').init(app);
     require('./modules/estimated-time/init').init(app);
     require('./modules/custom-field/init').init(app);
     require('./modules/ProjectTemplates/init').init(app);
