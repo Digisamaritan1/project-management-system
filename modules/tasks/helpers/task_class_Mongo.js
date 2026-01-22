@@ -19,7 +19,7 @@ const { replaceObjectKey } = require("../../auth/helper");
 const { emitListener } = require("../../company/eventController.js");
 const { createCustomFields } = require("./helper.js");
 const { removeCache } = require('../../../utils/commonFunctions.js');
-const { updateRemainingTime } = require('../../logTime/controllerV2.js');
+const { updateRemainingTime } = require('../../log-time/controllerV2.js');
 class Task {
     create({data, user, projectData ,indexObj, setNotif}) {
         return new Promise((resolve,reject) => {
