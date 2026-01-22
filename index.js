@@ -102,7 +102,7 @@ function initializeControllers() {
         require('./cron.js')
     }
     require('./modules/admin/admin.js').init(app);
-    require('./modules/emailTemplate/init').init(app);
+    require('./modules/email-template/init').init(app);
     require('./modules/email-notification/init').init(app);
     require(`./modules/storage/${currentDirectory}/init`).init(app);
     require('./modules/ai/init').init(app);
