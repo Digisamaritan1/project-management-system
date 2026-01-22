@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const { emitListener } = require("./eventController.js");
 const { getCachedPromptData, getCachedAllPromptData, getCachedCategoryData, getCachedAiModelData } = require("../../utils/enterpriseHelper.js");
-const { updateCompanyFun, getCompanyDataFun } = require('../Company/controller/updateCompany.js');
+const { updateCompanyFun, getCompanyDataFun } = require('../company/controller/updateCompany.js');
 const { updateMemberFunction } = require('../settings/Members/controller.js');
 const aiPrompts = require('../../utils/aiPrompts.json');
 

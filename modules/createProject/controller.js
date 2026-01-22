@@ -8,7 +8,7 @@ const { addSprintFun } = require("../sprints/controller")
 const config = require("../../Config/config");
 const { getCachedGlobalTemplateData } = require("../../utils/enterpriseHelper");
 const { removeCache } = require('../../utils/commonFunctions');
-const { updateCompanyFun } = require("../Company/controller/updateCompany");
+const { updateCompanyFun } = require("../company/controller/updateCompany");
 const projectTemplate = require("../../utils/projectTemplates.json");
 
 exports.checkProjectPlan = (req) => {

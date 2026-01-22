@@ -9,7 +9,7 @@ const { replaceObjectKey } = require("./helper");
 const {myCache} = require('../../Config/config');
 const logger = require('../../Config/loggerConfig');
 const {removeCache} = require('../../utils/commonFunctions');
-const { handleEvents } = require('../Company/eventController');
+const { handleEvents } = require('../company/eventController');
 exports.init = (app) => {
     app.post("/api/v2/createUser", createUserCtrl.createUserV2);
     /**

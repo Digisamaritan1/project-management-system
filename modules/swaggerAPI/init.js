@@ -29,7 +29,7 @@ exports.init = (app, apiUrl) => {
             "./modules/logTime/routes.js",
             "./modules/milestone/routes.js",
             "./modules/wasabi/routes.js",
-            "./modules/Company/routes.js",
+            "./modules/company/routes.js",
             './modules/notification/prepare-notification-data/routes.js',
             "./modules/notification/notification-middleware/routes.js",
             "./modules/projectSetting/routes.js",

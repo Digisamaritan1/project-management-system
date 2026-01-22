@@ -8,7 +8,7 @@ const { dbCollections } = require("../../Config/collections");
 const { unsetAllCounts } = require("../notification-count/controller");
 const requestQueue = new RequestQueue();
 const { getCachedCompanyData } = require('../../utils/planHelper');
-const { updateCompanyFun } = require("../Company/controller/updateCompany");
+const { updateCompanyFun } = require("../company/controller/updateCompany");
 
 exports.addSprint = (req, res) => {
     exports.addSprintFun(req).then((data) => {
