@@ -35,7 +35,7 @@ exports.init = (app, apiUrl) => {
             "./modules/projectSetting/routes.js",
             "./modules/trackerDownload/routes.js",
             "./modules/taskIndex/routes.js",
-            "./modules/createProject/routes.js",
+            "./modules/create-project/routes.js",
             "./modules/notification-count/routes.js",
             "./modules/trackerUserPermission/routes.js",
             "./modules/SaasAdmin/routes.js",

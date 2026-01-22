@@ -92,7 +92,7 @@ function initializeControllers() {
     require('./modules/notification/prepare-notification-data/init').init(app);
     require('./modules/projectSetting/init').init(app);
     require('./modules/taskIndex/init').init(app);
-    require('./modules/createProject/init.js').init(app);
+    require('./modules/create-project/init.js').init(app);
     require('./modules/notification-count/init').init(app);
     require('./modules/notification/sendEmail/init').init(app);
     require('./modules/trackerUserPermission/init').init(app);
