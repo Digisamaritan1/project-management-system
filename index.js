@@ -87,7 +87,7 @@ function initializeControllers() {
     require('./modules/log-time/init.js').init(app);
     require('./modules/milestone/init.js').init(app);
     require('./modules/company/init.js').init(app);
-    require('./modules/trackerDownload/init.js').init(app);
+    require('./modules/tracker-download/init.js').init(app);
     require('./modules/notification/notification-middleware/init').init(app);
     require('./modules/notification/prepare-notification-data/init').init(app);
     require('./modules/project-setting/init').init(app);
