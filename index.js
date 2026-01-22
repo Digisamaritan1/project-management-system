@@ -139,7 +139,7 @@ function initializeControllers() {
     require('./modules/settings/taskPriority/init').init(app);
     require('./modules/settings/settingMilestone/init').init(app);
     require('./modules/media-files/init').init(app);
-    require("./modules/SubscriptionPlan/init").init(app);
+    require("./modules/subscription-plan/init").init(app);
     require("./modules/subscription/init").init(app);
     require("./modules/plane-feature/init").init(app);
     require("./modules/invoice/init").init(app);
