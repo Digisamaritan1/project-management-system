@@ -114,7 +114,7 @@ function initializeControllers() {
     require('./modules/settings/settingCurrency/init').init(app);
     require('./modules/settings/settingNotifications/init').init(app);
     require('./modules/projectRules/init').init(app);
-    require('./modules/EstimatedTime/init').init(app);
+    require('./modules/estimated-time/init').init(app);
     require('./modules/custom-field/init').init(app);
     require('./modules/ProjectTemplates/init').init(app);
     require('./modules/settings/templates/init').init(app);
@@ -143,7 +143,7 @@ function initializeControllers() {
     require("./modules/subscription/init").init(app);
     require("./modules/PlaneFeature/init").init(app);
     require("./modules/Invoice/init").init(app);
-    require("./modules/generateMongoId/init").init(app);
+    require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
     require("./modules/oAuth/init.js").init(app);
