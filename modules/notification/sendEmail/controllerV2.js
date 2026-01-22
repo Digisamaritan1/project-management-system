@@ -1,7 +1,7 @@
 const logger = require("../../../Config/loggerConfig");
 const config = require("../../../Config/config");
 const sendMail = require("../../service.js");
-const sendEmailNotification = require("../../Template/sendEmailNotification.js")
+const sendEmailNotification = require("../../template/sendEmailNotification.js")
 const moment = require('moment')
 const { Notification_key, TemplateType } = require("../../../Config/notificationKey");
 const { removeDocument, UpdateDocument } = require("../notification-middleware/push-controllerV2")

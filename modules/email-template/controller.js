@@ -17,7 +17,7 @@ exports.updateEmailTemplate = (req,res) => {
             return;
         }
 
-        const filePath = req.body.id === 1 ? __dirname + '/../Template/sendEmailVerification.js' : req.body.id === 2 ? __dirname + '/../Template/forgotPassword.js' : __dirname + '/../Template/sendEmailInvitation.js';
+        const filePath = req.body.id === 1 ? __dirname + '/../template/sendEmailVerification.js' : req.body.id === 2 ? __dirname + '/../template/forgotPassword.js' : __dirname + '/../template/sendEmailInvitation.js';
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading file:', err);

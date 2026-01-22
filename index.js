@@ -184,9 +184,9 @@ app.get("/health", (req, res) => {
     res.send("Server is running in "+config.NODE_ENV);
 });
 
-fs.watch(__dirname + "/modules/Template/", (event_type, file_name) => {
+fs.watch(__dirname + "/modules/template/", (event_type, file_name) => {
     try {
-        delete require.cache[require.resolve(__dirname + "/modules/Template/" + file_name)];;
+        delete require.cache[require.resolve(__dirname + "/modules/template/" + file_name)];;
     } catch (error) {
         console.error("ERROR in remove cache", error);
     }
