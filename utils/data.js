@@ -16,7 +16,7 @@ const { SCHEMA_TYPE } = require("../Config/schemaType");
 const {defaultCustomFields} = require("../utils/Tempates/customFields");
 const {defaultProjectTours} = require("../utils/Tempates/projectTours");
 const { addSprintFun } = require('../modules/sprints/controller');
-const { updateMainChat } = require('../modules/MainChats/controller');
+const { updateMainChat } = require('../modules/main-chats/controller');
 //IMPORT CURRENCY
 exports.importCurrency = (companyName) => {
     return new Promise(async(resolve, reject) => {

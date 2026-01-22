@@ -127,7 +127,7 @@ function initializeControllers() {
     require('./modules/projectTabs/init').init(app)
     require('./modules/comments/init').init(app);
     require('./modules/TimeSheet/init').init(app);
-    require('./modules/MainChats/init').init(app);
+    require('./modules/main-chats/init').init(app);
     require('./modules/notification/app-notification/init').init(app);
     require('./modules/history/init').init(app);
     require('./modules/settings/Category/init').init(app);
