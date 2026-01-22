@@ -121,7 +121,7 @@ function initializeControllers() {
     require('./modules/settings/ProjectStatusTemplate/init').init(app);
     require('./modules/settings/securityPermissions/init').init(app);
     require('./modules/settings/restrictedExtensions/init').init(app);
-    require('./modules/UserId/init').init(app);
+    require('./modules/collection-user-id/init').init(app);
     require('./modules/settings/Members/init').init(app);
     require('./modules/apps/init').init(app)
     require('./modules/project-tabs/init').init(app)
