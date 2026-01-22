@@ -81,10 +81,10 @@ function initializeControllers() {
     //IMPORT CUSTOM FILES
     require('./modules/auth/init').init(app);
     require('./modules/notification/init').init(app);
-    require('./modules/import_settings/init').init(app);
+    require('./modules/import-settings/init').init(app);
     require('./modules/tasks/init.js').init(app);
     require('./modules/sprints/init.js').init(app);
-    require('./modules/logTime/init.js').init(app);
+    require('./modules/log-time/init.js').init(app);
     require('./modules/milestone/init.js').init(app);
     require('./modules/company/init.js').init(app);
     require('./modules/trackerDownload/init.js').init(app);
@@ -127,9 +127,9 @@ function initializeControllers() {
     require('./modules/projectTabs/init').init(app)
     require('./modules/comments/init').init(app);
     require('./modules/TimeSheet/init').init(app);
-    require('./modules/MainChats/init').init(app);
+    require('./modules/main-chats/init').init(app);
     require('./modules/notification/app-notification/init').init(app);
-    require('./modules/History/init').init(app);
+    require('./modules/history/init').init(app);
     require('./modules/settings/Category/init').init(app);
     require('./modules/settings/Roles/init').init(app);
     require('./modules/settings/Designation/init').init(app);
@@ -138,17 +138,17 @@ function initializeControllers() {
     require('./modules/settings/commonDateFormate/init').init(app);
     require('./modules/settings/taskPriority/init').init(app);
     require('./modules/settings/settingMilestone/init').init(app);
-    require('./modules/MediaFiles/init').init(app);
+    require('./modules/media-files/init').init(app);
     require("./modules/SubscriptionPlan/init").init(app);
     require("./modules/subscription/init").init(app);
     require("./modules/PlaneFeature/init").init(app);
-    require("./modules/Invoice/init").init(app);
+    require("./modules/invoice/init").init(app);
     require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
     require("./modules/oAuth/init.js").init(app);
-    require("./modules/githubOAuth/init.js").init(app);
-    require("./modules/googleOAuth/init.js").init(app);
+    require("./modules/github-oauth/init.js").init(app);
+    require("./modules/google-oauth/init.js").init(app);
 }
 
 // FIRES EVENT WHEN THE ENV IS UPDATED

@@ -1,6 +1,6 @@
 const { SCHEMA_TYPE } = require("../../Config/schemaType.js");
 const { MongoDbCrudOpration } = require("../../utils/mongo-handler/mongoQueries.js");
-const iCtr = require('../import_settings/controller.js');
+const iCtr = require('../import-settings/controller.js');
 const helperCtr = require('../auth/controller/helper.js');
 const logger = require('../../Config/loggerConfig.js');
 const { addAndRemoveUserInMongodbNotificationCount } = require("../auth/controller.js");

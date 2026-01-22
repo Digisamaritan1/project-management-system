@@ -14,12 +14,12 @@ const { handleTaskAttachmentsDuplicateFunctionality } = require(`../../../common
 const { buildQueryObject, buildHistoryObject, convertToDisplayFormat } = require("./helper");
 const socketEmitter = require('../../../event/socketEventEmitter');
 const { addCommentCollection, updateCommentCollection } = require('../../comments/controller')
-const { updateMainChat } = require('../../MainChats/controller');
+const { updateMainChat } = require('../../main-chats/controller');
 const { replaceObjectKey } = require("../../auth/helper");
 const { emitListener } = require("../../company/eventController.js");
 const { createCustomFields } = require("./helper.js");
 const { removeCache } = require('../../../utils/commonFunctions.js');
-const { updateRemainingTime } = require('../../logTime/controllerV2.js');
+const { updateRemainingTime } = require('../../log-time/controllerV2.js');
 class Task {
     create({data, user, projectData ,indexObj, setNotif}) {
         return new Promise((resolve,reject) => {

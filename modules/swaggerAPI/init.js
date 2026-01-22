@@ -26,7 +26,7 @@ exports.init = (app, apiUrl) => {
             "./modules/notification/routes.js",
             "./modules/import_settings1/routes.js",
             "./modules/remove-sprint-operations/routes.js",
-            "./modules/logTime/routes.js",
+            "./modules/log-time/routes.js",
             "./modules/milestone/routes.js",
             "./modules/wasabi/routes.js",
             "./modules/company/routes.js",
