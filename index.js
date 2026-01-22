@@ -106,7 +106,7 @@ function initializeControllers() {
     require('./modules/email-notification/init').init(app);
     require(`./modules/storage/${currentDirectory}/init`).init(app);
     require('./modules/ai/init').init(app);
-    require('./modules/usersModule/init').init(app);
+    require('./modules/users-module/init').init(app);
     require('./modules/project/init').init(app);
     require('./modules/teams/init').init(app);
     require('./modules/tours/init').init(app);

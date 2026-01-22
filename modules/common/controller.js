@@ -1,5 +1,5 @@
 const { dbCollections } = require("../../Config/collections");
-const { updateUserFun } = require("../usersModule/controller");
+const { updateUserFun } = require("../users-module/controller");
 
 exports.versionUpdateNotifyToClient = (req, res) => {
     try {

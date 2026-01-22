@@ -5,7 +5,7 @@ const { MongoDbCrudOpration } = require("../../../utils/mongo-handler/mongoQueri
 const { dbCollections } = require("../../../Config/collections");
 const { addAndRemoveUserInMongodbNotificationCount } = require("../controller");
 const atob = require('atob');
-const { updateUserFun, getUserByQueyFun } = require("../../usersModule/controller");
+const { updateUserFun, getUserByQueyFun } = require("../../users-module/controller");
 const { updateMemberFunction } = require('../../settings/Members/controller');
 
 /**
