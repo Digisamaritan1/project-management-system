@@ -147,8 +147,8 @@ function initializeControllers() {
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
     require("./modules/oAuth/init.js").init(app);
-    require("./modules/githubOAuth/init.js").init(app);
-    require("./modules/googleOAuth/init.js").init(app);
+    require("./modules/github-oauth/init.js").init(app);
+    require("./modules/google-oauth/init.js").init(app);
 }
 
 // FIRES EVENT WHEN THE ENV IS UPDATED
