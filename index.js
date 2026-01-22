@@ -97,7 +97,7 @@ function initializeControllers() {
     require('./modules/notification/sendEmail/init').init(app);
     require('./modules/trackerUserPermission/init').init(app);
     require('./modules/check-install-step/init').init(app);
-    require('./modules/SaasAdmin/init').init(app);
+    require('./modules/saas-admin/init').init(app);
     if(process.env.NODE_ENV === "production") {
         require('./cron.js')
     }
