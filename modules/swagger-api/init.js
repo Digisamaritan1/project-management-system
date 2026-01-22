@@ -33,11 +33,11 @@ exports.init = (app, apiUrl) => {
             './modules/notification/prepare-notification-data/routes.js',
             "./modules/notification/notification-middleware/routes.js",
             "./modules/project-setting/routes.js",
-            "./modules/trackerDownload/routes.js",
+            "./modules/tracker-download/routes.js",
             "./modules/task-index/routes.js",
             "./modules/create-project/routes.js",
             "./modules/notification-count/routes.js",
-            "./modules/trackerUserPermission/routes.js",
+            "./modules/tracker-user-permission/routes.js",
             "./modules/saas-admin/routes.js",
         ]
     };

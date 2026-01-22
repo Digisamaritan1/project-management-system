@@ -87,7 +87,7 @@ function initializeControllers() {
     require('./modules/log-time/init.js').init(app);
     require('./modules/milestone/init.js').init(app);
     require('./modules/company/init.js').init(app);
-    require('./modules/trackerDownload/init.js').init(app);
+    require('./modules/tracker-download/init.js').init(app);
     require('./modules/notification/notification-middleware/init').init(app);
     require('./modules/notification/prepare-notification-data/init').init(app);
     require('./modules/project-setting/init').init(app);
@@ -95,7 +95,7 @@ function initializeControllers() {
     require('./modules/create-project/init.js').init(app);
     require('./modules/notification-count/init').init(app);
     require('./modules/notification/sendEmail/init').init(app);
-    require('./modules/trackerUserPermission/init').init(app);
+    require('./modules/tracker-user-permission/init').init(app);
     require('./modules/check-install-step/init').init(app);
     require('./modules/saas-admin/init').init(app);
     if(process.env.NODE_ENV === "production") {
@@ -106,7 +106,7 @@ function initializeControllers() {
     require('./modules/email-notification/init').init(app);
     require(`./modules/storage/${currentDirectory}/init`).init(app);
     require('./modules/ai/init').init(app);
-    require('./modules/usersModule/init').init(app);
+    require('./modules/users-module/init').init(app);
     require('./modules/project/init').init(app);
     require('./modules/teams/init').init(app);
     require('./modules/tours/init').init(app);
@@ -121,7 +121,7 @@ function initializeControllers() {
     require('./modules/settings/ProjectStatusTemplate/init').init(app);
     require('./modules/settings/securityPermissions/init').init(app);
     require('./modules/settings/restrictedExtensions/init').init(app);
-    require('./modules/UserId/init').init(app);
+    require('./modules/collection-user-id/init').init(app);
     require('./modules/settings/Members/init').init(app);
     require('./modules/apps/init').init(app)
     require('./modules/project-tabs/init').init(app)
@@ -144,7 +144,7 @@ function initializeControllers() {
     require("./modules/plane-feature/init").init(app);
     require("./modules/invoice/init").init(app);
     require("./modules/generate-mongo-id/init").init(app);
-    require("./modules/UserDashboard/init.js").init(app);
+    require("./modules/user-dashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);
     require("./modules/oauth/init.js").init(app);
     require("./modules/github-oauth/init.js").init(app);

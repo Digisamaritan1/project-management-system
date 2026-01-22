@@ -15,7 +15,7 @@ const installStepsFilePath = __dirname + "/../../installationSteps.json";
 const defaultSubscriptionDataRef = require("./defaultSubscriptionData.js")
 const serviceFun = require("../serviceFunction.js");
 const { updateCompanyFun } = require("../company/controller/updateCompany.js");
-const { updateUserFun, getUserByQueyFun } = require("../usersModule/controller.js");
+const { updateUserFun, getUserByQueyFun } = require("../users-module/controller.js");
 const { storeRefferalCode } = require("../affiliate/controller.js");
 const { handleCreateCompanyDataStorageFun } = require(`../../common-storage/common-${process.env.STORAGE_TYPE}.js`);
 

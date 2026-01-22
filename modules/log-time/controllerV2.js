@@ -9,7 +9,7 @@ const { MongoDbCrudOpration } = require("../../utils/mongo-handler/mongoQueries"
 const mongoose = require("mongoose")
 
 const fs = require("fs");
-const { updateUserFun } = require('../usersModule/controller');
+const { updateUserFun } = require('../users-module/controller');
 const { myCache } = require('../../Config/config');
 const { updateProjectInternal } = require('../project/controller/updateProject');
 const loggerConfig = require('../../Config/loggerConfig');

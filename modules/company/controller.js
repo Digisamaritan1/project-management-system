@@ -12,7 +12,7 @@ const config =  require('../../Config/config.js');
 const { dbCollections } = require("../../Config/collections.js");
 const defaultSubscriptionDataRef = require("./defaultSubscriptionData.js")
 const { updateCompanyFun } = require("./controller/updateCompany.js");
-const { updateUserFun } = require("../usersModule/controller.js");
+const { updateUserFun } = require("../users-module/controller.js");
 const { storeRefferalCode, checkAndStoreRefferalCode } = require("../affiliate/controller.js");
 const { handleCreateCompanyDataStorageFunForUpload, handleCreateCompanyDataStorageFun } = require(`../../common-storage/common-${process.env.STORAGE_TYPE}.js`);
 
