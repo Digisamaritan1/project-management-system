@@ -81,7 +81,7 @@ function initializeControllers() {
     //IMPORT CUSTOM FILES
     require('./modules/auth/init').init(app);
     require('./modules/notification/init').init(app);
-    require('./modules/import_settings/init').init(app);
+    require('./modules/import-settings/init').init(app);
     require('./modules/tasks/init.js').init(app);
     require('./modules/sprints/init.js').init(app);
     require('./modules/logTime/init.js').init(app);
@@ -142,7 +142,7 @@ function initializeControllers() {
     require("./modules/SubscriptionPlan/init").init(app);
     require("./modules/subscription/init").init(app);
     require("./modules/PlaneFeature/init").init(app);
-    require("./modules/Invoice/init").init(app);
+    require("./modules/invoice/init").init(app);
     require("./modules/generate-mongo-id/init").init(app);
     require("./modules/UserDashboard/init.js").init(app);
     require("./modules/affiliate/init").init(app);

@@ -1,7 +1,7 @@
 // const AWS = require('aws-sdk');
 const { SCHEMA_TYPE } = require("../../Config/schemaType.js");
 const { MongoDbCrudOpration } = require("../../utils/mongo-handler/mongoQueries.js");
-const iCtr = require('../import_settings/controller.js');
+const iCtr = require('../import-settings/controller.js');
 const { addAndRemoveUserInMongodbNotificationCount } = require("../auth/controller.js");
 const logger = require('../../Config/loggerConfig.js');
 const { default: mongoose } = require("mongoose");
