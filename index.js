@@ -108,7 +108,7 @@ function initializeControllers() {
     require('./modules/ai/init').init(app);
     require('./modules/usersModule/init').init(app);
     require('./modules/project/init').init(app);
-    require('./modules/Teams/init').init(app);
+    require('./modules/teams/init').init(app);
     require('./modules/tours/init').init(app);
     require('./modules/advance-global-filter/init.js').init(app);
     require('./modules/settings/settingCurrency/init').init(app);
