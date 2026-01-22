@@ -3,7 +3,7 @@ const {taskMongo} = require('./helpers/task_class_Mongo');
 const tabSyncTaskCtrl = require('./controller/getTabSyncTasks');
 const advanceFilter = require('./helpers/manageGlobalFilter');
 const getTaskCtrl = require('./helpers/getTasksData');
-const { handleEvents } = require('../company/eventController');
+const { handleEvents } = require('../company/event-controller');
 const logger = require('../../Config/loggerConfig');
 
 exports.init = (app) => {
