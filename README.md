@@ -1,83 +1,110 @@
-# AlianHub  
-**Open Source Project Management System**
+<div align="center">
+<a href="https://alianhub.com">
+    <strong style="font-size:32px;">AlianHub</strong>
+</a>
 
-AlianHub is a full-stack, open-source project management system designed for **enterprises, startups, and growing teams** that need control, extensibility, and self-hosting without vendor lock-in.
+<br/>
+<br/>
 
-It provides a modern web interface, a scalable backend, and optional desktop support — all built with a pragmatic, developer-friendly architecture.
+<div align="center">
+    <a href="https://alianhub.com">Website</a> |
+    <a href="https://demo.alianhub.com">Demo</a> |
+    <a href="https://alianhub.com/docs">Documentation</a> |
+    <a href="./CONTRIBUTING.md">Contributing</a>
+</div>
+</div>
 
-🌐 Website: https://alianhub.com  
-🚀 Demo: https://demo.alianhub.com
+<br/>
+<br/>
+
+<div align="center">
+<strong>An open-source, full-stack project management system for teams that need control, extensibility, and self-hosting.</strong>
+<br/>
+<br/>
+Built for enterprises, startups, and growing teams — without vendor lock-in.
+</div>
+
+<br/>
+
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
+</div>
+
+<br/>
 
 ---
 
 ## What is AlianHub?
 
-AlianHub helps teams plan, track, and manage projects across their entire lifecycle.  
-It is built to be **self-hosted**, **customizable**, and **extensible**, making it suitable for organizations that need more than SaaS-only tools.
+**AlianHub** is a full-stack, open-source project management system designed for teams that require flexibility, transparency, and ownership over their workflows.
 
-Core goals:
-- Transparent project tracking
-- Team collaboration at scale
-- Extensibility for custom workflows
-- On-premise and private deployments
+Unlike SaaS-only tools, AlianHub is built to be:
+- **Self-hosted**
+- **Extensible**
+- **Customizable for real-world organizational needs**
+
+It supports both web and desktop environments and is suitable for internal tools, enterprise deployments, and long-term team collaboration.
 
 ---
 
 ## Tech Stack
 
-AlianHub is built as a **full-stack system**:
+AlianHub is built using a pragmatic and scalable stack:
 
-- **Frontend**: Vue  
-- **Backend**: Node.js  
-- **Database**: MongoDB  
-- **Desktop**: Electron  
-- **Repository**: Single-repo architecture
+- **Frontend**: Vue
+- **Backend**: Node.js
+- **Database**: MongoDB
+- **Desktop**: Electron
+- **Repository Structure**: Single repository
 
 ---
 
-## Features (High-Level)
+## Key Features
 
-- Project & task management
-- Team and role-based access control
-- Real-time collaboration
-- Activity tracking & audit logs
+- Project and task management
+- Team collaboration and role-based access control
+- Real-time updates
+- Activity tracking and audit logs
+- Web and desktop (Electron) support
 - Self-hosted deployments
-- Web + desktop support (Electron)
 
-> Feature set may evolve as the project grows.
+> Features and capabilities may evolve as the project grows.
 
 ---
 
 ## Getting Started
 
-AlianHub is currently installed by following the official documentation.
+AlianHub is currently set up by following the official installation documentation.
 
-📘 **Installation & Setup**  
-➡️ Refer to the documentation for environment setup, configuration, and deployment instructions.
+📘 **Installation & Setup**
+- Refer to the documentation for environment configuration, setup steps, and deployment guidance.
 
-> A quick-start guide may be added in the future once the project stabilizes.
+A quick-start guide may be added once the project reaches further stability.
 
 ---
 
 ## Demo
 
-You can explore a running instance here:
+You can explore a live demo here:
 
 👉 **https://demo.alianhub.com**
 
-Note: Demo data may reset periodically.
+> Demo data may reset periodically.
 
 ---
 
-## Contribution
+## Contributing
 
-Contributions are welcome and encouraged.
+Contributions are welcome.
 
-- Issues and feature requests can be opened via GitHub
+- Anyone can open issues or pull requests
 - Pull requests are reviewed by the core maintainers
-- A dedicated `CONTRIBUTING.md` will be added soon with detailed guidelines
+- A detailed `CONTRIBUTING.md` will be added soon
 
-Please follow the project’s:
+Please follow:
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Security Policy](SECURITY.md)
 
@@ -85,8 +112,9 @@ Please follow the project’s:
 
 ## Governance
 
-AlianHub is currently maintained by **core maintainers (company-backed)**.  
-The long-term goal is to transition toward a **community-driven model with maintainers**.
+AlianHub is currently maintained by **core maintainers (company-backed)**.
+
+The long-term goal is to transition toward a **community-driven project with dedicated maintainers**.
 
 ---
 
@@ -94,7 +122,7 @@ The long-term goal is to transition toward a **community-driven model with maint
 
 If you discover a security vulnerability, **do not open a public issue**.
 
-Please report it responsibly via GitHub Security Advisories as outlined in  
+Please report it responsibly using GitHub Security Advisories as described in  
 [`SECURITY.md`](SECURITY.md).
 
 ---
