@@ -11,7 +11,7 @@
     <a href="https://help.alianhub.com">Documentation</a> |
     <a href="./CONTRIBUTING.md">Contributing</a>
 </div>
-
+<br/>
 <div>
     <a href="https://demo.alianhub.com" target="_blank">
       <img width="90" src=".gitbook/assets/DEMO_BTN.png" />
@@ -19,7 +19,6 @@
 </div>
 </div>
 
-<br/>
 <br/>
 
 <div align="center">
