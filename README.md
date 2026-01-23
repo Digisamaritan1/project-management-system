@@ -84,7 +84,7 @@ AlianHub is built using a pragmatic and scalable stack:
 AlianHub is currently set up by following the official installation documentation.
 
 📘 **Installation & Setup**
-- Refer to the documentation for environment configuration, setup steps, and deployment guidance.
+- Refer to the [documentation](https://help.alianhub.com) for environment configuration, setup steps, and deployment guidance.
 
 A quick-start guide may be added once the project reaches further stability.
 
