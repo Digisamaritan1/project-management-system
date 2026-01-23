@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://alianhub.com">
-    <strong style="font-size:32px;">AlianHub</strong>
+    <img src=".gitbook/assets/AlianHub_Main.png" />
 </a>
 
 <br/>
