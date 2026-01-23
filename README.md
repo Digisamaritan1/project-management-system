@@ -8,9 +8,14 @@
 
 <div align="center">
     <a href="https://alianhub.com">Website</a> |
-    <a href="https://demo.alianhub.com">Demo</a> |
     <a href="https://help.alianhub.com">Documentation</a> |
     <a href="./CONTRIBUTING.md">Contributing</a>
+</div>
+
+<div>
+    <a href="https://demo.alianhub.com" target="_blank">
+      <img width="90" src=".gitbook/assets/DEMO_BTN.png" />
+    </a>
 </div>
 </div>
 
