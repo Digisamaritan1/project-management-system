@@ -131,6 +131,20 @@ Please report it responsibly using GitHub Security Advisories as described in
 
 ---
 
+## Contributors ♥️ Thanks
+
+We extend our gratitude to all our numerous contributors who create plugins, assist with issues and pull requests, and respond to questions on GitHub Discussions.
+
+AlianHub Project-Management-System is a community-driven project, and your contributions continually improve it.
+
+<br/>
+
+<a href="https://github.com/aliansoftwareteam/AlianHub-Project-Management-System/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=aliansoftwareteam/AlianHub-Project-Management-System&max=400&columns=20" />
+</a>
+
+---
+
 ## License
 
 Licensed under the **MIT License**.  
