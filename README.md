@@ -9,7 +9,7 @@
 <div align="center">
     <a href="https://alianhub.com">Website</a> |
     <a href="https://demo.alianhub.com">Demo</a> |
-    <a href="https://alianhub.com/docs">Documentation</a> |
+    <a href="https://help.alianhub.com">Documentation</a> |
     <a href="./CONTRIBUTING.md">Contributing</a>
 </div>
 </div>
