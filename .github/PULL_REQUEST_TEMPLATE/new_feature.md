@@ -1,13 +1,13 @@
-# 🚀 New Feature Proposal
+# New Feature Proposal
 
-## 📌 Summary
+## Summary
 Provide a clear and concise description of the new feature.
 
 > What problem does this feature solve?  
 > Why is this feature needed?
 
 
-## 🎯 Motivation & Context
+## Motivation & Context
 Explain the motivation behind this feature.
 
 - What user pain-point does it address?
@@ -17,7 +17,7 @@ Explain the motivation behind this feature.
 Closes / Relates to: #ISSUE_NUMBER
 
 
-## 🧠 Proposed Solution
+## Proposed Solution
 Describe **how** this feature works.
 
 - High-level design
@@ -25,7 +25,7 @@ Describe **how** this feature works.
 - Any architectural decisions made
 
 
-## 🧩 Scope of Change
+## Scope of Change
 Check all that apply:
 
 - [ ] Frontend
@@ -36,7 +36,7 @@ Check all that apply:
 - [ ] Documentation
 
 
-## 🧪 Testing Strategy
+## Testing Strategy
 Describe how this feature was tested.
 
 - [ ] Unit tests
@@ -50,11 +50,11 @@ Provide steps to verify:
 3. …
 
 
-## 📸 Screenshots / Demo (if applicable)
+## Screenshots / Demo (if applicable)
 Attach screenshots, GIFs, or videos demonstrating the feature.
 
 
-## ⚠️ Breaking Changes
+## Breaking Changes
 - [ ] Yes
 - [ ] No
 
@@ -63,24 +63,21 @@ If **yes**, describe:
 - Migration steps (if any)
 
 
-## 📚 Documentation Updates
+## Documentation Updates
 - [ ] README updated
 - [ ] API docs updated
 - [ ] Inline comments added
 - [ ] Not required
 
 
-## ✅ Pre-Submission Checklist
-**All must be checked before requesting review**
+## Preflight Checklist
+> **Required before submitting this Pull Request** 
 
-- [ ] Feature aligns with project goals
-- [ ] Code follows project conventions
-- [ ] No unnecessary dependencies added
-- [ ] Error handling considered
-- [ ] Edge cases handled
-- [ ] Tests added or updated
-- [ ] Documentation updated
-- [ ] Self-review completed
+- [ ] I have read and understood the **[Contributing Guidelines](../../CONTRIBUTING.md)** for this project.
+- [ ] I agree to follow the **[Code of Conduct](../../CODE_OF_CONDUCT.md)** that this project adheres to.
+- [ ] This PR is submitted against the correct base branch.
+- [ ] The scope of this PR is clearly defined and limited.
+- [ ] I have performed a self-review of my changes.
 
 ## 📝 Additional Notes
 Anything else reviewers should know?
