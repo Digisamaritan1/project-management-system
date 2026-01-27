@@ -1,12 +1,12 @@
-# ♻️ Refactor Proposal
+# Refactor Proposal
 
-## 📌 Refactor Summary
+## Refactor Summary
 Describe what was refactored and why.
 
 > This PR does **not** change external behavior.
 
 
-## 🎯 Motivation
+## Motivation
 Why was refactoring needed?
 
 - Improve readability
@@ -16,7 +16,7 @@ Why was refactoring needed?
 - Prepare for future features
 
 
-## 🧠 Refactor Details
+## Refactor Details
 Explain what changed:
 
 - Before vs After approach
@@ -24,7 +24,7 @@ Explain what changed:
 - Patterns or principles applied (SOLID, DRY, etc.)
 
 
-## 🧪 Verification
+## Verification
 How did you ensure nothing broke?
 
 - [ ] Existing tests passed
@@ -33,13 +33,13 @@ How did you ensure nothing broke?
 - [ ] Performance comparison (if applicable)
 
 
-## 📊 Performance Impact
+## Performance Impact
 - [ ] No impact
 - [ ] Improved
 - [ ] Potential regression (explain)
 
 
-## 🔍 Risk Assessment
+## Risk Assessment
 - [ ] Low risk
 - [ ] Medium risk
 - [ ] High risk
@@ -47,15 +47,15 @@ How did you ensure nothing broke?
 Explain if medium/high.
 
 
-## ✅ Pre-Submission Checklist
-- [ ] No functional changes introduced
-- [ ] Code is easier to read & maintain
-- [ ] No dead code left behind
-- [ ] Naming improved where applicable
-- [ ] No logic duplication
-- [ ] Tests still pass
-- [ ] Self-review completed
+## Preflight Checklist
+> **Required before submitting this Pull Request** 
+
+- [ ] I have read and understood the **[Contributing Guidelines](../../CONTRIBUTING.md)** for this project.
+- [ ] I agree to follow the **[Code of Conduct](../../CODE_OF_CONDUCT.md)** that this project adheres to.
+- [ ] This PR is submitted against the correct base branch.
+- [ ] The scope of this PR is clearly defined and limited.
+- [ ] I have performed a self-review of my changes.
 
 
-## 📝 Additional Notes
+## Additional Notes
 Anything reviewers should pay attention to?
