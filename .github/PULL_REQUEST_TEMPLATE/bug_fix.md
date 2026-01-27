@@ -1,12 +1,12 @@
-# 🐛 Bug Fix
+# Bug Fix
 
-## 📌 Bug Summary
+## Bug Summary
 Clearly describe the bug being fixed.
 
 Closes: #ISSUE_NUMBER
 
 
-## ❗ Problem Description
+## Problem Description
 What was going wrong?
 
 - Actual behavior
@@ -14,7 +14,7 @@ What was going wrong?
 - Severity (low / medium / high / critical)
 
 
-## 🔁 Steps to Reproduce
+## Steps to Reproduce
 Provide clear reproduction steps:
 
 1. …
@@ -22,11 +22,11 @@ Provide clear reproduction steps:
 3. …
 
 
-## ✅ Expected Behavior
+## Expected Behavior
 Describe the correct behavior.
 
 
-## 🛠 Solution Description
+## Solution Description
 Explain how the bug was fixed.
 
 - Root cause analysis
@@ -34,7 +34,7 @@ Explain how the bug was fixed.
 - Any alternatives considered
 
 
-## 🧪 Testing Done
+## Testing Done
 Select all that apply:
 
 - [ ] Unit tests added
@@ -47,24 +47,25 @@ Describe verification steps:
 2. …
 
 
-## 🧩 Impact Analysis
+## Impact Analysis
 - [ ] Affects only this module
 - [ ] Affects multiple modules
 - [ ] Potential side effects considered
 
 
-## ⚠️ Backward Compatibility
+## Backward Compatibility
 - [ ] No breaking changes
 - [ ] Potential impact (explain)
 
 
-## ✅ Pre-Submission Checklist
-- [ ] Bug is reproducible on `main`
-- [ ] Fix is minimal and targeted
-- [ ] No unrelated changes included
-- [ ] Tests cover the fix
-- [ ] Code style followed
-- [ ] Self-review completed
+## Preflight Checklist
+> **Required before submitting this Pull Request** 
+
+- [ ] I have read and understood the **[Contributing Guidelines](../../CONTRIBUTING.md)** for this project.
+- [ ] I agree to follow the **[Code of Conduct](../../CODE_OF_CONDUCT.md)** that this project adheres to.
+- [ ] This PR is submitted against the correct base branch.
+- [ ] The scope of this PR is clearly defined and limited.
+- [ ] I have performed a self-review of my changes.
 
 
 ## 📝 Additional Context
