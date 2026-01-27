@@ -1,20 +1,61 @@
-## 🧹 Refactor
-**Area of Focus**: (e.g., Database Layer, UI Components)
+# ♻️ Refactor Proposal
 
-### Nature of Refactor
-- [ ] Code Cleanup (Formatting, naming)
-- [ ] Performance Optimization
-- [ ] Simplifying Logic
-- [ ] Technical Debt Reduction
+## 📌 Refactor Summary
+Describe what was refactored and why.
 
-### Changes Made
-- Moved helper functions to a dedicated `utils` folder.
-- Replaced `for` loops with `map/filter` for better readability.
-- Removed deprecated variables.
+> This PR does **not** change external behavior.
 
-### Quality Assurance
-- [ ] **No functional changes** were made (Behavior remains identical).
-- [ ] Existing unit tests still pass.
-- [ ] Manually verified critical paths.
 
-### Notes for Reviewer
+## 🎯 Motivation
+Why was refactoring needed?
+
+- Improve readability
+- Reduce complexity
+- Improve performance
+- Remove duplication
+- Prepare for future features
+
+
+## 🧠 Refactor Details
+Explain what changed:
+
+- Before vs After approach
+- Key files/modules affected
+- Patterns or principles applied (SOLID, DRY, etc.)
+
+
+## 🧪 Verification
+How did you ensure nothing broke?
+
+- [ ] Existing tests passed
+- [ ] Manual testing
+- [ ] Static analysis/linting
+- [ ] Performance comparison (if applicable)
+
+
+## 📊 Performance Impact
+- [ ] No impact
+- [ ] Improved
+- [ ] Potential regression (explain)
+
+
+## 🔍 Risk Assessment
+- [ ] Low risk
+- [ ] Medium risk
+- [ ] High risk
+
+Explain if medium/high.
+
+
+## ✅ Pre-Submission Checklist
+- [ ] No functional changes introduced
+- [ ] Code is easier to read & maintain
+- [ ] No dead code left behind
+- [ ] Naming improved where applicable
+- [ ] No logic duplication
+- [ ] Tests still pass
+- [ ] Self-review completed
+
+
+## 📝 Additional Notes
+Anything reviewers should pay attention to?
