@@ -6,7 +6,7 @@ We welcome contributions of all kinds — bug reports, features, refactors, and 
 Please read this guide carefully before submitting issues or pull requests.
 
 
-## 🧭 How to Contribute
+## How to Contribute
 
 ### 1. Reporting Bugs
 - Search existing issues before opening a new one
@@ -28,7 +28,7 @@ Please read this guide carefully before submitting issues or pull requests.
   - `refactor.md`
 
 
-## 🌿 Branch Naming Convention
+## Branch Naming Convention
 
 Examples:
 - `feature/user-notifications`
@@ -36,26 +36,26 @@ Examples:
 - `refactor/api-layer`
 
 
-## 🧪 Testing Requirements
+## Testing Requirements
 - All new features must include tests where applicable
 - Bug fixes should include regression coverage
 - Refactors must not break existing tests
 
 
-## 🧹 Code Style & Quality
+## Code Style & Quality
 - Follow existing code style and patterns
 - Avoid unnecessary dependencies
 - Keep functions small and readable
 - Comment complex logic where necessary
 
 
-## 🔍 Pull Request Review Process
+## Pull Request Review Process
 - All PRs require review before merging
 - Maintainers may request changes
 - Be respectful and responsive to feedback
 
 
-## 🛡 Code of Conduct
+## Code of Conduct
 By participating, you agree to follow the project's **[Code of Conduct](../../CODE_OF_CONDUCT.md)**.
 
 Thank you for helping make this project better 🚀
