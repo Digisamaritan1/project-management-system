@@ -1,15 +1,7 @@
 {
   "build": [
-    
-    // Step 2: Build frontend
     "cd ../frontend && npm ci --include=dev && npm run build",
-
-    // Step 1: Run installation/setup
     "cd installation && npm ci && node setup.js",
-
-    
-
-    // Step 3: Return to root (backend ready)
     "cd .."
   ],
   "start": "node server.js",
