@@ -11,6 +11,7 @@ jspm_packages
 /admin/dist
 installation-saas-backup
 checkinstallstep-saas-backup
+test
 
 # local env files
 .env.local
