@@ -1,8 +1,4 @@
 {
-  "build": [
-    "cd ../frontend && npm ci --include=dev && npm run build",
-    "cd installation && npm ci && node setup.js",
-    "cd .."
-  ],
+  "build": "cd frontend && npm ci --include=dev && npm run build && cd ../installation && npm ci && node setup.js && cd ..",
   "start": "node server.js"
 }
