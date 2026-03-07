@@ -1,4 +1,9 @@
 {
-  "build": "cd frontend && npm ci --include=dev && npm run build && cd ../installation && npm ci && node setup.js && cd ..",
-  "start": "node server.js"
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "buildCommand": "cd frontend && npm ci --include=dev && npm run build && cd ../installation && npm ci && node setup.js && cd .."
+  },
+  "deploy": {
+    "startCommand": "node server.js"
+  }
 }
