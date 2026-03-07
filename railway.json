@@ -4,6 +4,5 @@
     "cd installation && npm ci && node setup.js",
     "cd .."
   ],
-  "start": "node server.js",
-  }
+  "start": "node server.js"
 }
