@@ -1,9 +1,12 @@
 {
   "$schema": "https://railway.com/railway.schema.json",
   "build": {
-    "buildCommand": "npm install && cd frontend && npm install && cd ../installation && npm install && npm run build && cd .."
+    "env": {
+      "NODE_VERSION": "20.11.1"
+    },
+    "buildCommand": "cd frontend && npm ci && npm run build"
   },
   "deploy": {
-    "startCommand": "npm start"
+    "startCommand": "node create-env.js && cd installation && npm ci && node setup.js && cd .. && node server.js"
   }
 }
