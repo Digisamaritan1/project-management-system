@@ -4,9 +4,9 @@
     "env": {
       "NODE_VERSION": "20.11.1"
     },
-    "buildCommand": "cd frontend && npm ci"
+    "buildCommand": "npm run basic-install && cd frontend && npm ci && npm run build"
   },
   "deploy": {
-    "startCommand": "node create-env.js && cd installation && npm ci && cd .. && node server.js"
+    "startCommand": "node create-env.js && cd installation && npm ci && npm run build && cd .. && node server.js"
   }
 }
