@@ -1,7 +1,10 @@
 const fs = require('fs');
 
-if (fs.existsSync('.env')) {
-  console.log('===== GENERATED ENV =====');
-  console.log(fs.readFileSync('.env', 'utf-8'));
-  console.log('=========================');
-}
+// Copy ALL Railway env variables into .env
+const envVars = Object.entries(process.env)
+  .map(([key, value]) => `${key}=${value}`)
+  .join('\n');
+
+fs.writeFileSync('.env', envVars);
+
+console.log('✅ .env fully synced with Railway variables');
