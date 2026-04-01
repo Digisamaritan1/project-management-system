@@ -7,6 +7,6 @@
     "buildCommand": "cd frontend && npm ci && npm run build"
   },
   "deploy": {
-    "startCommand": "node create-env.js && cd installation && npm ci && node setup.js && cd .. && node server.js"
+    "startCommand": "node create-env.js && cd installation && npm ci && cd .. && node server.js"
   }
 }
