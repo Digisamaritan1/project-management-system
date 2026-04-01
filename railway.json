@@ -4,7 +4,7 @@
   "env": {
       "NODE_VERSION": "20.11.1"
     },
-    "buildCommand": "npm install && cd frontend && npm install && cd .. && Cd installation && npm install && npm run build && cd .."
+    "buildCommand": "npm install && cd frontend && npm install && cd .. && cd installation && npm install && npm run build && cd .."
   },
   "deploy": {
     "startCommand": "node create-env.js && npm start"
