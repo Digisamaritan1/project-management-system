@@ -2,7 +2,8 @@
   "$schema": "https://railway.com/railway.schema.json",
   "build": {
   "env": {
-      "NODE_VERSION": "20.11.1"
+      "NODE_VERSION": "20.11.1",
+      "NODE_OPTIONS": "--max-old-space-size=3072"
     },
     "buildCommand": "npm install && cd frontend && npm install && cd .. && cd installation && npm install && npm run build && cd .."
   },
