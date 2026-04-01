@@ -7,6 +7,6 @@
     "buildCommand": "npm install && cd frontend && npm install && cd .. && cd installation && npm install && npm run build && cd .."
   },
   "deploy": {
-    "startCommand": "node create-env.js && npm start"
+    "startCommand": "node create-env.js && node create-firebase.js && npm start"
   }
 }
