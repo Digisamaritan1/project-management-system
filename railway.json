@@ -4,6 +4,6 @@
     "buildCommand": "npm install && cd frontend && npm install && cd ../installation && npm install && npm run build && cd .."
   },
   "deploy": {
-    "startCommand": "node start"
+    "startCommand": "npm start"
   }
 }
