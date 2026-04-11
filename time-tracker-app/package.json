@@ -7,6 +7,12 @@
   "homepage": "https://aliansoftware.com",
   "main": "app/background.js",
   "executableName": "alianhubtimetracker",
+  
+  "engines": {
+    "node": "18.17.0",
+    "npm": "9.6.7"
+  },
+  
   "scripts": {
     "dev": "nextron",
     "build": "nextron build",
