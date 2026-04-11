@@ -15,6 +15,7 @@
   
   "scripts": {
     "dev": "nextron",
+    "install:clean": "rm -rf node_modules package-lock.json && npm install",
     "build": "nextron build",
     "build:linux": "nextron build --linux",
     "postinstall": "electron-builder install-app-deps && bash postinstall.sh"
